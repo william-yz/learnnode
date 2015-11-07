@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "net.js",
+  "sourceRoot": "",
+  "sources": [
+    "net.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA;;EAAA,IAAA,GAAO,OAAA,CAAQ,MAAR;;EAEP,MAAA,GAAS,IAAI,CAAC,YAAL,CAAA;;EAET,MAAM,CAAC,EAAP,CAAU,YAAV,EAAwB,SAAC,CAAD,GAAA,CAAxB;;EAGA,MAAM,CAAC,MAAP,CAAc,IAAd,EAAoB,SAAA;WAAG,OAAO,CAAC,GAAR,CAAY,OAAZ;EAAH,CAApB;AAPA"
+}
