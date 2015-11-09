@@ -1,17 +1,5 @@
-var http = require('http');
+invoiceDto = AR.controller.ArCreateDetail.invoiceAmendDtoList[0]
+echarge = invoiceDto.existingChargeList
+ncharge = invoiceDto.newAddedChargeList
 
-var proxy = http.createServer(function(request, response) {
-
-    var options = {
-        host: 'localhost', // ????????
-        port: 8888,             // ??????????
-        path: request.url,
-        method: request.method
-    };
-
-    var req = http.request(options, function(req, res) {
-        console.log(req.url);
-        res.pipe(response);
-    }).end();
-
-}).listen(9999);
+for (int )

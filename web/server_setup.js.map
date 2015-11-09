@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "server_setup.js",
+  "sourceRoot": "",
+  "sources": [
+    "server_setup.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;EAAA;;AAAA"
+}
