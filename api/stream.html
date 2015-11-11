@@ -6,12 +6,12 @@
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/sh.css">
   <link rel="canonical" href="http://nodejs.org/api/stream.html">
-  <script type="text/javascript" src="//use.typekit.net/mse5tqx.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+  
 </head>
 <body class="alt apidoc int docs" id="docs">
     <div id="nav">
-      <img id="logo" src="assets/logo.svg" alt="node.js">
+      
       <ul>
         <li><a href="http://nodejs.org">Home</a></li>
         <li><a href="http://nodejs.org/download/">Downloads</a></li>
@@ -54,11 +54,11 @@
 <li><a href="#stream_stream">Stream</a><ul>
 <li><a href="#stream_api_for_stream_consumers">API for Stream Consumers</a><ul>
 <li><a href="#stream_class_stream_readable">Class: stream.Readable</a><ul>
-<li><a href="#stream_event_readable">Event: &#39;readable&#39;</a></li>
-<li><a href="#stream_event_data">Event: &#39;data&#39;</a></li>
-<li><a href="#stream_event_end">Event: &#39;end&#39;</a></li>
-<li><a href="#stream_event_close">Event: &#39;close&#39;</a></li>
-<li><a href="#stream_event_error">Event: &#39;error&#39;</a></li>
+<li><a href="#stream_event_readable">Event: &apos;readable&apos;</a></li>
+<li><a href="#stream_event_data">Event: &apos;data&apos;</a></li>
+<li><a href="#stream_event_end">Event: &apos;end&apos;</a></li>
+<li><a href="#stream_event_close">Event: &apos;close&apos;</a></li>
+<li><a href="#stream_event_error">Event: &apos;error&apos;</a></li>
 <li><a href="#stream_readable_read_size">readable.read([size])</a></li>
 <li><a href="#stream_readable_setencoding_encoding">readable.setEncoding(encoding)</a></li>
 <li><a href="#stream_readable_resume">readable.resume()</a></li>
@@ -72,15 +72,15 @@
 </li>
 <li><a href="#stream_class_stream_writable">Class: stream.Writable</a><ul>
 <li><a href="#stream_writable_write_chunk_encoding_callback">writable.write(chunk[, encoding][, callback])</a></li>
-<li><a href="#stream_event_drain">Event: &#39;drain&#39;</a></li>
+<li><a href="#stream_event_drain">Event: &apos;drain&apos;</a></li>
 <li><a href="#stream_writable_cork">writable.cork()</a></li>
 <li><a href="#stream_writable_uncork">writable.uncork()</a></li>
 <li><a href="#stream_writable_setdefaultencoding_encoding">writable.setDefaultEncoding(encoding)</a></li>
 <li><a href="#stream_writable_end_chunk_encoding_callback">writable.end([chunk][, encoding][, callback])</a></li>
-<li><a href="#stream_event_finish">Event: &#39;finish&#39;</a></li>
-<li><a href="#stream_event_pipe">Event: &#39;pipe&#39;</a></li>
-<li><a href="#stream_event_unpipe">Event: &#39;unpipe&#39;</a></li>
-<li><a href="#stream_event_error_1">Event: &#39;error&#39;</a></li>
+<li><a href="#stream_event_finish">Event: &apos;finish&apos;</a></li>
+<li><a href="#stream_event_pipe">Event: &apos;pipe&apos;</a></li>
+<li><a href="#stream_event_unpipe">Event: &apos;unpipe&apos;</a></li>
+<li><a href="#stream_event_error_1">Event: &apos;error&apos;</a></li>
 </ul>
 </li>
 <li><a href="#stream_class_stream_duplex">Class: stream.Duplex</a></li>
@@ -110,7 +110,7 @@
 <li><a href="#stream_new_stream_transform_options">new stream.Transform([options])</a></li>
 <li><a href="#stream_transform_transform_chunk_encoding_callback">transform._transform(chunk, encoding, callback)</a></li>
 <li><a href="#stream_transform_flush_callback">transform._flush(callback)</a></li>
-<li><a href="#stream_events_finish_and_end">Events: &#39;finish&#39; and &#39;end&#39;</a></li>
+<li><a href="#stream_events_finish_and_end">Events: &apos;finish&apos; and &apos;end&apos;</a></li>
 <li><a href="#stream_example_simpleprotocol_parser_v2">Example: <code>SimpleProtocol</code> parser v2</a></li>
 </ul>
 </li>
@@ -120,7 +120,7 @@
 <li><a href="#stream_streams_under_the_hood">Streams: Under the Hood</a><ul>
 <li><a href="#stream_buffering">Buffering</a></li>
 <li><a href="#stream_stream_read_0"><code>stream.read(0)</code></a></li>
-<li><a href="#stream_stream_push"><code>stream.push(&#39;&#39;)</code></a></li>
+<li><a href="#stream_stream_push"><code>stream.push(&apos;&apos;)</code></a></li>
 <li><a href="#stream_compatibility_with_older_node_versions">Compatibility with Older Node Versions</a></li>
 <li><a href="#stream_object_mode">Object Mode</a></li>
 </ul>
@@ -140,7 +140,7 @@ server</a> is a stream, as is
 instances of <a href="events.html#events_class_events_eventemitter">EventEmitter</a>
 
 </p>
-<p>You can load the Stream base classes by doing <code>require(&#39;stream&#39;)</code>.
+<p>You can load the Stream base classes by doing <code>require(&apos;stream&apos;)</code>.
 There are base classes provided for <a href="#stream_class_stream_readable">Readable</a> streams, <a href="#stream_class_stream_writable">Writable</a>
 streams, <a href="#stream_class_stream_duplex">Duplex</a> streams, and <a href="#stream_class_stream_transform">Transform</a> streams.
 
@@ -190,30 +190,30 @@ interfaces in your own program, please also refer to
 way.  Here is an example of using Streams in a Node program:
 
 </p>
-<pre><code class="javascript">var http = require(&#39;http&#39;);
+<pre><code class="javascript">var http = require(&apos;http&apos;);
 
 var server = http.createServer(function (req, res) {
   // req is an http.IncomingMessage, which is a Readable Stream
   // res is an http.ServerResponse, which is a Writable Stream
 
-  var body = &#39;&#39;;
+  var body = &apos;&apos;;
   // we want to get the data as utf8 strings
-  // If you don&#39;t set an encoding, then you&#39;ll get Buffer objects
-  req.setEncoding(&#39;utf8&#39;);
+  // If you don&apos;t set an encoding, then you&apos;ll get Buffer objects
+  req.setEncoding(&apos;utf8&apos;);
 
-  // Readable streams emit &#39;data&#39; events once a listener is added
-  req.on(&#39;data&#39;, function (chunk) {
+  // Readable streams emit &apos;data&apos; events once a listener is added
+  req.on(&apos;data&apos;, function (chunk) {
     body += chunk;
   });
 
   // the end event tells you that you have entire body
-  req.on(&#39;end&#39;, function () {
+  req.on(&apos;end&apos;, function () {
     try {
       var data = JSON.parse(body);
     } catch (er) {
       // uh oh!  bad json!
       res.statusCode = 400;
-      return res.end(&#39;error: &#39; + er.message);
+      return res.end(&apos;error: &apos; + er.message);
     }
 
     // write back something interesting to the user:
@@ -224,11 +224,11 @@ var server = http.createServer(function (req, res) {
 
 server.listen(1337);
 
-// $ curl localhost:1337 -d &#39;{}&#39;
+// $ curl localhost:1337 -d &apos;{}&apos;
 // object
-// $ curl localhost:1337 -d &#39;&quot;foo&quot;&#39;
+// $ curl localhost:1337 -d &apos;&quot;foo&quot;&apos;
 // string
-// $ curl localhost:1337 -d &#39;not json&#39;
+// $ curl localhost:1337 -d &apos;not json&apos;
 // error: Unexpected token o</code></pre>
 <h3>Class: stream.Readable<span><a class="mark" href="#stream_class_stream_readable" id="stream_class_stream_readable">#</a></span></h3>
 <!--type=class-->
@@ -258,7 +258,7 @@ mode, then data will be lost.
 
 </p>
 <ul>
-<li>Adding a <a href="#stream_event_data"><code>&#39;data&#39;</code> event</a> handler to listen for data.</li>
+<li>Adding a <a href="#stream_event_data"><code>&apos;data&apos;</code> event</a> handler to listen for data.</li>
 <li>Calling the <a href="#stream_readable_resume"><code>resume()</code></a> method to explicitly open the flow.</li>
 <li>Calling the <a href="#stream_readable_pipe_destination_options"><code>pipe()</code></a> method to send the data to a <a href="#stream_class_stream_writable">Writable</a>.</li>
 </ul>
@@ -268,11 +268,11 @@ mode, then data will be lost.
 <ul>
 <li>If there are no pipe destinations, by calling the <a href="#stream_readable_pause"><code>pause()</code></a>
 method.</li>
-<li>If there are pipe destinations, by removing any <a href="#stream_event_data"><code>&#39;data&#39;</code> event</a>
+<li>If there are pipe destinations, by removing any <a href="#stream_event_data"><code>&apos;data&apos;</code> event</a>
 handlers, and removing all pipe destinations by calling the
 <a href="#stream_readable_unpipe_destination"><code>unpipe()</code></a> method.</li>
 </ul>
-<p>Note that, for backwards compatibility reasons, removing <code>&#39;data&#39;</code>
+<p>Note that, for backwards compatibility reasons, removing <code>&apos;data&apos;</code>
 event handlers will <strong>not</strong> automatically pause the stream.  Also, if
 there are piped destinations, then calling <code>pause()</code> will not
 guarantee that the stream will <em>remain</em> paused once those
@@ -292,28 +292,28 @@ destinations drain and ask for more data.
 <li><a href="child_process.html#child_process_child_stdout">child process stdout and stderr</a></li>
 <li><a href="process.html#process_process_stdin">process.stdin</a></li>
 </ul>
-<h4>Event: &#39;readable&#39;<span><a class="mark" href="#stream_event_readable" id="stream_event_readable">#</a></span></h4>
+<h4>Event: &apos;readable&apos;<span><a class="mark" href="#stream_event_readable" id="stream_event_readable">#</a></span></h4>
 <p>When a chunk of data can be read from the stream, it will emit a
-<code>&#39;readable&#39;</code> event.
+<code>&apos;readable&apos;</code> event.
 
 </p>
-<p>In some cases, listening for a <code>&#39;readable&#39;</code> event will cause some data
+<p>In some cases, listening for a <code>&apos;readable&apos;</code> event will cause some data
 to be read into the internal buffer from the underlying system, if it
-hadn&#39;t already.
+hadn&apos;t already.
 
 </p>
 <pre><code class="javascript">var readable = getReadableStreamSomehow();
-readable.on(&#39;readable&#39;, function() {
+readable.on(&apos;readable&apos;, function() {
   // there is some data to read now
 });</code></pre>
 <p>Once the internal buffer is drained, a <code>readable</code> event will fire
 again when more data is available.
 
 </p>
-<h4>Event: &#39;data&#39;<span><a class="mark" href="#stream_event_data" id="stream_event_data">#</a></span></h4>
+<h4>Event: &apos;data&apos;<span><a class="mark" href="#stream_event_data" id="stream_event_data">#</a></span></h4>
 <div class="signature"><ul>
 <li><code>chunk</code> <span class="type">Buffer | String</span> The chunk of data.</li>
-</div></ul>
+</ul></div>
 <p>Attaching a <code>data</code> event listener to a stream that has not been
 explicitly paused will switch the stream into flowing mode. Data will
 then be passed as soon as it is available.
@@ -324,10 +324,10 @@ possible, this is the best way to do so.
 
 </p>
 <pre><code class="javascript">var readable = getReadableStreamSomehow();
-readable.on(&#39;data&#39;, function(chunk) {
-  console.log(&#39;got %d bytes of data&#39;, chunk.length);
+readable.on(&apos;data&apos;, function(chunk) {
+  console.log(&apos;got %d bytes of data&apos;, chunk.length);
 });</code></pre>
-<h4>Event: &#39;end&#39;<span><a class="mark" href="#stream_event_end" id="stream_event_end">#</a></span></h4>
+<h4>Event: &apos;end&apos;<span><a class="mark" href="#stream_event_end" id="stream_event_end">#</a></span></h4>
 <p>This event fires when there will be no more data to read.
 
 </p>
@@ -337,21 +337,21 @@ or by calling <code>read()</code> repeatedly until you get to the end.
 
 </p>
 <pre><code class="javascript">var readable = getReadableStreamSomehow();
-readable.on(&#39;data&#39;, function(chunk) {
-  console.log(&#39;got %d bytes of data&#39;, chunk.length);
+readable.on(&apos;data&apos;, function(chunk) {
+  console.log(&apos;got %d bytes of data&apos;, chunk.length);
 });
-readable.on(&#39;end&#39;, function() {
-  console.log(&#39;there will be no more data.&#39;);
+readable.on(&apos;end&apos;, function() {
+  console.log(&apos;there will be no more data.&apos;);
 });</code></pre>
-<h4>Event: &#39;close&#39;<span><a class="mark" href="#stream_event_close" id="stream_event_close">#</a></span></h4>
+<h4>Event: &apos;close&apos;<span><a class="mark" href="#stream_event_close" id="stream_event_close">#</a></span></h4>
 <p>Emitted when the underlying resource (for example, the backing file
 descriptor) has been closed. Not all streams will emit this.
 
 </p>
-<h4>Event: &#39;error&#39;<span><a class="mark" href="#stream_event_error" id="stream_event_error">#</a></span></h4>
+<h4>Event: &apos;error&apos;<span><a class="mark" href="#stream_event_error" id="stream_event_error">#</a></span></h4>
 <div class="signature"><ul>
 <li><span class="type">Error Object</span></li>
-</div></ul>
+</ul></div>
 <p>Emitted if there was an error receiving data.
 
 </p>
@@ -359,7 +359,7 @@ descriptor) has been closed. Not all streams will emit this.
 <div class="signature"><ul>
 <li><code>size</code> <span class="type">Number</span> Optional argument to specify how much data to read.</li>
 <li>Return <span class="type">String | Buffer | null</span></li>
-</div></ul>
+</ul></div>
 <p>The <code>read()</code> method pulls some data out of the internal buffer and
 returns it.  If there is no data available, then it will return
 <code>null</code>.
@@ -379,26 +379,26 @@ drained.
 
 </p>
 <pre><code class="javascript">var readable = getReadableStreamSomehow();
-readable.on(&#39;readable&#39;, function() {
+readable.on(&apos;readable&apos;, function() {
   var chunk;
   while (null !== (chunk = readable.read())) {
-    console.log(&#39;got %d bytes of data&#39;, chunk.length);
+    console.log(&apos;got %d bytes of data&apos;, chunk.length);
   }
 });</code></pre>
 <p>If this method returns a data chunk, then it will also trigger the
-emission of a <a href="#stream_event_data"><code>&#39;data&#39;</code> event</a>.
+emission of a <a href="#stream_event_data"><code>&apos;data&apos;</code> event</a>.
 
 </p>
 <h4>readable.setEncoding(encoding)<span><a class="mark" href="#stream_readable_setencoding_encoding" id="stream_readable_setencoding_encoding">#</a></span></h4>
 <div class="signature"><ul>
 <li><code>encoding</code> <span class="type">String</span> The encoding to use.</li>
 <li>Return: <code>this</code></li>
-</div></ul>
+</ul></div>
 <p>Call this function to cause the stream to return strings of the
 specified encoding instead of Buffer objects.  For example, if you do
-<code>readable.setEncoding(&#39;utf8&#39;)</code>, then the output data will be
+<code>readable.setEncoding(&apos;utf8&apos;)</code>, then the output data will be
 interpreted as UTF-8 data, and returned as strings.  If you do
-<code>readable.setEncoding(&#39;hex&#39;)</code>, then the data will be encoded in
+<code>readable.setEncoding(&apos;hex&apos;)</code>, then the data will be encoded in
 hexadecimal string format.
 
 </p>
@@ -409,15 +409,15 @@ as strings, always use this method.
 
 </p>
 <pre><code class="javascript">var readable = getReadableStreamSomehow();
-readable.setEncoding(&#39;utf8&#39;);
-readable.on(&#39;data&#39;, function(chunk) {
-  assert.equal(typeof chunk, &#39;string&#39;);
-  console.log(&#39;got %d characters of string data&#39;, chunk.length);
+readable.setEncoding(&apos;utf8&apos;);
+readable.on(&apos;data&apos;, function(chunk) {
+  assert.equal(typeof chunk, &apos;string&apos;);
+  console.log(&apos;got %d characters of string data&apos;, chunk.length);
 });</code></pre>
 <h4>readable.resume()<span><a class="mark" href="#stream_readable_resume" id="stream_readable_resume">#</a></span></h4>
 <div class="signature"><ul>
 <li>Return: <code>this</code></li>
-</div></ul>
+</ul></div>
 <p>This method will cause the readable stream to resume emitting <code>data</code>
 events.
 
@@ -430,32 +430,32 @@ data.
 </p>
 <pre><code class="javascript">var readable = getReadableStreamSomehow();
 readable.resume();
-readable.on(&#39;end&#39;, function(chunk) {
-  console.log(&#39;got to the end, but did not read anything&#39;);
+readable.on(&apos;end&apos;, function(chunk) {
+  console.log(&apos;got to the end, but did not read anything&apos;);
 });</code></pre>
 <h4>readable.pause()<span><a class="mark" href="#stream_readable_pause" id="stream_readable_pause">#</a></span></h4>
 <div class="signature"><ul>
 <li>Return: <code>this</code></li>
-</div></ul>
+</ul></div>
 <p>This method will cause a stream in flowing mode to stop emitting
 <code>data</code> events, switching out of flowing mode.  Any data that becomes
 available will remain in the internal buffer.
 
 </p>
 <pre><code class="javascript">var readable = getReadableStreamSomehow();
-readable.on(&#39;data&#39;, function(chunk) {
-  console.log(&#39;got %d bytes of data&#39;, chunk.length);
+readable.on(&apos;data&apos;, function(chunk) {
+  console.log(&apos;got %d bytes of data&apos;, chunk.length);
   readable.pause();
-  console.log(&#39;there will be no more data for 1 second&#39;);
+  console.log(&apos;there will be no more data for 1 second&apos;);
   setTimeout(function() {
-    console.log(&#39;now data will start flowing again&#39;);
+    console.log(&apos;now data will start flowing again&apos;);
     readable.resume();
   }, 1000);
 });</code></pre>
 <h4>readable.isPaused()<span><a class="mark" href="#stream_readable_ispaused" id="stream_readable_ispaused">#</a></span></h4>
 <div class="signature"><ul>
 <li>Return: <code>Boolean</code></li>
-</div></ul>
+</ul></div>
 <p>This method returns whether or not the <code>readable</code> has been <strong>explicitly</strong>
 paused by client code (using <code>readable.pause()</code> without a corresponding
 <code>readable.resume()</code>).
@@ -475,7 +475,7 @@ readable.isPaused() // === false</code></pre>
 <li><code>end</code> <span class="type">Boolean</span> End the writer when the reader ends. Default = <code>true</code></li>
 </ul>
 </li>
-</div></ul>
+</ul></div>
 <p>This method pulls all the data out of a readable stream, and writes it
 to the supplied destination, automatically managing the flow so that
 the destination is not overwhelmed by a fast readable stream.
@@ -485,16 +485,16 @@ the destination is not overwhelmed by a fast readable stream.
 
 </p>
 <pre><code class="javascript">var readable = getReadableStreamSomehow();
-var writable = fs.createWriteStream(&#39;file.txt&#39;);
-// All the data from readable goes into &#39;file.txt&#39;
+var writable = fs.createWriteStream(&apos;file.txt&apos;);
+// All the data from readable goes into &apos;file.txt&apos;
 readable.pipe(writable);</code></pre>
 <p>This function returns the destination stream, so you can set up pipe
 chains like so:
 
 </p>
-<pre><code class="javascript">var r = fs.createReadStream(&#39;file.txt&#39;);
+<pre><code class="javascript">var r = fs.createReadStream(&apos;file.txt&apos;);
 var z = zlib.createGzip();
-var w = fs.createWriteStream(&#39;file.txt.gz&#39;);
+var w = fs.createWriteStream(&apos;file.txt.gz&apos;);
 r.pipe(z).pipe(w);</code></pre>
 <p>For example, emulating the Unix <code>cat</code> command:
 
@@ -510,8 +510,8 @@ end.
 
 </p>
 <pre><code class="javascript">reader.pipe(writer, { end: false });
-reader.on(&#39;end&#39;, function() {
-  writer.end(&#39;Goodbye\n&#39;);
+reader.on(&apos;end&apos;, function() {
+  writer.end(&apos;Goodbye\n&apos;);
 });</code></pre>
 <p>Note that <code>process.stderr</code> and <code>process.stdout</code> are never closed until
 the process exits, regardless of the specified options.
@@ -520,7 +520,7 @@ the process exits, regardless of the specified options.
 <h4>readable.unpipe([destination])<span><a class="mark" href="#stream_readable_unpipe_destination" id="stream_readable_unpipe_destination">#</a></span></h4>
 <div class="signature"><ul>
 <li><code>destination</code> <span class="type"><a href="#stream_class_stream_writable">Writable</a> Stream</span> Optional specific stream to unpipe</li>
-</div></ul>
+</ul></div>
 <p>This method will remove the hooks set up for a previous <code>pipe()</code> call.
 
 </p>
@@ -532,20 +532,20 @@ this is a no-op.
 
 </p>
 <pre><code class="javascript">var readable = getReadableStreamSomehow();
-var writable = fs.createWriteStream(&#39;file.txt&#39;);
-// All the data from readable goes into &#39;file.txt&#39;,
+var writable = fs.createWriteStream(&apos;file.txt&apos;);
+// All the data from readable goes into &apos;file.txt&apos;,
 // but only for the first second
 readable.pipe(writable);
 setTimeout(function() {
-  console.log(&#39;stop writing to file.txt&#39;);
+  console.log(&apos;stop writing to file.txt&apos;);
   readable.unpipe(writable);
-  console.log(&#39;manually close the file stream&#39;);
+  console.log(&apos;manually close the file stream&apos;);
   writable.end();
 }, 1000);</code></pre>
 <h4>readable.unshift(chunk)<span><a class="mark" href="#stream_readable_unshift_chunk" id="stream_readable_unshift_chunk">#</a></span></h4>
 <div class="signature"><ul>
 <li><code>chunk</code> <span class="type">Buffer | String</span> Chunk of data to unshift onto the read queue</li>
-</div></ul>
+</ul></div>
 <p>This is useful in certain cases where a stream is being consumed by a
 parser, which needs to &quot;un-consume&quot; some data that it has
 optimistically pulled out of the source, so that the stream can be
@@ -560,12 +560,12 @@ for Stream Implementors, below.)
 <pre><code class="javascript">// Pull off a header delimited by \n\n
 // use unshift() if we get too much
 // Call the callback with (error, header, stream)
-var StringDecoder = require(&#39;string_decoder&#39;).StringDecoder;
+var StringDecoder = require(&apos;string_decoder&apos;).StringDecoder;
 function parseHeader(stream, callback) {
-  stream.on(&#39;error&#39;, callback);
-  stream.on(&#39;readable&#39;, onReadable);
-  var decoder = new StringDecoder(&#39;utf8&#39;);
-  var header = &#39;&#39;;
+  stream.on(&apos;error&apos;, callback);
+  stream.on(&apos;readable&apos;, onReadable);
+  var decoder = new StringDecoder(&apos;utf8&apos;);
+  var header = &apos;&apos;;
   function onReadable() {
     var chunk;
     while (null !== (chunk = stream.read())) {
@@ -574,12 +574,12 @@ function parseHeader(stream, callback) {
         // found the header boundary
         var split = str.split(/\n\n/);
         header += split.shift();
-        var remaining = split.join(&#39;\n\n&#39;);
-        var buf = new Buffer(remaining, &#39;utf8&#39;);
+        var remaining = split.join(&apos;\n\n&apos;);
+        var buf = new Buffer(remaining, &apos;utf8&apos;);
         if (buf.length)
           stream.unshift(buf);
-        stream.removeListener(&#39;error&#39;, callback);
-        stream.removeListener(&#39;readable&#39;, onReadable);
+        stream.removeListener(&apos;error&apos;, callback);
+        stream.removeListener(&apos;readable&apos;, onReadable);
         // now the body of the message can be read from the stream.
         callback(null, header, stream);
       } else {
@@ -592,13 +592,13 @@ function parseHeader(stream, callback) {
 <h4>readable.wrap(stream)<span><a class="mark" href="#stream_readable_wrap_stream" id="stream_readable_wrap_stream">#</a></span></h4>
 <div class="signature"><ul>
 <li><code>stream</code> <span class="type">Stream</span> An &quot;old style&quot; readable stream</li>
-</div></ul>
+</ul></div>
 <p>Versions of Node prior to v0.10 had streams that did not implement the
 entire Streams API as it is today.  (See &quot;Compatibility&quot; below for
 more information.)
 
 </p>
-<p>If you are using an older Node library that emits <code>&#39;data&#39;</code> events and
+<p>If you are using an older Node library that emits <code>&apos;data&apos;</code> events and
 has a <a href="#stream_readable_pause"><code>pause()</code></a> method that is advisory only, then you can use the
 <code>wrap()</code> method to create a <a href="#stream_class_stream_readable">Readable</a> stream that uses the old stream
 as its data source.
@@ -611,12 +611,12 @@ as a convenience for interacting with old Node programs and libraries.
 <p>For example:
 
 </p>
-<pre><code class="javascript">var OldReader = require(&#39;./old-api-module.js&#39;).OldReader;
+<pre><code class="javascript">var OldReader = require(&apos;./old-api-module.js&apos;).OldReader;
 var oreader = new OldReader;
-var Readable = require(&#39;stream&#39;).Readable;
+var Readable = require(&apos;stream&apos;).Readable;
 var myReader = new Readable().wrap(oreader);
 
-myReader.on(&#39;readable&#39;, function() {
+myReader.on(&apos;readable&apos;, function() {
   myReader.read(); // etc.
 });</code></pre>
 <h3>Class: stream.Writable<span><a class="mark" href="#stream_class_stream_writable" id="stream_class_stream_writable">#</a></span></h3>
@@ -645,7 +645,7 @@ that you are writing data <em>to</em>.
 <li><code>encoding</code> <span class="type">String</span> The encoding, if <code>chunk</code> is a String</li>
 <li><code>callback</code> <span class="type">Function</span> Callback for when this chunk of data is flushed</li>
 <li>Returns: <span class="type">Boolean</span> True if the data was handled completely.</li>
-</div></ul>
+</ul></div>
 <p>This method writes some data to the underlying system, and calls the
 supplied callback once the data has been fully handled.
 
@@ -661,7 +661,7 @@ memory, so it is best not to do this excessively.  Instead, wait for
 the <code>drain</code> event before writing more data.
 
 </p>
-<h4>Event: &#39;drain&#39;<span><a class="mark" href="#stream_event_drain" id="stream_event_drain">#</a></span></h4>
+<h4>Event: &apos;drain&apos;<span><a class="mark" href="#stream_event_drain" id="stream_event_drain">#</a></span></h4>
 <p>If a <a href="#stream_writable_write_chunk_encoding_callback"><code>writable.write(chunk)</code></a> call returns false, then the <code>drain</code>
 event will indicate when it is appropriate to begin writing more data
 to the stream.
@@ -681,14 +681,14 @@ function writeOneMillionTimes(writer, data, encoding, callback) {
         writer.write(data, encoding, callback);
       } else {
         // see if we should continue, or wait
-        // don&#39;t pass the callback, because we&#39;re not done yet.
+        // don&apos;t pass the callback, because we&apos;re not done yet.
         ok = writer.write(data, encoding);
       }
     } while (i &gt; 0 &amp;&amp; ok);
     if (i &gt; 0) {
       // had to stop early!
       // write some more once it drains
-      writer.once(&#39;drain&#39;, write);
+      writer.once(&apos;drain&apos;, write);
     }
   }
 }</code></pre>
@@ -707,7 +707,7 @@ function writeOneMillionTimes(writer, data, encoding, callback) {
 <div class="signature"><ul>
 <li><code>encoding</code> <span class="type">String</span> The new default encoding</li>
 <li>Return: <code>Boolean</code></li>
-</div></ul>
+</ul></div>
 <p>Sets the default encoding for a writable stream. Returns <code>true</code> if the encoding
 is valid and is set. Otherwise returns <code>false</code>.
 
@@ -717,70 +717,70 @@ is valid and is set. Otherwise returns <code>false</code>.
 <li><code>chunk</code> <span class="type">String | Buffer</span> Optional data to write</li>
 <li><code>encoding</code> <span class="type">String</span> The encoding, if <code>chunk</code> is a String</li>
 <li><code>callback</code> <span class="type">Function</span> Optional callback for when the stream is finished</li>
-</div></ul>
+</ul></div>
 <p>Call this method when no more data will be written to the stream.  If
 supplied, the callback is attached as a listener on the <code>finish</code> event.
 
 </p>
-<pre><code class="javascript">// write &#39;hello, &#39; and then end with &#39;world!&#39;
-var file = fs.createWriteStream(&#39;example.txt&#39;);
-file.write(&#39;hello, &#39;);
-file.end(&#39;world!&#39;);</code></pre>
+<pre><code class="javascript">// write &apos;hello, &apos; and then end with &apos;world!&apos;
+var file = fs.createWriteStream(&apos;example.txt&apos;);
+file.write(&apos;hello, &apos;);
+file.end(&apos;world!&apos;);</code></pre>
 <p>Calling <a href="#stream_writable_write_chunk_encoding_callback"><code>write()</code></a> after calling <a href="#stream_writable_end_chunk_encoding_callback"><code>end()</code></a> will raise an error:
 
 </p>
-<pre><code class="javascript">// end with &#39;world!&#39; and then write with &#39;hello, &#39; will raise an error
-var file = fs.createWriteStream(&#39;example.txt&#39;);
-file.end(&#39;world!&#39;);
-file.write(&#39;hello, &#39;);</code></pre>
-<h4>Event: &#39;finish&#39;<span><a class="mark" href="#stream_event_finish" id="stream_event_finish">#</a></span></h4>
+<pre><code class="javascript">// end with &apos;world!&apos; and then write with &apos;hello, &apos; will raise an error
+var file = fs.createWriteStream(&apos;example.txt&apos;);
+file.end(&apos;world!&apos;);
+file.write(&apos;hello, &apos;);</code></pre>
+<h4>Event: &apos;finish&apos;<span><a class="mark" href="#stream_event_finish" id="stream_event_finish">#</a></span></h4>
 <p>When the <a href="#stream_writable_end_chunk_encoding_callback"><code>end()</code></a> method has been called, and all data has been flushed
 to the underlying system, this event is emitted.
 
 </p>
 <pre><code class="javascript">var writer = getWritableStreamSomehow();
 for (var i = 0; i &lt; 100; i ++) {
-  writer.write(&#39;hello, #&#39; + i + &#39;!\n&#39;);
+  writer.write(&apos;hello, #&apos; + i + &apos;!\n&apos;);
 }
-writer.end(&#39;this is the end\n&#39;);
-writer.on(&#39;finish&#39;, function() {
-  console.error(&#39;all writes are now complete.&#39;);
+writer.end(&apos;this is the end\n&apos;);
+writer.on(&apos;finish&apos;, function() {
+  console.error(&apos;all writes are now complete.&apos;);
 });</code></pre>
-<h4>Event: &#39;pipe&#39;<span><a class="mark" href="#stream_event_pipe" id="stream_event_pipe">#</a></span></h4>
+<h4>Event: &apos;pipe&apos;<span><a class="mark" href="#stream_event_pipe" id="stream_event_pipe">#</a></span></h4>
 <div class="signature"><ul>
 <li><code>src</code> <span class="type"><a href="#stream_class_stream_readable">Readable</a> Stream</span> source stream that is piping to this writable</li>
-</div></ul>
+</ul></div>
 <p>This is emitted whenever the <code>pipe()</code> method is called on a readable
 stream, adding this writable to its set of destinations.
 
 </p>
 <pre><code class="javascript">var writer = getWritableStreamSomehow();
 var reader = getReadableStreamSomehow();
-writer.on(&#39;pipe&#39;, function(src) {
-  console.error(&#39;something is piping into the writer&#39;);
+writer.on(&apos;pipe&apos;, function(src) {
+  console.error(&apos;something is piping into the writer&apos;);
   assert.equal(src, reader);
 });
 reader.pipe(writer);</code></pre>
-<h4>Event: &#39;unpipe&#39;<span><a class="mark" href="#stream_event_unpipe" id="stream_event_unpipe">#</a></span></h4>
+<h4>Event: &apos;unpipe&apos;<span><a class="mark" href="#stream_event_unpipe" id="stream_event_unpipe">#</a></span></h4>
 <div class="signature"><ul>
 <li><code>src</code> <span class="type"><a href="#stream_class_stream_readable">Readable</a> Stream</span> The source stream that <a href="#stream_readable_unpipe_destination">unpiped</a> this writable</li>
-</div></ul>
+</ul></div>
 <p>This is emitted whenever the <a href="#stream_readable_unpipe_destination"><code>unpipe()</code></a> method is called on a
 readable stream, removing this writable from its set of destinations.
 
 </p>
 <pre><code class="javascript">var writer = getWritableStreamSomehow();
 var reader = getReadableStreamSomehow();
-writer.on(&#39;unpipe&#39;, function(src) {
-  console.error(&#39;something has stopped piping into the writer&#39;);
+writer.on(&apos;unpipe&apos;, function(src) {
+  console.error(&apos;something has stopped piping into the writer&apos;);
   assert.equal(src, reader);
 });
 reader.pipe(writer);
 reader.unpipe(writer);</code></pre>
-<h4>Event: &#39;error&#39;<span><a class="mark" href="#stream_event_error_1" id="stream_event_error_1">#</a></span></h4>
+<h4>Event: &apos;error&apos;<span><a class="mark" href="#stream_event_error_1" id="stream_event_error_1">#</a></span></h4>
 <div class="signature"><ul>
 <li><span class="type">Error object</span></li>
-</div></ul>
+</ul></div>
 <p>Emitted if there was an error when writing or piping data.
 
 </p>
@@ -912,8 +912,8 @@ implement Readable streams in your programs.
 from 1 to 1,000,000 in ascending order, and then ends.
 
 </p>
-<pre><code class="javascript">var Readable = require(&#39;stream&#39;).Readable;
-var util = require(&#39;util&#39;);
+<pre><code class="javascript">var Readable = require(&apos;stream&apos;).Readable;
+var util = require(&apos;util&apos;);
 util.inherits(Counter, Readable);
 
 function Counter(opt) {
@@ -927,8 +927,8 @@ Counter.prototype._read = function() {
   if (i &gt; this._max)
     this.push(null);
   else {
-    var str = &#39;&#39; + i;
-    var buf = new Buffer(str, &#39;ascii&#39;);
+    var str = &apos;&apos; + i;
+    var buf = new Buffer(str, &apos;ascii&apos;);
     this.push(buf);
   }
 };</code></pre>
@@ -950,8 +950,8 @@ below for a better implementation.
 // Using Readable directly for this is sub-optimal.  See the
 // alternative example below under the Transform section.
 
-var Readable = require(&#39;stream&#39;).Readable;
-var util = require(&#39;util&#39;);
+var Readable = require(&apos;stream&apos;).Readable;
+var util = require(&apos;util&apos;);
 
 util.inherits(SimpleProtocol, Readable);
 
@@ -967,13 +967,13 @@ function SimpleProtocol(source, options) {
   this._source = source;
 
   var self = this;
-  source.on(&#39;end&#39;, function() {
+  source.on(&apos;end&apos;, function() {
     self.push(null);
   });
 
   // give it a kick whenever the source is readable
   // read(0) will not consume any bytes
-  source.on(&#39;readable&#39;, function() {
+  source.on(&apos;readable&apos;, function() {
     self.read(0);
   });
 
@@ -985,14 +985,14 @@ SimpleProtocol.prototype._read = function(n) {
   if (!this._inBody) {
     var chunk = this._source.read();
 
-    // if the source doesn&#39;t have data, we don&#39;t have data yet.
+    // if the source doesn&apos;t have data, we don&apos;t have data yet.
     if (chunk === null)
-      return this.push(&#39;&#39;);
+      return this.push(&apos;&apos;);
 
     // check if the chunk has a \n\n
     var split = -1;
     for (var i = 0; i &lt; chunk.length; i++) {
-      if (chunk[i] === 10) { // &#39;\n&#39;
+      if (chunk[i] === 10) { // &apos;\n&apos;
         if (this._sawFirstCr) {
           split = i;
           break;
@@ -1008,7 +1008,7 @@ SimpleProtocol.prototype._read = function(n) {
       // still waiting for the \n\n
       // stash the chunk, and try again.
       this._rawHeader.push(chunk);
-      this.push(&#39;&#39;);
+      this.push(&apos;&apos;);
     } else {
       this._inBody = true;
       var h = chunk.slice(0, split);
@@ -1017,7 +1017,7 @@ SimpleProtocol.prototype._read = function(n) {
       try {
         this.header = JSON.parse(header);
       } catch (er) {
-        this.emit(&#39;error&#39;, new Error(&#39;invalid simple protocol data&#39;));
+        this.emit(&apos;error&apos;, new Error(&apos;invalid simple protocol data&apos;));
         return;
       }
       // now, because we got some extra data, unshift the rest
@@ -1026,7 +1026,7 @@ SimpleProtocol.prototype._read = function(n) {
       this.unshift(b);
 
       // and let them know that we are done parsing the header.
-      this.emit(&#39;header&#39;, this.header);
+      this.emit(&apos;header&apos;, this.header);
     }
   } else {
     // from there on, just provide the data to our consumer.
@@ -1038,7 +1038,7 @@ SimpleProtocol.prototype._read = function(n) {
 
 // Usage:
 // var parser = new SimpleProtocol(source);
-// Now parser is a readable stream that will emit &#39;header&#39;
+// Now parser is a readable stream that will emit &apos;header&apos;
 // with the parsed header data.</code></pre>
 <h4>new stream.Readable([options])<span><a class="mark" href="#stream_new_stream_readable_options" id="stream_new_stream_readable_options">#</a></span></h4>
 <div class="signature"><ul>
@@ -1053,7 +1053,7 @@ as a stream of objects. Meaning that stream.read(n) returns
 a single value instead of a Buffer of size n.  Default=false</li>
 </ul>
 </li>
-</div></ul>
+</ul></div>
 <p>In classes that extend the Readable class, make sure to call the
 Readable constructor so that the buffering settings can be properly
 initialized.
@@ -1062,7 +1062,7 @@ initialized.
 <h4>readable._read(size)<span><a class="mark" href="#stream_readable_read_size_1" id="stream_readable_read_size_1">#</a></span></h4>
 <div class="signature"><ul>
 <li><code>size</code> <span class="type">Number</span> Number of bytes to read asynchronously</li>
-</div></ul>
+</ul></div>
 <p>Note: <strong>Implement this function, but do NOT call it directly.</strong>
 
 </p>
@@ -1099,9 +1099,9 @@ becomes available.  There is no need, for example to &quot;wait&quot; until
 <div class="signature"><ul>
 <li><code>chunk</code> <span class="type">Buffer | null | String</span> Chunk of data to push into the read queue</li>
 <li><code>encoding</code> <span class="type">String</span> Encoding of String chunks.  Must be a valid
-Buffer encoding, such as <code>&#39;utf8&#39;</code> or <code>&#39;ascii&#39;</code></li>
+Buffer encoding, such as <code>&apos;utf8&apos;</code> or <code>&apos;ascii&apos;</code></li>
 <li>return <span class="type">Boolean</span> Whether or not more pushes should be performed</li>
-</div></ul>
+</ul></div>
 <p>Note: <strong>This function should be called by Readable implementors, NOT
 by consumers of Readable streams.</strong>
 
@@ -1111,7 +1111,7 @@ by consumers of Readable streams.</strong>
 
 </p>
 <p>The <code>Readable</code> class works by putting data into a read queue to be
-pulled out later by calling the <code>read()</code> method when the <code>&#39;readable&#39;</code>
+pulled out later by calling the <code>read()</code> method when the <code>&apos;readable&apos;</code>
 event fires.
 
 </p>
@@ -1138,7 +1138,7 @@ function SourceWrapper(options) {
   this._source = getLowlevelSourceObject();
   var self = this;
 
-  // Every time there&#39;s data, we push it into the internal buffer.
+  // Every time there&apos;s data, we push it into the internal buffer.
   this._source.ondata = function(chunk) {
     // if push() returns false, then we need to stop reading from source
     if (!self.push(chunk))
@@ -1180,7 +1180,7 @@ a valid operation. If set you can write arbitrary data instead
 of only <code>Buffer</code> / <code>String</code> data.  Default=false</li>
 </ul>
 </li>
-</div></ul>
+</ul></div>
 <p>In classes that extend the Writable class, make sure to call the
 constructor so that the buffering settings can be properly
 initialized.
@@ -1196,7 +1196,7 @@ encoding type.  Ignore if chunk is a buffer.  Note that chunk will
 explicitly set to <code>false</code>.</li>
 <li><code>callback</code> <span class="type">Function</span> Call this function (optionally with an error
 argument) when you are done processing the supplied chunk.</li>
-</div></ul>
+</ul></div>
 <p>All Writable stream implementations must provide a <a href="#stream_writable_write_chunk_encoding_callback_1"><code>_write()</code></a>
 method to send data to the underlying resource.
 
@@ -1231,7 +1231,7 @@ your own extension classes.
 format: <code>{ chunk: ..., encoding: ... }</code>.</li>
 <li><code>callback</code> <span class="type">Function</span> Call this function (optionally with an error
 argument) when you are done processing the supplied chunks.</li>
-</div></ul>
+</ul></div>
 <p>Note: <strong>This function MUST NOT be called directly.</strong>  It may be
 implemented by child classes, and called by the internal Writable
 class methods only.
@@ -1256,7 +1256,7 @@ with an underlying implementation of the <code>_read(size)</code> and
 Readable or Writable stream class.
 
 </p>
-<p>Since JavaScript doesn&#39;t have multiple prototypal inheritance, this
+<p>Since JavaScript doesn&apos;t have multiple prototypal inheritance, this
 class prototypally inherits from Readable, and then parasitically from
 Writable.  It is thus up to the user to implement both the lowlevel
 <code>_read(n)</code> method as well as the lowlevel
@@ -1278,7 +1278,7 @@ for writable side of the stream. Has no effect if <code>objectMode</code>
 is <code>true</code>.</li>
 </ul>
 </li>
-</div></ul>
+</ul></div>
 <p>In classes that extend the Duplex class, make sure to call the
 constructor so that the buffering settings can be properly
 initialized.
@@ -1307,7 +1307,7 @@ also implement the <code>_flush()</code> method.  (See below.)
 <div class="signature"><ul>
 <li><code>options</code> <span class="type">Object</span> Passed to both Writable and Readable
 constructors.</li>
-</div></ul>
+</ul></div>
 <p>In classes that extend the Transform class, make sure to call the
 constructor so that the buffering settings can be properly
 initialized.
@@ -1321,7 +1321,7 @@ be a buffer unless the <code>decodeStrings</code> option was set to <code>false<
 encoding type.  (Ignore if <code>decodeStrings</code> chunk is a buffer.)</li>
 <li><code>callback</code> <span class="type">Function</span> Call this function (optionally with an error
 argument and data) when you are done processing the supplied chunk.</li>
-</div></ul>
+</ul></div>
 <p>Note: <strong>This function MUST NOT be called directly.</strong>  It should be
 implemented by child classes, and called by the internal Transform
 class methods only.
@@ -1367,7 +1367,7 @@ your own extension classes.
 <div class="signature"><ul>
 <li><code>callback</code> <span class="type">Function</span> Call this function (optionally with an error
 argument) when you are done flushing any remaining data.</li>
-</div></ul>
+</ul></div>
 <p>Note: <strong>This function MUST NOT be called directly.</strong>  It MAY be implemented
 by child classes, and if so, will be called by the internal Transform
 class methods only.
@@ -1394,7 +1394,7 @@ programs.  However, you <strong>are</strong> expected to override this method in
 your own extension classes.
 
 </p>
-<h4>Events: &#39;finish&#39; and &#39;end&#39;<span><a class="mark" href="#stream_events_finish_and_end" id="stream_events_finish_and_end">#</a></span></h4>
+<h4>Events: &apos;finish&apos; and &apos;end&apos;<span><a class="mark" href="#stream_events_finish_and_end" id="stream_events_finish_and_end">#</a></span></h4>
 <p>The <a href="#stream_event_finish"><code>finish</code></a> and <a href="#stream_event_end"><code>end</code></a> events are from the parent Writable
 and Readable classes respectively. The <code>finish</code> event is fired after
 <code>.end()</code> is called and all chunks have been processed by <code>_transform</code>,
@@ -1413,8 +1413,8 @@ would be piped into the parser, which is a more idiomatic Node stream
 approach.
 
 </p>
-<pre><code class="javascript">var util = require(&#39;util&#39;);
-var Transform = require(&#39;stream&#39;).Transform;
+<pre><code class="javascript">var util = require(&apos;util&apos;);
+var Transform = require(&apos;stream&apos;).Transform;
 util.inherits(SimpleProtocol, Transform);
 
 function SimpleProtocol(options) {
@@ -1433,7 +1433,7 @@ SimpleProtocol.prototype._transform = function(chunk, encoding, done) {
     // check if the chunk has a \n\n
     var split = -1;
     for (var i = 0; i &lt; chunk.length; i++) {
-      if (chunk[i] === 10) { // &#39;\n&#39;
+      if (chunk[i] === 10) { // &apos;\n&apos;
         if (this._sawFirstCr) {
           split = i;
           break;
@@ -1457,11 +1457,11 @@ SimpleProtocol.prototype._transform = function(chunk, encoding, done) {
       try {
         this.header = JSON.parse(header);
       } catch (er) {
-        this.emit(&#39;error&#39;, new Error(&#39;invalid simple protocol data&#39;));
+        this.emit(&apos;error&apos;, new Error(&apos;invalid simple protocol data&apos;));
         return;
       }
       // and let them know that we are done parsing the header.
-      this.emit(&#39;header&#39;, this.header);
+      this.emit(&apos;header&apos;, this.header);
 
       // now, because we got some extra data, emit this first.
       this.push(chunk.slice(split));
@@ -1476,7 +1476,7 @@ SimpleProtocol.prototype._transform = function(chunk, encoding, done) {
 // Usage:
 // var parser = new SimpleProtocol();
 // source.pipe(parser)
-// Now parser is a readable stream that will emit &#39;header&#39;
+// Now parser is a readable stream that will emit &apos;header&apos;
 // with the parsed header data.</code></pre>
 <h3>Class: stream.PassThrough<span><a class="mark" href="#stream_class_stream_passthrough" id="stream_class_stream_passthrough">#</a></span></h3>
 <p>This is a trivial implementation of a <a href="#stream_class_stream_transform">Transform</a> stream that simply
@@ -1529,27 +1529,27 @@ a low-level <code>_read</code> call.
 
 </p>
 <p>There is almost never a need to do this.  However, you will see some
-cases in Node&#39;s internals where this is done, particularly in the
+cases in Node&apos;s internals where this is done, particularly in the
 Readable stream class internals.
 
 </p>
-<h3><code>stream.push(&#39;&#39;)</code><span><a class="mark" href="#stream_stream_push" id="stream_stream_push">#</a></span></h3>
+<h3><code>stream.push(&apos;&apos;)</code><span><a class="mark" href="#stream_stream_push" id="stream_stream_push">#</a></span></h3>
 <p>Pushing a zero-byte string or Buffer (when not in <a href="#stream_object_mode">Object mode</a>) has an
 interesting side effect.  Because it <em>is</em> a call to
 <a href="#stream_readable_push_chunk_encoding"><code>stream.push()</code></a>, it will end the <code>reading</code> process.  However, it
-does <em>not</em> add any data to the readable buffer, so there&#39;s nothing for
+does <em>not</em> add any data to the readable buffer, so there&apos;s nothing for
 a user to consume.
 
 </p>
 <p>Very rarely, there are cases where you have no data to provide now,
 but the consumer of your stream (or, perhaps, another bit of your own
 code) will know when to check again, by calling <code>stream.read(0)</code>.  In
-those cases, you <em>may</em> call <code>stream.push(&#39;&#39;)</code>.
+those cases, you <em>may</em> call <code>stream.push(&apos;&apos;)</code>.
 
 </p>
 <p>So far, the only use case for this functionality is in the
 <a href="tls.html#tls_class_cryptostream">tls.CryptoStream</a> class, which is deprecated in Node v0.12.  If you
-find that you have to use <code>stream.push(&#39;&#39;)</code>, please consider another
+find that you have to use <code>stream.push(&apos;&apos;)</code>, please consider another
 approach, because it almost certainly indicates that something is
 horribly wrong.
 
@@ -1562,20 +1562,20 @@ simpler, but also less powerful and less useful.
 
 </p>
 <ul>
-<li>Rather than waiting for you to call the <code>read()</code> method, <code>&#39;data&#39;</code>
+<li>Rather than waiting for you to call the <code>read()</code> method, <code>&apos;data&apos;</code>
 events would start emitting immediately.  If you needed to do some
 I/O to decide how to handle data, then you had to store the chunks
 in some kind of buffer so that they would not be lost.</li>
 <li>The <a href="#stream_readable_pause"><code>pause()</code></a> method was advisory, rather than guaranteed.  This
-meant that you still had to be prepared to receive <code>&#39;data&#39;</code> events
+meant that you still had to be prepared to receive <code>&apos;data&apos;</code> events
 even when the stream was in a paused state.</li>
 </ul>
 <p>In Node v0.10, the Readable class described below was added.  For
 backwards compatibility with older Node programs, Readable streams
-switch into &quot;flowing mode&quot; when a <code>&#39;data&#39;</code> event handler is added, or
+switch into &quot;flowing mode&quot; when a <code>&apos;data&apos;</code> event handler is added, or
 when the <a href="#stream_readable_resume"><code>resume()</code></a> method is called.  The effect is that, even if
-you are not using the new <code>read()</code> method and <code>&#39;readable&#39;</code> event, you
-no longer have to worry about losing <code>&#39;data&#39;</code> chunks.
+you are not using the new <code>read()</code> method and <code>&apos;readable&apos;</code> event, you
+no longer have to worry about losing <code>&apos;data&apos;</code> chunks.
 
 </p>
 <p>Most programs will continue to function normally.  However, this
@@ -1583,7 +1583,7 @@ introduces an edge case in the following conditions:
 
 </p>
 <ul>
-<li>No <a href="#stream_event_data"><code>&#39;data&#39;</code> event</a> handler is added.</li>
+<li>No <a href="#stream_event_data"><code>&apos;data&apos;</code> event</a> handler is added.</li>
 <li>The <a href="#stream_readable_resume"><code>resume()</code></a> method is never called.</li>
 <li>The stream is not piped to any writable destination.</li>
 </ul>
@@ -1593,10 +1593,10 @@ introduces an edge case in the following conditions:
 <pre><code class="javascript">// WARNING!  BROKEN!
 net.createServer(function(socket) {
 
-  // we add an &#39;end&#39; method, but never consume the data
-  socket.on(&#39;end&#39;, function() {
+  // we add an &apos;end&apos; method, but never consume the data
+  socket.on(&apos;end&apos;, function() {
     // It will never get here.
-    socket.end(&#39;I got your message (but didnt read it)\n&#39;);
+    socket.end(&apos;I got your message (but didnt read it)\n&apos;);
   });
 
 }).listen(1337);</code></pre>
@@ -1612,8 +1612,8 @@ start the flow of data:
 <pre><code class="javascript">// Workaround
 net.createServer(function(socket) {
 
-  socket.on(&#39;end&#39;, function() {
-    socket.end(&#39;I got your message (but didnt read it)\n&#39;);
+  socket.on(&apos;end&apos;, function() {
+    socket.end(&apos;I got your message (but didnt read it)\n&apos;);
   });
 
   // start the flow of data, discarding it.
@@ -1666,9 +1666,9 @@ respectively. These options can be used to implement parsers and
 serializers with Transform streams.
 
 </p>
-<pre><code class="javascript">var util = require(&#39;util&#39;);
-var StringDecoder = require(&#39;string_decoder&#39;).StringDecoder;
-var Transform = require(&#39;stream&#39;).Transform;
+<pre><code class="javascript">var util = require(&apos;util&apos;);
+var StringDecoder = require(&apos;string_decoder&apos;).StringDecoder;
+var Transform = require(&apos;stream&apos;).Transform;
 util.inherits(JSONParseStream, Transform);
 
 // Gets \n-delimited JSON string data, and emits the parsed objects
@@ -1678,8 +1678,8 @@ function JSONParseStream() {
 
   Transform.call(this, { readableObjectMode : true });
 
-  this._buffer = &#39;&#39;;
-  this._decoder = new StringDecoder(&#39;utf8&#39;);
+  this._buffer = &apos;&apos;;
+  this._decoder = new StringDecoder(&apos;utf8&apos;);
 }
 
 JSONParseStream.prototype._transform = function(chunk, encoding, cb) {
@@ -1693,7 +1693,7 @@ JSONParseStream.prototype._transform = function(chunk, encoding, cb) {
     try {
       var obj = JSON.parse(line);
     } catch (er) {
-      this.emit(&#39;error&#39;, er);
+      this.emit(&apos;error&apos;, er);
       return;
     }
     // push the parsed object out to the readable consumer
@@ -1709,7 +1709,7 @@ JSONParseStream.prototype._flush = function(cb) {
     try {
       var obj = JSON.parse(rem);
     } catch (er) {
-      this.emit(&#39;error&#39;, er);
+      this.emit(&apos;error&apos;, er);
       return;
     }
     // push the parsed object out to the readable consumer
@@ -1725,7 +1725,7 @@ JSONParseStream.prototype._flush = function(cb) {
     <div id="footer">
       <div class="foot-1">
         <a href="http://www.joyent.com"><h5>The Node.js Project is Sponsored by</h5>
-        <img src="assets/joyent-footer.svg" width="200">
+        
         <p class="tag">Production Node +<br>High Performance Infrastructure</p></a>
         <a href="https://my.joyent.com/landing/signup/701800000015696" class="button getstarted">Get Started</a>
       </div>
@@ -1761,18 +1761,10 @@ JSONParseStream.prototype._flush = function(cb) {
       </div>
     </div>
 
-  <script src="/sh_main.js"></script>
-  <script src="/sh_javascript.min.js"></script>
-  <script>highlight(undefined, undefined, 'pre');</script>
-  <script>
-    window._gaq = [['_setAccount', 'UA-10874194-2'], ['_trackPageview']];
-    (function(d, t) {
-      var g = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      g.src = '//www.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g, s);
-    }(document, 'script'));
-  </script>
+  
+  
+  
+  
 </body>
 </html>
 

@@ -6,12 +6,12 @@
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/sh.css">
   <link rel="canonical" href="http://nodejs.org/api/tls.html">
-  <script type="text/javascript" src="//use.typekit.net/mse5tqx.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+  
 </head>
 <body class="alt apidoc int docs" id="docs">
     <div id="nav">
-      <img id="logo" src="assets/logo.svg" alt="node.js">
+      
       <ul>
         <li><a href="http://nodejs.org">Home</a></li>
         <li><a href="http://nodejs.org/download/">Downloads</a></li>
@@ -65,15 +65,15 @@
 <li><a href="#tls_tls_createsecurecontext_details">tls.createSecureContext(details)</a></li>
 <li><a href="#tls_tls_createsecurepair_context_isserver_requestcert_rejectunauthorized">tls.createSecurePair([context][, isServer][, requestCert][, rejectUnauthorized])</a></li>
 <li><a href="#tls_class_securepair">Class: SecurePair</a><ul>
-<li><a href="#tls_event_secure">Event: &#39;secure&#39;</a></li>
+<li><a href="#tls_event_secure">Event: &apos;secure&apos;</a></li>
 </ul>
 </li>
 <li><a href="#tls_class_tls_server">Class: tls.Server</a><ul>
-<li><a href="#tls_event_secureconnection">Event: &#39;secureConnection&#39;</a></li>
-<li><a href="#tls_event_clienterror">Event: &#39;clientError&#39;</a></li>
-<li><a href="#tls_event_newsession">Event: &#39;newSession&#39;</a></li>
-<li><a href="#tls_event_resumesession">Event: &#39;resumeSession&#39;</a></li>
-<li><a href="#tls_event_ocsprequest">Event: &#39;OCSPRequest&#39;</a></li>
+<li><a href="#tls_event_secureconnection">Event: &apos;secureConnection&apos;</a></li>
+<li><a href="#tls_event_clienterror">Event: &apos;clientError&apos;</a></li>
+<li><a href="#tls_event_newsession">Event: &apos;newSession&apos;</a></li>
+<li><a href="#tls_event_resumesession">Event: &apos;resumeSession&apos;</a></li>
+<li><a href="#tls_event_ocsprequest">Event: &apos;OCSPRequest&apos;</a></li>
 <li><a href="#tls_server_listen_port_host_callback">server.listen(port[, host][, callback])</a></li>
 <li><a href="#tls_server_close">server.close()</a></li>
 <li><a href="#tls_server_address">server.address()</a></li>
@@ -87,8 +87,8 @@
 </ul>
 </li>
 <li><a href="#tls_class_tls_tlssocket_1">Class: tls.TLSSocket</a><ul>
-<li><a href="#tls_event_secureconnect">Event: &#39;secureConnect&#39;</a></li>
-<li><a href="#tls_event_ocspresponse">Event: &#39;OCSPResponse&#39;</a></li>
+<li><a href="#tls_event_secureconnect">Event: &apos;secureConnect&apos;</a></li>
+<li><a href="#tls_event_ocspresponse">Event: &apos;OCSPResponse&apos;</a></li>
 <li><a href="#tls_tlssocket_encrypted">tlsSocket.encrypted</a></li>
 <li><a href="#tls_tlssocket_authorized">tlsSocket.authorized</a></li>
 <li><a href="#tls_tlssocket_authorizationerror">tlsSocket.authorizationError</a></li>
@@ -114,7 +114,7 @@
 
           <div id="apicontent">
             <h1>TLS (SSL)<span><a class="mark" href="#tls_tls_ssl" id="tls_tls_ssl">#</a></span></h1>
-<pre class="api_stability_3">Stability: 3 - Stable</pre><p>Use <code>require(&#39;tls&#39;)</code> to access this module.
+<pre class="api_stability_3">Stability: 3 - Stable</pre><p>Use <code>require(&apos;tls&apos;)</code> to access this module.
 
 </p>
 <p>The <code>tls</code> module uses OpenSSL to provide Transport Layer Security and/or
@@ -166,7 +166,7 @@ SSLv3 will not be compiled in by default.
 
 </p>
 <p>There is a way to force node into using SSLv3 or SSLv2 only mode by explicitly
-specifying <code>secureProtocol</code> to <code>&#39;SSLv3_method&#39;</code> or <code>&#39;SSLv2_method&#39;</code>.
+specifying <code>secureProtocol</code> to <code>&apos;SSLv3_method&apos;</code> or <code>&apos;SSLv2_method&apos;</code>.
 
 </p>
 <p>The default protocol method Node.js uses is <code>SSLv23_method</code> which would be more
@@ -189,11 +189,11 @@ options.
 <li>If your application is behaving as a secure server, clients who are <code>SSLv3</code>
 only will now not be able to appropriately negotiate a connection and will be
 refused. In this case your server will emit a <code>clientError</code> event. The error
-message will include <code>&#39;wrong version number&#39;</code>.</li>
+message will include <code>&apos;wrong version number&apos;</code>.</li>
 <li>If your application is behaving as a secure client and communicating with a
-server that doesn&#39;t support methods more secure than SSLv3 then your connection
-won&#39;t be able to negotiate and will fail. In this case your client will emit a
-an <code>error</code> event. The error message will include <code>&#39;wrong version number&#39;</code>.</li>
+server that doesn&apos;t support methods more secure than SSLv3 then your connection
+won&apos;t be able to negotiate and will fail. In this case your client will emit a
+an <code>error</code> event. The error message will include <code>&apos;wrong version number&apos;</code>.</li>
 </ul>
 <h2>Client-initiated renegotiation attack mitigation<span><a class="mark" href="#tls_client_initiated_renegotiation_attack_mitigation" id="tls_client_initiated_renegotiation_attack_mitigation">#</a></span></h2>
 <!-- type=misc -->
@@ -216,11 +216,11 @@ exceeded. The limits are configurable:
 10 minutes.</p>
 </li>
 </ul>
-<p>Don&#39;t change the defaults unless you know what you are doing.
+<p>Don&apos;t change the defaults unless you know what you are doing.
 
 </p>
 <p>To test your server, connect to it with <code>openssl s_client -connect address:port</code>
-and tap <code>R&lt;CR&gt;</code> (that&#39;s the letter <code>R</code> followed by a carriage return) a few
+and tap <code>R&lt;CR&gt;</code> (that&apos;s the letter <code>R</code> followed by a carriage return) a few
 times.
 
 
@@ -274,7 +274,7 @@ is expensive.
 
 </p>
 <pre><code>var ciphers = tls.getCiphers();
-console.log(ciphers); // [&#39;AES128-SHA&#39;, &#39;AES256-SHA&#39;, ...]</code></pre>
+console.log(ciphers); // [&apos;AES128-SHA&apos;, &apos;AES256-SHA&apos;, ...]</code></pre>
 <h2>tls.createServer(options[, secureConnectionListener])<span><a class="mark" href="#tls_tls_createserver_options_secureconnectionlistener" id="tls_tls_createserver_options_secureconnectionlistener">#</a></span></h2>
 <p>Creates a new <a href="#tls_class_tls_server">tls.Server</a>.  The <code>connectionListener</code> argument is
 automatically set as a listener for the <a href="#tls_event_secureconnection">secureConnection</a> event.  The
@@ -332,10 +332,10 @@ load, it is silently discarded.</p>
 </li>
 <li><p><code>handshakeTimeout</code>: Abort the connection if the SSL/TLS handshake does not
 finish in this many milliseconds. The default is 120 seconds.</p>
-<p>A <code>&#39;clientError&#39;</code> is emitted on the <code>tls.Server</code> object whenever a handshake
+<p>A <code>&apos;clientError&apos;</code> is emitted on the <code>tls.Server</code> object whenever a handshake
 times out.</p>
 </li>
-<li><p><code>honorCipherOrder</code> : When choosing a cipher, use the server&#39;s preferences
+<li><p><code>honorCipherOrder</code> : When choosing a cipher, use the server&apos;s preferences
 instead of the client preferences.</p>
 <p>Although, this option is disabled by default, it is <em>recommended</em> that you
 use this option in conjunction with the <code>ciphers</code> option to mitigate
@@ -353,7 +353,7 @@ which is not authorized with the list of supplied CAs. This option only
 has an effect if <code>requestCert</code> is <code>true</code>. Default: <code>false</code>.</p>
 </li>
 <li><p><code>checkServerIdentity(servername, cert)</code>: Provide an override for checking
-server&#39;s hostname against the certificate. Should return an error if verification
+server&apos;s hostname against the certificate. Should return an error if verification
 fails. Return <code>undefined</code> if passing.</p>
 </li>
 <li><p><code>NPNProtocols</code>: An array or <code>Buffer</code> of possible NPN protocols. (Protocols
@@ -364,7 +364,7 @@ supports SNI TLS extension. Two argument will be passed to it: <code>servername<
 and <code>cb</code>. <code>SNICallback</code> should invoke <code>cb(null, ctx)</code>, where <code>ctx</code> is a
 SecureContext instance.
 (You can use <code>tls.createSecureContext(...)</code> to get proper
-SecureContext). If <code>SNICallback</code> wasn&#39;t provided - default callback with
+SecureContext). If <code>SNICallback</code> wasn&apos;t provided - default callback with
 high-level API will be used (see below).</p>
 </li>
 <li><p><code>sessionTimeout</code>: An integer specifying the seconds after which TLS
@@ -392,38 +392,38 @@ for all available options.</p>
 <p>Here is a simple example echo server:
 
 </p>
-<pre><code>var tls = require(&#39;tls&#39;);
-var fs = require(&#39;fs&#39;);
+<pre><code>var tls = require(&apos;tls&apos;);
+var fs = require(&apos;fs&apos;);
 
 var options = {
-  key: fs.readFileSync(&#39;server-key.pem&#39;),
-  cert: fs.readFileSync(&#39;server-cert.pem&#39;),
+  key: fs.readFileSync(&apos;server-key.pem&apos;),
+  cert: fs.readFileSync(&apos;server-cert.pem&apos;),
 
   // This is necessary only if using the client certificate authentication.
   requestCert: true,
 
   // This is necessary only if the client uses the self-signed certificate.
-  ca: [ fs.readFileSync(&#39;client-cert.pem&#39;) ]
+  ca: [ fs.readFileSync(&apos;client-cert.pem&apos;) ]
 };
 
 var server = tls.createServer(options, function(socket) {
-  console.log(&#39;server connected&#39;,
-              socket.authorized ? &#39;authorized&#39; : &#39;unauthorized&#39;);
+  console.log(&apos;server connected&apos;,
+              socket.authorized ? &apos;authorized&apos; : &apos;unauthorized&apos;);
   socket.write(&quot;welcome!\n&quot;);
-  socket.setEncoding(&#39;utf8&#39;);
+  socket.setEncoding(&apos;utf8&apos;);
   socket.pipe(socket);
 });
 server.listen(8000, function() {
-  console.log(&#39;server bound&#39;);
+  console.log(&apos;server bound&apos;);
 });</code></pre>
 <p>Or
 
 </p>
-<pre><code>var tls = require(&#39;tls&#39;);
-var fs = require(&#39;fs&#39;);
+<pre><code>var tls = require(&apos;tls&apos;);
+var fs = require(&apos;fs&apos;);
 
 var options = {
-  pfx: fs.readFileSync(&#39;server.pfx&#39;),
+  pfx: fs.readFileSync(&apos;server.pfx&apos;),
 
   // This is necessary only if using the client certificate authentication.
   requestCert: true,
@@ -431,14 +431,14 @@ var options = {
 };
 
 var server = tls.createServer(options, function(socket) {
-  console.log(&#39;server connected&#39;,
-              socket.authorized ? &#39;authorized&#39; : &#39;unauthorized&#39;);
+  console.log(&apos;server connected&apos;,
+              socket.authorized ? &apos;authorized&apos; : &apos;unauthorized&apos;);
   socket.write(&quot;welcome!\n&quot;);
-  socket.setEncoding(&#39;utf8&#39;);
+  socket.setEncoding(&apos;utf8&apos;);
   socket.pipe(socket);
 });
 server.listen(8000, function() {
-  console.log(&#39;server bound&#39;);
+  console.log(&apos;server bound&apos;);
 });</code></pre>
 <p>You can test this server by connecting to it with <code>openssl s_client</code>:
 
@@ -491,13 +491,13 @@ format. If this is omitted several well known &quot;root&quot; CAs will be used,
 like VeriSign. These are used to authorize connections.</p>
 </li>
 <li><p><code>rejectUnauthorized</code>: If <code>true</code>, the server certificate is verified against
-the list of supplied CAs. An <code>&#39;error&#39;</code> event is emitted if verification
+the list of supplied CAs. An <code>&apos;error&apos;</code> event is emitted if verification
 fails; <code>err.code</code> contains the OpenSSL error code. Default: <code>true</code>.</p>
 </li>
 <li><p><code>NPNProtocols</code>: An array of strings or <code>Buffer</code>s containing supported NPN
 protocols. <code>Buffer</code>s should have following format: <code>0x05hello0x05world</code>,
-where first byte is next protocol name&#39;s length. (Passing array should
-usually be much simpler: <code>[&#39;hello&#39;, &#39;world&#39;]</code>.)</p>
+where first byte is next protocol name&apos;s length. (Passing array should
+usually be much simpler: <code>[&apos;hello&apos;, &apos;world&apos;]</code>.)</p>
 </li>
 <li><p><code>servername</code>: Servername for SNI (Server Name Indication) TLS extension.</p>
 </li>
@@ -509,7 +509,7 @@ OpenSSL and are defined in the constant <a href="http://www.openssl.org/docs/ssl
 </li>
 </ul>
 <p>The <code>callback</code> parameter will be added as a listener for the
-<a href="#tls_event_secureconnect">&#39;secureConnect&#39;</a> event.
+<a href="#tls_event_secureconnect">&apos;secureConnect&apos;</a> event.
 
 </p>
 <p><code>tls.connect()</code> returns a <a href="#tls_class_tls_tlssocket">tls.TLSSocket</a> object.
@@ -518,52 +518,52 @@ OpenSSL and are defined in the constant <a href="http://www.openssl.org/docs/ssl
 <p>Here is an example of a client of echo server as described previously:
 
 </p>
-<pre><code>var tls = require(&#39;tls&#39;);
-var fs = require(&#39;fs&#39;);
+<pre><code>var tls = require(&apos;tls&apos;);
+var fs = require(&apos;fs&apos;);
 
 var options = {
   // These are necessary only if using the client certificate authentication
-  key: fs.readFileSync(&#39;client-key.pem&#39;),
-  cert: fs.readFileSync(&#39;client-cert.pem&#39;),
+  key: fs.readFileSync(&apos;client-key.pem&apos;),
+  cert: fs.readFileSync(&apos;client-cert.pem&apos;),
 
   // This is necessary only if the server uses the self-signed certificate
-  ca: [ fs.readFileSync(&#39;server-cert.pem&#39;) ]
+  ca: [ fs.readFileSync(&apos;server-cert.pem&apos;) ]
 };
 
 var socket = tls.connect(8000, options, function() {
-  console.log(&#39;client connected&#39;,
-              socket.authorized ? &#39;authorized&#39; : &#39;unauthorized&#39;);
+  console.log(&apos;client connected&apos;,
+              socket.authorized ? &apos;authorized&apos; : &apos;unauthorized&apos;);
   process.stdin.pipe(socket);
   process.stdin.resume();
 });
-socket.setEncoding(&#39;utf8&#39;);
-socket.on(&#39;data&#39;, function(data) {
+socket.setEncoding(&apos;utf8&apos;);
+socket.on(&apos;data&apos;, function(data) {
   console.log(data);
 });
-socket.on(&#39;end&#39;, function() {
+socket.on(&apos;end&apos;, function() {
   server.close();
 });</code></pre>
 <p>Or
 
 </p>
-<pre><code>var tls = require(&#39;tls&#39;);
-var fs = require(&#39;fs&#39;);
+<pre><code>var tls = require(&apos;tls&apos;);
+var fs = require(&apos;fs&apos;);
 
 var options = {
-  pfx: fs.readFileSync(&#39;client.pfx&#39;)
+  pfx: fs.readFileSync(&apos;client.pfx&apos;)
 };
 
 var socket = tls.connect(8000, options, function() {
-  console.log(&#39;client connected&#39;,
-              socket.authorized ? &#39;authorized&#39; : &#39;unauthorized&#39;);
+  console.log(&apos;client connected&apos;,
+              socket.authorized ? &apos;authorized&apos; : &apos;unauthorized&apos;);
   process.stdin.pipe(socket);
   process.stdin.resume();
 });
-socket.setEncoding(&#39;utf8&#39;);
-socket.on(&#39;data&#39;, function(data) {
+socket.setEncoding(&apos;utf8&apos;);
+socket.on(&apos;data&apos;, function(data) {
   console.log(data);
 });
-socket.on(&#39;end&#39;, function() {
+socket.on(&apos;end&apos;, function() {
   server.close();
 });</code></pre>
 <h2>Class: tls.TLSSocket<span><a class="mark" href="#tls_class_tls_tlssocket" id="tls_class_tls_tlssocket">#</a></span></h2>
@@ -623,11 +623,11 @@ certificates to trust.</li>
 Consult
 <a href="http://www.openssl.org/docs/apps/ciphers.html#CIPHER_LIST_FORMAT">http://www.openssl.org/docs/apps/ciphers.html#CIPHER_LIST_FORMAT</a>
 for details on the format.</li>
-<li><code>honorCipherOrder</code> : When choosing a cipher, use the server&#39;s preferences
+<li><code>honorCipherOrder</code> : When choosing a cipher, use the server&apos;s preferences
 instead of the client preferences. For further details see <code>tls</code> module
 documentation.</li>
 </ul>
-<p>If no &#39;ca&#39; details are given, then node.js will use the default
+<p>If no &apos;ca&apos; details are given, then node.js will use the default
 publicly trusted list of CAs as given in
 </p>
 <p><a href="http://mxr.mozilla.org/mozilla/source/security/nss/lib/ckfw/builtins/certdata.txt">http://mxr.mozilla.org/mozilla/source/security/nss/lib/ckfw/builtins/certdata.txt</a>.
@@ -666,12 +666,12 @@ servers with <code>requestCert</code> enabled.</p>
 <p>Returned by tls.createSecurePair.
 
 </p>
-<h3>Event: &#39;secure&#39;<span><a class="mark" href="#tls_event_secure" id="tls_event_secure">#</a></span></h3>
+<h3>Event: &apos;secure&apos;<span><a class="mark" href="#tls_event_secure" id="tls_event_secure">#</a></span></h3>
 <p>The event is emitted from the SecurePair once the pair has successfully
 established a secure connection.
 
 </p>
-<p>Similarly to the checking for the server &#39;secureConnection&#39; event,
+<p>Similarly to the checking for the server &apos;secureConnection&apos; event,
 pair.cleartext.authorized should be checked to confirm whether the certificate
 used properly authorized.
 
@@ -682,7 +682,7 @@ Instead of accepting just raw TCP connections, this accepts encrypted
 connections using TLS or SSL.
 
 </p>
-<h3>Event: &#39;secureConnection&#39;<span><a class="mark" href="#tls_event_secureconnection" id="tls_event_secureconnection">#</a></span></h3>
+<h3>Event: &apos;secureConnection&apos;<span><a class="mark" href="#tls_event_secureconnection" id="tls_event_secureconnection">#</a></span></h3>
 <p><code>function (tlsSocket) {}</code>
 
 </p>
@@ -703,11 +703,11 @@ SNI.
 
 
 </p>
-<h3>Event: &#39;clientError&#39;<span><a class="mark" href="#tls_event_clienterror" id="tls_event_clienterror">#</a></span></h3>
+<h3>Event: &apos;clientError&apos;<span><a class="mark" href="#tls_event_clienterror" id="tls_event_clienterror">#</a></span></h3>
 <p><code>function (exception, tlsSocket) { }</code>
 
 </p>
-<p>When a client connection emits an &#39;error&#39; event before secure connection is
+<p>When a client connection emits an &apos;error&apos; event before secure connection is
 established - it will be forwarded here.
 
 </p>
@@ -715,7 +715,7 @@ established - it will be forwarded here.
 
 
 </p>
-<h3>Event: &#39;newSession&#39;<span><a class="mark" href="#tls_event_newsession" id="tls_event_newsession">#</a></span></h3>
+<h3>Event: &apos;newSession&apos;<span><a class="mark" href="#tls_event_newsession" id="tls_event_newsession">#</a></span></h3>
 <p><code>function (sessionId, sessionData, callback) { }</code>
 
 </p>
@@ -729,14 +729,14 @@ established after addition of event listener.
 
 
 </p>
-<h3>Event: &#39;resumeSession&#39;<span><a class="mark" href="#tls_event_resumesession" id="tls_event_resumesession">#</a></span></h3>
+<h3>Event: &apos;resumeSession&apos;<span><a class="mark" href="#tls_event_resumesession" id="tls_event_resumesession">#</a></span></h3>
 <p><code>function (sessionId, callback) { }</code>
 
 </p>
 <p>Emitted when client wants to resume previous TLS session. Event listener may
 perform lookup in external storage using given <code>sessionId</code>, and invoke
-<code>callback(null, sessionData)</code> once finished. If session can&#39;t be resumed
-(i.e. doesn&#39;t exist in storage) one may call <code>callback(null, null)</code>. Calling
+<code>callback(null, sessionData)</code> once finished. If session can&apos;t be resumed
+(i.e. doesn&apos;t exist in storage) one may call <code>callback(null, null)</code>. Calling
 <code>callback(err)</code> will terminate incoming connection and destroy socket.
 
 </p>
@@ -745,15 +745,15 @@ established after addition of event listener.
 
 
 </p>
-<h3>Event: &#39;OCSPRequest&#39;<span><a class="mark" href="#tls_event_ocsprequest" id="tls_event_ocsprequest">#</a></span></h3>
+<h3>Event: &apos;OCSPRequest&apos;<span><a class="mark" href="#tls_event_ocsprequest" id="tls_event_ocsprequest">#</a></span></h3>
 <p><code>function (certificate, issuer, callback) { }</code>
 
 </p>
 <p>Emitted when the client sends a certificate status request. You could parse
-server&#39;s current certificate to obtain OCSP url and certificate id, and after
+server&apos;s current certificate to obtain OCSP url and certificate id, and after
 obtaining OCSP response invoke <code>callback(null, resp)</code>, where <code>resp</code> is a
 <code>Buffer</code> instance. Both <code>certificate</code> and <code>issuer</code> are a <code>Buffer</code>
-DER-representations of the primary and issuer&#39;s certificates. They could be used
+DER-representations of the primary and issuer&apos;s certificates. They could be used
 to obtain OCSP certificate id and OCSP endpoint url.
 
 </p>
@@ -808,7 +808,7 @@ when the server has been bound.
 </p>
 <h3>server.close()<span><a class="mark" href="#tls_server_close" id="tls_server_close">#</a></span></h3>
 <p>Stops the server from accepting new connections. This function is
-asynchronous, the server is finally closed when the server emits a <code>&#39;close&#39;</code>
+asynchronous, the server is finally closed when the server emits a <code>&apos;close&apos;</code>
 event.
 
 </p>
@@ -819,14 +819,14 @@ more information.
 
 </p>
 <h3>server.addContext(hostname, context)<span><a class="mark" href="#tls_server_addcontext_hostname_context" id="tls_server_addcontext_hostname_context">#</a></span></h3>
-<p>Add secure context that will be used if client request&#39;s SNI hostname is
+<p>Add secure context that will be used if client request&apos;s SNI hostname is
 matching passed <code>hostname</code> (wildcards can be used). <code>context</code> can contain
 <code>key</code>, <code>cert</code>, <code>ca</code> and/or any other properties from <code>tls.createSecureContext</code>
 <code>options</code> argument.
 
 </p>
 <h3>server.maxConnections<span><a class="mark" href="#tls_server_maxconnections" id="tls_server_maxconnections">#</a></span></h3>
-<p>Set this property to reject connections when the server&#39;s connection count
+<p>Set this property to reject connections when the server&apos;s connection count
 gets high.
 
 </p>
@@ -840,7 +840,7 @@ gets high.
 
 </p>
 <h3>cryptoStream.bytesWritten<span><a class="mark" href="#tls_cryptostream_byteswritten" id="tls_cryptostream_byteswritten">#</a></span></h3>
-<p>A proxy to the underlying socket&#39;s bytesWritten accessor, this will return
+<p>A proxy to the underlying socket&apos;s bytesWritten accessor, this will return
 the total bytes written to the socket, <em>including the TLS overhead</em>.
 
 </p>
@@ -853,9 +853,9 @@ of written data and all required TLS negotiation.
 common stream methods and events.
 
 </p>
-<h3>Event: &#39;secureConnect&#39;<span><a class="mark" href="#tls_event_secureconnect" id="tls_event_secureconnect">#</a></span></h3>
+<h3>Event: &apos;secureConnect&apos;<span><a class="mark" href="#tls_event_secureconnect" id="tls_event_secureconnect">#</a></span></h3>
 <p>This event is emitted after a new connection has been successfully handshaked.
-The listener will be called no matter if the server&#39;s certificate was
+The listener will be called no matter if the server&apos;s certificate was
 authorized or not. It is up to the user to test <code>tlsSocket.authorized</code>
 to see if the server certificate was signed by one of the specified CAs.
 If <code>tlsSocket.authorized === false</code> then the error can be found in
@@ -863,16 +863,16 @@ If <code>tlsSocket.authorized === false</code> then the error can be found in
 <code>tlsSocket.npnProtocol</code> for negotiated protocol.
 
 </p>
-<h3>Event: &#39;OCSPResponse&#39;<span><a class="mark" href="#tls_event_ocspresponse" id="tls_event_ocspresponse">#</a></span></h3>
+<h3>Event: &apos;OCSPResponse&apos;<span><a class="mark" href="#tls_event_ocspresponse" id="tls_event_ocspresponse">#</a></span></h3>
 <p><code>function (response) { }</code>
 
 </p>
 <p>This event will be emitted if <code>requestOCSP</code> option was set. <code>response</code> is a
-buffer object, containing server&#39;s OCSP response.
+buffer object, containing server&apos;s OCSP response.
 
 </p>
-<p>Traditionally, the <code>response</code> is a signed object from the server&#39;s CA that
-contains information about server&#39;s certificate revocation status.
+<p>Traditionally, the <code>response</code> is a signed object from the server&apos;s CA that
+contains information about server&apos;s certificate revocation status.
 
 </p>
 <h3>tlsSocket.encrypted<span><a class="mark" href="#tls_tlssocket_encrypted" id="tls_tlssocket_encrypted">#</a></span></h3>
@@ -886,12 +886,12 @@ specified CAs, otherwise <code>false</code>
 
 </p>
 <h3>tlsSocket.authorizationError<span><a class="mark" href="#tls_tlssocket_authorizationerror" id="tls_tlssocket_authorizationerror">#</a></span></h3>
-<p>The reason why the peer&#39;s certificate has not been verified. This property
+<p>The reason why the peer&apos;s certificate has not been verified. This property
 becomes available only when <code>tlsSocket.authorized === false</code>.
 
 </p>
 <h3>tlsSocket.getPeerCertificate([ detailed ])<span><a class="mark" href="#tls_tlssocket_getpeercertificate_detailed" id="tls_tlssocket_getpeercertificate_detailed">#</a></span></h3>
-<p>Returns an object representing the peer&#39;s certificate. The returned object has
+<p>Returns an object representing the peer&apos;s certificate. The returned object has
 some properties corresponding to the field of the certificate. If <code>detailed</code>
 argument is <code>true</code> - the full chain with <code>issuer</code> property will be returned,
 if <code>false</code> - only the top certificate without <code>issuer</code> property.
@@ -901,26 +901,26 @@ if <code>false</code> - only the top certificate without <code>issuer</code> pro
 
 </p>
 <pre><code>{ subject:
-   { C: &#39;UK&#39;,
-     ST: &#39;Acknack Ltd&#39;,
-     L: &#39;Rhys Jones&#39;,
-     O: &#39;node.js&#39;,
-     OU: &#39;Test TLS Certificate&#39;,
-     CN: &#39;localhost&#39; },
+   { C: &apos;UK&apos;,
+     ST: &apos;Acknack Ltd&apos;,
+     L: &apos;Rhys Jones&apos;,
+     O: &apos;node.js&apos;,
+     OU: &apos;Test TLS Certificate&apos;,
+     CN: &apos;localhost&apos; },
   issuerInfo:
-   { C: &#39;UK&#39;,
-     ST: &#39;Acknack Ltd&#39;,
-     L: &#39;Rhys Jones&#39;,
-     O: &#39;node.js&#39;,
-     OU: &#39;Test TLS Certificate&#39;,
-     CN: &#39;localhost&#39; },
+   { C: &apos;UK&apos;,
+     ST: &apos;Acknack Ltd&apos;,
+     L: &apos;Rhys Jones&apos;,
+     O: &apos;node.js&apos;,
+     OU: &apos;Test TLS Certificate&apos;,
+     CN: &apos;localhost&apos; },
   issuer:
    { ... another certificate ... },
   raw: &lt; RAW DER buffer &gt;,
-  valid_from: &#39;Nov 11 09:52:22 2009 GMT&#39;,
-  valid_to: &#39;Nov  6 09:52:22 2029 GMT&#39;,
-  fingerprint: &#39;2A:7A:C2:DD:E5:F9:CC:53:72:35:99:7A:02:5A:71:38:52:EC:8A:DF&#39;,
-  serialNumber: &#39;B9B0D332A1AA5635&#39; }</code></pre>
+  valid_from: &apos;Nov 11 09:52:22 2009 GMT&apos;,
+  valid_to: &apos;Nov  6 09:52:22 2029 GMT&apos;,
+  fingerprint: &apos;2A:7A:C2:DD:E5:F9:CC:53:72:35:99:7A:02:5A:71:38:52:EC:8A:DF&apos;,
+  serialNumber: &apos;B9B0D332A1AA5635&apos; }</code></pre>
 <p>If the peer does not provide a certificate, it returns <code>null</code> or an empty
 object.
 
@@ -931,7 +931,7 @@ protocol version of the current connection.
 
 </p>
 <p>Example:
-{ name: &#39;AES256-SHA&#39;, version: &#39;TLSv1/SSLv3&#39; }
+{ name: &apos;AES256-SHA&apos;, version: &apos;TLSv1/SSLv3&apos; }
 
 </p>
 <p>See SSL_CIPHER_get_name() and SSL_CIPHER_get_version() in
@@ -946,7 +946,7 @@ for details). <code>callback(err)</code> will be executed with <code>null</code>
 once the renegotiation is successfully completed.
 
 </p>
-<p>NOTE: Can be used to request peer&#39;s certificate after the secure connection
+<p>NOTE: Can be used to request peer&apos;s certificate after the secure connection
 has been established.
 
 </p>
@@ -984,16 +984,16 @@ session reuse provide <code>session</code> option to <code>tls.connect</code>.
 <p>Returns the bound address, the address family name and port of the
 underlying socket as reported by the operating system. Returns an
 object with three properties, e.g.
-<code>{ port: 12346, family: &#39;IPv4&#39;, address: &#39;127.0.0.1&#39; }</code>
+<code>{ port: 12346, family: &apos;IPv4&apos;, address: &apos;127.0.0.1&apos; }</code>
 
 </p>
 <h3>tlsSocket.remoteAddress<span><a class="mark" href="#tls_tlssocket_remoteaddress" id="tls_tlssocket_remoteaddress">#</a></span></h3>
 <p>The string representation of the remote IP address. For example,
-<code>&#39;74.125.127.100&#39;</code> or <code>&#39;2001:4860:a005::68&#39;</code>.
+<code>&apos;74.125.127.100&apos;</code> or <code>&apos;2001:4860:a005::68&apos;</code>.
 
 </p>
 <h3>tlsSocket.remoteFamily<span><a class="mark" href="#tls_tlssocket_remotefamily" id="tls_tlssocket_remotefamily">#</a></span></h3>
-<p>The string representation of the remote IP family. <code>&#39;IPv4&#39;</code> or <code>&#39;IPv6&#39;</code>.
+<p>The string representation of the remote IP family. <code>&apos;IPv4&apos;</code> or <code>&apos;IPv6&apos;</code>.
 
 </p>
 <h3>tlsSocket.remotePort<span><a class="mark" href="#tls_tlssocket_remoteport" id="tls_tlssocket_remoteport">#</a></span></h3>
@@ -1016,7 +1016,7 @@ object with three properties, e.g.
     <div id="footer">
       <div class="foot-1">
         <a href="http://www.joyent.com"><h5>The Node.js Project is Sponsored by</h5>
-        <img src="assets/joyent-footer.svg" width="200">
+        
         <p class="tag">Production Node +<br>High Performance Infrastructure</p></a>
         <a href="https://my.joyent.com/landing/signup/701800000015696" class="button getstarted">Get Started</a>
       </div>
@@ -1052,18 +1052,10 @@ object with three properties, e.g.
       </div>
     </div>
 
-  <script src="/sh_main.js"></script>
-  <script src="/sh_javascript.min.js"></script>
-  <script>highlight(undefined, undefined, 'pre');</script>
-  <script>
-    window._gaq = [['_setAccount', 'UA-10874194-2'], ['_trackPageview']];
-    (function(d, t) {
-      var g = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      g.src = '//www.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g, s);
-    }(document, 'script'));
-  </script>
+  
+  
+  
+  
 </body>
 </html>
 

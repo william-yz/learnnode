@@ -6,12 +6,12 @@
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/sh.css">
   <link rel="canonical" href="http://nodejs.org/api/crypto.html">
-  <script type="text/javascript" src="//use.typekit.net/mse5tqx.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+  
 </head>
 <body class="alt apidoc int docs" id="docs">
     <div id="nav">
-      <img id="logo" src="assets/logo.svg" alt="node.js">
+      
       <ul>
         <li><a href="http://nodejs.org">Home</a></li>
         <li><a href="http://nodejs.org/download/">Downloads</a></li>
@@ -148,14 +148,14 @@
           <div id="apicontent">
             <h1>Crypto<span><a class="mark" href="#crypto_crypto" id="crypto_crypto">#</a></span></h1>
 <pre class="api_stability_2">Stability: 2 - Unstable; API changes are being discussed for
-future versions.  Breaking changes will be minimized.  See below.</pre><p>Use <code>require(&#39;crypto&#39;)</code> to access this module.
+future versions.  Breaking changes will be minimized.  See below.</pre><p>Use <code>require(&apos;crypto&apos;)</code> to access this module.
 
 </p>
 <p>The crypto module offers a way of encapsulating secure credentials to be
 used as part of a secure HTTPS net or http connection.
 
 </p>
-<p>It also offers a set of wrappers for OpenSSL&#39;s hash, hmac, cipher,
+<p>It also offers a set of wrappers for OpenSSL&apos;s hash, hmac, cipher,
 decipher, sign and verify methods.
 
 
@@ -164,7 +164,7 @@ decipher, sign and verify methods.
 <p>Load and set engine for some/all OpenSSL functions (selected by flags).
 
 </p>
-<p><code>engine</code> could be either an id or a path to the to the engine&#39;s shared library.
+<p><code>engine</code> could be either an id or a path to the to the engine&apos;s shared library.
 
 </p>
 <p><code>flags</code> is optional and has <code>ENGINE_METHOD_ALL</code> value by default. It could take
@@ -194,7 +194,7 @@ one of or mix of following flags (defined in <code>constants</code> module):
 
 </p>
 <pre><code>var ciphers = crypto.getCiphers();
-console.log(ciphers); // [&#39;AES-128-CBC&#39;, &#39;AES-128-CBC-HMAC-SHA1&#39;, ...]</code></pre>
+console.log(ciphers); // [&apos;AES-128-CBC&apos;, &apos;AES-128-CBC-HMAC-SHA1&apos;, ...]</code></pre>
 <h2>crypto.getHashes()<span><a class="mark" href="#crypto_crypto_gethashes" id="crypto_crypto_gethashes">#</a></span></h2>
 <p>Returns an array with the names of the supported hash algorithms.
 
@@ -203,7 +203,7 @@ console.log(ciphers); // [&#39;AES-128-CBC&#39;, &#39;AES-128-CBC-HMAC-SHA1&#39;
 
 </p>
 <pre><code>var hashes = crypto.getHashes();
-console.log(hashes); // [&#39;sha&#39;, &#39;sha1&#39;, &#39;sha1WithRSAEncryption&#39;, ...]</code></pre>
+console.log(hashes); // [&apos;sha&apos;, &apos;sha1&apos;, &apos;sha1WithRSAEncryption&apos;, ...]</code></pre>
 <h2>crypto.createCredentials(details)<span><a class="mark" href="#crypto_crypto_createcredentials_details" id="crypto_crypto_createcredentials_details">#</a></span></h2>
 <pre class="api_stability_0">Stability: 0 - Deprecated. Use <a href="tls.html#tls_tls_createsecurecontext_details">tls.createSecureContext</a> instead.</pre><p>Creates a credentials object, with the optional details being a
 dictionary with keys:
@@ -224,7 +224,7 @@ Consult
 <a href="http://www.openssl.org/docs/apps/ciphers.html#CIPHER_LIST_FORMAT">http://www.openssl.org/docs/apps/ciphers.html#CIPHER_LIST_FORMAT</a>
 for details on the format.</li>
 </ul>
-<p>If no &#39;ca&#39; details are given, then node.js will use the default
+<p>If no &apos;ca&apos; details are given, then node.js will use the default
 publicly trusted list of CAs as given in
 </p>
 <p><a href="http://mxr.mozilla.org/mozilla/source/security/nss/lib/ckfw/builtins/certdata.txt">http://mxr.mozilla.org/mozilla/source/security/nss/lib/ckfw/builtins/certdata.txt</a>.
@@ -237,8 +237,8 @@ algorithm which can be used to generate hash digests.
 
 </p>
 <p><code>algorithm</code> is dependent on the available algorithms supported by the
-version of OpenSSL on the platform. Examples are <code>&#39;sha1&#39;</code>, <code>&#39;md5&#39;</code>,
-<code>&#39;sha256&#39;</code>, <code>&#39;sha512&#39;</code>, etc.  On recent releases, <code>openssl
+version of OpenSSL on the platform. Examples are <code>&apos;sha1&apos;</code>, <code>&apos;md5&apos;</code>,
+<code>&apos;sha256&apos;</code>, <code>&apos;sha512&apos;</code>, etc.  On recent releases, <code>openssl
 list-message-digest-algorithms</code> will display the available digest
 algorithms.
 
@@ -247,19 +247,19 @@ algorithms.
 
 </p>
 <pre><code>var filename = process.argv[2];
-var crypto = require(&#39;crypto&#39;);
-var fs = require(&#39;fs&#39;);
+var crypto = require(&apos;crypto&apos;);
+var fs = require(&apos;fs&apos;);
 
-var shasum = crypto.createHash(&#39;sha1&#39;);
+var shasum = crypto.createHash(&apos;sha1&apos;);
 
 var s = fs.ReadStream(filename);
-s.on(&#39;data&#39;, function(d) {
+s.on(&apos;data&apos;, function(d) {
   shasum.update(d);
 });
 
-s.on(&#39;end&#39;, function() {
-  var d = shasum.digest(&#39;hex&#39;);
-  console.log(d + &#39;  &#39; + filename);
+s.on(&apos;end&apos;, function() {
+  var d = shasum.digest(&apos;hex&apos;);
+  console.log(d + &apos;  &apos; + filename);
 });</code></pre>
 <h2>Class: Hash<span><a class="mark" href="#crypto_class_hash" id="crypto_class_hash">#</a></span></h2>
 <p>The class for creating hash digests of data.
@@ -276,9 +276,9 @@ digest.  The legacy <code>update</code> and <code>digest</code> methods are also
 </p>
 <h3>hash.update(data[, input_encoding])<span><a class="mark" href="#crypto_hash_update_data_input_encoding" id="crypto_hash_update_data_input_encoding">#</a></span></h3>
 <p>Updates the hash content with the given <code>data</code>, the encoding of which
-is given in <code>input_encoding</code> and can be <code>&#39;utf8&#39;</code>, <code>&#39;ascii&#39;</code> or
-<code>&#39;binary&#39;</code>.  If no encoding is provided and the input is a string an
-encoding of <code>&#39;binary&#39;</code> is enforced. If <code>data</code> is a <code>Buffer</code> then
+is given in <code>input_encoding</code> and can be <code>&apos;utf8&apos;</code>, <code>&apos;ascii&apos;</code> or
+<code>&apos;binary&apos;</code>.  If no encoding is provided and the input is a string an
+encoding of <code>&apos;binary&apos;</code> is enforced. If <code>data</code> is a <code>Buffer</code> then
 <code>input_encoding</code> is ignored.
 
 </p>
@@ -287,7 +287,7 @@ encoding of <code>&#39;binary&#39;</code> is enforced. If <code>data</code> is a
 </p>
 <h3>hash.digest([encoding])<span><a class="mark" href="#crypto_hash_digest_encoding" id="crypto_hash_digest_encoding">#</a></span></h3>
 <p>Calculates the digest of all of the passed data to be hashed.  The
-<code>encoding</code> can be <code>&#39;hex&#39;</code>, <code>&#39;binary&#39;</code> or <code>&#39;base64&#39;</code>.  If no encoding
+<code>encoding</code> can be <code>&apos;hex&apos;</code>, <code>&apos;binary&apos;</code> or <code>&apos;base64&apos;</code>.  If no encoding
 is provided, then a buffer is returned.
 
 </p>
@@ -325,7 +325,7 @@ many times with new data as it is streamed.
 </p>
 <h3>hmac.digest([encoding])<span><a class="mark" href="#crypto_hmac_digest_encoding" id="crypto_hmac_digest_encoding">#</a></span></h3>
 <p>Calculates the digest of all of the passed data to the hmac.  The
-<code>encoding</code> can be <code>&#39;hex&#39;</code>, <code>&#39;binary&#39;</code> or <code>&#39;base64&#39;</code>.  If no encoding
+<code>encoding</code> can be <code>&apos;hex&apos;</code>, <code>&apos;binary&apos;</code> or <code>&apos;base64&apos;</code>.  If no encoding
 is provided, then a buffer is returned.
 
 </p>
@@ -339,10 +339,10 @@ called.
 password.
 
 </p>
-<p><code>algorithm</code> is dependent on OpenSSL, examples are <code>&#39;aes192&#39;</code>, etc.  On
+<p><code>algorithm</code> is dependent on OpenSSL, examples are <code>&apos;aes192&apos;</code>, etc.  On
 recent releases, <code>openssl list-cipher-algorithms</code> will display the
 available cipher algorithms.  <code>password</code> is used to derive key and IV,
-which must be a <code>&#39;binary&#39;</code> encoded string or a <a href="buffer.html">buffer</a>.
+which must be a <code>&apos;binary&apos;</code> encoded string or a <a href="buffer.html">buffer</a>.
 
 </p>
 <p>It is a <a href="stream.html">stream</a> that is both readable and writable.  The
@@ -358,7 +358,7 @@ The low iteration count and non-cryptographically secure hash algorithm allow
 passwords to be tested very rapidly.
 
 </p>
-<p>In line with OpenSSL&#39;s recommendation to use pbkdf2 instead of EVP_BytesToKey it
+<p>In line with OpenSSL&apos;s recommendation to use pbkdf2 instead of EVP_BytesToKey it
 is recommended you derive a key and iv yourself with <a href="#crypto_crypto_pbkdf2_password_salt_iterations_keylen_callback">crypto.pbkdf2</a> and to
 then use <a href="#crypto_crypto_createcipheriv_algorithm_key_iv">createCipheriv()</a> to create the cipher stream.
 
@@ -373,7 +373,7 @@ the raw key used by the algorithm.  <code>iv</code> is an <a href="http://en.wik
 vector</a>.
 
 </p>
-<p><code>key</code> and <code>iv</code> must be <code>&#39;binary&#39;</code> encoded strings or
+<p><code>key</code> and <code>iv</code> must be <code>&apos;binary&apos;</code> encoded strings or
 <a href="buffer.html">buffers</a>.
 
 </p>
@@ -392,13 +392,13 @@ methods are also supported.
 </p>
 <h3>cipher.update(data[, input_encoding][, output_encoding])<span><a class="mark" href="#crypto_cipher_update_data_input_encoding_output_encoding" id="crypto_cipher_update_data_input_encoding_output_encoding">#</a></span></h3>
 <p>Updates the cipher with <code>data</code>, the encoding of which is given in
-<code>input_encoding</code> and can be <code>&#39;utf8&#39;</code>, <code>&#39;ascii&#39;</code> or <code>&#39;binary&#39;</code>.  If no
+<code>input_encoding</code> and can be <code>&apos;utf8&apos;</code>, <code>&apos;ascii&apos;</code> or <code>&apos;binary&apos;</code>.  If no
 encoding is provided, then a buffer is expected.
 If <code>data</code> is a <code>Buffer</code> then <code>input_encoding</code> is ignored.
 
 </p>
 <p>The <code>output_encoding</code> specifies the output format of the enciphered
-data, and can be <code>&#39;binary&#39;</code>, <code>&#39;base64&#39;</code> or <code>&#39;hex&#39;</code>.  If no encoding is
+data, and can be <code>&apos;binary&apos;</code>, <code>&apos;base64&apos;</code> or <code>&apos;hex&apos;</code>.  If no encoding is
 provided, then a buffer is returned.
 
 </p>
@@ -408,7 +408,7 @@ data as it is streamed.
 </p>
 <h3>cipher.final([output_encoding])<span><a class="mark" href="#crypto_cipher_final_output_encoding" id="crypto_cipher_final_output_encoding">#</a></span></h3>
 <p>Returns any remaining enciphered contents, with <code>output_encoding</code>
-being one of: <code>&#39;binary&#39;</code>, <code>&#39;base64&#39;</code> or <code>&#39;hex&#39;</code>.  If no encoding is
+being one of: <code>&apos;binary&apos;</code>, <code>&apos;base64&apos;</code> or <code>&apos;hex&apos;</code>.  If no encoding is
 provided, then a buffer is returned.
 
 </p>
@@ -419,7 +419,7 @@ called.
 <h3>cipher.setAutoPadding(auto_padding=true)<span><a class="mark" href="#crypto_cipher_setautopadding_auto_padding_true" id="crypto_cipher_setautopadding_auto_padding_true">#</a></span></h3>
 <p>You can disable automatic padding of the input data to block size. If
 <code>auto_padding</code> is false, the length of the entire input data must be a
-multiple of the cipher&#39;s block size or <code>final</code> will fail.  Useful for
+multiple of the cipher&apos;s block size or <code>final</code> will fail.  Useful for
 non-standard padding, e.g. using <code>0x0</code> instead of PKCS padding. You
 must call this before <code>cipher.final</code>.
 
@@ -462,20 +462,20 @@ plain-text data on the the readable side.  The legacy <code>update</code> and
 
 </p>
 <h3>decipher.update(data[, input_encoding][, output_encoding])<span><a class="mark" href="#crypto_decipher_update_data_input_encoding_output_encoding" id="crypto_decipher_update_data_input_encoding_output_encoding">#</a></span></h3>
-<p>Updates the decipher with <code>data</code>, which is encoded in <code>&#39;binary&#39;</code>,
-<code>&#39;base64&#39;</code> or <code>&#39;hex&#39;</code>.  If no encoding is provided, then a buffer is
+<p>Updates the decipher with <code>data</code>, which is encoded in <code>&apos;binary&apos;</code>,
+<code>&apos;base64&apos;</code> or <code>&apos;hex&apos;</code>.  If no encoding is provided, then a buffer is
 expected.
 If <code>data</code> is a <code>Buffer</code> then <code>input_encoding</code> is ignored.
 
 </p>
 <p>The <code>output_decoding</code> specifies in what format to return the
-deciphered plaintext: <code>&#39;binary&#39;</code>, <code>&#39;ascii&#39;</code> or <code>&#39;utf8&#39;</code>.  If no
+deciphered plaintext: <code>&apos;binary&apos;</code>, <code>&apos;ascii&apos;</code> or <code>&apos;utf8&apos;</code>.  If no
 encoding is provided, then a buffer is returned.
 
 </p>
 <h3>decipher.final([output_encoding])<span><a class="mark" href="#crypto_decipher_final_output_encoding" id="crypto_decipher_final_output_encoding">#</a></span></h3>
 <p>Returns any remaining plaintext which is deciphered, with
-<code>output_encoding</code> being one of: <code>&#39;binary&#39;</code>, <code>&#39;ascii&#39;</code> or <code>&#39;utf8&#39;</code>.  If
+<code>output_encoding</code> being one of: <code>&apos;binary&apos;</code>, <code>&apos;ascii&apos;</code> or <code>&apos;utf8&apos;</code>.  If
 no encoding is provided, then a buffer is returned.
 
 </p>
@@ -486,7 +486,7 @@ called.
 <h3>decipher.setAutoPadding(auto_padding=true)<span><a class="mark" href="#crypto_decipher_setautopadding_auto_padding_true" id="crypto_decipher_setautopadding_auto_padding_true">#</a></span></h3>
 <p>You can disable auto padding if the data has been encrypted without
 standard block padding to prevent <code>decipher.final</code> from checking and
-removing it. Can only work if the input data&#39;s length is a multiple of
+removing it. Can only work if the input data&apos;s length is a multiple of
 the ciphers block size. You must call this before streaming data to
 <code>decipher.update</code>.
 
@@ -509,7 +509,7 @@ parameter.
 <h2>crypto.createSign(algorithm)<span><a class="mark" href="#crypto_crypto_createsign_algorithm" id="crypto_crypto_createsign_algorithm">#</a></span></h2>
 <p>Creates and returns a signing object, with the given algorithm.  On
 recent OpenSSL releases, <code>openssl list-public-key-algorithms</code> will
-display the available signing algorithms. Examples are <code>&#39;RSA-SHA256&#39;</code>.
+display the available signing algorithms. Examples are <code>&apos;RSA-SHA256&apos;</code>.
 
 </p>
 <h2>Class: Sign<span><a class="mark" href="#crypto_class_sign" id="crypto_class_sign">#</a></span></h2>
@@ -546,8 +546,8 @@ treated as the key with no passphrase.
 <li><code>key</code> : A string holding the PEM encoded private key</li>
 <li><code>passphrase</code> : A string of passphrase for the private key</li>
 </ul>
-<p>Returns the signature in <code>output_format</code> which can be <code>&#39;binary&#39;</code>,
-<code>&#39;hex&#39;</code> or <code>&#39;base64&#39;</code>. If no encoding is provided, then a buffer is
+<p>Returns the signature in <code>output_format</code> which can be <code>&apos;binary&apos;</code>,
+<code>&apos;hex&apos;</code> or <code>&apos;base64&apos;</code>. If no encoding is provided, then a buffer is
 returned.
 
 </p>
@@ -584,7 +584,7 @@ with new data as it is streamed.
 <code>object</code> is  a string containing a PEM encoded object, which can be
 one of RSA public key, DSA public key, or X.509 certificate.
 <code>signature</code> is the previously calculated signature for the data, in
-the <code>signature_format</code> which can be <code>&#39;binary&#39;</code>, <code>&#39;hex&#39;</code> or <code>&#39;base64&#39;</code>.
+the <code>signature_format</code> which can be <code>&apos;binary&apos;</code>, <code>&apos;hex&apos;</code> or <code>&apos;base64&apos;</code>.
 If no encoding is specified, then a buffer is expected.
 
 </p>
@@ -607,7 +607,7 @@ If no <code>generator</code> is specified, then <code>2</code> is used.
 optional specific <code>generator</code>.
 <code>generator</code> can be a number, string, or Buffer.
 If no <code>generator</code> is specified, then <code>2</code> is used.
-<code>prime_encoding</code> and <code>generator_encoding</code> can be <code>&#39;binary&#39;</code>, <code>&#39;hex&#39;</code>, or <code>&#39;base64&#39;</code>.
+<code>prime_encoding</code> and <code>generator_encoding</code> can be <code>&apos;binary&apos;</code>, <code>&apos;hex&apos;</code>, or <code>&apos;base64&apos;</code>.
 If no <code>prime_encoding</code> is specified, then a Buffer is expected for <code>prime</code>.
 If no <code>generator_encoding</code> is specified, then a Buffer is expected for <code>generator</code>.
 
@@ -634,16 +634,16 @@ during initialization. The following values are valid for this property
 <h3>diffieHellman.generateKeys([encoding])<span><a class="mark" href="#crypto_diffiehellman_generatekeys_encoding" id="crypto_diffiehellman_generatekeys_encoding">#</a></span></h3>
 <p>Generates private and public Diffie-Hellman key values, and returns
 the public key in the specified encoding. This key should be
-transferred to the other party. Encoding can be <code>&#39;binary&#39;</code>, <code>&#39;hex&#39;</code>,
-or <code>&#39;base64&#39;</code>.  If no encoding is provided, then a buffer is returned.
+transferred to the other party. Encoding can be <code>&apos;binary&apos;</code>, <code>&apos;hex&apos;</code>,
+or <code>&apos;base64&apos;</code>.  If no encoding is provided, then a buffer is returned.
 
 </p>
 <h3>diffieHellman.computeSecret(other_public_key[, input_encoding][, output_encoding])<span><a class="mark" href="#crypto_diffiehellman_computesecret_other_public_key_input_encoding_output_encoding" id="crypto_diffiehellman_computesecret_other_public_key_input_encoding_output_encoding">#</a></span></h3>
 <p>Computes the shared secret using <code>other_public_key</code> as the other
-party&#39;s public key and returns the computed shared secret. Supplied
+party&apos;s public key and returns the computed shared secret. Supplied
 key is interpreted using specified <code>input_encoding</code>, and secret is
 encoded using specified <code>output_encoding</code>. Encodings can be
-<code>&#39;binary&#39;</code>, <code>&#39;hex&#39;</code>, or <code>&#39;base64&#39;</code>. If the input encoding is not
+<code>&apos;binary&apos;</code>, <code>&apos;hex&apos;</code>, or <code>&apos;base64&apos;</code>. If the input encoding is not
 provided, then a buffer is expected.
 
 </p>
@@ -652,49 +652,49 @@ provided, then a buffer is expected.
 </p>
 <h3>diffieHellman.getPrime([encoding])<span><a class="mark" href="#crypto_diffiehellman_getprime_encoding" id="crypto_diffiehellman_getprime_encoding">#</a></span></h3>
 <p>Returns the Diffie-Hellman prime in the specified encoding, which can
-be <code>&#39;binary&#39;</code>, <code>&#39;hex&#39;</code>, or <code>&#39;base64&#39;</code>. If no encoding is provided,
+be <code>&apos;binary&apos;</code>, <code>&apos;hex&apos;</code>, or <code>&apos;base64&apos;</code>. If no encoding is provided,
 then a buffer is returned.
 
 </p>
 <h3>diffieHellman.getGenerator([encoding])<span><a class="mark" href="#crypto_diffiehellman_getgenerator_encoding" id="crypto_diffiehellman_getgenerator_encoding">#</a></span></h3>
 <p>Returns the Diffie-Hellman generator in the specified encoding, which can
-be <code>&#39;binary&#39;</code>, <code>&#39;hex&#39;</code>, or <code>&#39;base64&#39;</code>. If no encoding is provided,
+be <code>&apos;binary&apos;</code>, <code>&apos;hex&apos;</code>, or <code>&apos;base64&apos;</code>. If no encoding is provided,
 then a buffer is returned.
 
 </p>
 <h3>diffieHellman.getPublicKey([encoding])<span><a class="mark" href="#crypto_diffiehellman_getpublickey_encoding" id="crypto_diffiehellman_getpublickey_encoding">#</a></span></h3>
 <p>Returns the Diffie-Hellman public key in the specified encoding, which
-can be <code>&#39;binary&#39;</code>, <code>&#39;hex&#39;</code>, or <code>&#39;base64&#39;</code>. If no encoding is provided,
+can be <code>&apos;binary&apos;</code>, <code>&apos;hex&apos;</code>, or <code>&apos;base64&apos;</code>. If no encoding is provided,
 then a buffer is returned.
 
 </p>
 <h3>diffieHellman.getPrivateKey([encoding])<span><a class="mark" href="#crypto_diffiehellman_getprivatekey_encoding" id="crypto_diffiehellman_getprivatekey_encoding">#</a></span></h3>
 <p>Returns the Diffie-Hellman private key in the specified encoding,
-which can be <code>&#39;binary&#39;</code>, <code>&#39;hex&#39;</code>, or <code>&#39;base64&#39;</code>. If no encoding is
+which can be <code>&apos;binary&apos;</code>, <code>&apos;hex&apos;</code>, or <code>&apos;base64&apos;</code>. If no encoding is
 provided, then a buffer is returned.
 
 </p>
 <h3>diffieHellman.setPublicKey(public_key[, encoding])<span><a class="mark" href="#crypto_diffiehellman_setpublickey_public_key_encoding" id="crypto_diffiehellman_setpublickey_public_key_encoding">#</a></span></h3>
-<p>Sets the Diffie-Hellman public key. Key encoding can be <code>&#39;binary&#39;</code>,
-<code>&#39;hex&#39;</code> or <code>&#39;base64&#39;</code>. If no encoding is provided, then a buffer is
+<p>Sets the Diffie-Hellman public key. Key encoding can be <code>&apos;binary&apos;</code>,
+<code>&apos;hex&apos;</code> or <code>&apos;base64&apos;</code>. If no encoding is provided, then a buffer is
 expected.
 
 </p>
 <h3>diffieHellman.setPrivateKey(private_key[, encoding])<span><a class="mark" href="#crypto_diffiehellman_setprivatekey_private_key_encoding" id="crypto_diffiehellman_setprivatekey_private_key_encoding">#</a></span></h3>
-<p>Sets the Diffie-Hellman private key. Key encoding can be <code>&#39;binary&#39;</code>,
-<code>&#39;hex&#39;</code> or <code>&#39;base64&#39;</code>. If no encoding is provided, then a buffer is
+<p>Sets the Diffie-Hellman private key. Key encoding can be <code>&apos;binary&apos;</code>,
+<code>&apos;hex&apos;</code> or <code>&apos;base64&apos;</code>. If no encoding is provided, then a buffer is
 expected.
 
 </p>
 <h2>crypto.getDiffieHellman(group_name)<span><a class="mark" href="#crypto_crypto_getdiffiehellman_group_name" id="crypto_crypto_getdiffiehellman_group_name">#</a></span></h2>
 <p>Creates a predefined Diffie-Hellman key exchange object.  The
-supported groups are: <code>&#39;modp1&#39;</code>, <code>&#39;modp2&#39;</code>, <code>&#39;modp5&#39;</code> (defined in <a href="http://www.rfc-editor.org/rfc/rfc2412.txt">RFC
-2412</a>) and <code>&#39;modp14&#39;</code>, <code>&#39;modp15&#39;</code>, <code>&#39;modp16&#39;</code>, <code>&#39;modp17&#39;</code>,
-<code>&#39;modp18&#39;</code> (defined in <a href="http://www.rfc-editor.org/rfc/rfc3526.txt">RFC 3526</a>).  The returned object mimics the
+supported groups are: <code>&apos;modp1&apos;</code>, <code>&apos;modp2&apos;</code>, <code>&apos;modp5&apos;</code> (defined in <a href="http://www.rfc-editor.org/rfc/rfc2412.txt">RFC
+2412</a>) and <code>&apos;modp14&apos;</code>, <code>&apos;modp15&apos;</code>, <code>&apos;modp16&apos;</code>, <code>&apos;modp17&apos;</code>,
+<code>&apos;modp18&apos;</code> (defined in <a href="http://www.rfc-editor.org/rfc/rfc3526.txt">RFC 3526</a>).  The returned object mimics the
 interface of objects created by <a href="#crypto_crypto_creatediffiehellman_prime_encoding">crypto.createDiffieHellman()</a>
 above, but will not allow to change the keys (with
 <a href="#crypto_diffiehellman_setpublickey_public_key_encoding">diffieHellman.setPublicKey()</a> for example).  The advantage of using
-this routine is that the parties don&#39;t have to generate nor exchange
+this routine is that the parties don&apos;t have to generate nor exchange
 group modulus beforehand, saving both processor and communication
 time.
 
@@ -702,15 +702,15 @@ time.
 <p>Example (obtaining a shared secret):
 
 </p>
-<pre><code>var crypto = require(&#39;crypto&#39;);
-var alice = crypto.getDiffieHellman(&#39;modp5&#39;);
-var bob = crypto.getDiffieHellman(&#39;modp5&#39;);
+<pre><code>var crypto = require(&apos;crypto&apos;);
+var alice = crypto.getDiffieHellman(&apos;modp5&apos;);
+var bob = crypto.getDiffieHellman(&apos;modp5&apos;);
 
 alice.generateKeys();
 bob.generateKeys();
 
-var alice_secret = alice.computeSecret(bob.getPublicKey(), null, &#39;hex&#39;);
-var bob_secret = bob.computeSecret(alice.getPublicKey(), null, &#39;hex&#39;);
+var alice_secret = alice.computeSecret(bob.getPublicKey(), null, &apos;hex&apos;);
+var bob_secret = bob.computeSecret(alice.getPublicKey(), null, &apos;hex&apos;);
 
 /* alice_secret and bob_secret should be the same */
 console.log(alice_secret == bob_secret);</code></pre>
@@ -732,21 +732,21 @@ the public key in the specified format and encoding. This key should be
 transferred to the other party.
 
 </p>
-<p>Format specifies point encoding and can be <code>&#39;compressed&#39;</code>, <code>&#39;uncompressed&#39;</code>, or
-<code>&#39;hybrid&#39;</code>. If no format is provided - the point will be returned in
-<code>&#39;uncompressed&#39;</code> format.
+<p>Format specifies point encoding and can be <code>&apos;compressed&apos;</code>, <code>&apos;uncompressed&apos;</code>, or
+<code>&apos;hybrid&apos;</code>. If no format is provided - the point will be returned in
+<code>&apos;uncompressed&apos;</code> format.
 
 </p>
-<p>Encoding can be <code>&#39;binary&#39;</code>, <code>&#39;hex&#39;</code>, or <code>&#39;base64&#39;</code>. If no encoding is provided,
+<p>Encoding can be <code>&apos;binary&apos;</code>, <code>&apos;hex&apos;</code>, or <code>&apos;base64&apos;</code>. If no encoding is provided,
 then a buffer is returned.
 
 </p>
 <h3>ECDH.computeSecret(other_public_key[, input_encoding][, output_encoding])<span><a class="mark" href="#crypto_ecdh_computesecret_other_public_key_input_encoding_output_encoding" id="crypto_ecdh_computesecret_other_public_key_input_encoding_output_encoding">#</a></span></h3>
 <p>Computes the shared secret using <code>other_public_key</code> as the other
-party&#39;s public key and returns the computed shared secret. Supplied
+party&apos;s public key and returns the computed shared secret. Supplied
 key is interpreted using specified <code>input_encoding</code>, and secret is
 encoded using specified <code>output_encoding</code>. Encodings can be
-<code>&#39;binary&#39;</code>, <code>&#39;hex&#39;</code>, or <code>&#39;base64&#39;</code>. If the input encoding is not
+<code>&apos;binary&apos;</code>, <code>&apos;hex&apos;</code>, or <code>&apos;base64&apos;</code>. If the input encoding is not
 provided, then a buffer is expected.
 
 </p>
@@ -757,45 +757,45 @@ provided, then a buffer is expected.
 <p>Returns the EC Diffie-Hellman public key in the specified encoding and format.
 
 </p>
-<p>Format specifies point encoding and can be <code>&#39;compressed&#39;</code>, <code>&#39;uncompressed&#39;</code>, or
-<code>&#39;hybrid&#39;</code>. If no format is provided - the point will be returned in
-<code>&#39;uncompressed&#39;</code> format.
+<p>Format specifies point encoding and can be <code>&apos;compressed&apos;</code>, <code>&apos;uncompressed&apos;</code>, or
+<code>&apos;hybrid&apos;</code>. If no format is provided - the point will be returned in
+<code>&apos;uncompressed&apos;</code> format.
 
 </p>
-<p>Encoding can be <code>&#39;binary&#39;</code>, <code>&#39;hex&#39;</code>, or <code>&#39;base64&#39;</code>. If no encoding is provided,
+<p>Encoding can be <code>&apos;binary&apos;</code>, <code>&apos;hex&apos;</code>, or <code>&apos;base64&apos;</code>. If no encoding is provided,
 then a buffer is returned.
 
 </p>
 <h3>ECDH.getPrivateKey([encoding])<span><a class="mark" href="#crypto_ecdh_getprivatekey_encoding" id="crypto_ecdh_getprivatekey_encoding">#</a></span></h3>
 <p>Returns the EC Diffie-Hellman private key in the specified encoding,
-which can be <code>&#39;binary&#39;</code>, <code>&#39;hex&#39;</code>, or <code>&#39;base64&#39;</code>. If no encoding is
+which can be <code>&apos;binary&apos;</code>, <code>&apos;hex&apos;</code>, or <code>&apos;base64&apos;</code>. If no encoding is
 provided, then a buffer is returned.
 
 </p>
 <h3>ECDH.setPublicKey(public_key[, encoding])<span><a class="mark" href="#crypto_ecdh_setpublickey_public_key_encoding" id="crypto_ecdh_setpublickey_public_key_encoding">#</a></span></h3>
-<p>Sets the EC Diffie-Hellman public key. Key encoding can be <code>&#39;binary&#39;</code>,
-<code>&#39;hex&#39;</code> or <code>&#39;base64&#39;</code>. If no encoding is provided, then a buffer is
+<p>Sets the EC Diffie-Hellman public key. Key encoding can be <code>&apos;binary&apos;</code>,
+<code>&apos;hex&apos;</code> or <code>&apos;base64&apos;</code>. If no encoding is provided, then a buffer is
 expected.
 
 </p>
 <h3>ECDH.setPrivateKey(private_key[, encoding])<span><a class="mark" href="#crypto_ecdh_setprivatekey_private_key_encoding" id="crypto_ecdh_setprivatekey_private_key_encoding">#</a></span></h3>
-<p>Sets the EC Diffie-Hellman private key. Key encoding can be <code>&#39;binary&#39;</code>,
-<code>&#39;hex&#39;</code> or <code>&#39;base64&#39;</code>. If no encoding is provided, then a buffer is
+<p>Sets the EC Diffie-Hellman private key. Key encoding can be <code>&apos;binary&apos;</code>,
+<code>&apos;hex&apos;</code> or <code>&apos;base64&apos;</code>. If no encoding is provided, then a buffer is
 expected.
 
 </p>
 <p>Example (obtaining a shared secret):
 
 </p>
-<pre><code>var crypto = require(&#39;crypto&#39;);
-var alice = crypto.createECDH(&#39;secp256k1&#39;);
-var bob = crypto.createECDH(&#39;secp256k1&#39;);
+<pre><code>var crypto = require(&apos;crypto&apos;);
+var alice = crypto.createECDH(&apos;secp256k1&apos;);
+var bob = crypto.createECDH(&apos;secp256k1&apos;);
 
 alice.generateKeys();
 bob.generateKeys();
 
-var alice_secret = alice.computeSecret(bob.getPublicKey(), null, &#39;hex&#39;);
-var bob_secret = bob.computeSecret(alice.getPublicKey(), null, &#39;hex&#39;);
+var alice_secret = alice.computeSecret(bob.getPublicKey(), null, &apos;hex&apos;);
+var bob_secret = bob.computeSecret(alice.getPublicKey(), null, &apos;hex&apos;);
 
 /* alice_secret and bob_secret should be the same */
 console.log(alice_secret == bob_secret);</code></pre>
@@ -809,10 +809,10 @@ salt and number of iterations.  The callback gets two arguments:
 <p>Example:
 
 </p>
-<pre><code>crypto.pbkdf2(&#39;secret&#39;, &#39;salt&#39;, 4096, 512, &#39;sha256&#39;, function(err, key) {
+<pre><code>crypto.pbkdf2(&apos;secret&apos;, &apos;salt&apos;, 4096, 512, &apos;sha256&apos;, function(err, key) {
   if (err)
     throw err;
-  console.log(key.toString(&#39;hex&#39;));  // &#39;c5e478d...1469e50&#39;
+  console.log(key.toString(&apos;hex&apos;));  // &apos;c5e478d...1469e50&apos;
 });</code></pre>
 <p>You can get a list of supported digest functions with
 <a href="#crypto_crypto_gethashes">crypto.getHashes()</a>.
@@ -829,13 +829,13 @@ salt and number of iterations.  The callback gets two arguments:
 <pre><code>// async
 crypto.randomBytes(256, function(ex, buf) {
   if (ex) throw ex;
-  console.log(&#39;Have %d bytes of random data: %s&#39;, buf.length, buf);
+  console.log(&apos;Have %d bytes of random data: %s&apos;, buf.length, buf);
 });
 
 // sync
 try {
   var buf = crypto.randomBytes(256);
-  console.log(&#39;Have %d bytes of random data: %s&#39;, buf.length, buf);
+  console.log(&apos;Have %d bytes of random data: %s&apos;, buf.length, buf);
 } catch (ex) {
   // handle error
   // most likely, entropy sources are drained
@@ -927,9 +927,9 @@ treated as the key with no passphrase and will use <code>RSA_PKCS1_OAEP_PADDING<
 </p>
 <h2>crypto.DEFAULT_ENCODING<span><a class="mark" href="#crypto_crypto_default_encoding" id="crypto_crypto_default_encoding">#</a></span></h2>
 <p>The default encoding to use for functions that can take either strings
-or buffers.  The default value is <code>&#39;buffer&#39;</code>, which makes it default
+or buffers.  The default value is <code>&apos;buffer&apos;</code>, which makes it default
 to using Buffer objects.  This is here to make the crypto module more
-easily compatible with legacy programs that expected <code>&#39;binary&#39;</code> to be
+easily compatible with legacy programs that expected <code>&apos;binary&apos;</code> to be
 the default encoding.
 
 </p>
@@ -943,7 +943,7 @@ unified Stream API, and before there were Buffer objects for handling
 binary data.
 
 </p>
-<p>As such, the streaming classes don&#39;t have the typical methods found on
+<p>As such, the streaming classes don&apos;t have the typical methods found on
 other Node classes, and many methods accepted and returned
 Binary-encoded strings by default rather than Buffers.  This was
 changed to use Buffers by default instead.
@@ -956,7 +956,7 @@ changed to use Buffers by default instead.
 class, and then pass the results to the Verify class, without ever
 inspecting the data, then it will continue to work as before.  Where
 you once got a binary string and then presented the binary string to
-the Verify object, you&#39;ll now get a Buffer, and present the Buffer to
+the Verify object, you&apos;ll now get a Buffer, and present the Buffer to
 the Verify object.
 
 </p>
@@ -964,9 +964,9 @@ the Verify object.
 work properly on Buffers (such as, concatenating them, storing in
 databases, etc.), or you are passing binary strings to the crypto
 functions without an encoding argument, then you will need to start
-providing encoding arguments to specify which encoding you&#39;d like to
+providing encoding arguments to specify which encoding you&apos;d like to
 use.  To switch to the previous style of using binary strings by
-default, set the <code>crypto.DEFAULT_ENCODING</code> field to &#39;binary&#39;.  Note
+default, set the <code>crypto.DEFAULT_ENCODING</code> field to &apos;binary&apos;.  Note
 that new programs will probably expect buffers, so only use this as a
 temporary measure.
 
@@ -980,7 +980,7 @@ temporary measure.
     <div id="footer">
       <div class="foot-1">
         <a href="http://www.joyent.com"><h5>The Node.js Project is Sponsored by</h5>
-        <img src="assets/joyent-footer.svg" width="200">
+        
         <p class="tag">Production Node +<br>High Performance Infrastructure</p></a>
         <a href="https://my.joyent.com/landing/signup/701800000015696" class="button getstarted">Get Started</a>
       </div>
@@ -1016,18 +1016,10 @@ temporary measure.
       </div>
     </div>
 
-  <script src="/sh_main.js"></script>
-  <script src="/sh_javascript.min.js"></script>
-  <script>highlight(undefined, undefined, 'pre');</script>
-  <script>
-    window._gaq = [['_setAccount', 'UA-10874194-2'], ['_trackPageview']];
-    (function(d, t) {
-      var g = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      g.src = '//www.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g, s);
-    }(document, 'script'));
-  </script>
+  
+  
+  
+  
 </body>
 </html>
 

@@ -6,12 +6,12 @@
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/sh.css">
   <link rel="canonical" href="http://nodejs.org/api/buffer.html">
-  <script type="text/javascript" src="//use.typekit.net/mse5tqx.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+  
 </head>
 <body class="alt apidoc int docs" id="docs">
     <div id="nav">
-      <img id="logo" src="assets/logo.svg" alt="node.js">
+      
       <ul>
         <li><a href="http://nodejs.org">Home</a></li>
         <li><a href="http://nodejs.org/download/">Downloads</a></li>
@@ -121,7 +121,7 @@
           <div id="apicontent">
             <h1>Buffer<span><a class="mark" href="#buffer_buffer" id="buffer_buffer">#</a></span></h1>
 <pre class="api_stability_3">Stability: 3 - Stable</pre><p>Pure JavaScript is Unicode friendly but not nice to binary data.  When
-dealing with TCP streams or the file system, it&#39;s necessary to handle octet
+dealing with TCP streams or the file system, it&apos;s necessary to handle octet
 streams. Node has several strategies for manipulating, creating, and
 consuming octet streams.
 
@@ -132,7 +132,7 @@ the V8 heap. A <code>Buffer</code> cannot be resized.
 
 </p>
 <p>The <code>Buffer</code> class is a global, making it very rare that one would need
-to ever <code>require(&#39;buffer&#39;)</code>.
+to ever <code>require(&apos;buffer&apos;)</code>.
 
 </p>
 <p>Converting between Buffers and JavaScript string objects requires an explicit
@@ -140,34 +140,34 @@ encoding method.  Here are the different string encodings.
 
 </p>
 <ul>
-<li><p><code>&#39;ascii&#39;</code> - for 7 bit ASCII data only.  This encoding method is very fast, and
+<li><p><code>&apos;ascii&apos;</code> - for 7 bit ASCII data only.  This encoding method is very fast, and
 will strip the high bit if set.</p>
 </li>
-<li><p><code>&#39;utf8&#39;</code> - Multibyte encoded Unicode characters. Many web pages and other
+<li><p><code>&apos;utf8&apos;</code> - Multibyte encoded Unicode characters. Many web pages and other
 document formats use UTF-8.</p>
 </li>
-<li><p><code>&#39;utf16le&#39;</code> - 2 or 4 bytes, little endian encoded Unicode characters.
+<li><p><code>&apos;utf16le&apos;</code> - 2 or 4 bytes, little endian encoded Unicode characters.
 Surrogate pairs (U+10000 to U+10FFFF) are supported.</p>
 </li>
-<li><p><code>&#39;ucs2&#39;</code> - Alias of <code>&#39;utf16le&#39;</code>.</p>
+<li><p><code>&apos;ucs2&apos;</code> - Alias of <code>&apos;utf16le&apos;</code>.</p>
 </li>
-<li><p><code>&#39;base64&#39;</code> - Base64 string encoding.</p>
+<li><p><code>&apos;base64&apos;</code> - Base64 string encoding.</p>
 </li>
-<li><p><code>&#39;binary&#39;</code> - A way of encoding raw binary data into strings by using only
+<li><p><code>&apos;binary&apos;</code> - A way of encoding raw binary data into strings by using only
 the first 8 bits of each character. This encoding method is deprecated and
 should be avoided in favor of <code>Buffer</code> objects where possible. This encoding
 will be removed in future versions of Node.</p>
 </li>
-<li><p><code>&#39;hex&#39;</code> - Encode each byte as two hexadecimal characters.</p>
+<li><p><code>&apos;hex&apos;</code> - Encode each byte as two hexadecimal characters.</p>
 </li>
 </ul>
 <p>Creating a typed array from a <code>Buffer</code> works with the following caveats:
 
 </p>
 <ol>
-<li><p>The buffer&#39;s memory is copied, not shared.</p>
+<li><p>The buffer&apos;s memory is copied, not shared.</p>
 </li>
-<li><p>The buffer&#39;s memory is interpreted as an array, not a byte array.  That is,
+<li><p>The buffer&apos;s memory is interpreted as an array, not a byte array.  That is,
 <code>new Uint32Array(new Buffer([1,2,3,4]))</code> creates a 4-element <code>Uint32Array</code>
 with elements <code>[1,2,3,4]</code>, not an <code>Uint32Array</code> with a single element
 <code>[0x1020304]</code> or <code>[0x4030201]</code>.</p>
@@ -190,7 +190,7 @@ It can be constructed in a variety of ways.
 <h3>new Buffer(size)<span><a class="mark" href="#buffer_new_buffer_size" id="buffer_new_buffer_size">#</a></span></h3>
 <div class="signature"><ul>
 <li><code>size</code> Number</li>
-</div></ul>
+</ul></div>
 <p>Allocates a new buffer of <code>size</code> octets. Note, <code>size</code> must be no more than
 <a href="smalloc.html#smalloc_smalloc_kmaxlength">kMaxLength</a>. Otherwise, a <code>RangeError</code>
 will be thrown here.
@@ -199,14 +199,14 @@ will be thrown here.
 <h3>new Buffer(array)<span><a class="mark" href="#buffer_new_buffer_array" id="buffer_new_buffer_array">#</a></span></h3>
 <div class="signature"><ul>
 <li><code>array</code> Array</li>
-</div></ul>
+</ul></div>
 <p>Allocates a new buffer using an <code>array</code> of octets.
 
 </p>
 <h3>new Buffer(buffer)<span><a class="mark" href="#buffer_new_buffer_buffer" id="buffer_new_buffer_buffer">#</a></span></h3>
 <div class="signature"><ul>
 <li><code>buffer</code> <span class="type">Buffer</span></li>
-</div></ul>
+</ul></div>
 <p>Copies the passed <code>buffer</code> data onto a new <code>Buffer</code> instance.
 
 </p>
@@ -214,15 +214,15 @@ will be thrown here.
 <div class="signature"><ul>
 <li><code>str</code> String - string to encode.</li>
 <li><code>encoding</code> String - encoding to use, Optional.</li>
-</div></ul>
+</ul></div>
 <p>Allocates a new buffer containing the given <code>str</code>.
-<code>encoding</code> defaults to <code>&#39;utf8&#39;</code>.
+<code>encoding</code> defaults to <code>&apos;utf8&apos;</code>.
 
 </p>
 <h3>Class Method: Buffer.isEncoding(encoding)<span><a class="mark" href="#buffer_class_method_buffer_isencoding_encoding" id="buffer_class_method_buffer_isencoding_encoding">#</a></span></h3>
 <div class="signature"><ul>
 <li><code>encoding</code> <span class="type">String</span> The encoding string to test</li>
-</div></ul>
+</ul></div>
 <p>Returns true if the <code>encoding</code> is a valid encoding argument, or false
 otherwise.
 
@@ -231,17 +231,17 @@ otherwise.
 <div class="signature"><ul>
 <li><code>obj</code> Object</li>
 <li>Return: Boolean</li>
-</div></ul>
+</ul></div>
 <p>Tests if <code>obj</code> is a <code>Buffer</code>.
 
 </p>
 <h3>Class Method: Buffer.byteLength(string[, encoding])<span><a class="mark" href="#buffer_class_method_buffer_bytelength_string_encoding" id="buffer_class_method_buffer_bytelength_string_encoding">#</a></span></h3>
 <div class="signature"><ul>
 <li><code>string</code> String</li>
-<li><code>encoding</code> String, Optional, Default: &#39;utf8&#39;</li>
+<li><code>encoding</code> String, Optional, Default: &apos;utf8&apos;</li>
 <li>Return: Number</li>
-</div></ul>
-<p>Gives the actual byte length of a string. <code>encoding</code> defaults to <code>&#39;utf8&#39;</code>.
+</ul></div>
+<p>Gives the actual byte length of a string. <code>encoding</code> defaults to <code>&apos;utf8&apos;</code>.
 This is not the same as <code>String.prototype.length</code> since that returns the
 number of <em>characters</em> in a string.
 
@@ -249,17 +249,17 @@ number of <em>characters</em> in a string.
 <p>Example:
 
 </p>
-<pre><code>str = &#39;\u00bd + \u00bc = \u00be&#39;;
+<pre><code>str = &apos;\u00bd + \u00bc = \u00be&apos;;
 
 console.log(str + &quot;: &quot; + str.length + &quot; characters, &quot; +
-  Buffer.byteLength(str, &#39;utf8&#39;) + &quot; bytes&quot;);
+  Buffer.byteLength(str, &apos;utf8&apos;) + &quot; bytes&quot;);
 
-// ½ + ¼ = ¾: 9 characters, 12 bytes</code></pre>
+// &#xBD; + &#xBC; = &#xBE;: 9 characters, 12 bytes</code></pre>
 <h3>Class Method: Buffer.concat(list[, totalLength])<span><a class="mark" href="#buffer_class_method_buffer_concat_list_totallength" id="buffer_class_method_buffer_concat_list_totallength">#</a></span></h3>
 <div class="signature"><ul>
 <li><code>list</code> <span class="type">Array</span> List of Buffer objects to concat</li>
 <li><code>totalLength</code> <span class="type">Number</span> Total length of the buffers when concatenated</li>
-</div></ul>
+</ul></div>
 <p>Returns a buffer which is the result of concatenating all the buffers in
 the list together.
 
@@ -284,17 +284,17 @@ to provide the length explicitly.
 <div class="signature"><ul>
 <li><code>buf1</code> <span class="type">Buffer</span></li>
 <li><code>buf2</code> <span class="type">Buffer</span></li>
-</div></ul>
+</ul></div>
 <p>The same as <a href="#buffer_buf_compare_otherbuffer"><code>buf1.compare(buf2)</code></a>. Useful
 for sorting an Array of Buffers:
 
 </p>
-<pre><code>var arr = [Buffer(&#39;1234&#39;), Buffer(&#39;0123&#39;)];
+<pre><code>var arr = [Buffer(&apos;1234&apos;), Buffer(&apos;0123&apos;)];
 arr.sort(Buffer.compare);</code></pre>
 <h3>buf.length<span><a class="mark" href="#buffer_buf_length" id="buffer_buf_length">#</a></span></h3>
 <div class="signature"><ul>
 <li>Number</li>
-</div></ul>
+</ul></div>
 <p>The size of the buffer in bytes.  Note that this is not necessarily the size
 of the contents. <code>length</code> refers to the amount of memory allocated for the
 buffer object.  It does not change when the contents of the buffer are changed.
@@ -324,10 +324,10 @@ console.log(buf.length); // 5</code></pre>
 <li><code>string</code> String - data to be written to buffer</li>
 <li><code>offset</code> Number, Optional, Default: 0</li>
 <li><code>length</code> Number, Optional, Default: <code>buffer.length - offset</code></li>
-<li><code>encoding</code> String, Optional, Default: &#39;utf8&#39;</li>
-</div></ul>
+<li><code>encoding</code> String, Optional, Default: &apos;utf8&apos;</li>
+</ul></div>
 <p>Writes <code>string</code> to the buffer at <code>offset</code> using the given encoding.
-<code>offset</code> defaults to <code>0</code>, <code>encoding</code> defaults to <code>&#39;utf8&#39;</code>. <code>length</code> is
+<code>offset</code> defaults to <code>0</code>, <code>encoding</code> defaults to <code>&apos;utf8&apos;</code>. <code>length</code> is
 the number of bytes to write. Returns number of octets written. If <code>buffer</code> did
 not contain enough space to fit the entire string, it will write a partial
 amount of the string. <code>length</code> defaults to <code>buffer.length - offset</code>.
@@ -335,8 +335,8 @@ The method will not write partial characters.
 
 </p>
 <pre><code>buf = new Buffer(256);
-len = buf.write(&#39;\u00bd + \u00bc = \u00be&#39;, 0);
-console.log(len + &quot; bytes: &quot; + buf.toString(&#39;utf8&#39;, 0, len));</code></pre>
+len = buf.write(&apos;\u00bd + \u00bc = \u00be&apos;, 0);
+console.log(len + &quot; bytes: &quot; + buf.toString(&apos;utf8&apos;, 0, len));</code></pre>
 <h3>buf.writeUIntLE(value, offset, byteLength[, noAssert])<span><a class="mark" href="#buffer_buf_writeuintle_value_offset_bytelength_noassert" id="buffer_buf_writeuintle_value_offset_bytelength_noassert">#</a></span></h3>
 <h3>buf.writeUIntBE(value, offset, byteLength[, noAssert])<span><a class="mark" href="#buffer_buf_writeuintbe_value_offset_bytelength_noassert" id="buffer_buf_writeuintbe_value_offset_bytelength_noassert">#</a></span></h3>
 <h3>buf.writeIntLE(value, offset, byteLength[, noAssert])<span><a class="mark" href="#buffer_buf_writeintle_value_offset_bytelength_noassert" id="buffer_buf_writeintle_value_offset_bytelength_noassert">#</a></span></h3>
@@ -377,20 +377,20 @@ accuracy. For example:
 b.writeUint16LE(0x90ab, 0);
 b.writeUInt32LE(0x12345678, 2);
 b.readUIntLE(0, 6).toString(16);  // Specify 6 bytes (48 bits)
-// output: &#39;1234567890ab&#39;</code></pre>
+// output: &apos;1234567890ab&apos;</code></pre>
 <p>Set <code>noAssert</code> to true to skip validation of <code>offset</code>. This means that <code>offset</code>
 may be beyond the end of the buffer. Defaults to <code>false</code>.
 
 </p>
 <h3>buf.toString([encoding][, start][, end])<span><a class="mark" href="#buffer_buf_tostring_encoding_start_end" id="buffer_buf_tostring_encoding_start_end">#</a></span></h3>
 <div class="signature"><ul>
-<li><code>encoding</code> String, Optional, Default: &#39;utf8&#39;</li>
+<li><code>encoding</code> String, Optional, Default: &apos;utf8&apos;</li>
 <li><code>start</code> Number, Optional, Default: 0</li>
 <li><code>end</code> Number, Optional, Default: <code>buffer.length</code></li>
-</div></ul>
+</ul></div>
 <p>Decodes and returns a string from buffer data encoded using the specified
 character set encoding. If <code>encoding</code> is <code>undefined</code> or <code>null</code>, then <code>encoding</code>
-defaults to <code>&#39;utf8&#39;. The </code>start<code> and </code>end<code> parameters default to </code>0<code> and
+defaults to <code>&apos;utf8&apos;. The </code>start<code> and </code>end<code> parameters default to </code>0<code> and
 </code>buffer.length<code> when </code>undefined`.
 
 </p>
@@ -398,10 +398,10 @@ defaults to <code>&#39;utf8&#39;. The </code>start<code> and </code>end<code> pa
 for (var i = 0 ; i &lt; 26 ; i++) {
   buf[i] = i + 97; // 97 is ASCII a
 }
-buf.toString(&#39;ascii&#39;); // outputs: abcdefghijklmnopqrstuvwxyz
-buf.toString(&#39;ascii&#39;,0,5); // outputs: abcde
-buf.toString(&#39;utf8&#39;,0,5); // outputs: abcde
-buf.toString(undefined,0,5); // encoding defaults to &#39;utf8&#39;, outputs abcde</code></pre>
+buf.toString(&apos;ascii&apos;); // outputs: abcdefghijklmnopqrstuvwxyz
+buf.toString(&apos;ascii&apos;,0,5); // outputs: abcde
+buf.toString(&apos;utf8&apos;,0,5); // outputs: abcde
+buf.toString(undefined,0,5); // encoding defaults to &apos;utf8&apos;, outputs abcde</code></pre>
 <p>See <code>buffer.write()</code> example, above.
 
 
@@ -414,14 +414,14 @@ implicitly calls this function when stringifying a Buffer instance.
 <p>Example:
 
 </p>
-<pre><code>var buf = new Buffer(&#39;test&#39;);
+<pre><code>var buf = new Buffer(&apos;test&apos;);
 var json = JSON.stringify(buf);
 
 console.log(json);
-// &#39;{&quot;type&quot;:&quot;Buffer&quot;,&quot;data&quot;:[116,101,115,116]}&#39;
+// &apos;{&quot;type&quot;:&quot;Buffer&quot;,&quot;data&quot;:[116,101,115,116]}&apos;
 
 var copy = JSON.parse(json, function(key, value) {
-    return value &amp;&amp; value.type === &#39;Buffer&#39;
+    return value &amp;&amp; value.type === &apos;Buffer&apos;
       ? new Buffer(value.data)
       : value;
   });
@@ -452,7 +452,7 @@ console.log(buf);
 <h3>buf.equals(otherBuffer)<span><a class="mark" href="#buffer_buf_equals_otherbuffer" id="buffer_buf_equals_otherbuffer">#</a></span></h3>
 <div class="signature"><ul>
 <li><code>otherBuffer</code> <span class="type">Buffer</span></li>
-</div></ul>
+</ul></div>
 <p>Returns a boolean of whether <code>this</code> and <code>otherBuffer</code> have the same
 bytes.
 
@@ -460,7 +460,7 @@ bytes.
 <h3>buf.compare(otherBuffer)<span><a class="mark" href="#buffer_buf_compare_otherbuffer" id="buffer_buf_compare_otherbuffer">#</a></span></h3>
 <div class="signature"><ul>
 <li><code>otherBuffer</code> <span class="type">Buffer</span></li>
-</div></ul>
+</ul></div>
 <p>Returns a number indicating whether <code>this</code> comes before or after or is
 the same as the <code>otherBuffer</code> in sort order.
 
@@ -471,7 +471,7 @@ the same as the <code>otherBuffer</code> in sort order.
 <li><code>targetStart</code> Number, Optional, Default: 0</li>
 <li><code>sourceStart</code> Number, Optional, Default: 0</li>
 <li><code>sourceEnd</code> Number, Optional, Default: <code>buffer.length</code></li>
-</div></ul>
+</ul></div>
 <p>Copies data from a region of this buffer to a region in the target buffer even
 if the target memory region overlaps with the source. If <code>undefined</code> the
 <code>targetStart</code> and <code>sourceStart</code> parameters default to <code>0</code> while <code>sourceEnd</code>
@@ -491,7 +491,7 @@ for (var i = 0 ; i &lt; 26 ; i++) {
 }
 
 buf1.copy(buf2, 8, 16, 20);
-console.log(buf2.toString(&#39;ascii&#39;, 0, 25));
+console.log(buf2.toString(&apos;ascii&apos;, 0, 25));
 
 // !!!!!!!!qrst!!!!!!!!!!!!!</code></pre>
 <p>Example: Build a single buffer, then copy data from one region to an overlapping
@@ -512,7 +512,7 @@ console.log(buf.toString());
 <div class="signature"><ul>
 <li><code>start</code> Number, Optional, Default: 0</li>
 <li><code>end</code> Number, Optional, Default: <code>buffer.length</code></li>
-</div></ul>
+</ul></div>
 <p>Returns a new buffer which references the same memory as the old, but offset
 and cropped by the <code>start</code> (defaults to <code>0</code>) and <code>end</code> (defaults to
 <code>buffer.length</code>) indexes.  Negative indexes start from the end of the buffer.
@@ -532,9 +532,9 @@ for (var i = 0 ; i &lt; 26 ; i++) {
 }
 
 var buf2 = buf1.slice(0, 3);
-console.log(buf2.toString(&#39;ascii&#39;, 0, buf2.length));
+console.log(buf2.toString(&apos;ascii&apos;, 0, buf2.length));
 buf1[0] = 33;
-console.log(buf2.toString(&#39;ascii&#39;, 0, buf2.length));
+console.log(buf2.toString(&apos;ascii&apos;, 0, buf2.length));
 
 // abc
 // !bc</code></pre>
@@ -543,7 +543,7 @@ console.log(buf2.toString(&#39;ascii&#39;, 0, buf2.length));
 <li><code>offset</code> Number</li>
 <li><code>noAssert</code> Boolean, Optional, Default: false</li>
 <li>Return: Number</li>
-</div></ul>
+</ul></div>
 <p>Reads an unsigned 8 bit integer from the buffer at the specified offset.
 
 </p>
@@ -642,7 +642,7 @@ console.log(buf.readUInt32LE(0));
 <li><code>offset</code> Number</li>
 <li><code>noAssert</code> Boolean, Optional, Default: false</li>
 <li>Return: Number</li>
-</div></ul>
+</ul></div>
 <p>Reads a signed 8 bit integer from the buffer at the specified offset.
 
 </p>
@@ -650,7 +650,7 @@ console.log(buf.readUInt32LE(0));
 may be beyond the end of the buffer. Defaults to <code>false</code>.
 
 </p>
-<p>Works as <code>buffer.readUInt8</code>, except buffer contents are treated as two&#39;s
+<p>Works as <code>buffer.readUInt8</code>, except buffer contents are treated as two&apos;s
 complement signed values.
 
 </p>
@@ -669,7 +669,7 @@ specified endian format.
 may be beyond the end of the buffer. Defaults to <code>false</code>.
 
 </p>
-<p>Works as <code>buffer.readUInt16*</code>, except buffer contents are treated as two&#39;s
+<p>Works as <code>buffer.readUInt16*</code>, except buffer contents are treated as two&apos;s
 complement signed values.
 
 </p>
@@ -688,7 +688,7 @@ specified endian format.
 may be beyond the end of the buffer. Defaults to <code>false</code>.
 
 </p>
-<p>Works as <code>buffer.readUInt32*</code>, except buffer contents are treated as two&#39;s
+<p>Works as <code>buffer.readUInt32*</code>, except buffer contents are treated as two&apos;s
 complement signed values.
 
 </p>
@@ -757,7 +757,7 @@ console.log(buf.readDoubleLE(0));
 <li><code>value</code> Number</li>
 <li><code>offset</code> Number</li>
 <li><code>noAssert</code> Boolean, Optional, Default: false</li>
-</div></ul>
+</ul></div>
 <p>Writes <code>value</code> to the buffer at the specified offset. Note, <code>value</code> must be a
 valid unsigned 8 bit integer.
 
@@ -849,7 +849,7 @@ console.log(buf);
 <li><code>value</code> Number</li>
 <li><code>offset</code> Number</li>
 <li><code>noAssert</code> Boolean, Optional, Default: false</li>
-</div></ul>
+</ul></div>
 <p>Writes <code>value</code> to the buffer at the specified offset. Note, <code>value</code> must be a
 valid signed 8 bit integer.
 
@@ -860,7 +860,7 @@ beyond the end of the buffer leading to the values being silently dropped. This
 should not be used unless you are certain of correctness. Defaults to <code>false</code>.
 
 </p>
-<p>Works as <code>buffer.writeUInt8</code>, except value is written out as a two&#39;s complement
+<p>Works as <code>buffer.writeUInt8</code>, except value is written out as a two&apos;s complement
 signed integer into <code>buffer</code>.
 
 </p>
@@ -881,7 +881,7 @@ beyond the end of the buffer leading to the values being silently dropped. This
 should not be used unless you are certain of correctness. Defaults to <code>false</code>.
 
 </p>
-<p>Works as <code>buffer.writeUInt16*</code>, except value is written out as a two&#39;s
+<p>Works as <code>buffer.writeUInt16*</code>, except value is written out as a two&apos;s
 complement signed integer into <code>buffer</code>.
 
 </p>
@@ -902,7 +902,7 @@ beyond the end of the buffer leading to the values being silently dropped. This
 should not be used unless you are certain of correctness. Defaults to <code>false</code>.
 
 </p>
-<p>Works as <code>buffer.writeUInt32*</code>, except value is written out as a two&#39;s
+<p>Works as <code>buffer.writeUInt32*</code>, except value is written out as a two&apos;s
 complement signed integer into <code>buffer</code>.
 
 </p>
@@ -973,7 +973,7 @@ console.log(buf);
 <li><code>value</code></li>
 <li><code>offset</code> Number, Optional</li>
 <li><code>end</code> Number, Optional</li>
-</div></ul>
+</ul></div>
 <p>Fills the buffer with the specified value. If the <code>offset</code> (defaults to <code>0</code>)
 and <code>end</code> (defaults to <code>buffer.length</code>) are not given it will fill the entire
 buffer.
@@ -984,13 +984,13 @@ b.fill(&quot;h&quot;);</code></pre>
 <h2>buffer.INSPECT_MAX_BYTES<span><a class="mark" href="#buffer_buffer_inspect_max_bytes" id="buffer_buffer_inspect_max_bytes">#</a></span></h2>
 <div class="signature"><ul>
 <li>Number, Default: 50</li>
-</div></ul>
+</ul></div>
 <p>How many bytes will be returned when <code>buffer.inspect()</code> is called. This can
 be overridden by user modules.
 
 </p>
 <p>Note that this is a property on the buffer module returned by
-<code>require(&#39;buffer&#39;)</code>, not on the Buffer global, or a buffer instance.
+<code>require(&apos;buffer&apos;)</code>, not on the Buffer global, or a buffer instance.
 
 </p>
 <h2>Class: SlowBuffer<span><a class="mark" href="#buffer_class_slowbuffer" id="buffer_class_slowbuffer">#</a></span></h2>
@@ -1011,7 +1011,7 @@ un-pooled Buffer instance using SlowBuffer and copy out the relevant bits.
 <pre><code>// need to keep around a few small chunks of memory
 var store = [];
 
-socket.on(&#39;readable&#39;, function() {
+socket.on(&apos;readable&apos;, function() {
   var data = socket.read();
   // allocate for retained data
   var sb = new SlowBuffer(10);
@@ -1030,7 +1030,7 @@ has actively observed undue memory retention in their applications.
     <div id="footer">
       <div class="foot-1">
         <a href="http://www.joyent.com"><h5>The Node.js Project is Sponsored by</h5>
-        <img src="assets/joyent-footer.svg" width="200">
+        
         <p class="tag">Production Node +<br>High Performance Infrastructure</p></a>
         <a href="https://my.joyent.com/landing/signup/701800000015696" class="button getstarted">Get Started</a>
       </div>
@@ -1066,18 +1066,10 @@ has actively observed undue memory retention in their applications.
       </div>
     </div>
 
-  <script src="/sh_main.js"></script>
-  <script src="/sh_javascript.min.js"></script>
-  <script>highlight(undefined, undefined, 'pre');</script>
-  <script>
-    window._gaq = [['_setAccount', 'UA-10874194-2'], ['_trackPageview']];
-    (function(d, t) {
-      var g = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      g.src = '//www.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g, s);
-    }(document, 'script'));
-  </script>
+  
+  
+  
+  
 </body>
 </html>
 

@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "cache2.js",
+  "sourceRoot": "",
+  "sources": [
+    "cache2.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA;;EAAA,GAAA,GAAM,OAAO,CAAC;;EAEd,GAAA,CAAI,mBAAJ;;EACA,UAAA,CAAW,SAAA;WACT,GAAA,CAAI,kBAAJ;EADS,CAAX,EAEE,IAFF;AAHA"
+}

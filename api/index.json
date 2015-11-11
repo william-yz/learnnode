@@ -1,385 +1,385 @@
 {
-  "source": "doc/api/index.markdown",
-  "desc": [
+  &quot;source&quot;: &quot;doc/api/index.markdown&quot;,
+  &quot;desc&quot;: [
     {
-      "type": "list_start",
-      "ordered": false
+      &quot;type&quot;: &quot;list_start&quot;,
+      &quot;ordered&quot;: false
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[About these Docs](documentation.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[About these Docs](documentation.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[Synopsis](synopsis.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[Synopsis](synopsis.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[Assertion Testing](assert.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[Assertion Testing](assert.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[Buffer](buffer.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[Buffer](buffer.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[C/C++ Addons](addons.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[C/C++ Addons](addons.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[Child Processes](child_process.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[Child Processes](child_process.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[Cluster](cluster.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[Cluster](cluster.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[Console](console.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[Console](console.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[Crypto](crypto.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[Crypto](crypto.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[Debugger](debugger.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[Debugger](debugger.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[DNS](dns.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[DNS](dns.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[Domain](domain.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[Domain](domain.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[Events](events.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[Events](events.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[File System](fs.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[File System](fs.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[Globals](globals.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[Globals](globals.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[HTTP](http.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[HTTP](http.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[HTTPS](https.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[HTTPS](https.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[Modules](modules.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[Modules](modules.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[Net](net.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[Net](net.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[OS](os.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[OS](os.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[Path](path.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[Path](path.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[Process](process.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[Process](process.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[Punycode](punycode.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[Punycode](punycode.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[Query Strings](querystring.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[Query Strings](querystring.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[Readline](readline.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[Readline](readline.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[REPL](repl.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[REPL](repl.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[Smalloc](smalloc.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[Smalloc](smalloc.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[Stream](stream.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[Stream](stream.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[String Decoder](string_decoder.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[String Decoder](string_decoder.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[Timers](timers.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[Timers](timers.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[TLS/SSL](tls.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[TLS/SSL](tls.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[TTY](tty.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[TTY](tty.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[UDP/Datagram](dgram.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[UDP/Datagram](dgram.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[URL](url.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[URL](url.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[Utilities](util.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[Utilities](util.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[VM](vm.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[VM](vm.html)&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_item_start"
+      &quot;type&quot;: &quot;list_item_start&quot;
     },
     {
-      "type": "text",
-      "text": "[ZLIB](zlib.html)"
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;text&quot;: &quot;[ZLIB](zlib.html)&quot;
     },
     {
-      "type": "space"
+      &quot;type&quot;: &quot;space&quot;
     },
     {
-      "type": "list_item_end"
+      &quot;type&quot;: &quot;list_item_end&quot;
     },
     {
-      "type": "list_end"
+      &quot;type&quot;: &quot;list_end&quot;
     }
   ]
 }

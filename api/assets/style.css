@@ -14,14 +14,14 @@ hr {
 }
 
 .din {
-  font-family: "din-condensed-web","Arial Narrow",Arial,sans-serif;
+  font-family: &quot;din-condensed-web&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
   text-transform: uppercase;
 }
 
 .sans {
-  font-family: "source-sans-pro", sans-serif;
+  font-family: &quot;source-sans-pro&quot;, sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -37,7 +37,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 17px;
   line-height: 200%;
-  font-family: "source-sans-pro", sans-serif;
+  font-family: &quot;source-sans-pro&quot;, sans-serif;
   font-style: normal;
   font-weight: 400;
   margin: 0;
@@ -90,7 +90,7 @@ h3, h4 {
 .blog h2 {margin-top: 10px;}
 
 #front h1, #front h2, #front h3, #front h4/*, .blog h2, .blog h3, .blog h4*/ {
-  font-family: "din-condensed-web","Arial Narrow",Arial,sans-serif;
+  font-family: &quot;din-condensed-web&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
   text-transform: uppercase;
@@ -138,7 +138,7 @@ h3 a {
 }
 
 #nav ul:after, #footer .foot-nav:after {
-  content: ' ';
+  content: &apos; &apos;;
   display: block;
   width: 0;
   height: 0;
@@ -159,7 +159,7 @@ h3 a {
   top: 100%;
   left: 50%;
   border: solid transparent;
-  content: " ";
+  content: &quot; &quot;;
   height: 0;
   width: 0;
   position: absolute;
@@ -226,7 +226,7 @@ h3 a {
 }
 
 #intro .button {
-  font-family: "din-condensed-web","Arial Narrow",Arial,sans-serif;
+  font-family: &quot;din-condensed-web&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
   text-transform: uppercase;
@@ -264,7 +264,7 @@ h3 a {
   font-size: 30px;
   display: block;
   margin: 30px auto 0px auto;
-  font-family: "din-condensed-web","Arial Narrow",Arial,sans-serif;
+  font-family: &quot;din-condensed-web&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
   text-transform: uppercase;
@@ -285,7 +285,7 @@ h3 a {
   position: absolute;
   background: url(/images/stripe.png);
   background-size: 5px auto;
-  content: '';
+  content: &apos;&apos;;
   top: 10px;
   left: 0;
   right: 0;
@@ -458,13 +458,13 @@ h3 a {
   margin-top: 10px;
   margin-bottom: 0;
   font-weight: normal;
-  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: &quot;HelveticaNeue&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif;
 }
 
 #column2.featured p {
   font-size: 11px;
   line-height: 18px;
-  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: &quot;HelveticaNeue&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif;
 }
 
 #column1.interior {
@@ -566,7 +566,7 @@ div.block:nth-of-type(4n) {
   border-left: 1px solid rgba(255,255,255,.3);
 }
 
-#footer > a {
+#footer &gt; a {
   display: block;
   text-align: center;
 }
@@ -596,7 +596,7 @@ div.block:nth-of-type(4n) {
 }
 
 #footer a.getstarted {
-  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: &quot;HelveticaNeue&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif;
   font-size: 20px;
   line-height: 20px;
   background-color: #6b9e00;
@@ -662,7 +662,7 @@ pre, tt, code {
   color: #d2d8ba;
   font-size: 14px;
   line-height: 22px;
-  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  font-family: Monaco, Consolas, &quot;Lucida Console&quot;, monospace;
   margin: 0; padding: 0;
 }
 
@@ -748,7 +748,7 @@ a:hover {
 
 /* simpler clearfix */
 .clearfix:after {
-  content: ".";
+  content: &quot;.&quot;;
   display: block;
   height: 0;
   clear: both;

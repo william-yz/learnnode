@@ -6,12 +6,12 @@
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/sh.css">
   <link rel="canonical" href="http://nodejs.org/api/globals.html">
-  <script type="text/javascript" src="//use.typekit.net/mse5tqx.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+  
 </head>
 <body class="alt apidoc int docs" id="docs">
     <div id="nav">
-      <img id="logo" src="assets/logo.svg" alt="node.js">
+      
       <ul>
         <li><a href="http://nodejs.org">Home</a></li>
         <li><a href="http://nodejs.org/download/">Downloads</a></li>
@@ -80,7 +80,7 @@
             <h1>Global Objects<span><a class="mark" href="#globals_global_objects" id="globals_global_objects">#</a></span></h1>
 <!-- type=misc -->
 
-<p>These objects are available in all modules. Some of these objects aren&#39;t
+<p>These objects are available in all modules. Some of these objects aren&apos;t
 actually in the global scope but in the module scope - this will be noted.
 
 </p>
@@ -91,7 +91,7 @@ actually in the global scope but in the module scope - this will be noted.
 <li>{Object} The global namespace object.</li>
 </ul>
 <p>In browsers, the top-level scope is the global scope. That means that in
-browsers if you&#39;re in the global scope <code>var something</code> will define a global
+browsers if you&apos;re in the global scope <code>var something</code> will define a global
 variable. In Node this is different. The top-level scope is not the global
 scope; <code>var something</code> inside a Node module will be local to that module.
 
@@ -129,7 +129,7 @@ scope; <code>var something</code> inside a Node module will be local to that mod
 <ul>
 <li>{Function}</li>
 </ul>
-<p>To require modules. See the <a href="modules.html#modules_modules">Modules</a> section.  <code>require</code> isn&#39;t actually a
+<p>To require modules. See the <a href="modules.html#modules_modules">Modules</a> section.  <code>require</code> isn&apos;t actually a
 global but rather local to each module.
 
 </p>
@@ -141,7 +141,7 @@ but rather than loading the module, just return the resolved filename.
 <h3>require.cache<span><a class="mark" href="#globals_require_cache" id="globals_require_cache">#</a></span></h3>
 <div class="signature"><ul>
 <li><span class="type">Object</span></li>
-</div></ul>
+</ul></div>
 <p>Modules are cached in this object when they are required. By deleting a key
 value from this object, the next <code>require</code> will reload the module.
 
@@ -149,14 +149,14 @@ value from this object, the next <code>require</code> will reload the module.
 <h3>require.extensions<span><a class="mark" href="#globals_require_extensions" id="globals_require_extensions">#</a></span></h3>
 <pre class="api_stability_0">Stability: 0 - Deprecated</pre><div class="signature"><ul>
 <li><span class="type">Object</span></li>
-</div></ul>
+</ul></div>
 <p>Instruct <code>require</code> on how to handle certain file extensions.
 
 </p>
 <p>Process files with the extension <code>.sjs</code> as <code>.js</code>:
 
 </p>
-<pre><code>require.extensions[&#39;.sjs&#39;] = require.extensions[&#39;.js&#39;];</code></pre>
+<pre><code>require.extensions[&apos;.sjs&apos;] = require.extensions[&apos;.js&apos;];</code></pre>
 <p><strong>Deprecated</strong>  In the past, this list has been used to load
 non-JavaScript modules into Node by compiling them on-demand.
 However, in practice, there are much better ways to do this, such as
@@ -186,7 +186,7 @@ to that module file.
 </p>
 <pre><code>console.log(__filename);
 // /Users/mjr/example.js</code></pre>
-<p><code>__filename</code> isn&#39;t actually a global but rather local to each module.
+<p><code>__filename</code> isn&apos;t actually a global but rather local to each module.
 
 </p>
 <h2>__dirname<span><a class="mark" href="#globals_dirname" id="globals_dirname">#</a></span></h2>
@@ -203,7 +203,7 @@ to that module file.
 </p>
 <pre><code>console.log(__dirname);
 // /Users/mjr</code></pre>
-<p><code>__dirname</code> isn&#39;t actually a global but rather local to each module.
+<p><code>__dirname</code> isn&apos;t actually a global but rather local to each module.
 
 
 </p>
@@ -218,7 +218,7 @@ to that module file.
 available through <code>require()</code>.
 
 </p>
-<p><code>module</code> isn&#39;t actually a global but rather local to each module.
+<p><code>module</code> isn&apos;t actually a global but rather local to each module.
 
 </p>
 <p>See the <a href="modules.html">module system documentation</a> for more information.
@@ -232,7 +232,7 @@ See <a href="modules.html">module system documentation</a> for details on when t
 when to use <code>module.exports</code>.
 
 </p>
-<p><code>exports</code> isn&#39;t actually a global but rather local to each module.
+<p><code>exports</code> isn&apos;t actually a global but rather local to each module.
 
 </p>
 <p>See the <a href="modules.html">module system documentation</a> for more information.
@@ -247,7 +247,7 @@ on external factors like OS timer granularity and system load.
 
 </p>
 <p>The timeout must be in the range of 1-2,147,483,647 inclusive. If the value is
-outside that range, it&#39;s changed to 1 millisecond. Broadly speaking, a timer
+outside that range, it&apos;s changed to 1 millisecond. Broadly speaking, a timer
 cannot span more than 24.8 days.
 
 </p>
@@ -262,11 +262,11 @@ not execute.
 <h2>setInterval(cb, ms)<span><a class="mark" href="#globals_setinterval_cb_ms" id="globals_setinterval_cb_ms">#</a></span></h2>
 <p>Run callback <code>cb</code> repeatedly every <code>ms</code> milliseconds. Note that the actual
 interval may vary, depending on external factors like OS timer granularity and
-system load. It&#39;s never less than <code>ms</code> but it may be longer.
+system load. It&apos;s never less than <code>ms</code> but it may be longer.
 
 </p>
 <p>The interval must be in the range of 1-2,147,483,647 inclusive. If the value is
-outside that range, it&#39;s changed to 1 millisecond. Broadly speaking, a timer
+outside that range, it&apos;s changed to 1 millisecond. Broadly speaking, a timer
 cannot span more than 24.8 days.
 
 </p>
@@ -291,7 +291,7 @@ will not execute.
     <div id="footer">
       <div class="foot-1">
         <a href="http://www.joyent.com"><h5>The Node.js Project is Sponsored by</h5>
-        <img src="assets/joyent-footer.svg" width="200">
+        
         <p class="tag">Production Node +<br>High Performance Infrastructure</p></a>
         <a href="https://my.joyent.com/landing/signup/701800000015696" class="button getstarted">Get Started</a>
       </div>
@@ -327,18 +327,10 @@ will not execute.
       </div>
     </div>
 
-  <script src="/sh_main.js"></script>
-  <script src="/sh_javascript.min.js"></script>
-  <script>highlight(undefined, undefined, 'pre');</script>
-  <script>
-    window._gaq = [['_setAccount', 'UA-10874194-2'], ['_trackPageview']];
-    (function(d, t) {
-      var g = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      g.src = '//www.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g, s);
-    }(document, 'script'));
-  </script>
+  
+  
+  
+  
 </body>
 </html>
 

@@ -60,8 +60,7 @@ var load = module.exports = function (url) {
         var $ = cheerio.load(res.text);
         $('img').remove();
         $('script').remove();
-        console.info(res.req.path);
-        // saveFile(res.path, $.html());
+        saveFile(res.req.path.replace('/docs/latest-v0.12.x/',''), $.html());
     }
 
     function saveFile(path, htmlStr) {

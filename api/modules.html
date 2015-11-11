@@ -6,12 +6,12 @@
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/sh.css">
   <link rel="canonical" href="http://nodejs.org/api/modules.html">
-  <script type="text/javascript" src="//use.typekit.net/mse5tqx.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+  
 </head>
 <body class="alt apidoc int docs" id="docs">
     <div id="nav">
-      <img id="logo" src="assets/logo.svg" alt="node.js">
+      
       <ul>
         <li><a href="http://nodejs.org">Home</a></li>
         <li><a href="http://nodejs.org/download/">Downloads</a></li>
@@ -96,8 +96,8 @@ one-to-one correspondence.  As an example, <code>foo.js</code> loads the module
 <p>The contents of <code>foo.js</code>:
 
 </p>
-<pre><code>var circle = require(&#39;./circle.js&#39;);
-console.log( &#39;The area of a circle of radius 4 is &#39;
+<pre><code>var circle = require(&apos;./circle.js&apos;);
+console.log( &apos;The area of a circle of radius 4 is &apos;
            + circle.area(4));</code></pre>
 <p>The contents of <code>circle.js</code>:
 
@@ -120,7 +120,7 @@ you can add them to the special <code>exports</code> object.
 in a function. In this example the variable <code>PI</code> is private to <code>circle.js</code>.
 
 </p>
-<p>If you want the root of your module&#39;s export to be a function (such as a
+<p>If you want the root of your module&apos;s export to be a function (such as a
 constructor) or if you want to export a complete object in one assignment
 instead of building it one property at a time, assign it to <code>module.exports</code>
 instead of <code>exports</code>.
@@ -129,9 +129,9 @@ instead of <code>exports</code>.
 <p>Below, <code>bar.js</code> makes use of the <code>square</code> module, which exports a constructor:
 
 </p>
-<pre><code>var square = require(&#39;./square.js&#39;);
+<pre><code>var square = require(&apos;./square.js&apos;);
 var mySquare = square(2);
-console.log(&#39;The area of my square is &#39; + mySquare.area());</code></pre>
+console.log(&apos;The area of my square is &apos; + mySquare.area());</code></pre>
 <p>The <code>square</code> module is defined in <code>square.js</code>:
 
 </p>
@@ -159,28 +159,28 @@ executing when it is returned.
 <p><code>a.js</code>:
 
 </p>
-<pre><code>console.log(&#39;a starting&#39;);
+<pre><code>console.log(&apos;a starting&apos;);
 exports.done = false;
-var b = require(&#39;./b.js&#39;);
-console.log(&#39;in a, b.done = %j&#39;, b.done);
+var b = require(&apos;./b.js&apos;);
+console.log(&apos;in a, b.done = %j&apos;, b.done);
 exports.done = true;
-console.log(&#39;a done&#39;);</code></pre>
+console.log(&apos;a done&apos;);</code></pre>
 <p><code>b.js</code>:
 
 </p>
-<pre><code>console.log(&#39;b starting&#39;);
+<pre><code>console.log(&apos;b starting&apos;);
 exports.done = false;
-var a = require(&#39;./a.js&#39;);
-console.log(&#39;in b, a.done = %j&#39;, a.done);
+var a = require(&apos;./a.js&apos;);
+console.log(&apos;in b, a.done = %j&apos;, a.done);
 exports.done = true;
-console.log(&#39;b done&#39;);</code></pre>
+console.log(&apos;b done&apos;);</code></pre>
 <p><code>main.js</code>:
 
 </p>
-<pre><code>console.log(&#39;main starting&#39;);
-var a = require(&#39;./a.js&#39;);
-var b = require(&#39;./b.js&#39;);
-console.log(&#39;in main, a.done=%j, b.done=%j&#39;, a.done, b.done);</code></pre>
+<pre><code>console.log(&apos;main starting&apos;);
+var a = require(&apos;./a.js&apos;);
+var b = require(&apos;./b.js&apos;);
+console.log(&apos;in main, a.done=%j, b.done=%j&apos;, a.done, b.done);</code></pre>
 <p>When <code>main.js</code> loads <code>a.js</code>, then <code>a.js</code> in turn loads <code>b.js</code>.  At that
 point, <code>b.js</code> tries to load <code>a.js</code>.  In order to prevent an infinite
 loop, an <strong>unfinished copy</strong> of the <code>a.js</code> exports object is returned to the
@@ -188,7 +188,7 @@ loop, an <strong>unfinished copy</strong> of the <code>a.js</code> exports objec
 provided to the <code>a.js</code> module.
 
 </p>
-<p>By the time <code>main.js</code> has loaded both modules, they&#39;re both finished.
+<p>By the time <code>main.js</code> has loaded both modules, they&apos;re both finished.
 The output of this program would thus be:
 
 </p>
@@ -212,11 +212,11 @@ plan accordingly.
 described in greater detail elsewhere in this documentation.
 
 </p>
-<p>The core modules are defined in node&#39;s source in the <code>lib/</code> folder.
+<p>The core modules are defined in node&apos;s source in the <code>lib/</code> folder.
 
 </p>
 <p>Core modules are always preferentially loaded if their identifier is
-passed to <code>require()</code>.  For instance, <code>require(&#39;http&#39;)</code> will always
+passed to <code>require()</code>.  For instance, <code>require(&apos;http&apos;)</code> will always
 return the built in HTTP module, even if there is a file by that name.
 
 </p>
@@ -232,29 +232,29 @@ parsed as JSON text files. <code>.node</code> files are interpreted as compiled 
 modules loaded with <code>dlopen</code>.
 
 </p>
-<p>A module prefixed with <code>&#39;/&#39;</code> is an absolute path to the file.  For
-example, <code>require(&#39;/home/marco/foo.js&#39;)</code> will load the file at
+<p>A module prefixed with <code>&apos;/&apos;</code> is an absolute path to the file.  For
+example, <code>require(&apos;/home/marco/foo.js&apos;)</code> will load the file at
 <code>/home/marco/foo.js</code>.
 
 </p>
-<p>A module prefixed with <code>&#39;./&#39;</code> is relative to the file calling <code>require()</code>.
+<p>A module prefixed with <code>&apos;./&apos;</code> is relative to the file calling <code>require()</code>.
 That is, <code>circle.js</code> must be in the same directory as <code>foo.js</code> for
-<code>require(&#39;./circle&#39;)</code> to find it.
+<code>require(&apos;./circle&apos;)</code> to find it.
 
 </p>
-<p>Without a leading &#39;/&#39; or &#39;./&#39; to indicate a file, the module is either a
+<p>Without a leading &apos;/&apos; or &apos;./&apos; to indicate a file, the module is either a
 &quot;core module&quot; or is loaded from a <code>node_modules</code> folder.
 
 </p>
 <p>If the given path does not exist, <code>require()</code> will throw an Error with its
-<code>code</code> property set to <code>&#39;MODULE_NOT_FOUND&#39;</code>.
+<code>code</code> property set to <code>&apos;MODULE_NOT_FOUND&apos;</code>.
 
 </p>
 <h2>Loading from <code>node_modules</code> Folders<span><a class="mark" href="#modules_loading_from_node_modules_folders" id="modules_loading_from_node_modules_folders">#</a></span></h2>
 <!--type=misc-->
 
 <p>If the module identifier passed to <code>require()</code> is not a native module,
-and does not begin with <code>&#39;/&#39;</code>, <code>&#39;../&#39;</code>, or <code>&#39;./&#39;</code>, then node starts at the
+and does not begin with <code>&apos;/&apos;</code>, <code>&apos;../&apos;</code>, or <code>&apos;./&apos;</code>, then node starts at the
 parent directory of the current module, and adds <code>/node_modules</code>, and
 attempts to load the module from that location.
 
@@ -263,8 +263,8 @@ attempts to load the module from that location.
 on, until the root of the file system is reached.
 
 </p>
-<p>For example, if the file at <code>&#39;/home/ry/projects/foo.js&#39;</code> called
-<code>require(&#39;bar.js&#39;)</code>, then node would look in the following locations, in
+<p>For example, if the file at <code>&apos;/home/ry/projects/foo.js&apos;</code> called
+<code>require(&apos;bar.js&apos;)</code>, then node would look in the following locations, in
 this order:
 
 </p>
@@ -280,7 +280,7 @@ clash.
 </p>
 <p>You can require specific files or sub modules distributed with a module by
 including a path suffix after the module name. For instance
-<code>require(&#39;example-module/path/to/file&#39;)</code> would resolve <code>path/to/file</code>
+<code>require(&apos;example-module/path/to/file&apos;)</code> would resolve <code>path/to/file</code>
 relative to where <code>example-module</code> is located. The suffixed path follows the
 same module resolution semantics.
 
@@ -302,17 +302,17 @@ look like this:
 <pre><code>{ &quot;name&quot; : &quot;some-library&quot;,
   &quot;main&quot; : &quot;./lib/some-library.js&quot; }</code></pre>
 <p>If this was in a folder at <code>./some-library</code>, then
-<code>require(&#39;./some-library&#39;)</code> would attempt to load
+<code>require(&apos;./some-library&apos;)</code> would attempt to load
 <code>./some-library/lib/some-library.js</code>.
 
 </p>
-<p>This is the extent of Node&#39;s awareness of package.json files.
+<p>This is the extent of Node&apos;s awareness of package.json files.
 
 </p>
 <p>If there is no package.json file present in the directory, then node
 will attempt to load an <code>index.js</code> or <code>index.node</code> file out of that
 directory.  For example, if there was no package.json file in the above
-example, then <code>require(&#39;./some-library&#39;)</code> would attempt to load:
+example, then <code>require(&apos;./some-library&apos;)</code> would attempt to load:
 
 </p>
 <ul>
@@ -323,11 +323,11 @@ example, then <code>require(&#39;./some-library&#39;)</code> would attempt to lo
 <!--type=misc-->
 
 <p>Modules are cached after the first time they are loaded.  This means
-(among other things) that every call to <code>require(&#39;foo&#39;)</code> will get
+(among other things) that every call to <code>require(&apos;foo&apos;)</code> will get
 exactly the same object returned, if it would resolve to the same file.
 
 </p>
-<p>Multiple calls to <code>require(&#39;foo&#39;)</code> may not cause the module code to be
+<p>Multiple calls to <code>require(&apos;foo&apos;)</code> may not cause the module code to be
 executed multiple times.  This is an important feature.  With it,
 &quot;partially done&quot; objects can be returned, thus allowing transitive
 dependencies to be loaded even when they would cause cycles.
@@ -343,7 +343,7 @@ function, and call that function.
 <p>Modules are cached based on their resolved filename.  Since modules may
 resolve to a different filename based on the location of the calling
 module (loading from <code>node_modules</code> folders), it is not a <em>guarantee</em>
-that <code>require(&#39;foo&#39;)</code> will always return the exact same object, if it
+that <code>require(&apos;foo&apos;)</code> will always return the exact same object, if it
 would resolve to different files.
 
 </p>
@@ -356,14 +356,14 @@ would resolve to different files.
 </ul>
 <p>In each module, the <code>module</code> free variable is a reference to the object
 representing the current module.  For convenience, <code>module.exports</code> is
-also accessible via the <code>exports</code> module-global. <code>module</code> isn&#39;t actually
+also accessible via the <code>exports</code> module-global. <code>module</code> isn&apos;t actually
 a global but rather local to each module.
 
 </p>
 <h3>module.exports<span><a class="mark" href="#modules_module_exports" id="modules_module_exports">#</a></span></h3>
 <div class="signature"><ul>
 <li><span class="type">Object</span></li>
-</div></ul>
+</ul></div>
 <p>The <code>module.exports</code> object is created by the Module system. Sometimes this is not
 acceptable; many want their module to be an instance of some class. To do this,
 assign the desired export object to <code>module.exports</code>. Note that assigning the
@@ -374,21 +374,21 @@ which is probably not what you want to do.
 <p>For example suppose we were making a module called <code>a.js</code>
 
 </p>
-<pre><code>var EventEmitter = require(&#39;events&#39;).EventEmitter;
+<pre><code>var EventEmitter = require(&apos;events&apos;).EventEmitter;
 
 module.exports = new EventEmitter();
 
 // Do some work, and after some time emit
-// the &#39;ready&#39; event from the module itself.
+// the &apos;ready&apos; event from the module itself.
 setTimeout(function() {
-  module.exports.emit(&#39;ready&#39;);
+  module.exports.emit(&apos;ready&apos;);
 }, 1000);</code></pre>
 <p>Then in another file we could do
 
 </p>
-<pre><code>var a = require(&#39;./a&#39;);
-a.on(&#39;ready&#39;, function() {
-  console.log(&#39;module a is ready&#39;);
+<pre><code>var a = require(&apos;./a&apos;);
+a.on(&apos;ready&apos;, function() {
+  console.log(&apos;module a is ready&apos;);
 });</code></pre>
 <p>Note that assignment to <code>module.exports</code> must be done immediately. It cannot be
 done in any callbacks.  This does not work:
@@ -403,7 +403,7 @@ done in any callbacks.  This does not work:
 <p>y.js:
 
 </p>
-<pre><code>var x = require(&#39;./x&#39;);
+<pre><code>var x = require(&apos;./x&apos;);
 console.log(x.a);</code></pre>
 <h4>exports alias<span><a class="mark" href="#modules_exports_alias" id="modules_exports_alias">#</a></span></h4>
 <p>The <code>exports</code> variable that is available within a module starts as a reference
@@ -433,14 +433,14 @@ seems like magic to you, ignore <code>exports</code> and only use <code>module.e
 <div class="signature"><ul>
 <li><code>id</code> <span class="type">String</span></li>
 <li>Return: <span class="type">Object</span> <code>module.exports</code> from the resolved module</li>
-</div></ul>
+</ul></div>
 <p>The <code>module.require</code> method provides a way to load a module as if
 <code>require()</code> was called from the original module.
 
 </p>
 <p>Note that in order to do this, you must get a reference to the <code>module</code>
 object.  Since <code>require()</code> returns the <code>module.exports</code>, and the <code>module</code> is
-typically <em>only</em> available within a specific module&#39;s code, it must be
+typically <em>only</em> available within a specific module&apos;s code, it must be
 explicitly exported in order to be used.
 
 
@@ -448,7 +448,7 @@ explicitly exported in order to be used.
 <h3>module.id<span><a class="mark" href="#modules_module_id" id="modules_module_id">#</a></span></h3>
 <div class="signature"><ul>
 <li><span class="type">String</span></li>
-</div></ul>
+</ul></div>
 <p>The identifier for the module.  Typically this is the fully resolved
 filename.
 
@@ -457,7 +457,7 @@ filename.
 <h3>module.filename<span><a class="mark" href="#modules_module_filename" id="modules_module_filename">#</a></span></h3>
 <div class="signature"><ul>
 <li><span class="type">String</span></li>
-</div></ul>
+</ul></div>
 <p>The fully resolved filename to the module.
 
 
@@ -465,7 +465,7 @@ filename.
 <h3>module.loaded<span><a class="mark" href="#modules_module_loaded" id="modules_module_loaded">#</a></span></h3>
 <div class="signature"><ul>
 <li><span class="type">Boolean</span></li>
-</div></ul>
+</ul></div>
 <p>Whether or not the module is done loading, or is in the process of
 loading.
 
@@ -474,7 +474,7 @@ loading.
 <h3>module.parent<span><a class="mark" href="#modules_module_parent" id="modules_module_parent">#</a></span></h3>
 <div class="signature"><ul>
 <li><span class="type">Module Object</span></li>
-</div></ul>
+</ul></div>
 <p>The module that required this one.
 
 
@@ -482,7 +482,7 @@ loading.
 <h3>module.children<span><a class="mark" href="#modules_module_children" id="modules_module_children">#</a></span></h3>
 <div class="signature"><ul>
 <li><span class="type">Array</span></li>
-</div></ul>
+</ul></div>
 <p>The module objects required by this one.
 
 
@@ -503,7 +503,7 @@ in pseudocode of what require.resolve does:
 1. If X is a core module,
    a. return the core module
    b. STOP
-2. If X begins with &#39;./&#39; or &#39;/&#39; or &#39;../&#39;
+2. If X begins with &apos;./&apos; or &apos;/&apos; or &apos;../&apos;
    a. LOAD_AS_FILE(Y + X)
    b. LOAD_AS_DIRECTORY(Y + X)
 3. LOAD_NODE_MODULES(X, dirname(Y))
@@ -557,7 +557,7 @@ semicolons instead of colons.)
 <li>2: <code>$HOME/.node_libraries</code></li>
 <li>3: <code>$PREFIX/lib/node</code></li>
 </ul>
-<p>Where <code>$HOME</code> is the user&#39;s home directory, and <code>$PREFIX</code> is node&#39;s
+<p>Where <code>$HOME</code> is the user&apos;s home directory, and <code>$PREFIX</code> is node&apos;s
 configured <code>node_prefix</code>.
 
 </p>
@@ -576,7 +576,7 @@ directly by testing
 </p>
 <pre><code>require.main === module</code></pre>
 <p>For a file <code>foo.js</code>, this will be <code>true</code> if run via <code>node foo.js</code>, but
-<code>false</code> if run by <code>require(&#39;./foo&#39;)</code>.
+<code>false</code> if run by <code>require(&apos;./foo&apos;)</code>.
 
 </p>
 <p>Because <code>module</code> provides a <code>filename</code> property (normally equivalent to
@@ -587,7 +587,7 @@ by checking <code>require.main.filename</code>.
 <h2>Addenda: Package Manager Tips<span><a class="mark" href="#modules_addenda_package_manager_tips" id="modules_addenda_package_manager_tips">#</a></span></h2>
 <!-- type=misc -->
 
-<p>The semantics of Node&#39;s <code>require()</code> function were designed to be general
+<p>The semantics of Node&apos;s <code>require()</code> function were designed to be general
 enough to support a number of sane directory structures. Package manager
 programs such as <code>dpkg</code>, <code>rpm</code>, and <code>npm</code> will hopefully find it possible to
 build native packages from Node modules without modification.
@@ -596,7 +596,7 @@ build native packages from Node modules without modification.
 <p>Below we give a suggested directory structure that could work:
 
 </p>
-<p>Let&#39;s say that we wanted to have the folder at
+<p>Let&apos;s say that we wanted to have the folder at
 <code>/usr/lib/node/&lt;some-package&gt;/&lt;some-version&gt;</code> hold the contents of a
 specific version of a package.
 
@@ -627,9 +627,9 @@ conflicts, every module will be able to get a version of its dependency
 that it can use.
 
 </p>
-<p>When the code in the <code>foo</code> package does <code>require(&#39;bar&#39;)</code>, it will get the
+<p>When the code in the <code>foo</code> package does <code>require(&apos;bar&apos;)</code>, it will get the
 version that is symlinked into <code>/usr/lib/node/foo/1.2.3/node_modules/bar</code>.
-Then, when the code in the <code>bar</code> package calls <code>require(&#39;quux&#39;)</code>, it&#39;ll get
+Then, when the code in the <code>bar</code> package calls <code>require(&apos;quux&apos;)</code>, it&apos;ll get
 the version that is symlinked into
 <code>/usr/lib/node/bar/4.3.2/node_modules/quux</code>.
 
@@ -654,7 +654,7 @@ relative, and based on the real path of the files making the calls to
     <div id="footer">
       <div class="foot-1">
         <a href="http://www.joyent.com"><h5>The Node.js Project is Sponsored by</h5>
-        <img src="assets/joyent-footer.svg" width="200">
+        
         <p class="tag">Production Node +<br>High Performance Infrastructure</p></a>
         <a href="https://my.joyent.com/landing/signup/701800000015696" class="button getstarted">Get Started</a>
       </div>
@@ -690,18 +690,10 @@ relative, and based on the real path of the files making the calls to
       </div>
     </div>
 
-  <script src="/sh_main.js"></script>
-  <script src="/sh_javascript.min.js"></script>
-  <script>highlight(undefined, undefined, 'pre');</script>
-  <script>
-    window._gaq = [['_setAccount', 'UA-10874194-2'], ['_trackPageview']];
-    (function(d, t) {
-      var g = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      g.src = '//www.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g, s);
-    }(document, 'script'));
-  </script>
+  
+  
+  
+  
 </body>
 </html>
 

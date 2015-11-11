@@ -1,9 +1,9 @@
 {
   "version": 3,
-  "file": "route.js",
+  "file": "module1.js",
   "sourceRoot": "",
   "sources": [
-    "route.coffee"
+    "module1.coffee"
   ],
   "names": [],
   "mappings": ";AAAA;;AAAA"

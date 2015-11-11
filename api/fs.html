@@ -6,12 +6,12 @@
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/sh.css">
   <link rel="canonical" href="http://nodejs.org/api/fs.html">
-  <script type="text/javascript" src="//use.typekit.net/mse5tqx.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+  
 </head>
 <body class="alt apidoc int docs" id="docs">
     <div id="nav">
-      <img id="logo" src="assets/logo.svg" alt="node.js">
+      
       <ul>
         <li><a href="http://nodejs.org">Home</a></li>
         <li><a href="http://nodejs.org/download/">Downloads</a></li>
@@ -134,19 +134,19 @@
 </li>
 <li><a href="#fs_fs_createreadstream_path_options">fs.createReadStream(path[, options])</a></li>
 <li><a href="#fs_class_fs_readstream">Class: fs.ReadStream</a><ul>
-<li><a href="#fs_event_open">Event: &#39;open&#39;</a></li>
+<li><a href="#fs_event_open">Event: &apos;open&apos;</a></li>
 </ul>
 </li>
 <li><a href="#fs_fs_createwritestream_path_options">fs.createWriteStream(path[, options])</a></li>
 <li><a href="#fs_class_fs_writestream">Class: fs.WriteStream</a><ul>
-<li><a href="#fs_event_open_1">Event: &#39;open&#39;</a></li>
+<li><a href="#fs_event_open_1">Event: &apos;open&apos;</a></li>
 <li><a href="#fs_file_byteswritten">file.bytesWritten</a></li>
 </ul>
 </li>
 <li><a href="#fs_class_fs_fswatcher">Class: fs.FSWatcher</a><ul>
 <li><a href="#fs_watcher_close">watcher.close()</a></li>
-<li><a href="#fs_event_change">Event: &#39;change&#39;</a></li>
-<li><a href="#fs_event_error">Event: &#39;error&#39;</a></li>
+<li><a href="#fs_event_change">Event: &apos;change&apos;</a></li>
+<li><a href="#fs_event_error">Event: &apos;error&apos;</a></li>
 </ul>
 </li>
 </ul>
@@ -160,7 +160,7 @@
 <pre class="api_stability_3">Stability: 3 - Stable</pre><!--name=fs-->
 
 <p>File I/O is provided by simple wrappers around standard POSIX functions.  To
-use this module do <code>require(&#39;fs&#39;)</code>. All the methods have asynchronous and
+use this module do <code>require(&apos;fs&apos;)</code>. All the methods have asynchronous and
 synchronous forms.
 
 </p>
@@ -177,40 +177,40 @@ You can use try/catch to handle exceptions or allow them to bubble up.
 <p>Here is an example of the asynchronous version:
 
 </p>
-<pre><code>var fs = require(&#39;fs&#39;);
+<pre><code>var fs = require(&apos;fs&apos;);
 
-fs.unlink(&#39;/tmp/hello&#39;, function (err) {
+fs.unlink(&apos;/tmp/hello&apos;, function (err) {
   if (err) throw err;
-  console.log(&#39;successfully deleted /tmp/hello&#39;);
+  console.log(&apos;successfully deleted /tmp/hello&apos;);
 });</code></pre>
 <p>Here is the synchronous version:
 
 </p>
-<pre><code>var fs = require(&#39;fs&#39;);
+<pre><code>var fs = require(&apos;fs&apos;);
 
-fs.unlinkSync(&#39;/tmp/hello&#39;);
-console.log(&#39;successfully deleted /tmp/hello&#39;);</code></pre>
+fs.unlinkSync(&apos;/tmp/hello&apos;);
+console.log(&apos;successfully deleted /tmp/hello&apos;);</code></pre>
 <p>With the asynchronous methods there is no guaranteed ordering. So the
 following is prone to error:
 
 </p>
-<pre><code>fs.rename(&#39;/tmp/hello&#39;, &#39;/tmp/world&#39;, function (err) {
+<pre><code>fs.rename(&apos;/tmp/hello&apos;, &apos;/tmp/world&apos;, function (err) {
   if (err) throw err;
-  console.log(&#39;renamed complete&#39;);
+  console.log(&apos;renamed complete&apos;);
 });
-fs.stat(&#39;/tmp/world&#39;, function (err, stats) {
+fs.stat(&apos;/tmp/world&apos;, function (err, stats) {
   if (err) throw err;
-  console.log(&#39;stats: &#39; + JSON.stringify(stats));
+  console.log(&apos;stats: &apos; + JSON.stringify(stats));
 });</code></pre>
 <p>It could be that <code>fs.stat</code> is executed before <code>fs.rename</code>.
 The correct way to do this is to chain the callbacks.
 
 </p>
-<pre><code>fs.rename(&#39;/tmp/hello&#39;, &#39;/tmp/world&#39;, function (err) {
+<pre><code>fs.rename(&apos;/tmp/hello&apos;, &apos;/tmp/world&apos;, function (err) {
   if (err) throw err;
-  fs.stat(&#39;/tmp/world&#39;, function (err, stats) {
+  fs.stat(&apos;/tmp/world&apos;, function (err, stats) {
     if (err) throw err;
-    console.log(&#39;stats: &#39; + JSON.stringify(stats));
+    console.log(&apos;stats: &apos; + JSON.stringify(stats));
   });
 });</code></pre>
 <p>In busy processes, the programmer is <em>strongly encouraged</em> to use the
@@ -229,7 +229,7 @@ site, set the NODE_DEBUG environment variable:
 </p>
 <pre><code>$ cat script.js
 function bad() {
-  require(&#39;fs&#39;).readFile(&#39;/&#39;);
+  require(&apos;fs&apos;).readFile(&apos;/&apos;);
 }
 bad();
 
@@ -372,10 +372,10 @@ the completion callback.
 <h2>fs.symlink(srcpath, dstpath[, type], callback)<span><a class="mark" href="#fs_fs_symlink_srcpath_dstpath_type_callback" id="fs_fs_symlink_srcpath_dstpath_type_callback">#</a></span></h2>
 <p>Asynchronous symlink(2). No arguments other than a possible exception are given
 to the completion callback.
-The <code>type</code> argument can be set to <code>&#39;dir&#39;</code>, <code>&#39;file&#39;</code>, or <code>&#39;junction&#39;</code> (default
-is <code>&#39;file&#39;</code>) and is only available on Windows (ignored on other platforms).
+The <code>type</code> argument can be set to <code>&apos;dir&apos;</code>, <code>&apos;file&apos;</code>, or <code>&apos;junction&apos;</code> (default
+is <code>&apos;file&apos;</code>) and is only available on Windows (ignored on other platforms).
 Note that Windows junction points require the destination path to be absolute.  When using
-<code>&#39;junction&#39;</code>, the <code>destination</code> argument will automatically be normalized to absolute path.
+<code>&apos;junction&apos;</code>, the <code>destination</code> argument will automatically be normalized to absolute path.
 
 </p>
 <h2>fs.symlinkSync(srcpath, dstpath[, type])<span><a class="mark" href="#fs_fs_symlinksync_srcpath_dstpath_type" id="fs_fs_symlinksync_srcpath_dstpath_type">#</a></span></h2>
@@ -388,7 +388,7 @@ linkString)</code>.
 
 </p>
 <h2>fs.readlinkSync(path)<span><a class="mark" href="#fs_fs_readlinksync_path" id="fs_fs_readlinksync_path">#</a></span></h2>
-<p>Synchronous readlink(2). Returns the symbolic link&#39;s string value.
+<p>Synchronous readlink(2). Returns the symbolic link&apos;s string value.
 
 </p>
 <h2>fs.realpath(path[, cache], callback)<span><a class="mark" href="#fs_fs_realpath_path_cache_callback" id="fs_fs_realpath_path_cache_callback">#</a></span></h2>
@@ -401,8 +401,8 @@ resolution or avoid additional <code>fs.stat</code> calls for known real paths.
 <p>Example:
 
 </p>
-<pre><code>var cache = {&#39;/etc&#39;:&#39;/private/etc&#39;};
-fs.realpath(&#39;/etc/passwd&#39;, cache, function (err, resolvedPath) {
+<pre><code>var cache = {&apos;/etc&apos;:&apos;/private/etc&apos;};
+fs.realpath(&apos;/etc/passwd&apos;, cache, function (err, resolvedPath) {
   if (err) throw err;
   console.log(resolvedPath);
 });</code></pre>
@@ -440,12 +440,12 @@ to the completion callback. <code>mode</code> defaults to <code>0777</code>.
 <h2>fs.readdir(path, callback)<span><a class="mark" href="#fs_fs_readdir_path_callback" id="fs_fs_readdir_path_callback">#</a></span></h2>
 <p>Asynchronous readdir(3).  Reads the contents of a directory.
 The callback gets two arguments <code>(err, files)</code> where <code>files</code> is an array of
-the names of the files in the directory excluding <code>&#39;.&#39;</code> and <code>&#39;..&#39;</code>.
+the names of the files in the directory excluding <code>&apos;.&apos;</code> and <code>&apos;..&apos;</code>.
 
 </p>
 <h2>fs.readdirSync(path)<span><a class="mark" href="#fs_fs_readdirsync_path" id="fs_fs_readdirsync_path">#</a></span></h2>
-<p>Synchronous readdir(3). Returns an array of filenames excluding <code>&#39;.&#39;</code> and
-<code>&#39;..&#39;</code>.
+<p>Synchronous readdir(3). Returns an array of filenames excluding <code>&apos;.&apos;</code> and
+<code>&apos;..&apos;</code>.
 
 </p>
 <h2>fs.close(fd, callback)<span><a class="mark" href="#fs_fs_close_fd_callback" id="fs_fs_close_fd_callback">#</a></span></h2>
@@ -462,42 +462,42 @@ to the completion callback.
 
 </p>
 <ul>
-<li><p><code>&#39;r&#39;</code> - Open file for reading.
+<li><p><code>&apos;r&apos;</code> - Open file for reading.
 An exception occurs if the file does not exist.</p>
 </li>
-<li><p><code>&#39;r+&#39;</code> - Open file for reading and writing.
+<li><p><code>&apos;r+&apos;</code> - Open file for reading and writing.
 An exception occurs if the file does not exist.</p>
 </li>
-<li><p><code>&#39;rs&#39;</code> - Open file for reading in synchronous mode. Instructs the operating
+<li><p><code>&apos;rs&apos;</code> - Open file for reading in synchronous mode. Instructs the operating
 system to bypass the local file system cache.</p>
 <p>This is primarily useful for opening files on NFS mounts as it allows you to
 skip the potentially stale local cache. It has a very real impact on I/O
-performance so don&#39;t use this flag unless you need it.</p>
-<p>Note that this doesn&#39;t turn <code>fs.open()</code> into a synchronous blocking call.
-If that&#39;s what you want then you should be using <code>fs.openSync()</code></p>
+performance so don&apos;t use this flag unless you need it.</p>
+<p>Note that this doesn&apos;t turn <code>fs.open()</code> into a synchronous blocking call.
+If that&apos;s what you want then you should be using <code>fs.openSync()</code></p>
 </li>
-<li><p><code>&#39;rs+&#39;</code> - Open file for reading and writing, telling the OS to open it
-synchronously. See notes for <code>&#39;rs&#39;</code> about using this with caution.</p>
+<li><p><code>&apos;rs+&apos;</code> - Open file for reading and writing, telling the OS to open it
+synchronously. See notes for <code>&apos;rs&apos;</code> about using this with caution.</p>
 </li>
-<li><p><code>&#39;w&#39;</code> - Open file for writing.
+<li><p><code>&apos;w&apos;</code> - Open file for writing.
 The file is created (if it does not exist) or truncated (if it exists).</p>
 </li>
-<li><p><code>&#39;wx&#39;</code> - Like <code>&#39;w&#39;</code> but fails if <code>path</code> exists.</p>
+<li><p><code>&apos;wx&apos;</code> - Like <code>&apos;w&apos;</code> but fails if <code>path</code> exists.</p>
 </li>
-<li><p><code>&#39;w+&#39;</code> - Open file for reading and writing.
+<li><p><code>&apos;w+&apos;</code> - Open file for reading and writing.
 The file is created (if it does not exist) or truncated (if it exists).</p>
 </li>
-<li><p><code>&#39;wx+&#39;</code> - Like <code>&#39;w+&#39;</code> but fails if <code>path</code> exists.</p>
+<li><p><code>&apos;wx+&apos;</code> - Like <code>&apos;w+&apos;</code> but fails if <code>path</code> exists.</p>
 </li>
-<li><p><code>&#39;a&#39;</code> - Open file for appending.
+<li><p><code>&apos;a&apos;</code> - Open file for appending.
 The file is created if it does not exist.</p>
 </li>
-<li><p><code>&#39;ax&#39;</code> - Like <code>&#39;a&#39;</code> but fails if <code>path</code> exists.</p>
+<li><p><code>&apos;ax&apos;</code> - Like <code>&apos;a&apos;</code> but fails if <code>path</code> exists.</p>
 </li>
-<li><p><code>&#39;a+&#39;</code> - Open file for reading and appending.
+<li><p><code>&apos;a+&apos;</code> - Open file for reading and appending.
 The file is created if it does not exist.</p>
 </li>
-<li><p><code>&#39;ax+&#39;</code> - Like <code>&#39;a+&#39;</code> but fails if <code>path</code> exists.</p>
+<li><p><code>&apos;ax+&apos;</code> - Like <code>&apos;a+&apos;</code> but fails if <code>path</code> exists.</p>
 </li>
 </ul>
 <p><code>mode</code> sets the file mode (permission and sticky bits), but only if the file was
@@ -507,13 +507,13 @@ created. It defaults to <code>0666</code>, readable and writeable.
 <p>The callback gets two arguments <code>(err, fd)</code>.
 
 </p>
-<p>The exclusive flag <code>&#39;x&#39;</code> (<code>O_EXCL</code> flag in open(2)) ensures that <code>path</code> is newly
+<p>The exclusive flag <code>&apos;x&apos;</code> (<code>O_EXCL</code> flag in open(2)) ensures that <code>path</code> is newly
 created. On POSIX systems, <code>path</code> is considered to exist even if it is a symlink
 to a non-existent file. The exclusive flag may or may not work with network file
 systems.
 
 </p>
-<p>On Linux, positional writes don&#39;t work when the file is opened in append mode.
+<p>On Linux, positional writes don&apos;t work when the file is opened in append mode.
 The kernel ignores the position argument and always appends the data to
 the end of the file.
 
@@ -558,7 +558,7 @@ to the completion callback.
 
 </p>
 <p><code>position</code> refers to the offset from the beginning of the file where this data
-should be written. If <code>typeof position !== &#39;number&#39;</code>, the data will be written
+should be written. If <code>typeof position !== &apos;number&apos;</code>, the data will be written
 at the current position. See pwrite(2).
 
 </p>
@@ -571,7 +571,7 @@ without waiting for the callback. For this scenario,
 <code>fs.createWriteStream</code> is strongly recommended.
 
 </p>
-<p>On Linux, positional writes don&#39;t work when the file is opened in append mode.
+<p>On Linux, positional writes don&apos;t work when the file is opened in append mode.
 The kernel ignores the position argument and always appends the data to
 the end of the file.
 
@@ -582,7 +582,7 @@ then the value will be coerced to a string.
 
 </p>
 <p><code>position</code> refers to the offset from the beginning of the file where this data
-should be written. If <code>typeof position !== &#39;number&#39;</code> the data will be written at
+should be written. If <code>typeof position !== &apos;number&apos;</code> the data will be written at
 the current position. See pwrite(2).
 
 </p>
@@ -605,7 +605,7 @@ without waiting for the callback. For this scenario,
 <code>fs.createWriteStream</code> is strongly recommended.
 
 </p>
-<p>On Linux, positional writes don&#39;t work when the file is opened in append mode.
+<p>On Linux, positional writes don&apos;t work when the file is opened in append mode.
 The kernel ignores the position argument and always appends the data to
 the end of the file.
 
@@ -644,15 +644,15 @@ If <code>position</code> is <code>null</code>, data will be read from the curren
 <li><code>filename</code> <span class="type">String</span></li>
 <li><code>options</code> <span class="type">Object</span><ul>
 <li><code>encoding</code> <span class="type">String | Null</span> default = <code>null</code></li>
-<li><code>flag</code> <span class="type">String</span> default = <code>&#39;r&#39;</code></li>
+<li><code>flag</code> <span class="type">String</span> default = <code>&apos;r&apos;</code></li>
 </ul>
 </li>
 <li><code>callback</code> <span class="type">Function</span></li>
-</div></ul>
+</ul></div>
 <p>Asynchronously reads the entire contents of a file. Example:
 
 </p>
-<pre><code>fs.readFile(&#39;/etc/passwd&#39;, function (err, data) {
+<pre><code>fs.readFile(&apos;/etc/passwd&apos;, function (err, data) {
   if (err) throw err;
   console.log(data);
 });</code></pre>
@@ -678,27 +678,27 @@ string. Otherwise it returns a buffer.
 <li><code>filename</code> <span class="type">String</span></li>
 <li><code>data</code> <span class="type">String | Buffer</span></li>
 <li><code>options</code> <span class="type">Object</span><ul>
-<li><code>encoding</code> <span class="type">String | Null</span> default = <code>&#39;utf8&#39;</code></li>
+<li><code>encoding</code> <span class="type">String | Null</span> default = <code>&apos;utf8&apos;</code></li>
 <li><code>mode</code> <span class="type">Number</span> default = <code>438</code> (aka <code>0666</code> in Octal)</li>
-<li><code>flag</code> <span class="type">String</span> default = <code>&#39;w&#39;</code></li>
+<li><code>flag</code> <span class="type">String</span> default = <code>&apos;w&apos;</code></li>
 </ul>
 </li>
 <li><code>callback</code> <span class="type">Function</span></li>
-</div></ul>
+</ul></div>
 <p>Asynchronously writes data to a file, replacing the file if it already exists.
 <code>data</code> can be a string or a buffer.
 
 </p>
 <p>The <code>encoding</code> option is ignored if <code>data</code> is a buffer. It defaults
-to <code>&#39;utf8&#39;</code>.
+to <code>&apos;utf8&apos;</code>.
 
 </p>
 <p>Example:
 
 </p>
-<pre><code>fs.writeFile(&#39;message.txt&#39;, &#39;Hello Node&#39;, function (err) {
+<pre><code>fs.writeFile(&apos;message.txt&apos;, &apos;Hello Node&apos;, function (err) {
   if (err) throw err;
-  console.log(&#39;It\&#39;s saved!&#39;);
+  console.log(&apos;It\&apos;s saved!&apos;);
 });</code></pre>
 <h2>fs.writeFileSync(filename, data[, options])<span><a class="mark" href="#fs_fs_writefilesync_filename_data_options" id="fs_fs_writefilesync_filename_data_options">#</a></span></h2>
 <p>The synchronous version of <code>fs.writeFile</code>. Returns <code>undefined</code>.
@@ -709,13 +709,13 @@ to <code>&#39;utf8&#39;</code>.
 <li><code>filename</code> <span class="type">String</span></li>
 <li><code>data</code> <span class="type">String | Buffer</span></li>
 <li><code>options</code> <span class="type">Object</span><ul>
-<li><code>encoding</code> <span class="type">String | Null</span> default = <code>&#39;utf8&#39;</code></li>
+<li><code>encoding</code> <span class="type">String | Null</span> default = <code>&apos;utf8&apos;</code></li>
 <li><code>mode</code> <span class="type">Number</span> default = <code>438</code> (aka <code>0666</code> in Octal)</li>
-<li><code>flag</code> <span class="type">String</span> default = <code>&#39;a&#39;</code></li>
+<li><code>flag</code> <span class="type">String</span> default = <code>&apos;a&apos;</code></li>
 </ul>
 </li>
 <li><code>callback</code> <span class="type">Function</span></li>
-</div></ul>
+</ul></div>
 <p>Asynchronously append data to a file, creating the file if it not yet exists.
 <code>data</code> can be a string or a buffer.
 
@@ -723,9 +723,9 @@ to <code>&#39;utf8&#39;</code>.
 <p>Example:
 
 </p>
-<pre><code>fs.appendFile(&#39;message.txt&#39;, &#39;data to append&#39;, function (err) {
+<pre><code>fs.appendFile(&apos;message.txt&apos;, &apos;data to append&apos;, function (err) {
   if (err) throw err;
-  console.log(&#39;The &quot;data to append&quot; was appended to file!&#39;);
+  console.log(&apos;The &quot;data to append&quot; was appended to file!&apos;);
 });</code></pre>
 <h2>fs.appendFileSync(filename, data[, options])<span><a class="mark" href="#fs_fs_appendfilesync_filename_data_options" id="fs_fs_appendfilesync_filename_data_options">#</a></span></h2>
 <p>The synchronous version of <code>fs.appendFile</code>. Returns <code>undefined</code>.
@@ -747,9 +747,9 @@ in milliseconds. The default is <code>{ persistent: true, interval: 5007 }</code
 stat object:
 
 </p>
-<pre><code>fs.watchFile(&#39;message.text&#39;, function (curr, prev) {
-  console.log(&#39;the current mtime is: &#39; + curr.mtime);
-  console.log(&#39;the previous mtime was: &#39; + prev.mtime);
+<pre><code>fs.watchFile(&apos;message.text&apos;, function (curr, prev) {
+  console.log(&apos;the current mtime is: &apos; + curr.mtime);
+  console.log(&apos;the previous mtime was: &apos; + prev.mtime);
 });</code></pre>
 <p>These stat objects are instances of <code>fs.Stat</code>.
 
@@ -785,7 +785,7 @@ on supported platforms (See Caveats below).
 
 </p>
 <p>The listener callback gets two arguments <code>(event, filename)</code>.  <code>event</code> is either
-&#39;rename&#39; or &#39;change&#39;, and <code>filename</code> is the name of the file which triggered
+&apos;rename&apos; or &apos;change&apos;, and <code>filename</code> is the name of the file which triggered
 the event.
 
 </p>
@@ -811,13 +811,13 @@ to be notified of filesystem changes.
 <ul>
 <li>On Linux systems, this uses <code>inotify</code>.</li>
 <li>On BSD systems, this uses <code>kqueue</code>.</li>
-<li>On OS X, this uses <code>kqueue</code> for files and &#39;FSEvents&#39; for directories.</li>
+<li>On OS X, this uses <code>kqueue</code> for files and &apos;FSEvents&apos; for directories.</li>
 <li>On SunOS systems (including Solaris and SmartOS), this uses <code>event ports</code>.</li>
 <li>On Windows systems, this feature depends on <code>ReadDirectoryChangesW</code>.</li>
 </ul>
 <p>If the underlying functionality is not available for some reason, then
 <code>fs.watch</code> will not be able to function.  For example, watching files or
-directories on network file systems (NFS, SMB, etc.) often doesn&#39;t work
+directories on network file systems (NFS, SMB, etc.) often doesn&apos;t work
 reliably or at all.
 
 </p>
@@ -829,18 +829,18 @@ less reliable.
 <!--type=misc-->
 
 <p>Providing <code>filename</code> argument in the callback is not supported
-on every platform (currently it&#39;s only supported on Linux and Windows).  Even
+on every platform (currently it&apos;s only supported on Linux and Windows).  Even
 on supported platforms <code>filename</code> is not always guaranteed to be provided.
-Therefore, don&#39;t assume that <code>filename</code> argument is always provided in the
+Therefore, don&apos;t assume that <code>filename</code> argument is always provided in the
 callback, and have some fallback logic if it is null.
 
 </p>
-<pre><code>fs.watch(&#39;somedir&#39;, function (event, filename) {
-  console.log(&#39;event is: &#39; + event);
+<pre><code>fs.watch(&apos;somedir&apos;, function (event, filename) {
+  console.log(&apos;event is: &apos; + event);
   if (filename) {
-    console.log(&#39;filename provided: &#39; + filename);
+    console.log(&apos;filename provided: &apos; + filename);
   } else {
-    console.log(&#39;filename not provided&#39;);
+    console.log(&apos;filename not provided&apos;);
   }
 });</code></pre>
 <h2>fs.exists(path, callback)<span><a class="mark" href="#fs_fs_exists_path_callback" id="fs_fs_exists_path_callback">#</a></span></h2>
@@ -848,8 +848,8 @@ callback, and have some fallback logic if it is null.
 Then call the <code>callback</code> argument with either true or false.  Example:
 
 </p>
-<pre><code>fs.exists(&#39;/etc/passwd&#39;, function (exists) {
-  util.debug(exists ? &quot;it&#39;s there&quot; : &quot;no passwd!&quot;);
+<pre><code>fs.exists(&apos;/etc/passwd&apos;, function (exists) {
+  util.debug(exists ? &quot;it&apos;s there&quot; : &quot;no passwd!&quot;);
 });</code></pre>
 <p><code>fs.exists()</code> is an anachronism and exists only for historical reasons.
 There should almost never be a reason to use it in your own code.
@@ -858,7 +858,7 @@ There should almost never be a reason to use it in your own code.
 <p>In particular, checking if a file exists before opening it is an anti-pattern
 that leaves you vulnerable to race conditions: another process may remove the
 file between the calls to <code>fs.exists()</code> and <code>fs.open()</code>.  Just open the file
-and handle the error when it&#39;s not there.
+and handle the error when it&apos;s not there.
 
 </p>
 <p><code>fs.exists()</code> will be deprecated.
@@ -873,7 +873,7 @@ and handle the error when it&#39;s not there.
 
 </p>
 <h2>fs.access(path[, mode], callback)<span><a class="mark" href="#fs_fs_access_path_mode_callback" id="fs_fs_access_path_mode_callback">#</a></span></h2>
-<p>Tests a user&#39;s permissions for the file specified by <code>path</code>. <code>mode</code> is an
+<p>Tests a user&apos;s permissions for the file specified by <code>path</code>. <code>mode</code> is an
 optional integer that specifies the accessibility checks to be performed. The
 following constants define the possible values of <code>mode</code>. It is possible to
 create a mask consisting of the bitwise OR of two or more values.
@@ -894,8 +894,8 @@ argument will be populated. The following example checks if the file
 <code>/etc/passwd</code> can be read and written by the current process.
 
 </p>
-<pre><code>fs.access(&#39;/etc/passwd&#39;, fs.R_OK | fs.W_OK, function(err) {
-  util.debug(err ? &#39;no access!&#39; : &#39;can read/write&#39;);
+<pre><code>fs.access(&apos;/etc/passwd&apos;, fs.R_OK | fs.W_OK, function(err) {
+  util.debug(err ? &apos;no access!&apos; : &apos;can read/write&apos;);
 });</code></pre>
 <h2>fs.accessSync(path[, mode])<span><a class="mark" href="#fs_fs_accesssync_path_mode" id="fs_fs_accesssync_path_mode">#</a></span></h2>
 <p>Synchronous version of <code>fs.access</code>. This throws if any accessibility checks
@@ -978,7 +978,7 @@ on Unix systems, it never was.
 <p><code>options</code> is an object with the following defaults:
 
 </p>
-<pre><code>{ flags: &#39;r&#39;,
+<pre><code>{ flags: &apos;r&apos;,
   encoding: null,
   fd: null,
   mode: 0666,
@@ -986,16 +986,16 @@ on Unix systems, it never was.
 }</code></pre>
 <p><code>options</code> can include <code>start</code> and <code>end</code> values to read a range of bytes from
 the file instead of the entire file.  Both <code>start</code> and <code>end</code> are inclusive and
-start at 0. The <code>encoding</code> can be <code>&#39;utf8&#39;</code>, <code>&#39;ascii&#39;</code>, or <code>&#39;base64&#39;</code>.
+start at 0. The <code>encoding</code> can be <code>&apos;utf8&apos;</code>, <code>&apos;ascii&apos;</code>, or <code>&apos;base64&apos;</code>.
 
 </p>
 <p>If <code>fd</code> is specified, <code>ReadStream</code> will ignore the <code>path</code> argument and will use
 the specified file descriptor. This means that no <code>open</code> event will be emitted.
 
 </p>
-<p>If <code>autoClose</code> is false, then the file descriptor won&#39;t be closed, even if
-there&#39;s an error.  It is your responsibility to close it and make sure
-there&#39;s no file descriptor leak.  If <code>autoClose</code> is set to true (default
+<p>If <code>autoClose</code> is false, then the file descriptor won&apos;t be closed, even if
+there&apos;s an error.  It is your responsibility to close it and make sure
+there&apos;s no file descriptor leak.  If <code>autoClose</code> is set to true (default
 behavior), on <code>error</code> or <code>end</code> the file descriptor will be closed
 automatically.
 
@@ -1003,16 +1003,16 @@ automatically.
 <p>An example to read the last 10 bytes of a file which is 100 bytes long:
 
 </p>
-<pre><code>fs.createReadStream(&#39;sample.txt&#39;, {start: 90, end: 99});</code></pre>
+<pre><code>fs.createReadStream(&apos;sample.txt&apos;, {start: 90, end: 99});</code></pre>
 <h2>Class: fs.ReadStream<span><a class="mark" href="#fs_class_fs_readstream" id="fs_class_fs_readstream">#</a></span></h2>
 <p><code>ReadStream</code> is a <a href="stream.html#stream_class_stream_readable">Readable Stream</a>.
 
 </p>
-<h3>Event: &#39;open&#39;<span><a class="mark" href="#fs_event_open" id="fs_event_open">#</a></span></h3>
+<h3>Event: &apos;open&apos;<span><a class="mark" href="#fs_event_open" id="fs_event_open">#</a></span></h3>
 <div class="signature"><ul>
 <li><code>fd</code> <span class="type">Integer</span> file descriptor used by the ReadStream.</li>
-</div></ul>
-<p>Emitted when the ReadStream&#39;s file is opened.
+</ul></div>
+<p>Emitted when the ReadStream&apos;s file is opened.
 
 
 </p>
@@ -1023,7 +1023,7 @@ automatically.
 <p><code>options</code> is an object with the following defaults:
 
 </p>
-<pre><code>{ flags: &#39;w&#39;,
+<pre><code>{ flags: &apos;w&apos;,
   encoding: null,
   fd: null,
   mode: 0666 }</code></pre>
@@ -1043,11 +1043,11 @@ default mode <code>w</code>.
 <p><code>WriteStream</code> is a <a href="stream.html#stream_class_stream_writable">Writable Stream</a>.
 
 </p>
-<h3>Event: &#39;open&#39;<span><a class="mark" href="#fs_event_open_1" id="fs_event_open_1">#</a></span></h3>
+<h3>Event: &apos;open&apos;<span><a class="mark" href="#fs_event_open_1" id="fs_event_open_1">#</a></span></h3>
 <div class="signature"><ul>
 <li><code>fd</code> <span class="type">Integer</span> file descriptor used by the WriteStream.</li>
-</div></ul>
-<p>Emitted when the WriteStream&#39;s file is opened.
+</ul></div>
+<p>Emitted when the WriteStream&apos;s file is opened.
 
 </p>
 <h3>file.bytesWritten<span><a class="mark" href="#fs_file_byteswritten" id="fs_file_byteswritten">#</a></span></h3>
@@ -1063,19 +1063,19 @@ for writing.
 <p>Stop watching for changes on the given <code>fs.FSWatcher</code>.
 
 </p>
-<h3>Event: &#39;change&#39;<span><a class="mark" href="#fs_event_change" id="fs_event_change">#</a></span></h3>
+<h3>Event: &apos;change&apos;<span><a class="mark" href="#fs_event_change" id="fs_event_change">#</a></span></h3>
 <div class="signature"><ul>
 <li><code>event</code> <span class="type">String</span> The type of fs change</li>
 <li><code>filename</code> <span class="type">String</span> The filename that changed (if relevant/available)</li>
-</div></ul>
+</ul></div>
 <p>Emitted when something changes in a watched directory or file.
 See more details in <a href="#fs_fs_watch_filename_options_listener">fs.watch</a>.
 
 </p>
-<h3>Event: &#39;error&#39;<span><a class="mark" href="#fs_event_error" id="fs_event_error">#</a></span></h3>
+<h3>Event: &apos;error&apos;<span><a class="mark" href="#fs_event_error" id="fs_event_error">#</a></span></h3>
 <div class="signature"><ul>
 <li><code>error</code> <span class="type">Error object</span></li>
-</div></ul>
+</ul></div>
 <p>Emitted when an error occurs.
 </p>
 
@@ -1086,7 +1086,7 @@ See more details in <a href="#fs_fs_watch_filename_options_listener">fs.watch</a
     <div id="footer">
       <div class="foot-1">
         <a href="http://www.joyent.com"><h5>The Node.js Project is Sponsored by</h5>
-        <img src="assets/joyent-footer.svg" width="200">
+        
         <p class="tag">Production Node +<br>High Performance Infrastructure</p></a>
         <a href="https://my.joyent.com/landing/signup/701800000015696" class="button getstarted">Get Started</a>
       </div>
@@ -1122,18 +1122,10 @@ See more details in <a href="#fs_fs_watch_filename_options_listener">fs.watch</a
       </div>
     </div>
 
-  <script src="/sh_main.js"></script>
-  <script src="/sh_javascript.min.js"></script>
-  <script>highlight(undefined, undefined, 'pre');</script>
-  <script>
-    window._gaq = [['_setAccount', 'UA-10874194-2'], ['_trackPageview']];
-    (function(d, t) {
-      var g = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      g.src = '//www.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g, s);
-    }(document, 'script'));
-  </script>
+  
+  
+  
+  
 </body>
 </html>
 

@@ -6,12 +6,12 @@
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/sh.css">
   <link rel="canonical" href="http://nodejs.org/api/dns.html">
-  <script type="text/javascript" src="//use.typekit.net/mse5tqx.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+  
 </head>
 <body class="alt apidoc int docs" id="docs">
     <div id="nav">
-      <img id="logo" src="assets/logo.svg" alt="node.js">
+      
       <ul>
         <li><a href="http://nodejs.org">Home</a></li>
         <li><a href="http://nodejs.org/download/">Downloads</a></li>
@@ -83,7 +83,7 @@
 
           <div id="apicontent">
             <h1>DNS<span><a class="mark" href="#dns_dns" id="dns_dns">#</a></span></h1>
-<pre class="api_stability_3">Stability: 3 - Stable</pre><p>Use <code>require(&#39;dns&#39;)</code> to access this module.
+<pre class="api_stability_3">Stability: 3 - Stable</pre><p>Use <code>require(&apos;dns&apos;)</code> to access this module.
 
 </p>
 <p>This module contains functions that belong to two different categories:
@@ -99,10 +99,10 @@ operating system behave should use <code>dns.lookup</code>.</strong>
 <p>Here is an example that does a lookup of <code>www.google.com</code>.
 
 </p>
-<pre><code>var dns = require(&#39;dns&#39;);
+<pre><code>var dns = require(&apos;dns&apos;);
 
-dns.lookup(&#39;www.google.com&#39;, function onLookup(err, addresses, family) {
-  console.log(&#39;addresses:&#39;, addresses);
+dns.lookup(&apos;www.google.com&apos;, function onLookup(err, addresses, family) {
+  console.log(&apos;addresses:&apos;, addresses);
 });</code></pre>
 <p>2) Functions that connect to an actual DNS server to perform name resolution,
 and that <em>always</em> use the network to perform DNS queries. This category
@@ -110,20 +110,20 @@ contains all functions in the <code>dns</code> module but <code>dns.lookup</code
 do not use the same set of configuration files than what <code>dns.lookup</code> uses.
 For instance, <em>they do not use the configuration from <code>/etc/hosts</code></em>. These
 functions should be used by developers who do not want to use the underlying
-operating system&#39;s facilities for name resolution, and instead want to
+operating system&apos;s facilities for name resolution, and instead want to
 <em>always</em> perform DNS queries.
 
 </p>
-<p>Here is an example which resolves <code>&#39;www.google.com&#39;</code> then reverse
+<p>Here is an example which resolves <code>&apos;www.google.com&apos;</code> then reverse
 resolves the IP addresses which are returned.
 
 </p>
-<pre><code>var dns = require(&#39;dns&#39;);
+<pre><code>var dns = require(&apos;dns&apos;);
 
-dns.resolve4(&#39;www.google.com&#39;, function (err, addresses) {
+dns.resolve4(&apos;www.google.com&apos;, function (err, addresses) {
   if (err) throw err;
 
-  console.log(&#39;addresses: &#39; + JSON.stringify(addresses));
+  console.log(&apos;addresses: &apos; + JSON.stringify(addresses));
 
   addresses.forEach(function (a) {
     dns.reverse(a, function (err, hostnames) {
@@ -131,7 +131,7 @@ dns.resolve4(&#39;www.google.com&#39;, function (err, addresses) {
         throw err;
       }
 
-      console.log(&#39;reverse for &#39; + a + &#39;: &#39; + JSON.stringify(hostnames));
+      console.log(&apos;reverse for &apos; + a + &apos;: &apos; + JSON.stringify(hostnames));
     });
   });
 });</code></pre>
@@ -141,7 +141,7 @@ for more information.
 
 </p>
 <h2>dns.lookup(hostname[, options], callback)<span><a class="mark" href="#dns_dns_lookup_hostname_options_callback" id="dns_dns_lookup_hostname_options_callback">#</a></span></h2>
-<p>Resolves a hostname (e.g. <code>&#39;google.com&#39;</code>) into the first found A (IPv4) or
+<p>Resolves a hostname (e.g. <code>&apos;google.com&apos;</code>) into the first found A (IPv4) or
 AAAA (IPv6) record. <code>options</code> can be an object or integer. If <code>options</code> is
 not provided, then IP v4 and v6 addresses are both valid. If <code>options</code> is
 an integer, then it must be <code>4</code> or <code>6</code>.
@@ -172,13 +172,13 @@ necessarily the value initially passed to <code>lookup</code>).
 
 </p>
 <p>On error, <code>err</code> is an <code>Error</code> object, where <code>err.code</code> is the error code.
-Keep in mind that <code>err.code</code> will be set to <code>&#39;ENOENT&#39;</code> not only when
+Keep in mind that <code>err.code</code> will be set to <code>&apos;ENOENT&apos;</code> not only when
 the hostname does not exist but also when the lookup fails in other ways
 such as no available file descriptors.
 
 </p>
-<p><code>dns.lookup</code> doesn&#39;t necessarily have anything to do with the DNS protocol.
-It&#39;s only an operating system facility that can associate name with addresses,
+<p><code>dns.lookup</code> doesn&apos;t necessarily have anything to do with the DNS protocol.
+It&apos;s only an operating system facility that can associate name with addresses,
 and vice versa.
 
 </p>
@@ -193,7 +193,7 @@ considerations section</a> before using it.
 
 </p>
 <p>The callback has arguments <code>(err, hostname, service)</code>. The <code>hostname</code> and
-<code>service</code> arguments are strings (e.g. <code>&#39;localhost&#39;</code> and <code>&#39;http&#39;</code> respectively).
+<code>service</code> arguments are strings (e.g. <code>&apos;localhost&apos;</code> and <code>&apos;http&apos;</code> respectively).
 
 </p>
 <p>On error, <code>err</code> is an <code>Error</code> object, where <code>err.code</code> is the error code.
@@ -201,7 +201,7 @@ considerations section</a> before using it.
 
 </p>
 <h2>dns.resolve(hostname[, rrtype], callback)<span><a class="mark" href="#dns_dns_resolve_hostname_rrtype_callback" id="dns_dns_resolve_hostname_rrtype_callback">#</a></span></h2>
-<p>Resolves a hostname (e.g. <code>&#39;google.com&#39;</code>) into an array of the record types
+<p>Resolves a hostname (e.g. <code>&apos;google.com&apos;</code>) into an array of the record types
 specified by rrtype.
 
 </p>
@@ -209,15 +209,15 @@ specified by rrtype.
 
 </p>
 <ul>
-<li><code>&#39;A&#39;</code> (IPV4 addresses, default)</li>
-<li><code>&#39;AAAA&#39;</code> (IPV6 addresses)</li>
-<li><code>&#39;MX&#39;</code> (mail exchange records)</li>
-<li><code>&#39;TXT&#39;</code> (text records)</li>
-<li><code>&#39;SRV&#39;</code> (SRV records)</li>
-<li><code>&#39;PTR&#39;</code> (used for reverse IP lookups)</li>
-<li><code>&#39;NS&#39;</code> (name server records)</li>
-<li><code>&#39;CNAME&#39;</code> (canonical name records)</li>
-<li><code>&#39;SOA&#39;</code> (start of authority record)</li>
+<li><code>&apos;A&apos;</code> (IPV4 addresses, default)</li>
+<li><code>&apos;AAAA&apos;</code> (IPV6 addresses)</li>
+<li><code>&apos;MX&apos;</code> (mail exchange records)</li>
+<li><code>&apos;TXT&apos;</code> (text records)</li>
+<li><code>&apos;SRV&apos;</code> (SRV records)</li>
+<li><code>&apos;PTR&apos;</code> (used for reverse IP lookups)</li>
+<li><code>&apos;NS&apos;</code> (name server records)</li>
+<li><code>&apos;CNAME&apos;</code> (canonical name records)</li>
+<li><code>&apos;SOA&apos;</code> (start of authority record)</li>
 </ul>
 <p>The callback has arguments <code>(err, addresses)</code>.  The type of each item
 in <code>addresses</code> is determined by the record type, and described in the
@@ -232,7 +232,7 @@ one of the error codes listed below.
 <h2>dns.resolve4(hostname, callback)<span><a class="mark" href="#dns_dns_resolve4_hostname_callback" id="dns_dns_resolve4_hostname_callback">#</a></span></h2>
 <p>The same as <code>dns.resolve()</code>, but only for IPv4 queries (<code>A</code> records).
 <code>addresses</code> is an array of IPv4 addresses (e.g.
-<code>[&#39;74.125.79.104&#39;, &#39;74.125.79.105&#39;, &#39;74.125.79.106&#39;]</code>).
+<code>[&apos;74.125.79.104&apos;, &apos;74.125.79.105&apos;, &apos;74.125.79.106&apos;]</code>).
 
 </p>
 <h2>dns.resolve6(hostname, callback)<span><a class="mark" href="#dns_dns_resolve6_hostname_callback" id="dns_dns_resolve6_hostname_callback">#</a></span></h2>
@@ -245,13 +245,13 @@ one of the error codes listed below.
 
 </p>
 <p><code>addresses</code> is an array of MX records, each with a priority and an exchange
-attribute (e.g. <code>[{&#39;priority&#39;: 10, &#39;exchange&#39;: &#39;mx.example.com&#39;},...]</code>).
+attribute (e.g. <code>[{&apos;priority&apos;: 10, &apos;exchange&apos;: &apos;mx.example.com&apos;},...]</code>).
 
 </p>
 <h2>dns.resolveTxt(hostname, callback)<span><a class="mark" href="#dns_dns_resolvetxt_hostname_callback" id="dns_dns_resolvetxt_hostname_callback">#</a></span></h2>
 <p>The same as <code>dns.resolve()</code>, but only for text queries (<code>TXT</code> records).
 <code>addresses</code> is an 2-d array of the text records available for <code>hostname</code> (e.g.,
-<code>[ [&#39;v=spf1 ip4:0.0.0.0 &#39;, &#39;~all&#39; ] ]</code>). Each sub-array contains TXT chunks of
+<code>[ [&apos;v=spf1 ip4:0.0.0.0 &apos;, &apos;~all&apos; ] ]</code>). Each sub-array contains TXT chunks of
 one record. Depending on the use case, the could be either joined together or
 treated separately.
 
@@ -260,7 +260,7 @@ treated separately.
 <p>The same as <code>dns.resolve()</code>, but only for service records (<code>SRV</code> records).
 <code>addresses</code> is an array of the SRV records available for <code>hostname</code>. Properties
 of SRV records are priority, weight, port, and name (e.g.,
-<code>[{&#39;priority&#39;: 10, &#39;weight&#39;: 5, &#39;port&#39;: 21223, &#39;name&#39;: &#39;service.example.com&#39;}, ...]</code>).
+<code>[{&apos;priority&apos;: 10, &apos;weight&apos;: 5, &apos;port&apos;: 21223, &apos;name&apos;: &apos;service.example.com&apos;}, ...]</code>).
 
 </p>
 <h2>dns.resolveSoa(hostname, callback)<span><a class="mark" href="#dns_dns_resolvesoa_hostname_callback" id="dns_dns_resolvesoa_hostname_callback">#</a></span></h2>
@@ -272,8 +272,8 @@ of SRV records are priority, weight, port, and name (e.g.,
 
 </p>
 <pre><code>{
-  nsname: &#39;ns.example.com&#39;,
-  hostmaster: &#39;root.example.com&#39;,
+  nsname: &apos;ns.example.com&apos;,
+  hostmaster: &apos;root.example.com&apos;,
   serial: 2013101809,
   refresh: 10000,
   retry: 2400,
@@ -283,13 +283,13 @@ of SRV records are priority, weight, port, and name (e.g.,
 <h2>dns.resolveNs(hostname, callback)<span><a class="mark" href="#dns_dns_resolvens_hostname_callback" id="dns_dns_resolvens_hostname_callback">#</a></span></h2>
 <p>The same as <code>dns.resolve()</code>, but only for name server records (<code>NS</code> records).
 <code>addresses</code> is an array of the name server records available for <code>hostname</code>
-(e.g., <code>[&#39;ns1.example.com&#39;, &#39;ns2.example.com&#39;]</code>).
+(e.g., <code>[&apos;ns1.example.com&apos;, &apos;ns2.example.com&apos;]</code>).
 
 </p>
 <h2>dns.resolveCname(hostname, callback)<span><a class="mark" href="#dns_dns_resolvecname_hostname_callback" id="dns_dns_resolvecname_hostname_callback">#</a></span></h2>
 <p>The same as <code>dns.resolve()</code>, but only for canonical name records (<code>CNAME</code>
 records). <code>addresses</code> is an array of the canonical name records available for
-<code>hostname</code> (e.g., <code>[&#39;bar.example.com&#39;]</code>).
+<code>hostname</code> (e.g., <code>[&apos;bar.example.com&apos;]</code>).
 
 </p>
 <h2>dns.reverse(ip, callback)<span><a class="mark" href="#dns_dns_reverse_ip_callback" id="dns_dns_reverse_ip_callback">#</a></span></h2>
@@ -314,7 +314,7 @@ resolving
 
 </p>
 <p>If you specify a port with the address it will be stripped, as the underlying
-library doesn&#39;t support that.
+library doesn&apos;t support that.
 
 </p>
 <p>This will throw if you pass invalid input.
@@ -380,15 +380,15 @@ these files will change the behavior of all other programs running on the same
 operating system.
 
 </p>
-<p>Though the call will be asynchronous from JavaScript&#39;s perspective, it is
-implemented as a synchronous call to <code>getaddrinfo(3)</code> that runs on libuv&#39;s
-threadpool. Because libuv&#39;s threadpool has a fixed size, it means that if for
+<p>Though the call will be asynchronous from JavaScript&apos;s perspective, it is
+implemented as a synchronous call to <code>getaddrinfo(3)</code> that runs on libuv&apos;s
+threadpool. Because libuv&apos;s threadpool has a fixed size, it means that if for
 whatever reason the call to <code>getaddrinfo(3)</code> takes a long time, other
-operations that could run on libuv&#39;s threadpool (such as filesystem
+operations that could run on libuv&apos;s threadpool (such as filesystem
 operations) will experience degraded performance. In order to mitigate this
-issue, one potential solution is to increase the size of libuv&#39;s threadpool by
-setting the &#39;UV_THREADPOOL_SIZE&#39; environment variable to a value greater than
-4 (its current default value). For more information on libuv&#39;s threadpool, see
+issue, one potential solution is to increase the size of libuv&apos;s threadpool by
+setting the &apos;UV_THREADPOOL_SIZE&apos; environment variable to a value greater than
+4 (its current default value). For more information on libuv&apos;s threadpool, see
 <a href="http://docs.libuv.org/en/latest/threadpool.html">the official libuv
 documentation</a>.
 
@@ -397,11 +397,11 @@ documentation</a>.
 <p>These functions are implemented quite differently than <code>dns.lookup</code>. They do
 not use <code>getaddrinfo(3)</code> and they <em>always</em> perform a DNS query on the network.
 This network communication is always done asynchronously, and does not use
-libuv&#39;s threadpool.
+libuv&apos;s threadpool.
 
 </p>
 <p>As a result, these functions cannot have the same negative impact on other
-processing that happens on libuv&#39;s threadpool that <code>dns.lookup</code> can have.
+processing that happens on libuv&apos;s threadpool that <code>dns.lookup</code> can have.
 
 </p>
 <p>They do not use the same set of configuration files than what <code>dns.lookup</code>
@@ -415,7 +415,7 @@ uses. For instance, <em>they do not use the configuration from <code>/etc/hosts<
     <div id="footer">
       <div class="foot-1">
         <a href="http://www.joyent.com"><h5>The Node.js Project is Sponsored by</h5>
-        <img src="assets/joyent-footer.svg" width="200">
+        
         <p class="tag">Production Node +<br>High Performance Infrastructure</p></a>
         <a href="https://my.joyent.com/landing/signup/701800000015696" class="button getstarted">Get Started</a>
       </div>
@@ -451,18 +451,10 @@ uses. For instance, <em>they do not use the configuration from <code>/etc/hosts<
       </div>
     </div>
 
-  <script src="/sh_main.js"></script>
-  <script src="/sh_javascript.min.js"></script>
-  <script>highlight(undefined, undefined, 'pre');</script>
-  <script>
-    window._gaq = [['_setAccount', 'UA-10874194-2'], ['_trackPageview']];
-    (function(d, t) {
-      var g = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      g.src = '//www.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g, s);
-    }(document, 'script'));
-  </script>
+  
+  
+  
+  
 </body>
 </html>
 

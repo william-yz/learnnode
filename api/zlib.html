@@ -6,12 +6,12 @@
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/sh.css">
   <link rel="canonical" href="http://nodejs.org/api/zlib.html">
-  <script type="text/javascript" src="//use.typekit.net/mse5tqx.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+  
 </head>
 <body class="alt apidoc int docs" id="docs">
     <div id="nav">
-      <img id="logo" src="assets/logo.svg" alt="node.js">
+      
       <ul>
         <li><a href="http://nodejs.org">Home</a></li>
         <li><a href="http://nodejs.org/download/">Downloads</a></li>
@@ -102,7 +102,7 @@
 <pre class="api_stability_3">Stability: 3 - Stable</pre><p>You can access this module with:
 
 </p>
-<pre><code>var zlib = require(&#39;zlib&#39;);</code></pre>
+<pre><code>var zlib = require(&apos;zlib&apos;);</code></pre>
 <p>This provides bindings to Gzip/Gunzip, Deflate/Inflate, and
 DeflateRaw/InflateRaw classes.  Each class takes the same options, and
 is a readable/writable Stream.
@@ -114,23 +114,23 @@ fs.ReadStream into a zlib stream, then into an fs.WriteStream.
 
 </p>
 <pre><code>var gzip = zlib.createGzip();
-var fs = require(&#39;fs&#39;);
-var inp = fs.createReadStream(&#39;input.txt&#39;);
-var out = fs.createWriteStream(&#39;input.txt.gz&#39;);
+var fs = require(&apos;fs&apos;);
+var inp = fs.createReadStream(&apos;input.txt&apos;);
+var out = fs.createWriteStream(&apos;input.txt.gz&apos;);
 
 inp.pipe(gzip).pipe(out);</code></pre>
 <p>Compressing or decompressing data in one step can be done by using
 the convenience methods.
 
 </p>
-<pre><code>var input = &#39;.................................&#39;;
+<pre><code>var input = &apos;.................................&apos;;
 zlib.deflate(input, function(err, buffer) {
   if (!err) {
-    console.log(buffer.toString(&#39;base64&#39;));
+    console.log(buffer.toString(&apos;base64&apos;));
   }
 });
 
-var buffer = new Buffer(&#39;eJzT0yMAAGTvBe8=&#39;, &#39;base64&#39;);
+var buffer = new Buffer(&apos;eJzT0yMAAGTvBe8=&apos;, &apos;base64&apos;);
 zlib.unzip(buffer, function(err, buffer) {
   if (!err) {
     console.log(buffer.toString());
@@ -151,22 +151,22 @@ tradeoffs involved in zlib usage.
 
 </p>
 <pre><code>// client request example
-var zlib = require(&#39;zlib&#39;);
-var http = require(&#39;http&#39;);
-var fs = require(&#39;fs&#39;);
-var request = http.get({ host: &#39;izs.me&#39;,
-                         path: &#39;/&#39;,
+var zlib = require(&apos;zlib&apos;);
+var http = require(&apos;http&apos;);
+var fs = require(&apos;fs&apos;);
+var request = http.get({ host: &apos;izs.me&apos;,
+                         path: &apos;/&apos;,
                          port: 80,
-                         headers: { &#39;accept-encoding&#39;: &#39;gzip,deflate&#39; } });
-request.on(&#39;response&#39;, function(response) {
-  var output = fs.createWriteStream(&#39;izs.me_index.html&#39;);
+                         headers: { &apos;accept-encoding&apos;: &apos;gzip,deflate&apos; } });
+request.on(&apos;response&apos;, function(response) {
+  var output = fs.createWriteStream(&apos;izs.me_index.html&apos;);
 
-  switch (response.headers[&#39;content-encoding&#39;]) {
+  switch (response.headers[&apos;content-encoding&apos;]) {
     // or, just use zlib.createUnzip() to handle both cases
-    case &#39;gzip&#39;:
+    case &apos;gzip&apos;:
       response.pipe(zlib.createGunzip()).pipe(output);
       break;
-    case &#39;deflate&#39;:
+    case &apos;deflate&apos;:
       response.pipe(zlib.createInflate()).pipe(output);
       break;
     default:
@@ -178,23 +178,23 @@ request.on(&#39;response&#39;, function(response) {
 // server example
 // Running a gzip operation on every request is quite expensive.
 // It would be much more efficient to cache the compressed buffer.
-var zlib = require(&#39;zlib&#39;);
-var http = require(&#39;http&#39;);
-var fs = require(&#39;fs&#39;);
+var zlib = require(&apos;zlib&apos;);
+var http = require(&apos;http&apos;);
+var fs = require(&apos;fs&apos;);
 http.createServer(function(request, response) {
-  var raw = fs.createReadStream(&#39;index.html&#39;);
-  var acceptEncoding = request.headers[&#39;accept-encoding&#39;];
+  var raw = fs.createReadStream(&apos;index.html&apos;);
+  var acceptEncoding = request.headers[&apos;accept-encoding&apos;];
   if (!acceptEncoding) {
-    acceptEncoding = &#39;&#39;;
+    acceptEncoding = &apos;&apos;;
   }
 
   // Note: this is not a conformant accept-encoding parser.
   // See http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.3
   if (acceptEncoding.match(/\bdeflate\b/)) {
-    response.writeHead(200, { &#39;content-encoding&#39;: &#39;deflate&#39; });
+    response.writeHead(200, { &apos;content-encoding&apos;: &apos;deflate&apos; });
     raw.pipe(zlib.createDeflate()).pipe(response);
   } else if (acceptEncoding.match(/\bgzip\b/)) {
-    response.writeHead(200, { &#39;content-encoding&#39;: &#39;gzip&#39; });
+    response.writeHead(200, { &apos;content-encoding&apos;: &apos;gzip&apos; });
     raw.pipe(zlib.createGzip()).pipe(response);
   } else {
     response.writeHead(200, {});
@@ -246,7 +246,7 @@ class of the compressor/decompressor classes.
 <p><code>kind</code> defaults to <code>zlib.Z_FULL_FLUSH</code>.
 
 </p>
-<p>Flush pending data. Don&#39;t call this frivolously, premature flushes negatively
+<p>Flush pending data. Don&apos;t call this frivolously, premature flushes negatively
 impact the effectiveness of the compression algorithm.
 
 </p>
@@ -363,7 +363,7 @@ ignored by the decompression classes.
 <h2>Memory Usage Tuning<span><a class="mark" href="#zlib_memory_usage_tuning" id="zlib_memory_usage_tuning">#</a></span></h2>
 <!--type=misc-->
 
-<p>From <code>zlib/zconf.h</code>, modified to node&#39;s usage:
+<p>From <code>zlib/zconf.h</code>, modified to node&apos;s usage:
 
 </p>
 <p>The memory requirements for deflate are (in bytes):
@@ -379,7 +379,7 @@ the default memory requirements from 256K to 128K, set the options to:
 
 </p>
 <pre><code>{ windowBits: 14, memLevel: 7 }</code></pre>
-<p>Of course this will generally degrade compression (there&#39;s no free lunch).
+<p>Of course this will generally degrade compression (there&apos;s no free lunch).
 
 </p>
 <p>The memory requirements for inflate are (in bytes)
@@ -401,7 +401,7 @@ compression, but will be much faster.
 
 </p>
 <p>In general, greater memory usage options will mean that node has to make
-fewer calls to zlib, since it&#39;ll be able to process more data in a
+fewer calls to zlib, since it&apos;ll be able to process more data in a
 single <code>write</code> operation.  So, this is another factor that affects the
 speed, at the cost of memory usage.
 
@@ -410,7 +410,7 @@ speed, at the cost of memory usage.
 <!--type=misc-->
 
 <p>All of the constants defined in zlib.h are also defined on
-<code>require(&#39;zlib&#39;)</code>.
+<code>require(&apos;zlib&apos;)</code>.
 In the normal course of operations, you will not need to ever set any of
 these.  They are documented here so that their presence is not
 surprising.  This section is taken almost directly from the <a href="http://zlib.net/manual.html#Constants">zlib
@@ -495,7 +495,7 @@ events.
     <div id="footer">
       <div class="foot-1">
         <a href="http://www.joyent.com"><h5>The Node.js Project is Sponsored by</h5>
-        <img src="assets/joyent-footer.svg" width="200">
+        
         <p class="tag">Production Node +<br>High Performance Infrastructure</p></a>
         <a href="https://my.joyent.com/landing/signup/701800000015696" class="button getstarted">Get Started</a>
       </div>
@@ -531,18 +531,10 @@ events.
       </div>
     </div>
 
-  <script src="/sh_main.js"></script>
-  <script src="/sh_javascript.min.js"></script>
-  <script>highlight(undefined, undefined, 'pre');</script>
-  <script>
-    window._gaq = [['_setAccount', 'UA-10874194-2'], ['_trackPageview']];
-    (function(d, t) {
-      var g = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      g.src = '//www.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g, s);
-    }(document, 'script'));
-  </script>
+  
+  
+  
+  
 </body>
 </html>
 

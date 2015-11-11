@@ -6,12 +6,12 @@
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/sh.css">
   <link rel="canonical" href="http://nodejs.org/api/dgram.html">
-  <script type="text/javascript" src="//use.typekit.net/mse5tqx.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+  
 </head>
 <body class="alt apidoc int docs" id="docs">
     <div id="nav">
-      <img id="logo" src="assets/logo.svg" alt="node.js">
+      
       <ul>
         <li><a href="http://nodejs.org">Home</a></li>
         <li><a href="http://nodejs.org/download/">Downloads</a></li>
@@ -55,10 +55,10 @@
 <li><a href="#dgram_dgram_createsocket_type_callback">dgram.createSocket(type[, callback])</a></li>
 <li><a href="#dgram_dgram_createsocket_options_callback">dgram.createSocket(options[, callback])</a></li>
 <li><a href="#dgram_class_dgram_socket">Class: dgram.Socket</a><ul>
-<li><a href="#dgram_event_message">Event: &#39;message&#39;</a></li>
-<li><a href="#dgram_event_listening">Event: &#39;listening&#39;</a></li>
-<li><a href="#dgram_event_close">Event: &#39;close&#39;</a></li>
-<li><a href="#dgram_event_error">Event: &#39;error&#39;</a></li>
+<li><a href="#dgram_event_message">Event: &apos;message&apos;</a></li>
+<li><a href="#dgram_event_listening">Event: &apos;listening&apos;</a></li>
+<li><a href="#dgram_event_close">Event: &apos;close&apos;</a></li>
+<li><a href="#dgram_event_error">Event: &apos;error&apos;</a></li>
 <li><a href="#dgram_socket_send_buf_offset_length_port_address_callback">socket.send(buf, offset, length, port, address[, callback])</a></li>
 <li><a href="#dgram_socket_bind_port_address_callback">socket.bind(port[, address][, callback])</a></li>
 <li><a href="#dgram_socket_bind_options_callback">socket.bind(options[, callback])</a></li>
@@ -84,30 +84,30 @@
             <h1>UDP / Datagram Sockets<span><a class="mark" href="#dgram_udp_datagram_sockets" id="dgram_udp_datagram_sockets">#</a></span></h1>
 <pre class="api_stability_3">Stability: 3 - Stable</pre><!-- name=dgram -->
 
-<p>Datagram sockets are available through <code>require(&#39;dgram&#39;)</code>.
+<p>Datagram sockets are available through <code>require(&apos;dgram&apos;)</code>.
 
 </p>
 <p>Important note: the behavior of <code>dgram.Socket#bind()</code> has changed in v0.10
 and is always asynchronous now.  If you have code that looks like this:
 
 </p>
-<pre><code>var s = dgram.createSocket(&#39;udp4&#39;);
+<pre><code>var s = dgram.createSocket(&apos;udp4&apos;);
 s.bind(1234);
-s.addMembership(&#39;224.0.0.114&#39;);</code></pre>
+s.addMembership(&apos;224.0.0.114&apos;);</code></pre>
 <p>You have to change it to this:
 
 </p>
-<pre><code>var s = dgram.createSocket(&#39;udp4&#39;);
+<pre><code>var s = dgram.createSocket(&apos;udp4&apos;);
 s.bind(1234, function() {
-  s.addMembership(&#39;224.0.0.114&#39;);
+  s.addMembership(&apos;224.0.0.114&apos;);
 });</code></pre>
 <h2>dgram.createSocket(type[, callback])<span><a class="mark" href="#dgram_dgram_createsocket_type_callback" id="dgram_dgram_createsocket_type_callback">#</a></span></h2>
 <div class="signature"><ul>
-<li><code>type</code> String. Either &#39;udp4&#39; or &#39;udp6&#39;</li>
+<li><code>type</code> String. Either &apos;udp4&apos; or &apos;udp6&apos;</li>
 <li><code>callback</code> Function. Attached as a listener to <code>message</code> events.
 Optional</li>
 <li>Returns: Socket object</li>
-</div></ul>
+</ul></div>
 <p>Creates a datagram Socket of the specified types.  Valid types are <code>udp4</code>
 and <code>udp6</code>.
 
@@ -126,7 +126,7 @@ with <code>socket.address().address</code> and <code>socket.address().port</code
 <li><code>options</code> Object</li>
 <li><code>callback</code> Function. Attached as a listener to <code>message</code> events.</li>
 <li>Returns: Socket object</li>
-</div></ul>
+</ul></div>
 <p>The <code>options</code> object should contain a <code>type</code> field of either <code>udp4</code> or <code>udp6</code>
 and an optional boolean <code>reuseAddr</code> field.
 
@@ -150,33 +150,33 @@ with <code>socket.address().address</code> and <code>socket.address().port</code
 should be created via <code>dgram.createSocket(...)</code>
 
 </p>
-<h3>Event: &#39;message&#39;<span><a class="mark" href="#dgram_event_message" id="dgram_event_message">#</a></span></h3>
+<h3>Event: &apos;message&apos;<span><a class="mark" href="#dgram_event_message" id="dgram_event_message">#</a></span></h3>
 <div class="signature"><ul>
 <li><code>msg</code> Buffer object. The message</li>
 <li><code>rinfo</code> Object. Remote address information</li>
-</div></ul>
+</ul></div>
 <p>Emitted when a new datagram is available on a socket.  <code>msg</code> is a <code>Buffer</code> and
-<code>rinfo</code> is an object with the sender&#39;s address information:
+<code>rinfo</code> is an object with the sender&apos;s address information:
 
 </p>
-<pre><code>socket.on(&#39;message&#39;, function(msg, rinfo) {
-  console.log(&#39;Received %d bytes from %s:%d\n&#39;,
+<pre><code>socket.on(&apos;message&apos;, function(msg, rinfo) {
+  console.log(&apos;Received %d bytes from %s:%d\n&apos;,
               msg.length, rinfo.address, rinfo.port);
 });</code></pre>
-<h3>Event: &#39;listening&#39;<span><a class="mark" href="#dgram_event_listening" id="dgram_event_listening">#</a></span></h3>
+<h3>Event: &apos;listening&apos;<span><a class="mark" href="#dgram_event_listening" id="dgram_event_listening">#</a></span></h3>
 <p>Emitted when a socket starts listening for datagrams.  This happens as soon as UDP sockets
 are created.
 
 </p>
-<h3>Event: &#39;close&#39;<span><a class="mark" href="#dgram_event_close" id="dgram_event_close">#</a></span></h3>
+<h3>Event: &apos;close&apos;<span><a class="mark" href="#dgram_event_close" id="dgram_event_close">#</a></span></h3>
 <p>Emitted when a socket is closed with <code>close()</code>.  No new <code>message</code> events will be emitted
 on this socket.
 
 </p>
-<h3>Event: &#39;error&#39;<span><a class="mark" href="#dgram_event_error" id="dgram_event_error">#</a></span></h3>
+<h3>Event: &apos;error&apos;<span><a class="mark" href="#dgram_event_error" id="dgram_event_error">#</a></span></h3>
 <div class="signature"><ul>
 <li><code>exception</code> Error object</li>
-</div></ul>
+</ul></div>
 <p>Emitted when an error occurs.
 
 </p>
@@ -188,23 +188,23 @@ on this socket.
 <li><code>port</code> Integer. Destination port.</li>
 <li><code>address</code> String. Destination hostname or IP address.</li>
 <li><code>callback</code> Function. Called when the message has been sent. Optional.</li>
-</div></ul>
+</ul></div>
 <p>For UDP sockets, the destination port and address must be specified.  A string
 may be supplied for the <code>address</code> parameter, and it will be resolved with DNS.
 
 </p>
-<p>If the address is omitted or is an empty string, <code>&#39;0.0.0.0&#39;</code> or <code>&#39;::0&#39;</code> is used
+<p>If the address is omitted or is an empty string, <code>&apos;0.0.0.0&apos;</code> or <code>&apos;::0&apos;</code> is used
 instead.  Depending on the network configuration, those defaults may or may not
-work; it&#39;s best to be explicit about the destination address.
+work; it&apos;s best to be explicit about the destination address.
 
 </p>
 <p>If the socket has not been previously bound with a call to <code>bind</code>, it gets
 assigned a random port number and is bound to the &quot;all interfaces&quot; address
-(<code>&#39;0.0.0.0&#39;</code> for <code>udp4</code> sockets, <code>&#39;::0&#39;</code> for <code>udp6</code> sockets.)
+(<code>&apos;0.0.0.0&apos;</code> for <code>udp4</code> sockets, <code>&apos;::0&apos;</code> for <code>udp6</code> sockets.)
 
 </p>
 <p>An optional callback may be specified to detect DNS errors or for determining
-when it&#39;s safe to reuse the <code>buf</code> object.  Note that DNS lookups delay the time
+when it&apos;s safe to reuse the <code>buf</code> object.  Note that DNS lookups delay the time
 to send for at least one tick.  The only way to know for sure that the datagram
 has been sent is by using a callback.
 
@@ -218,7 +218,7 @@ and not the character position.
 <p>Example of sending a UDP packet to a random port on <code>localhost</code>;
 
 </p>
-<pre><code>var dgram = require(&#39;dgram&#39;);
+<pre><code>var dgram = require(&apos;dgram&apos;);
 var message = new Buffer(&quot;Some bytes&quot;);
 var client = dgram.createSocket(&quot;udp4&quot;);
 client.send(message, 0, message.length, 41234, &quot;localhost&quot;, function(err) {
@@ -234,7 +234,7 @@ and on the <code>Payload Length</code> field size.
 <ul>
 <li><p>The <code>Payload Length</code> field is <code>16 bits</code> wide, which means that a normal payload
 cannot be larger than 64K octets including internet header and data
-(65,507 bytes = 65,535 − 8 bytes UDP header − 20 bytes IP header);
+(65,507 bytes = 65,535 &#x2212; 8 bytes UDP header &#x2212; 20 bytes IP header);
 this is generally true for loopback interfaces, but such long datagrams
 are impractical for most hosts and networks.</p>
 </li>
@@ -248,9 +248,9 @@ The value of <code>68</code> octets is very small, since most current link layer
 a minimum <code>MTU</code> of <code>1500</code> (like Ethernet).</p>
 </li>
 </ul>
-<p>Note that it&#39;s impossible to know in advance the MTU of each link through which
+<p>Note that it&apos;s impossible to know in advance the MTU of each link through which
 a packet might travel, and that generally sending a datagram greater than
-the (receiver) <code>MTU</code> won&#39;t work (the packet gets silently dropped, without
+the (receiver) <code>MTU</code> won&apos;t work (the packet gets silently dropped, without
 informing the source that the data did not reach its intended recipient).
 
 </p>
@@ -260,7 +260,7 @@ informing the source that the data did not reach its intended recipient).
 <li><code>address</code> String, Optional</li>
 <li><code>callback</code> Function with no parameters, Optional. Callback when
 binding is done.</li>
-</div></ul>
+</ul></div>
 <p>For UDP sockets, listen for datagrams on a named <code>port</code> and optional
 <code>address</code>. If <code>address</code> is not specified, the OS will try to listen on
 all addresses.  After binding is done, a &quot;listening&quot; event is emitted
@@ -311,7 +311,7 @@ server.bind(41234);
 </ul>
 </li>
 <li><code>callback</code> <span class="type">Function</span> - Optional.</li>
-</div></ul>
+</ul></div>
 <p>The <code>port</code> and <code>address</code> properties of <code>options</code>, as well as the optional
 callback function, behave as they do on a call to
 <a href="#dgram_socket_bind_port_address_callback">socket.bind(port, [address], [callback])
@@ -326,7 +326,7 @@ shown below.
 
 </p>
 <pre><code>socket.bind({
-  address: &#39;localhost&#39;,
+  address: &apos;localhost&apos;,
   port: 8000,
   exclusive: true
 });</code></pre>
@@ -342,15 +342,15 @@ this object will contain <code>address</code> , <code>family</code> and <code>po
 <h3>socket.setBroadcast(flag)<span><a class="mark" href="#dgram_socket_setbroadcast_flag" id="dgram_socket_setbroadcast_flag">#</a></span></h3>
 <div class="signature"><ul>
 <li><code>flag</code> Boolean</li>
-</div></ul>
+</ul></div>
 <p>Sets or clears the <code>SO_BROADCAST</code> socket option.  When this option is set, UDP packets
-may be sent to a local interface&#39;s broadcast address.
+may be sent to a local interface&apos;s broadcast address.
 
 </p>
 <h3>socket.setTTL(ttl)<span><a class="mark" href="#dgram_socket_setttl_ttl" id="dgram_socket_setttl_ttl">#</a></span></h3>
 <div class="signature"><ul>
 <li><code>ttl</code> Integer</li>
-</div></ul>
+</ul></div>
 <p>Sets the <code>IP_TTL</code> socket option.  TTL stands for &quot;Time to Live,&quot; but in this context it
 specifies the number of IP hops that a packet is allowed to go through.  Each router or
 gateway that forwards a packet decrements the TTL.  If the TTL is decremented to 0 by a
@@ -365,7 +365,7 @@ systems is 64.
 <h3>socket.setMulticastTTL(ttl)<span><a class="mark" href="#dgram_socket_setmulticastttl_ttl" id="dgram_socket_setmulticastttl_ttl">#</a></span></h3>
 <div class="signature"><ul>
 <li><code>ttl</code> Integer</li>
-</div></ul>
+</ul></div>
 <p>Sets the <code>IP_MULTICAST_TTL</code> socket option.  TTL stands for &quot;Time to Live,&quot; but in this
 context it specifies the number of IP hops that a packet is allowed to go through,
 specifically for multicast traffic.  Each router or gateway that forwards a packet
@@ -379,7 +379,7 @@ systems is 1.
 <h3>socket.setMulticastLoopback(flag)<span><a class="mark" href="#dgram_socket_setmulticastloopback_flag" id="dgram_socket_setmulticastloopback_flag">#</a></span></h3>
 <div class="signature"><ul>
 <li><code>flag</code> Boolean</li>
-</div></ul>
+</ul></div>
 <p>Sets or clears the <code>IP_MULTICAST_LOOP</code> socket option.  When this option is set, multicast
 packets will also be received on the local interface.
 
@@ -388,7 +388,7 @@ packets will also be received on the local interface.
 <div class="signature"><ul>
 <li><code>multicastAddress</code> String</li>
 <li><code>multicastInterface</code> String, Optional</li>
-</div></ul>
+</ul></div>
 <p>Tells the kernel to join a multicast group with <code>IP_ADD_MEMBERSHIP</code> socket option.
 
 </p>
@@ -400,7 +400,7 @@ interfaces.
 <div class="signature"><ul>
 <li><code>multicastAddress</code> String</li>
 <li><code>multicastInterface</code> String, Optional</li>
-</div></ul>
+</ul></div>
 <p>Opposite of <code>addMembership</code> - tells the kernel to leave a multicast group with
 <code>IP_DROP_MEMBERSHIP</code> socket option. This is automatically called by the kernel
 when the socket is closed or process terminates, so most apps will never need to call
@@ -419,7 +419,7 @@ active socket in the event system. If the socket is already <code>unref</code>d 
 </p>
 <h3>socket.ref()<span><a class="mark" href="#dgram_socket_ref" id="dgram_socket_ref">#</a></span></h3>
 <p>Opposite of <code>unref</code>, calling <code>ref</code> on a previously <code>unref</code>d socket will <em>not</em>
-let the program exit if it&#39;s the only socket left (the default behavior). If
+let the program exit if it&apos;s the only socket left (the default behavior). If
 the socket is <code>ref</code>d calling <code>ref</code> again will have no effect.
 </p>
 
@@ -430,7 +430,7 @@ the socket is <code>ref</code>d calling <code>ref</code> again will have no effe
     <div id="footer">
       <div class="foot-1">
         <a href="http://www.joyent.com"><h5>The Node.js Project is Sponsored by</h5>
-        <img src="assets/joyent-footer.svg" width="200">
+        
         <p class="tag">Production Node +<br>High Performance Infrastructure</p></a>
         <a href="https://my.joyent.com/landing/signup/701800000015696" class="button getstarted">Get Started</a>
       </div>
@@ -466,18 +466,10 @@ the socket is <code>ref</code>d calling <code>ref</code> again will have no effe
       </div>
     </div>
 
-  <script src="/sh_main.js"></script>
-  <script src="/sh_javascript.min.js"></script>
-  <script>highlight(undefined, undefined, 'pre');</script>
-  <script>
-    window._gaq = [['_setAccount', 'UA-10874194-2'], ['_trackPageview']];
-    (function(d, t) {
-      var g = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      g.src = '//www.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g, s);
-    }(document, 'script'));
-  </script>
+  
+  
+  
+  
 </body>
 </html>
 
