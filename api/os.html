@@ -2,57 +2,82 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>os Node.js v0.12.7 Manual &amp; Documentation</title>
+  <title>OS Node.js v5.0.0 Manual &amp; Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/sh.css">
-  <link rel="canonical" href="http://nodejs.org/api/os.html">
-  
-  
+  <link rel="canonical" href="https://nodejs.org/api/os.html">
 </head>
-<body class="alt apidoc int docs" id="docs">
-    <div id="nav">
-      
-      <ul>
-        <li><a href="http://nodejs.org">Home</a></li>
-        <li><a href="http://nodejs.org/download/">Downloads</a></li>
-        <li class="active"><a href="http://nodejs.org/documentation/">Docs</a></li>
-        <li><a href="http://nodejs.org/community/">Community</a></li>
-        <li><a href="http://nodejs.org/about/">About</a></li>
-        <li><a href="http://jobs.nodejs.org">Jobs</a></li>
-        <li><a href="http://blog.nodejs.org">Blog</a></li>
-      </ul>
-    </div>
-    <div id="content-wrap">
-    <div id="content" class="clearfix">
-      <div id="column2" class="interior">
-        <!--<img src="/images/logo-light.svg" alt="node.js" width="170">-->
-        <ul class="docs-nav">
-          <li><a href="http://nodejs.org/documentation/">About Docs</a></li>
-          <li><a href="http://nodejs.org/documentation/tutorials/">Tutorials</a></li>
-          <li><a href="http://nodejs.org/documentation/contributing/">Contributing</a></li>
-          <li><a href="http://nodejs.org/documentation/workflow/">Workflow</a></li>
-          <li><a href="http://nodejs.org/documentation/localization/">Localization</a></li>
-          <li class="active"><a href="http://nodejs.org/api/">API Docs</a></li>
-        </ul>
+<body class="alt apidoc" id="api-section-os">
+  <div id="content" class="clearfix">
+    <div id="column2" class="interior">
+      <div id="intro" class="interior">
+        <a href="/" title="Go back to the home page">
+          Node.js (1)
+        </a>
       </div>
-        <div id="column1" class="interior">
-          <header>
-            <h1>Node.js v0.12.7 Manual &amp; Documentation</h1>
-            <div id="gtoc">
-              <p>
-                <a href="index.html" name="toc">Index</a> |
-                <a href="all.html">View on single page</a> |
-                <a href="os.json">View as JSON</a>
-              </p>
-            </div>
-            <hr>
-          </header>
+      <ul>
+<li><a class="nav-documentation" href="documentation.html">About these Docs</a></li>
+<li><a class="nav-synopsis" href="synopsis.html">Synopsis</a></li>
+<li><a class="nav-assert" href="assert.html">Assertion Testing</a></li>
+<li><a class="nav-buffer" href="buffer.html">Buffer</a></li>
+<li><a class="nav-addons" href="addons.html">C/C++ Addons</a></li>
+<li><a class="nav-child_process" href="child_process.html">Child Processes</a></li>
+<li><a class="nav-cluster" href="cluster.html">Cluster</a></li>
+<li><a class="nav-console" href="console.html">Console</a></li>
+<li><a class="nav-crypto" href="crypto.html">Crypto</a></li>
+<li><a class="nav-debugger" href="debugger.html">Debugger</a></li>
+<li><a class="nav-dns" href="dns.html">DNS</a></li>
+<li><a class="nav-domain" href="domain.html">Domain</a></li>
+<li><a class="nav-errors" href="errors.html">Errors</a></li>
+<li><a class="nav-events" href="events.html">Events</a></li>
+<li><a class="nav-fs" href="fs.html">File System</a></li>
+<li><a class="nav-globals" href="globals.html">Globals</a></li>
+<li><a class="nav-http" href="http.html">HTTP</a></li>
+<li><a class="nav-https" href="https.html">HTTPS</a></li>
+<li><a class="nav-modules" href="modules.html">Modules</a></li>
+<li><a class="nav-net" href="net.html">Net</a></li>
+<li><a class="nav-os active" href="os.html">OS</a></li>
+<li><a class="nav-path" href="path.html">Path</a></li>
+<li><a class="nav-process" href="process.html">Process</a></li>
+<li><a class="nav-punycode" href="punycode.html">Punycode</a></li>
+<li><a class="nav-querystring" href="querystring.html">Query Strings</a></li>
+<li><a class="nav-readline" href="readline.html">Readline</a></li>
+<li><a class="nav-repl" href="repl.html">REPL</a></li>
+<li><a class="nav-stream" href="stream.html">Stream</a></li>
+<li><a class="nav-string_decoder" href="string_decoder.html">String Decoder</a></li>
+<li><a class="nav-timers" href="timers.html">Timers</a></li>
+<li><a class="nav-tls" href="tls.html">TLS/SSL</a></li>
+<li><a class="nav-tty" href="tty.html">TTY</a></li>
+<li><a class="nav-dgram" href="dgram.html">UDP/Datagram</a></li>
+<li><a class="nav-url" href="url.html">URL</a></li>
+<li><a class="nav-util" href="util.html">Utilities</a></li>
+<li><a class="nav-v8" href="v8.html">V8</a></li>
+<li><a class="nav-vm" href="vm.html">VM</a></li>
+<li><a class="nav-zlib" href="zlib.html">ZLIB</a></li>
+</ul>
 
-          <div id="toc">
-            <h2>Table of Contents</h2>
-            <ul>
-<li><a href="#os_os">os</a><ul>
+    </div>
+
+    <div id="column1" data-id="os" class="interior">
+      <header>
+        <h1>Node.js v5.0.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="index.html" name="toc">Index</a> |
+            <a href="all.html">View on single page</a> |
+            <a href="os.json">View as JSON</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+<li><a href="#os_os">OS</a><ul>
 <li><a href="#os_os_tmpdir">os.tmpdir()</a></li>
+<li><a href="#os_os_homedir">os.homedir()</a></li>
 <li><a href="#os_os_endianness">os.endianness()</a></li>
 <li><a href="#os_os_hostname">os.hostname()</a></li>
 <li><a href="#os_os_type">os.type()</a></li>
@@ -70,22 +95,27 @@
 </li>
 </ul>
 
-          </div>
+      </div>
 
-          <div id="apicontent">
-            <h1>os<span><a class="mark" href="#os_os" id="os_os">#</a></span></h1>
-<pre class="api_stability_4">Stability: 4 - API Frozen</pre><p>Provides a few basic operating-system related utility functions.
+      <div id="apicontent">
+        <h1>OS<span><a class="mark" href="#os_os" id="os_os">#</a></span></h1>
+<pre class="api_stability_2">Stability: 2 - Stable</pre><p>Provides a few basic operating-system related utility functions.
 
 </p>
 <p>Use <code>require(&apos;os&apos;)</code> to access this module.
 
 </p>
 <h2>os.tmpdir()<span><a class="mark" href="#os_os_tmpdir" id="os_os_tmpdir">#</a></span></h2>
-<p>Returns the operating system&apos;s default directory for temp files.
+<p>Returns the operating system&apos;s default directory for temporary files.
+
+</p>
+<h2>os.homedir()<span><a class="mark" href="#os_os_homedir" id="os_os_homedir">#</a></span></h2>
+<p>Returns the home directory of the current user.
 
 </p>
 <h2>os.endianness()<span><a class="mark" href="#os_os_endianness" id="os_os_endianness">#</a></span></h2>
-<p>Returns the endianness of the CPU. Possible values are <code>&quot;BE&quot;</code> or <code>&quot;LE&quot;</code>.
+<p>Returns the endianness of the CPU. Possible values are <code>&apos;BE&apos;</code> for big endian
+or <code>&apos;LE&apos;</code> for little endian.
 
 </p>
 <h2>os.hostname()<span><a class="mark" href="#os_os_hostname" id="os_os_hostname">#</a></span></h2>
@@ -93,16 +123,19 @@
 
 </p>
 <h2>os.type()<span><a class="mark" href="#os_os_type" id="os_os_type">#</a></span></h2>
-<p>Returns the operating system name.
+<p>Returns the operating system name. For example <code>&apos;Linux&apos;</code> on Linux, <code>&apos;Darwin&apos;</code>
+on OS X and <code>&apos;Windows_NT&apos;</code> on Windows.
 
 </p>
 <h2>os.platform()<span><a class="mark" href="#os_os_platform" id="os_os_platform">#</a></span></h2>
-<p>Returns the operating system platform.
+<p>Returns the operating system platform. Possible values are <code>&apos;darwin&apos;</code>,
+<code>&apos;freebsd&apos;</code>, <code>&apos;linux&apos;</code>, <code>&apos;sunos&apos;</code> or <code>&apos;win32&apos;</code>. Returns the value of
+<code>process.platform</code>.
 
 </p>
 <h2>os.arch()<span><a class="mark" href="#os_os_arch" id="os_os_arch">#</a></span></h2>
-<p>Returns the operating system CPU architecture. Possible values are <code>&quot;x64&quot;</code>,
-<code>&quot;arm&quot;</code> and <code>&quot;ia32&quot;</code>.
+<p>Returns the operating system CPU architecture. Possible values are <code>&apos;x64&apos;</code>,
+<code>&apos;arm&apos;</code> and <code>&apos;ia32&apos;</code>. Returns the value of <code>process.arch</code>.
 
 </p>
 <h2>os.release()<span><a class="mark" href="#os_os_release" id="os_os_release">#</a></span></h2>
@@ -208,6 +241,10 @@ milliseconds the CPU/core spent in: user, nice, sys, idle, and irq).
        sys: 34920,
        idle: 1072572010,
        irq: 30 } } ]</code></pre>
+<p>Note that since <code>nice</code> values are UNIX centric in Windows the <code>nice</code> values of
+all processors are always 0.
+
+</p>
 <h2>os.networkInterfaces()<span><a class="mark" href="#os_os_networkinterfaces" id="os_os_networkinterfaces">#</a></span></h2>
 <p>Get a list of network interfaces:
 
@@ -234,54 +271,21 @@ milliseconds the CPU/core spent in: user, nice, sys, idle, and irq).
        family: &apos;IPv6&apos;,
        mac: &apos;01:02:03:0a:0b:0c&apos;,
        internal: false } ] }</code></pre>
+<p>Note that due to the underlying implementation this will only return network
+interfaces that have been assigned an address.
+
+</p>
 <h2>os.EOL<span><a class="mark" href="#os_os_eol" id="os_os_eol">#</a></span></h2>
-<p>A constant defining the appropriate End-of-line marker for the operating system.
+<p>A constant defining the appropriate End-of-line marker for the operating
+system.
 </p>
 
-          </div>
-        </div>
-    </div>
-    </div>
-    <div id="footer">
-      <div class="foot-1">
-        <a href="http://www.joyent.com"><h5>The Node.js Project is Sponsored by</h5>
-        
-        <p class="tag">Production Node +<br>High Performance Infrastructure</p></a>
-        <a href="https://my.joyent.com/landing/signup/701800000015696" class="button getstarted">Get Started</a>
-      </div>
-      <div class="foot-2">
-        <div class="foot-nav">
-          <ul>
-            <li><a href="http://nodejs.org/download/">Downloads</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/documentation/">Documentation</a></li>
-            <li><a href="http://nodejs.org/api/">API Docs</a></li>
-            <li><a href="http://nodejs.org/documentation/tutorials/">Tutorials</a></li>
-            <li><a href="http://nodejs.org/documentation/localization/">Localization</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/community/">Community</a></li>
-            <li><a href="https://github.com/joyent/node/issues">Github Issues</a></li>
-            <li><a href="http://groups.google.com/group/nodejs">Mailing List</a></li>
-            <li><a href="http://webchat.freenode.net/?channels=node.js">IRC</a></li>
-            <li><a href="https://twitter.com/nodejs">Twitter</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/about/">About</a></li>
-            <li><a href="http://nodejs.org/about/organization/">Organization</a></li>
-            <li><a href="http://nodejs.org/about/core-team/">Core Team</a></li>
-            <li><a href="http://nodejs.org/about/resources/">Resources</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://blog.nodejs.org">Blog</a></li>
-          </ul>
-        </div>
-        <p class="copyright">Copyright 2014 <a href="http://joyent.com/">Joyent, Inc</a>, Node.js is a <a href="https://nodejs.org/images/trademark-policy.pdf">trademark</a> of Joyent, Inc. <a href="https://raw.github.com/joyent/node/v0.12.7/LICENSE">View license</a>.</p>
       </div>
     </div>
+  </div>
+  <div id="footer">
+  </div>
 
-  
   
   
   

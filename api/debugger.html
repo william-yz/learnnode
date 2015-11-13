@@ -2,55 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Debugger Node.js v0.12.7 Manual &amp; Documentation</title>
+  <title>Debugger Node.js v5.0.0 Manual &amp; Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/sh.css">
-  <link rel="canonical" href="http://nodejs.org/api/debugger.html">
-  
-  
+  <link rel="canonical" href="https://nodejs.org/api/debugger.html">
 </head>
-<body class="alt apidoc int docs" id="docs">
-    <div id="nav">
-      
-      <ul>
-        <li><a href="http://nodejs.org">Home</a></li>
-        <li><a href="http://nodejs.org/download/">Downloads</a></li>
-        <li class="active"><a href="http://nodejs.org/documentation/">Docs</a></li>
-        <li><a href="http://nodejs.org/community/">Community</a></li>
-        <li><a href="http://nodejs.org/about/">About</a></li>
-        <li><a href="http://jobs.nodejs.org">Jobs</a></li>
-        <li><a href="http://blog.nodejs.org">Blog</a></li>
-      </ul>
-    </div>
-    <div id="content-wrap">
-    <div id="content" class="clearfix">
-      <div id="column2" class="interior">
-        <!--<img src="/images/logo-light.svg" alt="node.js" width="170">-->
-        <ul class="docs-nav">
-          <li><a href="http://nodejs.org/documentation/">About Docs</a></li>
-          <li><a href="http://nodejs.org/documentation/tutorials/">Tutorials</a></li>
-          <li><a href="http://nodejs.org/documentation/contributing/">Contributing</a></li>
-          <li><a href="http://nodejs.org/documentation/workflow/">Workflow</a></li>
-          <li><a href="http://nodejs.org/documentation/localization/">Localization</a></li>
-          <li class="active"><a href="http://nodejs.org/api/">API Docs</a></li>
-        </ul>
+<body class="alt apidoc" id="api-section-debugger">
+  <div id="content" class="clearfix">
+    <div id="column2" class="interior">
+      <div id="intro" class="interior">
+        <a href="/" title="Go back to the home page">
+          Node.js (1)
+        </a>
       </div>
-        <div id="column1" class="interior">
-          <header>
-            <h1>Node.js v0.12.7 Manual &amp; Documentation</h1>
-            <div id="gtoc">
-              <p>
-                <a href="index.html" name="toc">Index</a> |
-                <a href="all.html">View on single page</a> |
-                <a href="debugger.json">View as JSON</a>
-              </p>
-            </div>
-            <hr>
-          </header>
+      <ul>
+<li><a class="nav-documentation" href="documentation.html">About these Docs</a></li>
+<li><a class="nav-synopsis" href="synopsis.html">Synopsis</a></li>
+<li><a class="nav-assert" href="assert.html">Assertion Testing</a></li>
+<li><a class="nav-buffer" href="buffer.html">Buffer</a></li>
+<li><a class="nav-addons" href="addons.html">C/C++ Addons</a></li>
+<li><a class="nav-child_process" href="child_process.html">Child Processes</a></li>
+<li><a class="nav-cluster" href="cluster.html">Cluster</a></li>
+<li><a class="nav-console" href="console.html">Console</a></li>
+<li><a class="nav-crypto" href="crypto.html">Crypto</a></li>
+<li><a class="nav-debugger active" href="debugger.html">Debugger</a></li>
+<li><a class="nav-dns" href="dns.html">DNS</a></li>
+<li><a class="nav-domain" href="domain.html">Domain</a></li>
+<li><a class="nav-errors" href="errors.html">Errors</a></li>
+<li><a class="nav-events" href="events.html">Events</a></li>
+<li><a class="nav-fs" href="fs.html">File System</a></li>
+<li><a class="nav-globals" href="globals.html">Globals</a></li>
+<li><a class="nav-http" href="http.html">HTTP</a></li>
+<li><a class="nav-https" href="https.html">HTTPS</a></li>
+<li><a class="nav-modules" href="modules.html">Modules</a></li>
+<li><a class="nav-net" href="net.html">Net</a></li>
+<li><a class="nav-os" href="os.html">OS</a></li>
+<li><a class="nav-path" href="path.html">Path</a></li>
+<li><a class="nav-process" href="process.html">Process</a></li>
+<li><a class="nav-punycode" href="punycode.html">Punycode</a></li>
+<li><a class="nav-querystring" href="querystring.html">Query Strings</a></li>
+<li><a class="nav-readline" href="readline.html">Readline</a></li>
+<li><a class="nav-repl" href="repl.html">REPL</a></li>
+<li><a class="nav-stream" href="stream.html">Stream</a></li>
+<li><a class="nav-string_decoder" href="string_decoder.html">String Decoder</a></li>
+<li><a class="nav-timers" href="timers.html">Timers</a></li>
+<li><a class="nav-tls" href="tls.html">TLS/SSL</a></li>
+<li><a class="nav-tty" href="tty.html">TTY</a></li>
+<li><a class="nav-dgram" href="dgram.html">UDP/Datagram</a></li>
+<li><a class="nav-url" href="url.html">URL</a></li>
+<li><a class="nav-util" href="util.html">Utilities</a></li>
+<li><a class="nav-v8" href="v8.html">V8</a></li>
+<li><a class="nav-vm" href="vm.html">VM</a></li>
+<li><a class="nav-zlib" href="zlib.html">ZLIB</a></li>
+</ul>
 
-          <div id="toc">
-            <h2>Table of Contents</h2>
-            <ul>
+    </div>
+
+    <div id="column1" data-id="debugger" class="interior">
+      <header>
+        <h1>Node.js v5.0.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="index.html" name="toc">Index</a> |
+            <a href="all.html">View on single page</a> |
+            <a href="debugger.json">View as JSON</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
 <li><a href="#debugger_debugger">Debugger</a><ul>
 <li><a href="#debugger_watchers">Watchers</a></li>
 <li><a href="#debugger_commands_reference">Commands reference</a><ul>
@@ -66,16 +90,16 @@
 </li>
 </ul>
 
-          </div>
+      </div>
 
-          <div id="apicontent">
-            <h1>Debugger<span><a class="mark" href="#debugger_debugger" id="debugger_debugger">#</a></span></h1>
-<pre class="api_stability_3">Stability: 3 - Stable</pre><!-- type=misc -->
+      <div id="apicontent">
+        <h1>Debugger<span><a class="mark" href="#debugger_debugger" id="debugger_debugger">#</a></span></h1>
+<pre class="api_stability_2">Stability: 2 - Stable</pre><!-- type=misc -->
 
 <p>V8 comes with an extensive debugger which is accessible out-of-process via a
 simple <a href="http://code.google.com/p/v8/wiki/DebuggerProtocol">TCP protocol</a>.
-Node has a built-in client for this debugger. To use this, start Node with the
-<code>debug</code> argument; a prompt will appear:
+Node.js has a built-in client for this debugger. To use this, start Node.js with
+the <code>debug</code> argument; a prompt will appear:
 
 </p>
 <pre><code>% node debug myscript.js
@@ -86,7 +110,7 @@ break in /home/indutny/Code/git/indutny/myscript.js:1
   2 setTimeout(function () {
   3   debugger;
 debug&gt;</code></pre>
-<p>Node&apos;s debugger client doesn&apos;t support the full range of commands, but
+<p>Node.js&apos;s debugger client doesn&apos;t support the full range of commands, but
 simple step and inspection is possible. By putting the statement <code>debugger;</code>
 into the source code of your script, you will enable a breakpoint.
 
@@ -176,7 +200,8 @@ prints the active watchers. To remove a watcher, type
 functions body</li>
 <li><code>setBreakpoint(&apos;script.js&apos;, 1)</code>, <code>sb(...)</code> - Set breakpoint on first line of
 script.js</li>
-<li><code>clearBreakpoint</code>, <code>cb(...)</code> - Clear breakpoint</li>
+<li><code>clearBreakpoint(&apos;script.js&apos;, 1)</code>, <code>cb(...)</code> - Clear breakpoint in script.js
+on line 1</li>
 </ul></div>
 <p>It is also possible to set a breakpoint in a file (module) that
 isn&apos;t loaded yet:
@@ -225,14 +250,14 @@ breakpoint)</li>
 <li><code>version</code> - Display v8&apos;s version</li>
 </ul></div>
 <h2>Advanced Usage<span><a class="mark" href="#debugger_advanced_usage" id="debugger_advanced_usage">#</a></span></h2>
-<p>The V8 debugger can be enabled and accessed either by starting Node with
-the <code>--debug</code> command-line flag or by signaling an existing Node process
+<p>The V8 debugger can be enabled and accessed either by starting Node.js with
+the <code>--debug</code> command-line flag or by signaling an existing Node.js process
 with <code>SIGUSR1</code>.
 
 </p>
 <p>Once a process has been set in debug mode with this it can be connected to
-with the node debugger. Either connect to the <code>pid</code> or the URI to the debugger.
-The syntax is:
+with the Node.js debugger. Either connect to the <code>pid</code> or the URI to the
+debugger. The syntax is:
 
 </p>
 <ul>
@@ -240,50 +265,12 @@ The syntax is:
 <li><code>node debug &lt;URI&gt;</code> - Connects to the process via the URI such as localhost:5858</li>
 </ul>
 
-          </div>
-        </div>
-    </div>
-    </div>
-    <div id="footer">
-      <div class="foot-1">
-        <a href="http://www.joyent.com"><h5>The Node.js Project is Sponsored by</h5>
-        
-        <p class="tag">Production Node +<br>High Performance Infrastructure</p></a>
-        <a href="https://my.joyent.com/landing/signup/701800000015696" class="button getstarted">Get Started</a>
-      </div>
-      <div class="foot-2">
-        <div class="foot-nav">
-          <ul>
-            <li><a href="http://nodejs.org/download/">Downloads</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/documentation/">Documentation</a></li>
-            <li><a href="http://nodejs.org/api/">API Docs</a></li>
-            <li><a href="http://nodejs.org/documentation/tutorials/">Tutorials</a></li>
-            <li><a href="http://nodejs.org/documentation/localization/">Localization</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/community/">Community</a></li>
-            <li><a href="https://github.com/joyent/node/issues">Github Issues</a></li>
-            <li><a href="http://groups.google.com/group/nodejs">Mailing List</a></li>
-            <li><a href="http://webchat.freenode.net/?channels=node.js">IRC</a></li>
-            <li><a href="https://twitter.com/nodejs">Twitter</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/about/">About</a></li>
-            <li><a href="http://nodejs.org/about/organization/">Organization</a></li>
-            <li><a href="http://nodejs.org/about/core-team/">Core Team</a></li>
-            <li><a href="http://nodejs.org/about/resources/">Resources</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://blog.nodejs.org">Blog</a></li>
-          </ul>
-        </div>
-        <p class="copyright">Copyright 2014 <a href="http://joyent.com/">Joyent, Inc</a>, Node.js is a <a href="https://nodejs.org/images/trademark-policy.pdf">trademark</a> of Joyent, Inc. <a href="https://raw.github.com/joyent/node/v0.12.7/LICENSE">View license</a>.</p>
       </div>
     </div>
+  </div>
+  <div id="footer">
+  </div>
 
-  
   
   
   

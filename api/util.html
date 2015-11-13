@@ -2,55 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>util Node.js v0.12.7 Manual &amp; Documentation</title>
+  <title>util Node.js v5.0.0 Manual &amp; Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/sh.css">
-  <link rel="canonical" href="http://nodejs.org/api/util.html">
-  
-  
+  <link rel="canonical" href="https://nodejs.org/api/util.html">
 </head>
-<body class="alt apidoc int docs" id="docs">
-    <div id="nav">
-      
-      <ul>
-        <li><a href="http://nodejs.org">Home</a></li>
-        <li><a href="http://nodejs.org/download/">Downloads</a></li>
-        <li class="active"><a href="http://nodejs.org/documentation/">Docs</a></li>
-        <li><a href="http://nodejs.org/community/">Community</a></li>
-        <li><a href="http://nodejs.org/about/">About</a></li>
-        <li><a href="http://jobs.nodejs.org">Jobs</a></li>
-        <li><a href="http://blog.nodejs.org">Blog</a></li>
-      </ul>
-    </div>
-    <div id="content-wrap">
-    <div id="content" class="clearfix">
-      <div id="column2" class="interior">
-        <!--<img src="/images/logo-light.svg" alt="node.js" width="170">-->
-        <ul class="docs-nav">
-          <li><a href="http://nodejs.org/documentation/">About Docs</a></li>
-          <li><a href="http://nodejs.org/documentation/tutorials/">Tutorials</a></li>
-          <li><a href="http://nodejs.org/documentation/contributing/">Contributing</a></li>
-          <li><a href="http://nodejs.org/documentation/workflow/">Workflow</a></li>
-          <li><a href="http://nodejs.org/documentation/localization/">Localization</a></li>
-          <li class="active"><a href="http://nodejs.org/api/">API Docs</a></li>
-        </ul>
+<body class="alt apidoc" id="api-section-util">
+  <div id="content" class="clearfix">
+    <div id="column2" class="interior">
+      <div id="intro" class="interior">
+        <a href="/" title="Go back to the home page">
+          Node.js (1)
+        </a>
       </div>
-        <div id="column1" class="interior">
-          <header>
-            <h1>Node.js v0.12.7 Manual &amp; Documentation</h1>
-            <div id="gtoc">
-              <p>
-                <a href="index.html" name="toc">Index</a> |
-                <a href="all.html">View on single page</a> |
-                <a href="util.json">View as JSON</a>
-              </p>
-            </div>
-            <hr>
-          </header>
+      <ul>
+<li><a class="nav-documentation" href="documentation.html">About these Docs</a></li>
+<li><a class="nav-synopsis" href="synopsis.html">Synopsis</a></li>
+<li><a class="nav-assert" href="assert.html">Assertion Testing</a></li>
+<li><a class="nav-buffer" href="buffer.html">Buffer</a></li>
+<li><a class="nav-addons" href="addons.html">C/C++ Addons</a></li>
+<li><a class="nav-child_process" href="child_process.html">Child Processes</a></li>
+<li><a class="nav-cluster" href="cluster.html">Cluster</a></li>
+<li><a class="nav-console" href="console.html">Console</a></li>
+<li><a class="nav-crypto" href="crypto.html">Crypto</a></li>
+<li><a class="nav-debugger" href="debugger.html">Debugger</a></li>
+<li><a class="nav-dns" href="dns.html">DNS</a></li>
+<li><a class="nav-domain" href="domain.html">Domain</a></li>
+<li><a class="nav-errors" href="errors.html">Errors</a></li>
+<li><a class="nav-events" href="events.html">Events</a></li>
+<li><a class="nav-fs" href="fs.html">File System</a></li>
+<li><a class="nav-globals" href="globals.html">Globals</a></li>
+<li><a class="nav-http" href="http.html">HTTP</a></li>
+<li><a class="nav-https" href="https.html">HTTPS</a></li>
+<li><a class="nav-modules" href="modules.html">Modules</a></li>
+<li><a class="nav-net" href="net.html">Net</a></li>
+<li><a class="nav-os" href="os.html">OS</a></li>
+<li><a class="nav-path" href="path.html">Path</a></li>
+<li><a class="nav-process" href="process.html">Process</a></li>
+<li><a class="nav-punycode" href="punycode.html">Punycode</a></li>
+<li><a class="nav-querystring" href="querystring.html">Query Strings</a></li>
+<li><a class="nav-readline" href="readline.html">Readline</a></li>
+<li><a class="nav-repl" href="repl.html">REPL</a></li>
+<li><a class="nav-stream" href="stream.html">Stream</a></li>
+<li><a class="nav-string_decoder" href="string_decoder.html">String Decoder</a></li>
+<li><a class="nav-timers" href="timers.html">Timers</a></li>
+<li><a class="nav-tls" href="tls.html">TLS/SSL</a></li>
+<li><a class="nav-tty" href="tty.html">TTY</a></li>
+<li><a class="nav-dgram" href="dgram.html">UDP/Datagram</a></li>
+<li><a class="nav-url" href="url.html">URL</a></li>
+<li><a class="nav-util active" href="util.html">Utilities</a></li>
+<li><a class="nav-v8" href="v8.html">V8</a></li>
+<li><a class="nav-vm" href="vm.html">VM</a></li>
+<li><a class="nav-zlib" href="zlib.html">ZLIB</a></li>
+</ul>
 
-          <div id="toc">
-            <h2>Table of Contents</h2>
-            <ul>
+    </div>
+
+    <div id="column1" data-id="util" class="interior">
+      <header>
+        <h1>Node.js v5.0.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="index.html" name="toc">Index</a> |
+            <a href="all.html">View on single page</a> |
+            <a href="util.json">View as JSON</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
 <li><a href="#util_util">util</a><ul>
 <li><a href="#util_util_debuglog_section">util.debuglog(section)</a></li>
 <li><a href="#util_util_format_format">util.format(format[, ...])</a></li>
@@ -64,6 +88,17 @@
 <li><a href="#util_util_isregexp_object">util.isRegExp(object)</a></li>
 <li><a href="#util_util_isdate_object">util.isDate(object)</a></li>
 <li><a href="#util_util_iserror_object">util.isError(object)</a></li>
+<li><a href="#util_util_isboolean_object">util.isBoolean(object)</a></li>
+<li><a href="#util_util_isnull_object">util.isNull(object)</a></li>
+<li><a href="#util_util_isnullorundefined_object">util.isNullOrUndefined(object)</a></li>
+<li><a href="#util_util_isnumber_object">util.isNumber(object)</a></li>
+<li><a href="#util_util_isstring_object">util.isString(object)</a></li>
+<li><a href="#util_util_issymbol_object">util.isSymbol(object)</a></li>
+<li><a href="#util_util_isundefined_object">util.isUndefined(object)</a></li>
+<li><a href="#util_util_isobject_object">util.isObject(object)</a></li>
+<li><a href="#util_util_isfunction_object">util.isFunction(object)</a></li>
+<li><a href="#util_util_isprimitive_object">util.isPrimitive(object)</a></li>
+<li><a href="#util_util_isbuffer_object">util.isBuffer(object)</a></li>
 <li><a href="#util_util_inherits_constructor_superconstructor">util.inherits(constructor, superConstructor)</a></li>
 <li><a href="#util_util_deprecate_function_string">util.deprecate(function, string)</a></li>
 <li><a href="#util_util_debug_string">util.debug(string)</a></li>
@@ -75,20 +110,20 @@
 </li>
 </ul>
 
-          </div>
+      </div>
 
-          <div id="apicontent">
-            <h1>util<span><a class="mark" href="#util_util" id="util_util">#</a></span></h1>
-<pre class="api_stability_4">Stability: 4 - API Frozen</pre><p>These functions are in the module <code>&apos;util&apos;</code>. Use <code>require(&apos;util&apos;)</code> to
+      <div id="apicontent">
+        <h1>util<span><a class="mark" href="#util_util" id="util_util">#</a></span></h1>
+<pre class="api_stability_2">Stability: 2 - Stable</pre><p>These functions are in the module <code>&apos;util&apos;</code>. Use <code>require(&apos;util&apos;)</code> to
 access them.
 
 </p>
-<p>The <code>util</code> module is primarily designed to support the needs of Node&apos;s
+<p>The <code>util</code> module is primarily designed to support the needs of node.js&apos;s
 internal APIs.  Many of these utilities are useful for your own
 programs.  If you find that these functions are lacking for your
 purposes, however, you are encouraged to write your own utilities.  We
 are not interested in any future additions to the <code>util</code> module that
-are unnecessary for Node&apos;s internal functionality.
+are unnecessary for node.js&apos;s internal functionality.
 
 </p>
 <h2>util.debuglog(section)<span><a class="mark" href="#util_util_debuglog_section" id="util_util_debuglog_section">#</a></span></h2>
@@ -135,9 +170,9 @@ argument. Supported placeholders are:
 <ul>
 <li><code>%s</code> - String.</li>
 <li><code>%d</code> - Number (both integer and float).</li>
-<li><code>%j</code> - JSON.  Replaced with the string <code>&apos;[Circular]&apos;</code> if the argument<pre><code>   contains circular references.</code></pre>
-</li>
-<li><code>%</code> - single percent sign (<code>&apos;%&apos;</code>). This does not consume an argument.</li>
+<li><code>%j</code> - JSON.  Replaced with the string <code>&apos;[Circular]&apos;</code> if the argument
+contains circular references.</li>
+<li><code>%%</code> - single percent sign (<code>&apos;%&apos;</code>). This does not consume an argument.</li>
 </ul>
 <p>If the placeholder does not have a corresponding argument, the placeholder is
 not replaced.
@@ -145,8 +180,8 @@ not replaced.
 </p>
 <pre><code>util.format(&apos;%s:%s&apos;, &apos;foo&apos;); // &apos;foo:%s&apos;</code></pre>
 <p>If there are more arguments than placeholders, the extra arguments are
-converted to strings with <code>util.inspect()</code> and these strings are concatenated,
-delimited by a space.
+coerced to strings (for objects and symbols, <code>util.inspect()</code> is used)
+and then concatenated, delimited by a space.
 
 </p>
 <pre><code>util.format(&apos;%s:%s&apos;, &apos;foo&apos;, &apos;bar&apos;, &apos;baz&apos;); // &apos;foo:bar baz&apos;</code></pre>
@@ -170,8 +205,8 @@ formatted string:
 
 </p>
 <ul>
-<li><p><code>showHidden</code> - if <code>true</code> then the object&apos;s non-enumerable properties will be
-shown too. Defaults to <code>false</code>.</p>
+<li><p><code>showHidden</code> - if <code>true</code> then the object&apos;s non-enumerable and symbol
+properties will be shown too. Defaults to <code>false</code>.</p>
 </li>
 <li><p><code>depth</code> - tells <code>inspect</code> how many times to recurse while formatting the
 object. This is useful for inspecting large complicated objects. Defaults to
@@ -216,7 +251,7 @@ Highlighted styles and their default values are:
  * <code>name</code> (intentionally no styling)
 
 </p>
-<p>Predefined color codes are: <code>white</code>, <code>grey</code>, <code>black</code>, <code>blue</code>, <code>cyan</code>, 
+<p>Predefined color codes are: <code>white</code>, <code>grey</code>, <code>black</code>, <code>blue</code>, <code>cyan</code>,
 <code>green</code>, <code>magenta</code>, <code>red</code> and <code>yellow</code>.
 There are also <code>bold</code>, <code>italic</code>, <code>underline</code> and <code>inverse</code> codes.
 
@@ -250,7 +285,7 @@ obj.inspect = function(depth) {
 util.inspect(obj);
   // &quot;{ bar: &apos;baz&apos; }&quot;</code></pre>
 <h2>util.isArray(object)<span><a class="mark" href="#util_util_isarray_object" id="util_util_isarray_object">#</a></span></h2>
-<p>Internal alias for Array.isArray.
+<pre class="api_stability_0">Stability: 0 - Deprecated</pre><p>Internal alias for Array.isArray.
 
 </p>
 <p>Returns <code>true</code> if the given &quot;object&quot; is an <code>Array</code>. <code>false</code> otherwise.
@@ -265,7 +300,7 @@ util.isArray(new Array)
 util.isArray({})
   // false</code></pre>
 <h2>util.isRegExp(object)<span><a class="mark" href="#util_util_isregexp_object" id="util_util_isregexp_object">#</a></span></h2>
-<p>Returns <code>true</code> if the given &quot;object&quot; is a <code>RegExp</code>. <code>false</code> otherwise.
+<pre class="api_stability_0">Stability: 0 - Deprecated</pre><p>Returns <code>true</code> if the given &quot;object&quot; is a <code>RegExp</code>. <code>false</code> otherwise.
 
 </p>
 <pre><code>var util = require(&apos;util&apos;);
@@ -277,7 +312,7 @@ util.isRegExp(new RegExp(&apos;another regexp&apos;))
 util.isRegExp({})
   // false</code></pre>
 <h2>util.isDate(object)<span><a class="mark" href="#util_util_isdate_object" id="util_util_isdate_object">#</a></span></h2>
-<p>Returns <code>true</code> if the given &quot;object&quot; is a <code>Date</code>. <code>false</code> otherwise.
+<pre class="api_stability_0">Stability: 0 - Deprecated</pre><p>Returns <code>true</code> if the given &quot;object&quot; is a <code>Date</code>. <code>false</code> otherwise.
 
 </p>
 <pre><code>var util = require(&apos;util&apos;);
@@ -289,7 +324,7 @@ util.isDate(Date())
 util.isDate({})
   // false</code></pre>
 <h2>util.isError(object)<span><a class="mark" href="#util_util_iserror_object" id="util_util_iserror_object">#</a></span></h2>
-<p>Returns <code>true</code> if the given &quot;object&quot; is an <code>Error</code>. <code>false</code> otherwise.
+<pre class="api_stability_0">Stability: 0 - Deprecated</pre><p>Returns <code>true</code> if the given &quot;object&quot; is an <code>Error</code>. <code>false</code> otherwise.
 
 </p>
 <pre><code>var util = require(&apos;util&apos;);
@@ -300,6 +335,161 @@ util.isError(new TypeError())
   // true
 util.isError({ name: &apos;Error&apos;, message: &apos;an error occurred&apos; })
   // false</code></pre>
+<h2>util.isBoolean(object)<span><a class="mark" href="#util_util_isboolean_object" id="util_util_isboolean_object">#</a></span></h2>
+<pre class="api_stability_0">Stability: 0 - Deprecated</pre><p>Returns <code>true</code> if the given &quot;object&quot; is a <code>Boolean</code>. <code>false</code> otherwise.
+
+</p>
+<pre><code>var util = require(&apos;util&apos;);
+
+util.isBoolean(1)
+  // false
+util.isBoolean(0)
+  // false
+util.isBoolean(false)
+  // true</code></pre>
+<h2>util.isNull(object)<span><a class="mark" href="#util_util_isnull_object" id="util_util_isnull_object">#</a></span></h2>
+<pre class="api_stability_0">Stability: 0 - Deprecated</pre><p>Returns <code>true</code> if the given &quot;object&quot; is strictly <code>null</code>. <code>false</code> otherwise.
+
+</p>
+<pre><code>var util = require(&apos;util&apos;);
+
+util.isNull(0)
+  // false
+util.isNull(undefined)
+  // false
+util.isNull(null)
+  // true</code></pre>
+<h2>util.isNullOrUndefined(object)<span><a class="mark" href="#util_util_isnullorundefined_object" id="util_util_isnullorundefined_object">#</a></span></h2>
+<pre class="api_stability_0">Stability: 0 - Deprecated</pre><p>Returns <code>true</code> if the given &quot;object&quot; is <code>null</code> or <code>undefined</code>. <code>false</code> otherwise.
+
+</p>
+<pre><code>var util = require(&apos;util&apos;);
+
+util.isNullOrUndefined(0)
+  // false
+util.isNullOrUndefined(undefined)
+  // true
+util.isNullOrUndefined(null)
+  // true</code></pre>
+<h2>util.isNumber(object)<span><a class="mark" href="#util_util_isnumber_object" id="util_util_isnumber_object">#</a></span></h2>
+<pre class="api_stability_0">Stability: 0 - Deprecated</pre><p>Returns <code>true</code> if the given &quot;object&quot; is a <code>Number</code>. <code>false</code> otherwise.
+
+</p>
+<pre><code>var util = require(&apos;util&apos;);
+
+util.isNumber(false)
+  // false
+util.isNumber(Infinity)
+  // true
+util.isNumber(0)
+  // true
+util.isNumber(NaN)
+  // true</code></pre>
+<h2>util.isString(object)<span><a class="mark" href="#util_util_isstring_object" id="util_util_isstring_object">#</a></span></h2>
+<pre class="api_stability_0">Stability: 0 - Deprecated</pre><p>Returns <code>true</code> if the given &quot;object&quot; is a <code>String</code>. <code>false</code> otherwise.
+
+</p>
+<pre><code>var util = require(&apos;util&apos;);
+
+util.isString(&apos;&apos;)
+  // true
+util.isString(&apos;foo&apos;)
+  // true
+util.isString(String(&apos;foo&apos;))
+  // true
+util.isString(5)
+  // false</code></pre>
+<h2>util.isSymbol(object)<span><a class="mark" href="#util_util_issymbol_object" id="util_util_issymbol_object">#</a></span></h2>
+<pre class="api_stability_0">Stability: 0 - Deprecated</pre><p>Returns <code>true</code> if the given &quot;object&quot; is a <code>Symbol</code>. <code>false</code> otherwise.
+
+</p>
+<pre><code>var util = require(&apos;util&apos;);
+
+util.isSymbol(5)
+  // false
+util.isSymbol(&apos;foo&apos;)
+  // false
+util.isSymbol(Symbol(&apos;foo&apos;))
+  // true</code></pre>
+<h2>util.isUndefined(object)<span><a class="mark" href="#util_util_isundefined_object" id="util_util_isundefined_object">#</a></span></h2>
+<pre class="api_stability_0">Stability: 0 - Deprecated</pre><p>Returns <code>true</code> if the given &quot;object&quot; is <code>undefined</code>. <code>false</code> otherwise.
+
+</p>
+<pre><code>var util = require(&apos;util&apos;);
+
+var foo;
+util.isUndefined(5)
+  // false
+util.isUndefined(foo)
+  // true
+util.isUndefined(null)
+  // false</code></pre>
+<h2>util.isObject(object)<span><a class="mark" href="#util_util_isobject_object" id="util_util_isobject_object">#</a></span></h2>
+<pre class="api_stability_0">Stability: 0 - Deprecated</pre><p>Returns <code>true</code> if the given &quot;object&quot; is strictly an <code>Object</code> <strong>and</strong> not a
+<code>Function</code>. <code>false</code> otherwise.
+
+</p>
+<pre><code>var util = require(&apos;util&apos;);
+
+util.isObject(5)
+  // false
+util.isObject(null)
+  // false
+util.isObject({})
+  // true
+util.isObject(function(){})
+  // false</code></pre>
+<h2>util.isFunction(object)<span><a class="mark" href="#util_util_isfunction_object" id="util_util_isfunction_object">#</a></span></h2>
+<pre class="api_stability_0">Stability: 0 - Deprecated</pre><p>Returns <code>true</code> if the given &quot;object&quot; is a <code>Function</code>. <code>false</code> otherwise.
+
+</p>
+<pre><code>var util = require(&apos;util&apos;);
+
+function Foo() {}
+var Bar = function() {};
+
+util.isFunction({})
+  // false
+util.isFunction(Foo)
+  // true
+util.isFunction(Bar)
+  // true</code></pre>
+<h2>util.isPrimitive(object)<span><a class="mark" href="#util_util_isprimitive_object" id="util_util_isprimitive_object">#</a></span></h2>
+<pre class="api_stability_0">Stability: 0 - Deprecated</pre><p>Returns <code>true</code> if the given &quot;object&quot; is a primitive type. <code>false</code> otherwise.
+
+</p>
+<pre><code>var util = require(&apos;util&apos;);
+
+util.isPrimitive(5)
+  // true
+util.isPrimitive(&apos;foo&apos;)
+  // true
+util.isPrimitive(false)
+  // true
+util.isPrimitive(null)
+  // true
+util.isPrimitive(undefined)
+  // true
+util.isPrimitive({})
+  // false
+util.isPrimitive(function() {})
+  // false
+util.isPrimitive(/^$/)
+  // false
+util.isPrimitive(new Date())
+  // false</code></pre>
+<h2>util.isBuffer(object)<span><a class="mark" href="#util_util_isbuffer_object" id="util_util_isbuffer_object">#</a></span></h2>
+<pre class="api_stability_0">Stability: 0 - Deprecated</pre><p>Returns <code>true</code> if the given &quot;object&quot; is a <code>Buffer</code>. <code>false</code> otherwise.
+
+</p>
+<pre><code>var util = require(&apos;util&apos;);
+
+util.isBuffer({ length: 0 })
+  // false
+util.isBuffer([])
+  // false
+util.isBuffer(new Buffer(&apos;hello world&apos;))
+  // true</code></pre>
 <h2>util.inherits(constructor, superConstructor)<span><a class="mark" href="#util_util_inherits_constructor_superconstructor" id="util_util_inherits_constructor_superconstructor">#</a></span></h2>
 <p>Inherit the prototype methods from one
 <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/constructor">constructor</a>
@@ -312,13 +502,13 @@ through the <code>constructor.super_</code> property.
 
 </p>
 <pre><code>var util = require(&quot;util&quot;);
-var events = require(&quot;events&quot;);
+var EventEmitter = require(&quot;events&quot;);
 
 function MyStream() {
-    events.EventEmitter.call(this);
+    EventEmitter.call(this);
 }
 
-util.inherits(MyStream, events.EventEmitter);
+util.inherits(MyStream, EventEmitter);
 
 MyStream.prototype.write = function(data) {
     this.emit(&quot;data&quot;, data);
@@ -326,8 +516,8 @@ MyStream.prototype.write = function(data) {
 
 var stream = new MyStream();
 
-console.log(stream instanceof events.EventEmitter); // true
-console.log(MyStream.super_ === events.EventEmitter); // true
+console.log(stream instanceof EventEmitter); // true
+console.log(MyStream.super_ === EventEmitter); // true
 
 stream.on(&quot;data&quot;, function(data) {
     console.log(&apos;Received data: &quot;&apos; + data + &apos;&quot;&apos;);
@@ -337,15 +527,32 @@ stream.write(&quot;It works!&quot;); // Received data: &quot;It works!&quot;</co
 <p>Marks that a method should not be used any more.
 
 </p>
-<pre><code>exports.puts = exports.deprecate(function() {
+<pre><code>var util = require(&apos;util&apos;);
+
+exports.puts = util.deprecate(function() {
   for (var i = 0, len = arguments.length; i &lt; len; ++i) {
     process.stdout.write(arguments[i] + &apos;\n&apos;);
   }
-}, &apos;util.puts: Use console.log instead&apos;)</code></pre>
-<p>It returns a modified function which warns once by default. If
-<code>--no-deprecation</code> is set then this function is a NO-OP. If
-<code>--throw-deprecation</code> is set then the application will throw an exception
-if the deprecated API is used.
+}, &apos;util.puts: Use console.log instead&apos;);</code></pre>
+<p>It returns a modified function which warns once by default.
+
+</p>
+<p>If <code>--no-deprecation</code> is set then this function is a NO-OP.  Configurable
+at run-time through the <code>process.noDeprecation</code> boolean (only effective
+when set before a module is loaded.)
+
+</p>
+<p>If <code>--trace-deprecation</code> is set, a warning and a stack trace are logged
+to the console the first time the deprecated API is used.  Configurable
+at run-time through the <code>process.traceDeprecation</code> boolean.
+
+</p>
+<p>If <code>--throw-deprecation</code> is set then the application throws an exception
+when the deprecated API is used.  Configurable at run-time through the
+<code>process.throwDeprecation</code> boolean.
+
+</p>
+<p><code>process.throwDeprecation</code> takes precedence over <code>process.traceDeprecation</code>.
 
 </p>
 <h2>util.debug(string)<span><a class="mark" href="#util_util_debug_string" id="util_util_debug_string">#</a></span></h2>
@@ -369,50 +576,12 @@ if the deprecated API is used.
 <pre class="api_stability_0">Stability: 0 - Deprecated: Use readableStream.pipe(writableStream)</pre><p>Deprecated predecessor of <code>stream.pipe()</code>.
 </p>
 
-          </div>
-        </div>
-    </div>
-    </div>
-    <div id="footer">
-      <div class="foot-1">
-        <a href="http://www.joyent.com"><h5>The Node.js Project is Sponsored by</h5>
-        
-        <p class="tag">Production Node +<br>High Performance Infrastructure</p></a>
-        <a href="https://my.joyent.com/landing/signup/701800000015696" class="button getstarted">Get Started</a>
-      </div>
-      <div class="foot-2">
-        <div class="foot-nav">
-          <ul>
-            <li><a href="http://nodejs.org/download/">Downloads</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/documentation/">Documentation</a></li>
-            <li><a href="http://nodejs.org/api/">API Docs</a></li>
-            <li><a href="http://nodejs.org/documentation/tutorials/">Tutorials</a></li>
-            <li><a href="http://nodejs.org/documentation/localization/">Localization</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/community/">Community</a></li>
-            <li><a href="https://github.com/joyent/node/issues">Github Issues</a></li>
-            <li><a href="http://groups.google.com/group/nodejs">Mailing List</a></li>
-            <li><a href="http://webchat.freenode.net/?channels=node.js">IRC</a></li>
-            <li><a href="https://twitter.com/nodejs">Twitter</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/about/">About</a></li>
-            <li><a href="http://nodejs.org/about/organization/">Organization</a></li>
-            <li><a href="http://nodejs.org/about/core-team/">Core Team</a></li>
-            <li><a href="http://nodejs.org/about/resources/">Resources</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://blog.nodejs.org">Blog</a></li>
-          </ul>
-        </div>
-        <p class="copyright">Copyright 2014 <a href="http://joyent.com/">Joyent, Inc</a>, Node.js is a <a href="https://nodejs.org/images/trademark-policy.pdf">trademark</a> of Joyent, Inc. <a href="https://raw.github.com/joyent/node/v0.12.7/LICENSE">View license</a>.</p>
       </div>
     </div>
+  </div>
+  <div id="footer">
+  </div>
 
-  
   
   
   

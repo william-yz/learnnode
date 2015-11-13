@@ -2,55 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Cluster Node.js v0.12.7 Manual &amp; Documentation</title>
+  <title>Cluster Node.js v5.0.0 Manual &amp; Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/sh.css">
-  <link rel="canonical" href="http://nodejs.org/api/cluster.html">
-  
-  
+  <link rel="canonical" href="https://nodejs.org/api/cluster.html">
 </head>
-<body class="alt apidoc int docs" id="docs">
-    <div id="nav">
-      
-      <ul>
-        <li><a href="http://nodejs.org">Home</a></li>
-        <li><a href="http://nodejs.org/download/">Downloads</a></li>
-        <li class="active"><a href="http://nodejs.org/documentation/">Docs</a></li>
-        <li><a href="http://nodejs.org/community/">Community</a></li>
-        <li><a href="http://nodejs.org/about/">About</a></li>
-        <li><a href="http://jobs.nodejs.org">Jobs</a></li>
-        <li><a href="http://blog.nodejs.org">Blog</a></li>
-      </ul>
-    </div>
-    <div id="content-wrap">
-    <div id="content" class="clearfix">
-      <div id="column2" class="interior">
-        <!--<img src="/images/logo-light.svg" alt="node.js" width="170">-->
-        <ul class="docs-nav">
-          <li><a href="http://nodejs.org/documentation/">About Docs</a></li>
-          <li><a href="http://nodejs.org/documentation/tutorials/">Tutorials</a></li>
-          <li><a href="http://nodejs.org/documentation/contributing/">Contributing</a></li>
-          <li><a href="http://nodejs.org/documentation/workflow/">Workflow</a></li>
-          <li><a href="http://nodejs.org/documentation/localization/">Localization</a></li>
-          <li class="active"><a href="http://nodejs.org/api/">API Docs</a></li>
-        </ul>
+<body class="alt apidoc" id="api-section-cluster">
+  <div id="content" class="clearfix">
+    <div id="column2" class="interior">
+      <div id="intro" class="interior">
+        <a href="/" title="Go back to the home page">
+          Node.js (1)
+        </a>
       </div>
-        <div id="column1" class="interior">
-          <header>
-            <h1>Node.js v0.12.7 Manual &amp; Documentation</h1>
-            <div id="gtoc">
-              <p>
-                <a href="index.html" name="toc">Index</a> |
-                <a href="all.html">View on single page</a> |
-                <a href="cluster.json">View as JSON</a>
-              </p>
-            </div>
-            <hr>
-          </header>
+      <ul>
+<li><a class="nav-documentation" href="documentation.html">About these Docs</a></li>
+<li><a class="nav-synopsis" href="synopsis.html">Synopsis</a></li>
+<li><a class="nav-assert" href="assert.html">Assertion Testing</a></li>
+<li><a class="nav-buffer" href="buffer.html">Buffer</a></li>
+<li><a class="nav-addons" href="addons.html">C/C++ Addons</a></li>
+<li><a class="nav-child_process" href="child_process.html">Child Processes</a></li>
+<li><a class="nav-cluster active" href="cluster.html">Cluster</a></li>
+<li><a class="nav-console" href="console.html">Console</a></li>
+<li><a class="nav-crypto" href="crypto.html">Crypto</a></li>
+<li><a class="nav-debugger" href="debugger.html">Debugger</a></li>
+<li><a class="nav-dns" href="dns.html">DNS</a></li>
+<li><a class="nav-domain" href="domain.html">Domain</a></li>
+<li><a class="nav-errors" href="errors.html">Errors</a></li>
+<li><a class="nav-events" href="events.html">Events</a></li>
+<li><a class="nav-fs" href="fs.html">File System</a></li>
+<li><a class="nav-globals" href="globals.html">Globals</a></li>
+<li><a class="nav-http" href="http.html">HTTP</a></li>
+<li><a class="nav-https" href="https.html">HTTPS</a></li>
+<li><a class="nav-modules" href="modules.html">Modules</a></li>
+<li><a class="nav-net" href="net.html">Net</a></li>
+<li><a class="nav-os" href="os.html">OS</a></li>
+<li><a class="nav-path" href="path.html">Path</a></li>
+<li><a class="nav-process" href="process.html">Process</a></li>
+<li><a class="nav-punycode" href="punycode.html">Punycode</a></li>
+<li><a class="nav-querystring" href="querystring.html">Query Strings</a></li>
+<li><a class="nav-readline" href="readline.html">Readline</a></li>
+<li><a class="nav-repl" href="repl.html">REPL</a></li>
+<li><a class="nav-stream" href="stream.html">Stream</a></li>
+<li><a class="nav-string_decoder" href="string_decoder.html">String Decoder</a></li>
+<li><a class="nav-timers" href="timers.html">Timers</a></li>
+<li><a class="nav-tls" href="tls.html">TLS/SSL</a></li>
+<li><a class="nav-tty" href="tty.html">TTY</a></li>
+<li><a class="nav-dgram" href="dgram.html">UDP/Datagram</a></li>
+<li><a class="nav-url" href="url.html">URL</a></li>
+<li><a class="nav-util" href="util.html">Utilities</a></li>
+<li><a class="nav-v8" href="v8.html">V8</a></li>
+<li><a class="nav-vm" href="vm.html">VM</a></li>
+<li><a class="nav-zlib" href="zlib.html">ZLIB</a></li>
+</ul>
 
-          <div id="toc">
-            <h2>Table of Contents</h2>
-            <ul>
+    </div>
+
+    <div id="column1" data-id="cluster" class="interior">
+      <header>
+        <h1>Node.js v5.0.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="index.html" name="toc">Index</a> |
+            <a href="all.html">View on single page</a> |
+            <a href="cluster.json">View as JSON</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
 <li><a href="#cluster_cluster">Cluster</a><ul>
 <li><a href="#cluster_how_it_works">How It Works</a></li>
 <li><a href="#cluster_cluster_schedulingpolicy">cluster.schedulingPolicy</a></li>
@@ -62,6 +86,7 @@
 <li><a href="#cluster_event_listening">Event: &apos;listening&apos;</a></li>
 <li><a href="#cluster_event_disconnect">Event: &apos;disconnect&apos;</a></li>
 <li><a href="#cluster_event_exit">Event: &apos;exit&apos;</a></li>
+<li><a href="#cluster_event_message">Event: &apos;message&apos;</a></li>
 <li><a href="#cluster_event_setup">Event: &apos;setup&apos;</a></li>
 <li><a href="#cluster_cluster_setupmaster_settings">cluster.setupMaster([settings])</a></li>
 <li><a href="#cluster_cluster_fork_env">cluster.fork([env])</a></li>
@@ -72,12 +97,12 @@
 <li><a href="#cluster_worker_id">worker.id</a></li>
 <li><a href="#cluster_worker_process">worker.process</a></li>
 <li><a href="#cluster_worker_suicide">worker.suicide</a></li>
-<li><a href="#cluster_worker_send_message_sendhandle">worker.send(message[, sendHandle])</a></li>
+<li><a href="#cluster_worker_send_message_sendhandle_callback">worker.send(message[, sendHandle][, callback])</a></li>
 <li><a href="#cluster_worker_kill_signal_sigterm">worker.kill([signal=&apos;SIGTERM&apos;])</a></li>
 <li><a href="#cluster_worker_disconnect">worker.disconnect()</a></li>
 <li><a href="#cluster_worker_isdead">worker.isDead()</a></li>
 <li><a href="#cluster_worker_isconnected">worker.isConnected()</a></li>
-<li><a href="#cluster_event_message">Event: &apos;message&apos;</a></li>
+<li><a href="#cluster_event_message_1">Event: &apos;message&apos;</a></li>
 <li><a href="#cluster_event_online_1">Event: &apos;online&apos;</a></li>
 <li><a href="#cluster_event_listening_1">Event: &apos;listening&apos;</a></li>
 <li><a href="#cluster_event_disconnect_1">Event: &apos;disconnect&apos;</a></li>
@@ -89,12 +114,12 @@
 </li>
 </ul>
 
-          </div>
+      </div>
 
-          <div id="apicontent">
-            <h1>Cluster<span><a class="mark" href="#cluster_cluster" id="cluster_cluster">#</a></span></h1>
-<pre class="api_stability_2">Stability: 2 - Unstable</pre><p>A single instance of Node runs in a single thread. To take advantage of
-multi-core systems the user will sometimes want to launch a cluster of Node
+      <div id="apicontent">
+        <h1>Cluster<span><a class="mark" href="#cluster_cluster" id="cluster_cluster">#</a></span></h1>
+<pre class="api_stability_2">Stability: 2 - Stable</pre><p>A single instance of Node.js runs in a single thread. To take advantage of
+multi-core systems the user will sometimes want to launch a cluster of Node.js
 processes to handle the load.
 
 </p>
@@ -117,13 +142,13 @@ if (cluster.isMaster) {
   });
 } else {
   // Workers can share any TCP connection
-  // In this case its a HTTP server
+  // In this case it is an HTTP server
   http.createServer(function(req, res) {
     res.writeHead(200);
     res.end(&quot;hello world\n&quot;);
   }).listen(8000);
 }</code></pre>
-<p>Running node will now share port 8000 between the workers:
+<p>Running Node.js will now share port 8000 between the workers:
 
 </p>
 <pre><code>% NODE_DEBUG=cluster node server.js
@@ -131,11 +156,7 @@ if (cluster.isMaster) {
 23521,Master Worker 23526 online
 23521,Master Worker 23523 online
 23521,Master Worker 23528 online</code></pre>
-<p>This feature was introduced recently, and may change in future versions.
-Please try it out and provide feedback.
-
-</p>
-<p>Also note that, on Windows, it is not yet possible to set up a named pipe
+<p>Please note that, on Windows, it is not yet possible to set up a named pipe
 server in a worker.
 
 </p>
@@ -172,7 +193,7 @@ out of a total of eight.
 </p>
 <p>Because <code>server.listen()</code> hands off most of the work to the master
 process, there are three cases where the behavior between a normal
-node.js process and a cluster worker differs:
+Node.js process and a cluster worker differs:
 
 </p>
 <ol>
@@ -200,9 +221,10 @@ for things like sessions and login.
 <p>Because workers are all separate processes, they can be killed or
 re-spawned depending on your program&apos;s needs, without affecting other
 workers.  As long as there are some workers still alive, the server will
-continue to accept connections.  Node does not automatically manage the
-number of workers for you, however.  It is your responsibility to manage
-the worker pool for your application&apos;s needs.
+continue to accept connections.  If no workers are alive, existing connections
+will be dropped and new connections will be refused.  Node.js does not
+automatically manage the number of workers for you, however.  It is your
+responsibility to manage the worker pool for your application&apos;s needs.
 
 </p>
 <h2>cluster.schedulingPolicy<span><a class="mark" href="#cluster_cluster_schedulingpolicy" id="cluster_cluster_schedulingpolicy">#</a></span></h2>
@@ -225,8 +247,8 @@ values are <code>&quot;rr&quot;</code> and <code>&quot;none&quot;</code>.
 <h2>cluster.settings<span><a class="mark" href="#cluster_cluster_settings" id="cluster_cluster_settings">#</a></span></h2>
 <div class="signature"><ul>
 <li><span class="type">Object</span><ul>
-<li><code>execArgv</code> <span class="type">Array</span> list of string arguments passed to the node executable. 
-(Default=<code>process.execArgv</code>)</li>
+<li><code>execArgv</code> <span class="type">Array</span> list of string arguments passed to the Node.js
+executable. (Default=<code>process.execArgv</code>)</li>
 <li><code>exec</code> <span class="type">String</span> file path to worker file.  (Default=<code>process.argv[1]</code>)</li>
 <li><code>args</code> <span class="type">Array</span> string arguments passed to worker.
 (Default=<code>process.argv.slice(2)</code>)</li>
@@ -363,6 +385,18 @@ the process to be killed.</li>
   cluster.fork();
 });</code></pre>
 <p>See <a href="child_process.html#child_process_event_exit">child_process event: &apos;exit&apos;</a>.
+
+</p>
+<h2>Event: &apos;message&apos;<span><a class="mark" href="#cluster_event_message" id="cluster_event_message">#</a></span></h2>
+<div class="signature"><ul>
+<li><code>worker</code> <span class="type">Worker object</span></li>
+<li><code>message</code> <span class="type">Object</span></li>
+</ul></div>
+<p>Emitted when any worker receives a message.
+
+</p>
+<p>See
+<a href="child_process.html#child_process_event_message">child_process event: &apos;message&apos;</a>.
 
 </p>
 <h2>Event: &apos;setup&apos;<span><a class="mark" href="#cluster_event_setup" id="cluster_event_setup">#</a></span></h2>
@@ -507,7 +541,7 @@ it can be obtained using <code>cluster.worker</code>.
 </p>
 <h3>worker.id<span><a class="mark" href="#cluster_worker_id" id="cluster_worker_id">#</a></span></h3>
 <div class="signature"><ul>
-<li><span class="type">String</span></li>
+<li><span class="type">Number</span></li>
 </ul></div>
 <p>Each new worker is given its own unique id, this id is stored in the
 <code>id</code>.
@@ -553,17 +587,22 @@ exit, the master may choose not to respawn a worker based on this value.
 
 // kill worker
 worker.kill();</code></pre>
-<h3>worker.send(message[, sendHandle])<span><a class="mark" href="#cluster_worker_send_message_sendhandle" id="cluster_worker_send_message_sendhandle">#</a></span></h3>
+<h3>worker.send(message[, sendHandle][, callback])<span><a class="mark" href="#cluster_worker_send_message_sendhandle_callback" id="cluster_worker_send_message_sendhandle_callback">#</a></span></h3>
 <div class="signature"><ul>
 <li><code>message</code> <span class="type">Object</span></li>
 <li><code>sendHandle</code> <span class="type">Handle object</span></li>
+<li><code>callback</code> <span class="type">Function</span></li>
+<li>Return: Boolean</li>
 </ul></div>
-<p>This function is equal to the send methods provided by
-<code>child_process.fork()</code>.  In the master you should use this function to
-send a message to a specific worker.
+<p>Send a message to a worker or master, optionally with a handle.
 
 </p>
-<p>In a worker you can also use <code>process.send(message)</code>, it is the same function.
+<p>In the master this sends a message to a specific worker. It is identical to
+<a href="child_process.html#child_process_child_send_message_sendhandle_callback">ChildProcess.send()</a>.
+
+</p>
+<p>In a worker this sends a message to the master. It is identical to
+<code>process.send()</code>.
 
 </p>
 <p>This example will echo back all messages from the master:
@@ -673,10 +712,13 @@ channel, <code>false</code> otherwise. A worker is connected to its master after
 created. It is disconnected after the <code>disconnect</code> event is emitted.
 
 </p>
-<h3>Event: &apos;message&apos;<span><a class="mark" href="#cluster_event_message" id="cluster_event_message">#</a></span></h3>
+<h3>Event: &apos;message&apos;<span><a class="mark" href="#cluster_event_message_1" id="cluster_event_message_1">#</a></span></h3>
 <div class="signature"><ul>
 <li><code>message</code> <span class="type">Object</span></li>
 </ul></div>
+<p>Similar to the <code>cluster.on(&apos;message&apos;)</code> event, but specific to this worker.
+
+</p>
 <p>This event is the same as the one provided by <code>child_process.fork()</code>.
 
 </p>
@@ -698,7 +740,7 @@ if (cluster.isMaster) {
     console.log(&quot;numReqs =&quot;, numReqs);
   }, 1000);
 
-  // Count requestes
+  // Count requests
   function messageHandler(msg) {
     if (msg.cmd &amp;&amp; msg.cmd == &apos;notifyRequest&apos;) {
       numReqs += 1;
@@ -750,7 +792,7 @@ if (cluster.isMaster) {
 
 </p>
 <h3>Event: &apos;disconnect&apos;<span><a class="mark" href="#cluster_event_disconnect_1" id="cluster_event_disconnect_1">#</a></span></h3>
-<p>Similar to the <code>cluster.on(&apos;disconnect&apos;)</code> event, but specfic to this worker.
+<p>Similar to the <code>cluster.on(&apos;disconnect&apos;)</code> event, but specific to this worker.
 
 </p>
 <pre><code>cluster.fork().on(&apos;disconnect&apos;, function() {
@@ -780,52 +822,15 @@ worker.on(&apos;exit&apos;, function(code, signal) {
 
 </p>
 <p>In a worker you can also use <code>process.on(&apos;error&apos;)</code>.
+
 </p>
 
-          </div>
-        </div>
-    </div>
-    </div>
-    <div id="footer">
-      <div class="foot-1">
-        <a href="http://www.joyent.com"><h5>The Node.js Project is Sponsored by</h5>
-        
-        <p class="tag">Production Node +<br>High Performance Infrastructure</p></a>
-        <a href="https://my.joyent.com/landing/signup/701800000015696" class="button getstarted">Get Started</a>
-      </div>
-      <div class="foot-2">
-        <div class="foot-nav">
-          <ul>
-            <li><a href="http://nodejs.org/download/">Downloads</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/documentation/">Documentation</a></li>
-            <li><a href="http://nodejs.org/api/">API Docs</a></li>
-            <li><a href="http://nodejs.org/documentation/tutorials/">Tutorials</a></li>
-            <li><a href="http://nodejs.org/documentation/localization/">Localization</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/community/">Community</a></li>
-            <li><a href="https://github.com/joyent/node/issues">Github Issues</a></li>
-            <li><a href="http://groups.google.com/group/nodejs">Mailing List</a></li>
-            <li><a href="http://webchat.freenode.net/?channels=node.js">IRC</a></li>
-            <li><a href="https://twitter.com/nodejs">Twitter</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/about/">About</a></li>
-            <li><a href="http://nodejs.org/about/organization/">Organization</a></li>
-            <li><a href="http://nodejs.org/about/core-team/">Core Team</a></li>
-            <li><a href="http://nodejs.org/about/resources/">Resources</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://blog.nodejs.org">Blog</a></li>
-          </ul>
-        </div>
-        <p class="copyright">Copyright 2014 <a href="http://joyent.com/">Joyent, Inc</a>, Node.js is a <a href="https://nodejs.org/images/trademark-policy.pdf">trademark</a> of Joyent, Inc. <a href="https://raw.github.com/joyent/node/v0.12.7/LICENSE">View license</a>.</p>
       </div>
     </div>
+  </div>
+  <div id="footer">
+  </div>
 
-  
   
   
   

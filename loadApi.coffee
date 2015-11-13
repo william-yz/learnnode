@@ -4,6 +4,7 @@ fs = require 'fs'
 async = require 'async'
 superagent = require 'superagent'
 cheerio = require 'cheerio'
+pathpath = require 'path'
 
 log = console.log
 loadApi = (url) ->
@@ -35,7 +36,7 @@ loadApi = (url) ->
     all = $ '[href]'
     getHref = (attr) ->
       href = attr.href
-      if href and !href.match /^http:|^https/
+      if href and !href.match /^http:|^https:/
         get(url + href, false, 0)()
     getHref attr.attribs for attr in all
     return
@@ -46,19 +47,21 @@ loadApi = (url) ->
       .remove()
     $ 'script'
       .remove()
-    saveFile res.req.path.replace('/docs/latest-v0.12.x/', ''), $.html()
+    saveFile res.req.path, $.html()
     return
 
   saveFile = (path, htmlStr) ->
-    fs.writeFile path, htmlStr, (err) -> (
+    fs.writeFile pathpath.join('./',path), htmlStr, (err) -> (
       log if err then err else "#{path} save success"
     )
     return
 
-  async.waterfall [get 'https://nodejs.org/docs/latest-v0.12.x/api/', true, 10
+  async.waterfall [get 'https://nodejs.org/api/', true, 10
     getModules],
     (err, result) ->
       log err
       log result
 
-loadApi 'https://nodejs.org/docs/latest-v0.12.x/api/'
+#loadApi 'https://nodejs.org/docs/latest-v0.12.x/api/'
+loadApi 'https://nodejs.org/api/'
+

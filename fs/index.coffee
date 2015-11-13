@@ -42,9 +42,14 @@ copyFile3 = (from, to) ->
     return
   return
 
+copyFile4 = (from, to) ->
+  fs.createReadStream(from).pipe fs.createWriteStream to
+  return
+
 #copyFile1 'oldFile', 'newFile1'
 #copyFile2 'newFile1', 'newFile2'
 #copyFile3 'newFile2', 'newFile3'
+copyFile4 'newFile3', 'newFile4'
 
 #fs.watchFile 'test.txt', (curr, prev) ->
 #  log curr

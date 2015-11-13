@@ -2,55 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Domain Node.js v0.12.7 Manual &amp; Documentation</title>
+  <title>Domain Node.js v5.0.0 Manual &amp; Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/sh.css">
-  <link rel="canonical" href="http://nodejs.org/api/domain.html">
-  
-  
+  <link rel="canonical" href="https://nodejs.org/api/domain.html">
 </head>
-<body class="alt apidoc int docs" id="docs">
-    <div id="nav">
-      
-      <ul>
-        <li><a href="http://nodejs.org">Home</a></li>
-        <li><a href="http://nodejs.org/download/">Downloads</a></li>
-        <li class="active"><a href="http://nodejs.org/documentation/">Docs</a></li>
-        <li><a href="http://nodejs.org/community/">Community</a></li>
-        <li><a href="http://nodejs.org/about/">About</a></li>
-        <li><a href="http://jobs.nodejs.org">Jobs</a></li>
-        <li><a href="http://blog.nodejs.org">Blog</a></li>
-      </ul>
-    </div>
-    <div id="content-wrap">
-    <div id="content" class="clearfix">
-      <div id="column2" class="interior">
-        <!--<img src="/images/logo-light.svg" alt="node.js" width="170">-->
-        <ul class="docs-nav">
-          <li><a href="http://nodejs.org/documentation/">About Docs</a></li>
-          <li><a href="http://nodejs.org/documentation/tutorials/">Tutorials</a></li>
-          <li><a href="http://nodejs.org/documentation/contributing/">Contributing</a></li>
-          <li><a href="http://nodejs.org/documentation/workflow/">Workflow</a></li>
-          <li><a href="http://nodejs.org/documentation/localization/">Localization</a></li>
-          <li class="active"><a href="http://nodejs.org/api/">API Docs</a></li>
-        </ul>
+<body class="alt apidoc" id="api-section-domain">
+  <div id="content" class="clearfix">
+    <div id="column2" class="interior">
+      <div id="intro" class="interior">
+        <a href="/" title="Go back to the home page">
+          Node.js (1)
+        </a>
       </div>
-        <div id="column1" class="interior">
-          <header>
-            <h1>Node.js v0.12.7 Manual &amp; Documentation</h1>
-            <div id="gtoc">
-              <p>
-                <a href="index.html" name="toc">Index</a> |
-                <a href="all.html">View on single page</a> |
-                <a href="domain.json">View as JSON</a>
-              </p>
-            </div>
-            <hr>
-          </header>
+      <ul>
+<li><a class="nav-documentation" href="documentation.html">About these Docs</a></li>
+<li><a class="nav-synopsis" href="synopsis.html">Synopsis</a></li>
+<li><a class="nav-assert" href="assert.html">Assertion Testing</a></li>
+<li><a class="nav-buffer" href="buffer.html">Buffer</a></li>
+<li><a class="nav-addons" href="addons.html">C/C++ Addons</a></li>
+<li><a class="nav-child_process" href="child_process.html">Child Processes</a></li>
+<li><a class="nav-cluster" href="cluster.html">Cluster</a></li>
+<li><a class="nav-console" href="console.html">Console</a></li>
+<li><a class="nav-crypto" href="crypto.html">Crypto</a></li>
+<li><a class="nav-debugger" href="debugger.html">Debugger</a></li>
+<li><a class="nav-dns" href="dns.html">DNS</a></li>
+<li><a class="nav-domain active" href="domain.html">Domain</a></li>
+<li><a class="nav-errors" href="errors.html">Errors</a></li>
+<li><a class="nav-events" href="events.html">Events</a></li>
+<li><a class="nav-fs" href="fs.html">File System</a></li>
+<li><a class="nav-globals" href="globals.html">Globals</a></li>
+<li><a class="nav-http" href="http.html">HTTP</a></li>
+<li><a class="nav-https" href="https.html">HTTPS</a></li>
+<li><a class="nav-modules" href="modules.html">Modules</a></li>
+<li><a class="nav-net" href="net.html">Net</a></li>
+<li><a class="nav-os" href="os.html">OS</a></li>
+<li><a class="nav-path" href="path.html">Path</a></li>
+<li><a class="nav-process" href="process.html">Process</a></li>
+<li><a class="nav-punycode" href="punycode.html">Punycode</a></li>
+<li><a class="nav-querystring" href="querystring.html">Query Strings</a></li>
+<li><a class="nav-readline" href="readline.html">Readline</a></li>
+<li><a class="nav-repl" href="repl.html">REPL</a></li>
+<li><a class="nav-stream" href="stream.html">Stream</a></li>
+<li><a class="nav-string_decoder" href="string_decoder.html">String Decoder</a></li>
+<li><a class="nav-timers" href="timers.html">Timers</a></li>
+<li><a class="nav-tls" href="tls.html">TLS/SSL</a></li>
+<li><a class="nav-tty" href="tty.html">TTY</a></li>
+<li><a class="nav-dgram" href="dgram.html">UDP/Datagram</a></li>
+<li><a class="nav-url" href="url.html">URL</a></li>
+<li><a class="nav-util" href="util.html">Utilities</a></li>
+<li><a class="nav-v8" href="v8.html">V8</a></li>
+<li><a class="nav-vm" href="vm.html">VM</a></li>
+<li><a class="nav-zlib" href="zlib.html">ZLIB</a></li>
+</ul>
 
-          <div id="toc">
-            <h2>Table of Contents</h2>
-            <ul>
+    </div>
+
+    <div id="column1" data-id="domain" class="interior">
+      <header>
+        <h1>Node.js v5.0.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="index.html" name="toc">Index</a> |
+            <a href="all.html">View on single page</a> |
+            <a href="domain.json">View as JSON</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
 <li><a href="#domain_domain">Domain</a><ul>
 <li><a href="#domain_warning_don_t_ignore_errors">Warning: Don&apos;t Ignore Errors!</a></li>
 <li><a href="#domain_additions_to_error_objects">Additions to Error objects</a></li>
@@ -58,7 +82,7 @@
 <li><a href="#domain_explicit_binding">Explicit Binding</a></li>
 <li><a href="#domain_domain_create">domain.create()</a></li>
 <li><a href="#domain_class_domain">Class: Domain</a><ul>
-<li><a href="#domain_domain_run_fn">domain.run(fn)</a></li>
+<li><a href="#domain_domain_run_fn_arg">domain.run(fn[, arg][, ...])</a></li>
 <li><a href="#domain_domain_members">domain.members</a></li>
 <li><a href="#domain_domain_add_emitter">domain.add(emitter)</a></li>
 <li><a href="#domain_domain_remove_emitter">domain.remove(emitter)</a></li>
@@ -79,11 +103,19 @@
 </li>
 </ul>
 
-          </div>
+      </div>
 
-          <div id="apicontent">
-            <h1>Domain<span><a class="mark" href="#domain_domain" id="domain_domain">#</a></span></h1>
-<pre class="api_stability_2">Stability: 2 - Unstable</pre><p>Domains provide a way to handle multiple different IO operations as a
+      <div id="apicontent">
+        <h1>Domain<span><a class="mark" href="#domain_domain" id="domain_domain">#</a></span></h1>
+<pre class="api_stability_0">Stability: 0 - Deprecated</pre><p><strong>This module is pending deprecation</strong>. Once a replacement API has been
+finalized, this module will be fully deprecated. Most end users should
+<strong>not</strong> have cause to use this module. Users who absolutely must have
+the functionality that domains provide may rely on it for the time being
+but should expect to have to migrate to a different solution
+in the future.
+
+</p>
+<p>Domains provide a way to handle multiple different IO operations as a
 single group.  If any of the event emitters or callbacks registered to a
 domain emit an <code>error</code> event, or throw an error, then the domain object
 will be notified, rather than losing the context of the error in the
@@ -109,14 +141,14 @@ connections open, and it is not reasonable to abruptly shut those down
 because an error was triggered by someone else.
 
 </p>
-<p>The better approach is send an error response to the request that
+<p>The better approach is to send an error response to the request that
 triggered the error, while letting the others finish in their normal
 time, and stop listening for new requests in that worker.
 
 </p>
 <p>In this way, <code>domain</code> usage goes hand-in-hand with the cluster module,
 since the master process can fork a new worker when a worker
-encounters an error.  For node programs that scale to multiple
+encounters an error.  For Node.js programs that scale to multiple
 machines, the terminating proxy or service registry can take note of
 the failure, and react accordingly.
 
@@ -349,13 +381,14 @@ uncaught exceptions to the active Domain object.
 catches, listen to its <code>error</code> event.
 
 </p>
-<h3>domain.run(fn)<span><a class="mark" href="#domain_domain_run_fn" id="domain_domain_run_fn">#</a></span></h3>
+<h3>domain.run(fn[, arg][, ...])<span><a class="mark" href="#domain_domain_run_fn_arg" id="domain_domain_run_fn_arg">#</a></span></h3>
 <div class="signature"><ul>
 <li><code>fn</code> <span class="type">Function</span></li>
 </ul></div>
 <p>Run the supplied function in the context of the domain, implicitly
 binding all event emitters, timers, and lowlevel requests that are
-created in that context.
+created in that context. Optionally, arguments can be passed to
+the function.
 
 </p>
 <p>This is the most basic way to use a domain.
@@ -525,50 +558,12 @@ is emitted.
 
 </p>
 
-          </div>
-        </div>
-    </div>
-    </div>
-    <div id="footer">
-      <div class="foot-1">
-        <a href="http://www.joyent.com"><h5>The Node.js Project is Sponsored by</h5>
-        
-        <p class="tag">Production Node +<br>High Performance Infrastructure</p></a>
-        <a href="https://my.joyent.com/landing/signup/701800000015696" class="button getstarted">Get Started</a>
-      </div>
-      <div class="foot-2">
-        <div class="foot-nav">
-          <ul>
-            <li><a href="http://nodejs.org/download/">Downloads</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/documentation/">Documentation</a></li>
-            <li><a href="http://nodejs.org/api/">API Docs</a></li>
-            <li><a href="http://nodejs.org/documentation/tutorials/">Tutorials</a></li>
-            <li><a href="http://nodejs.org/documentation/localization/">Localization</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/community/">Community</a></li>
-            <li><a href="https://github.com/joyent/node/issues">Github Issues</a></li>
-            <li><a href="http://groups.google.com/group/nodejs">Mailing List</a></li>
-            <li><a href="http://webchat.freenode.net/?channels=node.js">IRC</a></li>
-            <li><a href="https://twitter.com/nodejs">Twitter</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/about/">About</a></li>
-            <li><a href="http://nodejs.org/about/organization/">Organization</a></li>
-            <li><a href="http://nodejs.org/about/core-team/">Core Team</a></li>
-            <li><a href="http://nodejs.org/about/resources/">Resources</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://blog.nodejs.org">Blog</a></li>
-          </ul>
-        </div>
-        <p class="copyright">Copyright 2014 <a href="http://joyent.com/">Joyent, Inc</a>, Node.js is a <a href="https://nodejs.org/images/trademark-policy.pdf">trademark</a> of Joyent, Inc. <a href="https://raw.github.com/joyent/node/v0.12.7/LICENSE">View license</a>.</p>
       </div>
     </div>
+  </div>
+  <div id="footer">
+  </div>
 
-  
   
   
   

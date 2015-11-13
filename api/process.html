@@ -2,60 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>process Node.js v0.12.7 Manual &amp; Documentation</title>
+  <title>process Node.js v5.0.0 Manual &amp; Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/sh.css">
-  <link rel="canonical" href="http://nodejs.org/api/process.html">
-  
-  
+  <link rel="canonical" href="https://nodejs.org/api/process.html">
 </head>
-<body class="alt apidoc int docs" id="docs">
-    <div id="nav">
-      
-      <ul>
-        <li><a href="http://nodejs.org">Home</a></li>
-        <li><a href="http://nodejs.org/download/">Downloads</a></li>
-        <li class="active"><a href="http://nodejs.org/documentation/">Docs</a></li>
-        <li><a href="http://nodejs.org/community/">Community</a></li>
-        <li><a href="http://nodejs.org/about/">About</a></li>
-        <li><a href="http://jobs.nodejs.org">Jobs</a></li>
-        <li><a href="http://blog.nodejs.org">Blog</a></li>
-      </ul>
-    </div>
-    <div id="content-wrap">
-    <div id="content" class="clearfix">
-      <div id="column2" class="interior">
-        <!--<img src="/images/logo-light.svg" alt="node.js" width="170">-->
-        <ul class="docs-nav">
-          <li><a href="http://nodejs.org/documentation/">About Docs</a></li>
-          <li><a href="http://nodejs.org/documentation/tutorials/">Tutorials</a></li>
-          <li><a href="http://nodejs.org/documentation/contributing/">Contributing</a></li>
-          <li><a href="http://nodejs.org/documentation/workflow/">Workflow</a></li>
-          <li><a href="http://nodejs.org/documentation/localization/">Localization</a></li>
-          <li class="active"><a href="http://nodejs.org/api/">API Docs</a></li>
-        </ul>
+<body class="alt apidoc" id="api-section-process">
+  <div id="content" class="clearfix">
+    <div id="column2" class="interior">
+      <div id="intro" class="interior">
+        <a href="/" title="Go back to the home page">
+          Node.js (1)
+        </a>
       </div>
-        <div id="column1" class="interior">
-          <header>
-            <h1>Node.js v0.12.7 Manual &amp; Documentation</h1>
-            <div id="gtoc">
-              <p>
-                <a href="index.html" name="toc">Index</a> |
-                <a href="all.html">View on single page</a> |
-                <a href="process.json">View as JSON</a>
-              </p>
-            </div>
-            <hr>
-          </header>
+      <ul>
+<li><a class="nav-documentation" href="documentation.html">About these Docs</a></li>
+<li><a class="nav-synopsis" href="synopsis.html">Synopsis</a></li>
+<li><a class="nav-assert" href="assert.html">Assertion Testing</a></li>
+<li><a class="nav-buffer" href="buffer.html">Buffer</a></li>
+<li><a class="nav-addons" href="addons.html">C/C++ Addons</a></li>
+<li><a class="nav-child_process" href="child_process.html">Child Processes</a></li>
+<li><a class="nav-cluster" href="cluster.html">Cluster</a></li>
+<li><a class="nav-console" href="console.html">Console</a></li>
+<li><a class="nav-crypto" href="crypto.html">Crypto</a></li>
+<li><a class="nav-debugger" href="debugger.html">Debugger</a></li>
+<li><a class="nav-dns" href="dns.html">DNS</a></li>
+<li><a class="nav-domain" href="domain.html">Domain</a></li>
+<li><a class="nav-errors" href="errors.html">Errors</a></li>
+<li><a class="nav-events" href="events.html">Events</a></li>
+<li><a class="nav-fs" href="fs.html">File System</a></li>
+<li><a class="nav-globals" href="globals.html">Globals</a></li>
+<li><a class="nav-http" href="http.html">HTTP</a></li>
+<li><a class="nav-https" href="https.html">HTTPS</a></li>
+<li><a class="nav-modules" href="modules.html">Modules</a></li>
+<li><a class="nav-net" href="net.html">Net</a></li>
+<li><a class="nav-os" href="os.html">OS</a></li>
+<li><a class="nav-path" href="path.html">Path</a></li>
+<li><a class="nav-process active" href="process.html">Process</a></li>
+<li><a class="nav-punycode" href="punycode.html">Punycode</a></li>
+<li><a class="nav-querystring" href="querystring.html">Query Strings</a></li>
+<li><a class="nav-readline" href="readline.html">Readline</a></li>
+<li><a class="nav-repl" href="repl.html">REPL</a></li>
+<li><a class="nav-stream" href="stream.html">Stream</a></li>
+<li><a class="nav-string_decoder" href="string_decoder.html">String Decoder</a></li>
+<li><a class="nav-timers" href="timers.html">Timers</a></li>
+<li><a class="nav-tls" href="tls.html">TLS/SSL</a></li>
+<li><a class="nav-tty" href="tty.html">TTY</a></li>
+<li><a class="nav-dgram" href="dgram.html">UDP/Datagram</a></li>
+<li><a class="nav-url" href="url.html">URL</a></li>
+<li><a class="nav-util" href="util.html">Utilities</a></li>
+<li><a class="nav-v8" href="v8.html">V8</a></li>
+<li><a class="nav-vm" href="vm.html">VM</a></li>
+<li><a class="nav-zlib" href="zlib.html">ZLIB</a></li>
+</ul>
 
-          <div id="toc">
-            <h2>Table of Contents</h2>
-            <ul>
+    </div>
+
+    <div id="column1" data-id="process" class="interior">
+      <header>
+        <h1>Node.js v5.0.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="index.html" name="toc">Index</a> |
+            <a href="all.html">View on single page</a> |
+            <a href="process.json">View as JSON</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
 <li><a href="#process_process">process</a><ul>
 <li><a href="#process_exit_codes">Exit Codes</a></li>
 <li><a href="#process_event_exit">Event: &apos;exit&apos;</a></li>
+<li><a href="#process_event_message">Event: &apos;message&apos;</a></li>
 <li><a href="#process_event_beforeexit">Event: &apos;beforeExit&apos;</a></li>
 <li><a href="#process_event_uncaughtexception">Event: &apos;uncaughtException&apos;</a></li>
+<li><a href="#process_event_unhandledrejection">Event: &apos;unhandledRejection&apos;</a></li>
+<li><a href="#process_event_rejectionhandled">Event: &apos;rejectionHandled&apos;</a></li>
 <li><a href="#process_signal_events">Signal Events</a></li>
 <li><a href="#process_process_stdout">process.stdout</a></li>
 <li><a href="#process_process_stderr">process.stderr</a></li>
@@ -70,34 +97,44 @@
 <li><a href="#process_process_exit_code">process.exit([code])</a></li>
 <li><a href="#process_process_exitcode">process.exitCode</a></li>
 <li><a href="#process_process_getgid">process.getgid()</a></li>
+<li><a href="#process_process_getegid">process.getegid()</a></li>
 <li><a href="#process_process_setgid_id">process.setgid(id)</a></li>
+<li><a href="#process_process_setegid_id">process.setegid(id)</a></li>
 <li><a href="#process_process_getuid">process.getuid()</a></li>
+<li><a href="#process_process_geteuid">process.geteuid()</a></li>
 <li><a href="#process_process_setuid_id">process.setuid(id)</a></li>
+<li><a href="#process_process_seteuid_id">process.seteuid(id)</a></li>
 <li><a href="#process_process_getgroups">process.getgroups()</a></li>
 <li><a href="#process_process_setgroups_groups">process.setgroups(groups)</a></li>
 <li><a href="#process_process_initgroups_user_extra_group">process.initgroups(user, extra_group)</a></li>
 <li><a href="#process_process_version">process.version</a></li>
 <li><a href="#process_process_versions">process.versions</a></li>
 <li><a href="#process_process_config">process.config</a></li>
+<li><a href="#process_process_release">process.release</a></li>
 <li><a href="#process_process_kill_pid_signal">process.kill(pid[, signal])</a></li>
 <li><a href="#process_process_pid">process.pid</a></li>
 <li><a href="#process_process_title">process.title</a></li>
 <li><a href="#process_process_arch">process.arch</a></li>
 <li><a href="#process_process_platform">process.platform</a></li>
 <li><a href="#process_process_memoryusage">process.memoryUsage()</a></li>
-<li><a href="#process_process_nexttick_callback">process.nextTick(callback)</a></li>
+<li><a href="#process_process_nexttick_callback_arg">process.nextTick(callback[, arg][, ...])</a></li>
 <li><a href="#process_process_umask_mask">process.umask([mask])</a></li>
 <li><a href="#process_process_uptime">process.uptime()</a></li>
 <li><a href="#process_process_hrtime">process.hrtime()</a></li>
+<li><a href="#process_process_send_message_sendhandle_callback">process.send(message[, sendHandle][, callback])</a></li>
+<li><a href="#process_process_disconnect">process.disconnect()</a><ul>
+<li><a href="#process_process_connected">process.connected</a></li>
+</ul>
+</li>
 <li><a href="#process_process_mainmodule">process.mainModule</a></li>
 </ul>
 </li>
 </ul>
 
-          </div>
+      </div>
 
-          <div id="apicontent">
-            <h1>process<span><a class="mark" href="#process_process" id="process_process">#</a></span></h1>
+      <div id="apicontent">
+        <h1>process<span><a class="mark" href="#process_process" id="process_process">#</a></span></h1>
 <!-- type=global -->
 
 <p>The <code>process</code> object is a global object and can be accessed from anywhere.
@@ -105,7 +142,7 @@ It is an instance of <a href="events.html#events_class_events_eventemitter">Even
 
 </p>
 <h2>Exit Codes<span><a class="mark" href="#process_exit_codes" id="process_exit_codes">#</a></span></h2>
-<p>Node will normally exit with a <code>0</code> status code when no more async
+<p>Node.js will normally exit with a <code>0</code> status code when no more async
 operations are pending.  The following status codes are used in other
 cases:
 
@@ -116,13 +153,13 @@ and it was not handled by a domain or an <code>uncaughtException</code> event
 handler.</li>
 <li><code>2</code> - Unused (reserved by Bash for builtin misuse)</li>
 <li><code>3</code> <strong>Internal JavaScript Parse Error</strong> - The JavaScript source code
-internal in Node&apos;s bootstrapping process caused a parse error.  This
+internal in Node.js&apos;s bootstrapping process caused a parse error.  This
 is extremely rare, and generally can only happen during development
-of Node itself.</li>
+of Node.js itself.</li>
 <li><code>4</code> <strong>Internal JavaScript Evaluation Failure</strong> - The JavaScript
-source code internal in Node&apos;s bootstrapping process failed to
+source code internal in Node.js&apos;s bootstrapping process failed to
 return a function value when evaluated.  This is extremely rare, and
-generally can only happen during development of Node itself.</li>
+generally can only happen during development of Node.js itself.</li>
 <li><code>5</code> <strong>Fatal Error</strong> - There was a fatal unrecoverable error in V8.
 Typically a message will be printed to stderr with the prefix <code>FATAL
 ERROR</code>.</li>
@@ -134,17 +171,17 @@ uncaught exception, and the internal fatal exception handler
 function itself threw an error while attempting to handle it.  This
 can happen, for example, if a <code>process.on(&apos;uncaughtException&apos;)</code> or
 <code>domain.on(&apos;error&apos;)</code> handler throws an error.</li>
-<li><code>8</code> - Unused.  In previous versions of Node, exit code 8 sometimes
+<li><code>8</code> - Unused.  In previous versions of Node.js, exit code 8 sometimes
 indicated an uncaught exception.</li>
 <li><code>9</code> - <strong>Invalid Argument</strong> - Either an unknown option was specified,
 or an option requiring a value was provided without a value.</li>
 <li><code>10</code> <strong>Internal JavaScript Run-Time Failure</strong> - The JavaScript
-source code internal in Node&apos;s bootstrapping process threw an error
+source code internal in Node.js&apos;s bootstrapping process threw an error
 when the bootstrapping function was called.  This is extremely rare,
-and generally can only happen during development of Node itself.</li>
+and generally can only happen during development of Node.js itself.</li>
 <li><code>12</code> <strong>Invalid Debug Argument</strong> - The <code>--debug</code> and/or <code>--debug-brk</code>
 options were set, but an invalid port number was chosen.</li>
-<li><code>&gt;128</code> <strong>Signal Exits</strong> - If Node receives a fatal signal such as
+<li><code>&gt;128</code> <strong>Signal Exits</strong> - If Node.js receives a fatal signal such as
 <code>SIGKILL</code> or <code>SIGHUP</code>, then its exit code will be <code>128</code> plus the
 value of the signal code.  This is a standard Unix practice, since
 exit codes are defined to be 7-bit integers, and signal exits set
@@ -159,6 +196,10 @@ checks on the module&apos;s state (like for unit tests). The callback takes one
 argument, the code the process is exiting with.
 
 </p>
+<p>This event is only emitted when node exits explicitly by process.exit() or
+implicitly by the event loop draining.
+
+</p>
 <p>Example of listening for <code>exit</code>:
 
 </p>
@@ -169,10 +210,21 @@ argument, the code the process is exiting with.
   }, 0);
   console.log(&apos;About to exit with code:&apos;, code);
 });</code></pre>
+<h2>Event: &apos;message&apos;<span><a class="mark" href="#process_event_message" id="process_event_message">#</a></span></h2>
+<div class="signature"><ul>
+<li><code>message</code> <span class="type">Object</span> a parsed JSON object or primitive value</li>
+<li><code>sendHandle</code> <span class="type">Handle object</span> a <a href="net.html#net_class_net_socket">net.Socket</a> or <a href="net.html#net_class_net_server">net.Server</a> object, or
+undefined.</li>
+</ul></div>
+<p>Messages sent by <a href="child_process.html#child_process_child_send_message_sendhandle_callback">ChildProcess.send()</a> are obtained using the <code>&apos;message&apos;</code>
+event on the child&apos;s process object.
+
+
+</p>
 <h2>Event: &apos;beforeExit&apos;<span><a class="mark" href="#process_event_beforeexit" id="process_event_beforeexit">#</a></span></h2>
-<p>This event is emitted when node empties it&apos;s event loop and has nothing else to
-schedule. Normally, node exits when there is no work scheduled, but a listener
-for &apos;beforeExit&apos; can make asynchronous calls, and cause node to continue.
+<p>This event is emitted when Node.js empties its event loop and has nothing else to
+schedule. Normally, Node.js exits when there is no work scheduled, but a listener
+for &apos;beforeExit&apos; can make asynchronous calls, and cause Node.js to continue.
 
 </p>
 <p>&apos;beforeExit&apos; is not emitted for conditions causing explicit termination, such as
@@ -205,12 +257,8 @@ console.log(&apos;This will not run.&apos;);</code></pre>
 handling.
 
 </p>
-<p>Don&apos;t use it, use <a href="domain.html">domains</a> instead. If you do use it, restart
-your application after every unhandled exception!
-
-</p>
-<p>Do <em>not</em> use it as the node.js equivalent of <code>On Error Resume Next</code>. An
-unhandled exception means your application - and by extension node.js itself -
+<p>Do <em>not</em> use it as the Node.js equivalent of <code>On Error Resume Next</code>. An
+unhandled exception means your application - and by extension Node.js itself -
 is in an undefined state. Blindly resuming means <em>anything</em> could happen.
 
 </p>
@@ -218,7 +266,104 @@ is in an undefined state. Blindly resuming means <em>anything</em> could happen.
 Nine out of ten times nothing happens - but the 10th time, your system is bust.
 
 </p>
+<p><code>uncaughtException</code> should be used to perform synchronous cleanup before
+shutting down the process. It is not safe to resume normal operation after
+<code>uncaughtException</code>. If you do use it, restart your application after every
+unhandled exception!
+
+</p>
 <p>You have been warned.
+
+</p>
+<h2>Event: &apos;unhandledRejection&apos;<span><a class="mark" href="#process_event_unhandledrejection" id="process_event_unhandledrejection">#</a></span></h2>
+<p>Emitted whenever a <code>Promise</code> is rejected and no error handler is attached to
+the promise within a turn of the event loop. When programming with promises
+exceptions are encapsulated as rejected promises. Such promises can be caught
+and handled using <code>promise.catch(...)</code> and rejections are propagated through
+a promise chain. This event is useful for detecting and keeping track of
+promises that were rejected whose rejections were not handled yet. This event
+is emitted with the following arguments:
+
+</p>
+<ul>
+<li><code>reason</code> the object with which the promise was rejected (usually an <code>Error</code>
+instance).</li>
+<li><code>p</code> the promise that was rejected.</li>
+</ul>
+<p>Here is an example that logs every unhandled rejection to the console
+
+</p>
+<pre><code>process.on(&apos;unhandledRejection&apos;, function(reason, p) {
+    console.log(&quot;Unhandled Rejection at: Promise &quot;, p, &quot; reason: &quot;, reason);
+    // application specific logging, throwing an error, or other logic here
+});</code></pre>
+<p>For example, here is a rejection that will trigger the <code>&apos;unhandledRejection&apos;</code>
+event:
+
+</p>
+<pre><code>somePromise.then(function(res) {
+  return reportToUser(JSON.pasre(res)); // note the typo
+}); // no `.catch` or `.then`</code></pre>
+<p>Here is an example of a coding pattern that will also trigger
+<code>&apos;unhandledRejection&apos;</code>:
+
+</p>
+<pre><code>function SomeResource() {
+  // Initially set the loaded status to a rejected promise
+  this.loaded = Promise.reject(new Error(&apos;Resource not yet loaded!&apos;));
+}
+
+var resource = new SomeResource();
+// no .catch or .then on resource.loaded for at least a turn</code></pre>
+<p>In cases like this, you may not want to track the rejection as a developer
+error like you would for other <code>&apos;unhandledRejection&apos;</code> events. To address
+this, you can either attach a dummy <code>.catch(function() { })</code> handler to
+<code>resource.loaded</code>, preventing the <code>&apos;unhandledRejection&apos;</code> event from being
+emitted, or you can use the <code>&apos;rejectionHandled&apos;</code> event. Below is an
+explanation of how to do that.
+
+</p>
+<h2>Event: &apos;rejectionHandled&apos;<span><a class="mark" href="#process_event_rejectionhandled" id="process_event_rejectionhandled">#</a></span></h2>
+<p>Emitted whenever a Promise was rejected and an error handler was attached to it
+(for example with <code>.catch()</code>) later than after an event loop turn. This event
+is emitted with the following arguments:
+
+</p>
+<ul>
+<li><code>p</code> the promise that was previously emitted in an <code>&apos;unhandledRejection&apos;</code>
+event, but which has now gained a rejection handler.</li>
+</ul>
+<p>There is no notion of a top level for a promise chain at which rejections can
+always be handled. Being inherently asynchronous in nature, a promise rejection
+can be be handled at a future point in time &#x2014; possibly much later than the
+event loop turn it takes for the <code>&apos;unhandledRejection&apos;</code> event to be emitted.
+
+</p>
+<p>Another way of stating this is that, unlike in synchronous code where there is
+an ever-growing list of unhandled exceptions, with promises there is a
+growing-and-shrinking list of unhandled rejections. In synchronous code, the
+&apos;uncaughtException&apos; event tells you when the list of unhandled exceptions
+grows. And in asynchronous code, the <code>&apos;unhandledRejection&apos;</code> event tells you
+when the list of unhandled rejections grows, while the &apos;rejectionHandled&apos;
+event tells you when the list of unhandled rejections shrinks.
+
+</p>
+<p>For example using the rejection detection hooks in order to keep a map of all
+the rejected promise reasons at a given time:
+
+</p>
+<pre><code>var unhandledRejections = new Map();
+process.on(&apos;unhandledRejection&apos;, function(reason, p) {
+  unhandledRejections.set(p, reason);
+});
+process.on(&apos;rejectionHandled&apos;, function(p) {
+  unhandledRejections.delete(p);
+});</code></pre>
+<p>This map will grow and shrink over time, reflecting rejections that start
+unhandled and then become handled. You could record the errors in some error
+log, either periodically (probably best for long-running programs, allowing
+you to clear the map, which in the case of a very buggy program could grow
+indefinitely) or upon process exit (more convenient for scripts).
 
 </p>
 <h2>Signal Events<span><a class="mark" href="#process_signal_events" id="process_signal_events">#</a></span></h2>
@@ -246,19 +391,19 @@ programs.
 
 </p>
 <ul>
-<li><code>SIGUSR1</code> is reserved by node.js to start the debugger.  It&apos;s possible to
+<li><code>SIGUSR1</code> is reserved by Node.js to start the debugger.  It&apos;s possible to
 install a listener but that won&apos;t stop the debugger from starting.</li>
 <li><code>SIGTERM</code> and <code>SIGINT</code> have default handlers on non-Windows platforms that resets
 the terminal mode before exiting with code <code>128 + signal number</code>. If one of
-these signals has a listener installed, its default behaviour will be removed
-(node will no longer exit).</li>
-<li><code>SIGPIPE</code> is ignored by default, it can have a listener installed.</li>
+these signals has a listener installed, its default behavior will be removed
+(Node.js will no longer exit).</li>
+<li><code>SIGPIPE</code> is ignored by default. It can have a listener installed.</li>
 <li><code>SIGHUP</code> is generated on Windows when the console window is closed, and on other
 platforms under various similar conditions, see signal(7). It can have a
-listener installed, however node will be unconditionally terminated by Windows
-about 10 seconds later. On non-Windows platforms, the default behaviour of
-<code>SIGHUP</code> is to terminate node, but once a listener has been installed its
-default behaviour will be removed.</li>
+listener installed, however Node.js will be unconditionally terminated by
+Windows about 10 seconds later. On non-Windows platforms, the default
+behavior of <code>SIGHUP</code> is to terminate Node.js, but once a listener has been
+installed its default behavior will be removed.</li>
 <li><code>SIGTERM</code> is not supported on Windows, it can be listened on.</li>
 <li><code>SIGINT</code> from the terminal is supported on all platforms, and can usually be
 generated with <code>CTRL+C</code> (though this may be configurable). It is not generated
@@ -269,41 +414,32 @@ platforms it can be listened on, but there is no way to send or generate it.</li
 only happen on write to the console when the cursor is being moved, or when a
 readable tty is used in raw mode.</li>
 <li><code>SIGKILL</code> cannot have a listener installed, it will unconditionally terminate
-node on all platforms.</li>
+Node.js on all platforms.</li>
 <li><code>SIGSTOP</code> cannot have a listener installed.</li>
 </ul>
-<p>Note that Windows does not support sending Signals, but node offers some
-emulation with <code>process.kill()</code>, and <code>child_process.kill()</code>:
-- Sending signal <code>0</code> can be used to search for the existence of a process
-- Sending <code>SIGINT</code>, <code>SIGTERM</code>, and <code>SIGKILL</code> cause the unconditional exit of the
-  target process.
+<p>Note that Windows does not support sending Signals, but Node.js offers some
+emulation with <code>process.kill()</code>, and <code>child_process.kill()</code>. Sending signal <code>0</code>
+can be used to test for the existence of a process. Sending <code>SIGINT</code>,
+<code>SIGTERM</code>, and <code>SIGKILL</code> cause the unconditional termination of the target
+process.
 
 </p>
 <h2>process.stdout<span><a class="mark" href="#process_process_stdout" id="process_process_stdout">#</a></span></h2>
 <p>A <code>Writable Stream</code> to <code>stdout</code> (on fd <code>1</code>).
 
 </p>
-<p>Example: the definition of <code>console.log</code>
+<p>For example, a <code>console.log</code> equivalent could look like this:
 
 </p>
-<pre><code>console.log = function(d) {
-  process.stdout.write(d + &apos;\n&apos;);
+<pre><code>console.log = function(msg) {
+  process.stdout.write(msg + &apos;\n&apos;);
 };</code></pre>
-<p><code>process.stderr</code> and <code>process.stdout</code> are unlike other streams in Node in
+<p><code>process.stderr</code> and <code>process.stdout</code> are unlike other streams in Node.js in
 that they cannot be closed (<code>end()</code> will throw), they never emit the <code>finish</code>
-event and that writes are usually blocking.
+event and that writes are always blocking.
 
 </p>
-<ul>
-<li>They are blocking in the case that they refer to regular files or TTY file
-descriptors.</li>
-<li>In the case they refer to pipes:<ul>
-<li>They are blocking in Linux/Unix.</li>
-<li>They are non-blocking like other streams in Windows.</li>
-</ul>
-</li>
-</ul>
-<p>To check if Node is being run in a TTY context, read the <code>isTTY</code> property
+<p>To check if Node.js is being run in a TTY context, read the <code>isTTY</code> property
 on <code>process.stderr</code>, <code>process.stdout</code>, or <code>process.stdin</code>:
 
 </p>
@@ -323,7 +459,7 @@ false</code></pre>
 <p>A writable stream to stderr (on fd <code>2</code>).
 
 </p>
-<p><code>process.stderr</code> and <code>process.stdout</code> are unlike other streams in Node in
+<p><code>process.stderr</code> and <code>process.stdout</code> are unlike other streams in Node.js in
 that they cannot be closed (<code>end()</code> will throw), they never emit the <code>finish</code>
 event and that writes are usually blocking.
 
@@ -357,9 +493,9 @@ process.stdin.on(&apos;end&apos;, function() {
   process.stdout.write(&apos;end&apos;);
 });</code></pre>
 <p>As a Stream, <code>process.stdin</code> can also be used in &quot;old&quot; mode that is compatible
-with scripts written for node prior v0.10.
+with scripts written for node.js prior to v0.10.
 For more information see
-<a href="stream.html#stream_compatibility_with_older_node_versions">Stream compatibility</a>.
+<a href="stream.html#stream_compatibility_with_older_node_js_versions">Stream compatibility</a>.
 
 </p>
 <p>In &quot;old&quot; Streams mode the stdin stream is paused by default, so one
@@ -399,9 +535,9 @@ process.argv.forEach(function(val, index, array) {
 </p>
 <pre><code>/usr/local/bin/node</code></pre>
 <h2>process.execArgv<span><a class="mark" href="#process_process_execargv" id="process_process_execargv">#</a></span></h2>
-<p>This is the set of node-specific command line options from the
+<p>This is the set of Node.js-specific command line options from the
 executable that started the process.  These options do not show up in
-<code>process.argv</code>, and do not include the node executable, the name of
+<code>process.argv</code>, and do not include the Node.js executable, the name of
 the script, or any options following the script name. These options
 are useful in order to spawn child processes with the same execution
 environment as the parent.
@@ -420,7 +556,7 @@ environment as the parent.
 </p>
 <pre><code>[&apos;/usr/local/bin/node&apos;, &apos;script.js&apos;, &apos;--version&apos;]</code></pre>
 <h2>process.abort()<span><a class="mark" href="#process_process_abort" id="process_process_abort">#</a></span></h2>
-<p>This causes node to emit an abort. This will cause node to exit and
+<p>This causes Node.js to emit an abort. This will cause Node.js to exit and
 generate a core file.
 
 </p>
@@ -462,7 +598,7 @@ catch (err) {
 process. That means that the following won&apos;t work:
 
 </p>
-<pre><code>node -e &apos;process.env.foo = &quot;bar&quot;&apos; &amp;&amp; echo $foo</code></pre>
+<pre><code>$ node -e &apos;process.env.foo = &quot;bar&quot;&apos; &amp;&amp; echo $foo</code></pre>
 <p>But this will:
 
 </p>
@@ -477,7 +613,7 @@ console.log(process.env.foo);</code></pre>
 
 </p>
 <pre><code>process.exit(1);</code></pre>
-<p>The shell that executed node should see the exit code as 1.
+<p>The shell that executed Node.js should see the exit code as 1.
 
 
 </p>
@@ -504,6 +640,18 @@ This is the numerical group id, not the group name.
 <pre><code>if (process.getgid) {
   console.log(&apos;Current gid: &apos; + process.getgid());
 }</code></pre>
+<h2>process.getegid()<span><a class="mark" href="#process_process_getegid" id="process_process_getegid">#</a></span></h2>
+<p>Note: this function is only available on POSIX platforms (i.e. not Windows,
+Android)
+
+</p>
+<p>Gets the effective group identity of the process. (See getegid(2).)
+This is the numerical group id, not the group name.
+
+</p>
+<pre><code>if (process.getegid) {
+  console.log(&apos;Current gid: &apos; + process.getegid());
+}</code></pre>
 <h2>process.setgid(id)<span><a class="mark" href="#process_process_setgid_id" id="process_process_setgid_id">#</a></span></h2>
 <p>Note: this function is only available on POSIX platforms (i.e. not Windows,
 Android)
@@ -524,6 +672,26 @@ blocks while resolving it to a numerical ID.
     console.log(&apos;Failed to set gid: &apos; + err);
   }
 }</code></pre>
+<h2>process.setegid(id)<span><a class="mark" href="#process_process_setegid_id" id="process_process_setegid_id">#</a></span></h2>
+<p>Note: this function is only available on POSIX platforms (i.e. not Windows,
+Android)
+
+</p>
+<p>Sets the effective group identity of the process. (See setegid(2).)
+This accepts either a numerical ID or a groupname string. If a groupname
+is specified, this method blocks while resolving it to a numerical ID.
+
+</p>
+<pre><code>if (process.getegid &amp;&amp; process.setegid) {
+  console.log(&apos;Current gid: &apos; + process.getegid());
+  try {
+    process.setegid(501);
+    console.log(&apos;New gid: &apos; + process.getegid());
+  }
+  catch (err) {
+    console.log(&apos;Failed to set gid: &apos; + err);
+  }
+}</code></pre>
 <h2>process.getuid()<span><a class="mark" href="#process_process_getuid" id="process_process_getuid">#</a></span></h2>
 <p>Note: this function is only available on POSIX platforms (i.e. not Windows,
 Android)
@@ -535,6 +703,18 @@ This is the numerical userid, not the username.
 </p>
 <pre><code>if (process.getuid) {
   console.log(&apos;Current uid: &apos; + process.getuid());
+}</code></pre>
+<h2>process.geteuid()<span><a class="mark" href="#process_process_geteuid" id="process_process_geteuid">#</a></span></h2>
+<p>Note: this function is only available on POSIX platforms (i.e. not Windows,
+Android)
+
+</p>
+<p>Gets the effective user identity of the process. (See geteuid(2).)
+This is the numerical userid, not the username.
+
+</p>
+<pre><code>if (process.geteuid) {
+  console.log(&apos;Current uid: &apos; + process.geteuid());
 }</code></pre>
 <h2>process.setuid(id)<span><a class="mark" href="#process_process_setuid_id" id="process_process_setuid_id">#</a></span></h2>
 <p>Note: this function is only available on POSIX platforms (i.e. not Windows,
@@ -556,13 +736,33 @@ blocks while resolving it to a numerical ID.
     console.log(&apos;Failed to set uid: &apos; + err);
   }
 }</code></pre>
+<h2>process.seteuid(id)<span><a class="mark" href="#process_process_seteuid_id" id="process_process_seteuid_id">#</a></span></h2>
+<p>Note: this function is only available on POSIX platforms (i.e. not Windows,
+Android)
+
+</p>
+<p>Sets the effective user identity of the process. (See seteuid(2).)
+This accepts either a numerical ID or a username string.  If a username
+is specified, this method blocks while resolving it to a numerical ID.
+
+</p>
+<pre><code>if (process.geteuid &amp;&amp; process.seteuid) {
+  console.log(&apos;Current uid: &apos; + process.geteuid());
+  try {
+    process.seteuid(501);
+    console.log(&apos;New uid: &apos; + process.geteuid());
+  }
+  catch (err) {
+    console.log(&apos;Failed to set uid: &apos; + err);
+  }
+}</code></pre>
 <h2>process.getgroups()<span><a class="mark" href="#process_process_getgroups" id="process_process_getgroups">#</a></span></h2>
 <p>Note: this function is only available on POSIX platforms (i.e. not Windows,
 Android)
 
 </p>
 <p>Returns an array with the supplementary group IDs. POSIX leaves it unspecified
-if the effective group ID is included but node.js ensures it always is.
+if the effective group ID is included but Node.js ensures it always is.
 
 
 </p>
@@ -606,24 +806,25 @@ console.log(process.getgroups());         // [ 27, 30, 46, 1000 ]</code></pre>
 </p>
 <pre><code>console.log(&apos;Version: &apos; + process.version);</code></pre>
 <h2>process.versions<span><a class="mark" href="#process_process_versions" id="process_process_versions">#</a></span></h2>
-<p>A property exposing version strings of node and its dependencies.
+<p>A property exposing version strings of Node.js and its dependencies.
 
 </p>
 <pre><code>console.log(process.versions);</code></pre>
 <p>Will print something like:
 
 </p>
-<pre><code>{ http_parser: &apos;1.0&apos;,
-  node: &apos;0.10.4&apos;,
-  v8: &apos;3.14.5.8&apos;,
-  ares: &apos;1.9.0-DEV&apos;,
-  uv: &apos;0.10.3&apos;,
-  zlib: &apos;1.2.3&apos;,
-  modules: &apos;11&apos;,
-  openssl: &apos;1.0.1e&apos; }</code></pre>
+<pre><code>{ http_parser: &apos;2.3.0&apos;,
+  node: &apos;1.1.1&apos;,
+  v8: &apos;4.1.0.14&apos;,
+  uv: &apos;1.3.0&apos;,
+  zlib: &apos;1.2.8&apos;,
+  ares: &apos;1.10.0-DEV&apos;,
+  modules: &apos;43&apos;,
+  icu: &apos;55.1&apos;,
+  openssl: &apos;1.0.1k&apos; }</code></pre>
 <h2>process.config<span><a class="mark" href="#process_process_config" id="process_process_config">#</a></span></h2>
 <p>An Object containing the JavaScript representation of the configure options
-that were used to compile the current node executable. This is the same as
+that were used to compile the current Node.js executable. This is the same as
 the &quot;config.gypi&quot; file that was produced when running the <code>./configure</code> script.
 
 </p>
@@ -643,7 +844,6 @@ the &quot;config.gypi&quot; file that was produced when running the <code>./conf
      node_shared_cares: &apos;false&apos;,
      node_shared_http_parser: &apos;false&apos;,
      node_shared_libuv: &apos;false&apos;,
-     node_shared_v8: &apos;false&apos;,
      node_shared_zlib: &apos;false&apos;,
      node_use_dtrace: &apos;false&apos;,
      node_use_openssl: &apos;true&apos;,
@@ -651,6 +851,40 @@ the &quot;config.gypi&quot; file that was produced when running the <code>./conf
      strict_aliasing: &apos;true&apos;,
      target_arch: &apos;x64&apos;,
      v8_use_snapshot: &apos;true&apos; } }</code></pre>
+<h2>process.release<span><a class="mark" href="#process_process_release" id="process_process_release">#</a></span></h2>
+<p>An Object containing metadata related to the current release, including URLs
+for the source tarball and headers-only tarball.
+
+</p>
+<p><code>process.release</code> contains the following properties:
+
+</p>
+<ul>
+<li><code>name</code>: a string with a value that will always be <code>&quot;node&quot;</code> for Node.js. For
+legacy io.js releases, this will be <code>&quot;io.js&quot;</code>.</li>
+<li><code>sourceUrl</code>: a complete URL pointing to a <em>.tar.gz</em> file containing the
+source of the current release.</li>
+<li><code>headersUrl</code>: a complete URL pointing to a <em>.tar.gz</em> file containing only
+the header files for the current release. This file is significantly smaller
+than the full source file and can be used for compiling add-ons against
+Node.js.</li>
+<li><code>libUrl</code>: a complete URL pointing to an <em>node.lib</em> file matching the
+architecture and version of the current release. This file is used for
+compiling add-ons against Node.js. <em>This property is only present on Windows
+builds of Node.js and will be missing on all other platforms.</em></li>
+</ul>
+<p>e.g.
+
+</p>
+<pre><code>{ name: &apos;node&apos;,
+  sourceUrl: &apos;https://nodejs.org/download/release/v4.0.0/node-v4.0.0.tar.gz&apos;,
+  headersUrl: &apos;https://nodejs.org/download/release/v4.0.0/node-v4.0.0-headers.tar.gz&apos;,
+  libUrl: &apos;https://nodejs.org/download/release/v4.0.0/win-x64/node.lib&apos; }</code></pre>
+<p>In custom builds from non-release versions of the source tree, only the
+<code>name</code> property may be present. The additional properties should not be
+relied upon to exist.
+
+</p>
 <h2>process.kill(pid[, signal])<span><a class="mark" href="#process_process_kill_pid_signal" id="process_process_kill_pid_signal">#</a></span></h2>
 <p>Send a signal to a process. <code>pid</code> is the process id and <code>signal</code> is the
 string describing the signal to send.  Signal names are strings like
@@ -658,13 +892,13 @@ string describing the signal to send.  Signal names are strings like
 See <a href="#process_signal_events">Signal Events</a> and kill(2) for more information.
 
 </p>
-<p>Will throw an error if target does not exist, and as a special case, a signal of
-<code>0</code> can be used to test for the existence of a process.
+<p>Will throw an error if target does not exist, and as a special case, a signal
+of <code>0</code> can be used to test for the existence of a process.
 
 </p>
-<p>Note that just because the name of this function is <code>process.kill</code>, it is
-really just a signal sender, like the <code>kill</code> system call.  The signal sent
-may do something other than kill the target process.
+<p>Note that even though the name of this function is <code>process.kill</code>, it is really
+just a signal sender, like the <code>kill</code> system call.  The signal sent may do
+something other than kill the target process.
 
 </p>
 <p>Example of sending a signal to yourself:
@@ -719,7 +953,7 @@ cases.
 </p>
 <pre><code>console.log(&apos;This platform is &apos; + process.platform);</code></pre>
 <h2>process.memoryUsage()<span><a class="mark" href="#process_process_memoryusage" id="process_process_memoryusage">#</a></span></h2>
-<p>Returns an object describing the memory usage of the Node process
+<p>Returns an object describing the memory usage of the Node.js process
 measured in bytes.
 
 </p>
@@ -736,7 +970,7 @@ console.log(util.inspect(process.memoryUsage()));</code></pre>
 
 
 </p>
-<h2>process.nextTick(callback)<span><a class="mark" href="#process_process_nexttick_callback" id="process_process_nexttick_callback">#</a></span></h2>
+<h2>process.nextTick(callback[, arg][, ...])<span><a class="mark" href="#process_process_nexttick_callback_arg" id="process_process_nexttick_callback_arg">#</a></span></h2>
 <div class="signature"><ul>
 <li><code>callback</code> <span class="type">Function</span></li>
 </ul></div>
@@ -827,7 +1061,7 @@ oldmask = process.umask(newmask);
 console.log(&apos;Changed umask from: &apos; + oldmask.toString(8) +
             &apos; to &apos; + newmask.toString(8));</code></pre>
 <h2>process.uptime()<span><a class="mark" href="#process_process_uptime" id="process_process_uptime">#</a></span></h2>
-<p>Number of seconds Node has been running.
+<p>Number of seconds Node.js has been running.
 
 
 </p>
@@ -852,6 +1086,43 @@ setTimeout(function() {
   console.log(&apos;benchmark took %d nanoseconds&apos;, diff[0] * 1e9 + diff[1]);
   // benchmark took 1000000527 nanoseconds
 }, 1000);</code></pre>
+<h2>process.send(message[, sendHandle][, callback])<span><a class="mark" href="#process_process_send_message_sendhandle_callback" id="process_process_send_message_sendhandle_callback">#</a></span></h2>
+<div class="signature"><ul>
+<li><code>message</code> <span class="type">Object</span></li>
+<li><code>sendHandle</code> <span class="type">Handle object</span></li>
+</ul></div>
+<p>When Node.js is spawned with an IPC channel attached, it can send messages to its
+parent process using <code>process.send()</code>. Each will be received as a
+<a href="child_process.html#child_process_event_message">&apos;message&apos;</a>
+event on the parent&apos;s <code>ChildProcess</code> object.
+
+</p>
+<p>If Node.js was not spawned with an IPC channel, <code>process.send()</code> will be undefined.
+
+
+</p>
+<h2>process.disconnect()<span><a class="mark" href="#process_process_disconnect" id="process_process_disconnect">#</a></span></h2>
+<p>Close the IPC channel to the parent process, allowing this child to exit
+gracefully once there are no other connections keeping it alive.
+
+</p>
+<p>Identical to the parent process&apos;s
+<a href="child_process.html#child_process_child_disconnect">ChildProcess.disconnect()</a>.
+
+</p>
+<p>If Node.js was not spawned with an IPC channel, <code>process.disconnect()</code> will be
+undefined.
+
+
+</p>
+<h3>process.connected<span><a class="mark" href="#process_process_connected" id="process_process_connected">#</a></span></h3>
+<div class="signature"><ul>
+<li><span class="type">Boolean</span> Set to false after <code>process.disconnect()</code> is called</li>
+</ul></div>
+<p>If <code>process.connected</code> is false, it is no longer possible to send messages.
+
+
+</p>
 <h2>process.mainModule<span><a class="mark" href="#process_process_mainmodule" id="process_process_mainmodule">#</a></span></h2>
 <p>Alternate way to retrieve
 <a href="modules.html#modules_accessing_the_main_module"><code>require.main</code></a>.
@@ -865,50 +1136,12 @@ to the same module.
 
 </p>
 
-          </div>
-        </div>
-    </div>
-    </div>
-    <div id="footer">
-      <div class="foot-1">
-        <a href="http://www.joyent.com"><h5>The Node.js Project is Sponsored by</h5>
-        
-        <p class="tag">Production Node +<br>High Performance Infrastructure</p></a>
-        <a href="https://my.joyent.com/landing/signup/701800000015696" class="button getstarted">Get Started</a>
-      </div>
-      <div class="foot-2">
-        <div class="foot-nav">
-          <ul>
-            <li><a href="http://nodejs.org/download/">Downloads</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/documentation/">Documentation</a></li>
-            <li><a href="http://nodejs.org/api/">API Docs</a></li>
-            <li><a href="http://nodejs.org/documentation/tutorials/">Tutorials</a></li>
-            <li><a href="http://nodejs.org/documentation/localization/">Localization</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/community/">Community</a></li>
-            <li><a href="https://github.com/joyent/node/issues">Github Issues</a></li>
-            <li><a href="http://groups.google.com/group/nodejs">Mailing List</a></li>
-            <li><a href="http://webchat.freenode.net/?channels=node.js">IRC</a></li>
-            <li><a href="https://twitter.com/nodejs">Twitter</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/about/">About</a></li>
-            <li><a href="http://nodejs.org/about/organization/">Organization</a></li>
-            <li><a href="http://nodejs.org/about/core-team/">Core Team</a></li>
-            <li><a href="http://nodejs.org/about/resources/">Resources</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://blog.nodejs.org">Blog</a></li>
-          </ul>
-        </div>
-        <p class="copyright">Copyright 2014 <a href="http://joyent.com/">Joyent, Inc</a>, Node.js is a <a href="https://nodejs.org/images/trademark-policy.pdf">trademark</a> of Joyent, Inc. <a href="https://raw.github.com/joyent/node/v0.12.7/LICENSE">View license</a>.</p>
       </div>
     </div>
+  </div>
+  <div id="footer">
+  </div>
 
-  
   
   
   

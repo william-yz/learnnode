@@ -2,71 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>REPL Node.js v0.12.7 Manual &amp; Documentation</title>
+  <title>REPL Node.js v5.0.0 Manual &amp; Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/sh.css">
-  <link rel="canonical" href="http://nodejs.org/api/repl.html">
-  
-  
+  <link rel="canonical" href="https://nodejs.org/api/repl.html">
 </head>
-<body class="alt apidoc int docs" id="docs">
-    <div id="nav">
-      
-      <ul>
-        <li><a href="http://nodejs.org">Home</a></li>
-        <li><a href="http://nodejs.org/download/">Downloads</a></li>
-        <li class="active"><a href="http://nodejs.org/documentation/">Docs</a></li>
-        <li><a href="http://nodejs.org/community/">Community</a></li>
-        <li><a href="http://nodejs.org/about/">About</a></li>
-        <li><a href="http://jobs.nodejs.org">Jobs</a></li>
-        <li><a href="http://blog.nodejs.org">Blog</a></li>
-      </ul>
-    </div>
-    <div id="content-wrap">
-    <div id="content" class="clearfix">
-      <div id="column2" class="interior">
-        <!--<img src="/images/logo-light.svg" alt="node.js" width="170">-->
-        <ul class="docs-nav">
-          <li><a href="http://nodejs.org/documentation/">About Docs</a></li>
-          <li><a href="http://nodejs.org/documentation/tutorials/">Tutorials</a></li>
-          <li><a href="http://nodejs.org/documentation/contributing/">Contributing</a></li>
-          <li><a href="http://nodejs.org/documentation/workflow/">Workflow</a></li>
-          <li><a href="http://nodejs.org/documentation/localization/">Localization</a></li>
-          <li class="active"><a href="http://nodejs.org/api/">API Docs</a></li>
-        </ul>
+<body class="alt apidoc" id="api-section-repl">
+  <div id="content" class="clearfix">
+    <div id="column2" class="interior">
+      <div id="intro" class="interior">
+        <a href="/" title="Go back to the home page">
+          Node.js (1)
+        </a>
       </div>
-        <div id="column1" class="interior">
-          <header>
-            <h1>Node.js v0.12.7 Manual &amp; Documentation</h1>
-            <div id="gtoc">
-              <p>
-                <a href="index.html" name="toc">Index</a> |
-                <a href="all.html">View on single page</a> |
-                <a href="repl.json">View as JSON</a>
-              </p>
-            </div>
-            <hr>
-          </header>
+      <ul>
+<li><a class="nav-documentation" href="documentation.html">About these Docs</a></li>
+<li><a class="nav-synopsis" href="synopsis.html">Synopsis</a></li>
+<li><a class="nav-assert" href="assert.html">Assertion Testing</a></li>
+<li><a class="nav-buffer" href="buffer.html">Buffer</a></li>
+<li><a class="nav-addons" href="addons.html">C/C++ Addons</a></li>
+<li><a class="nav-child_process" href="child_process.html">Child Processes</a></li>
+<li><a class="nav-cluster" href="cluster.html">Cluster</a></li>
+<li><a class="nav-console" href="console.html">Console</a></li>
+<li><a class="nav-crypto" href="crypto.html">Crypto</a></li>
+<li><a class="nav-debugger" href="debugger.html">Debugger</a></li>
+<li><a class="nav-dns" href="dns.html">DNS</a></li>
+<li><a class="nav-domain" href="domain.html">Domain</a></li>
+<li><a class="nav-errors" href="errors.html">Errors</a></li>
+<li><a class="nav-events" href="events.html">Events</a></li>
+<li><a class="nav-fs" href="fs.html">File System</a></li>
+<li><a class="nav-globals" href="globals.html">Globals</a></li>
+<li><a class="nav-http" href="http.html">HTTP</a></li>
+<li><a class="nav-https" href="https.html">HTTPS</a></li>
+<li><a class="nav-modules" href="modules.html">Modules</a></li>
+<li><a class="nav-net" href="net.html">Net</a></li>
+<li><a class="nav-os" href="os.html">OS</a></li>
+<li><a class="nav-path" href="path.html">Path</a></li>
+<li><a class="nav-process" href="process.html">Process</a></li>
+<li><a class="nav-punycode" href="punycode.html">Punycode</a></li>
+<li><a class="nav-querystring" href="querystring.html">Query Strings</a></li>
+<li><a class="nav-readline" href="readline.html">Readline</a></li>
+<li><a class="nav-repl active" href="repl.html">REPL</a></li>
+<li><a class="nav-stream" href="stream.html">Stream</a></li>
+<li><a class="nav-string_decoder" href="string_decoder.html">String Decoder</a></li>
+<li><a class="nav-timers" href="timers.html">Timers</a></li>
+<li><a class="nav-tls" href="tls.html">TLS/SSL</a></li>
+<li><a class="nav-tty" href="tty.html">TTY</a></li>
+<li><a class="nav-dgram" href="dgram.html">UDP/Datagram</a></li>
+<li><a class="nav-url" href="url.html">URL</a></li>
+<li><a class="nav-util" href="util.html">Utilities</a></li>
+<li><a class="nav-v8" href="v8.html">V8</a></li>
+<li><a class="nav-vm" href="vm.html">VM</a></li>
+<li><a class="nav-zlib" href="zlib.html">ZLIB</a></li>
+</ul>
 
-          <div id="toc">
-            <h2>Table of Contents</h2>
-            <ul>
+    </div>
+
+    <div id="column1" data-id="repl" class="interior">
+      <header>
+        <h1>Node.js v5.0.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="index.html" name="toc">Index</a> |
+            <a href="all.html">View on single page</a> |
+            <a href="repl.json">View as JSON</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
 <li><a href="#repl_repl">REPL</a><ul>
+<li><a href="#repl_persistent_history">Persistent History</a><ul>
+<li><a href="#repl_node_repl_history_file">NODE_REPL_HISTORY_FILE</a></li>
+</ul>
+</li>
+<li><a href="#repl_environment_variable_options">Environment Variable Options</a></li>
 <li><a href="#repl_repl_start_options">repl.start(options)</a><ul>
 <li><a href="#repl_event_exit">Event: &apos;exit&apos;</a></li>
 <li><a href="#repl_event_reset">Event: &apos;reset&apos;</a></li>
 </ul>
 </li>
-<li><a href="#repl_repl_features">REPL Features</a></li>
+<li><a href="#repl_repl_features">REPL Features</a><ul>
+<li><a href="#repl_customizing_object_displays_in_the_repl">Customizing Object displays in the REPL</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 
-          </div>
+      </div>
 
-          <div id="apicontent">
-            <h1>REPL<span><a class="mark" href="#repl_repl" id="repl_repl">#</a></span></h1>
-<pre class="api_stability_3">Stability: 3 - Stable</pre><p>A Read-Eval-Print-Loop (REPL) is available both as a standalone program and
+      <div id="apicontent">
+        <h1>REPL<span><a class="mark" href="#repl_repl" id="repl_repl">#</a></span></h1>
+<pre class="api_stability_2">Stability: 2 - Stable</pre><p>A Read-Eval-Print-Loop (REPL) is available both as a standalone program and
 easily includable in other programs. The REPL provides a way to interactively
 run JavaScript and see the results.  It can be used for debugging, testing, or
 just trying things out.
@@ -86,7 +118,7 @@ Type &apos;.help&apos; for options.
 1
 2
 3</code></pre>
-<p>For advanced line-editors, start node with the environmental variable
+<p>For advanced line-editors, start Node.js with the environmental variable
 <code>NODE_NO_READLINE=1</code>. This will start the main and debugger REPL in canonical
 terminal settings which will allow you to use with <code>rlwrap</code>.
 
@@ -95,9 +127,40 @@ terminal settings which will allow you to use with <code>rlwrap</code>.
 
 </p>
 <pre><code>alias node=&quot;env NODE_NO_READLINE=1 rlwrap node&quot;</code></pre>
+<h2>Persistent History<span><a class="mark" href="#repl_persistent_history" id="repl_persistent_history">#</a></span></h2>
+<p>By default, the REPL will persist history between <code>node</code> REPL sessions by saving
+to a <code>.node_repl_history</code> file in the user&apos;s home directory. This can be
+disabled by setting the environment variable <code>NODE_REPL_HISTORY=&quot;&quot;</code>.
+
+</p>
+<h3>NODE_REPL_HISTORY_FILE<span><a class="mark" href="#repl_node_repl_history_file" id="repl_node_repl_history_file">#</a></span></h3>
+<pre class="api_stability_0">Stability: 0 - Deprecated: Use <code>NODE_REPL_HISTORY</code> instead.</pre><p>Previously in Node.js/io.js v2.x, REPL history was controlled by using a
+<code>NODE_REPL_HISTORY_FILE</code> environment variable, and the history was saved in JSON
+format. This variable has now been deprecated, and your REPL history will
+automatically be converted to using plain text. The new file will be saved to
+either your home directory, or a directory defined by the <code>NODE_REPL_HISTORY</code>
+variable, as documented below.
+
+</p>
+<h2>Environment Variable Options<span><a class="mark" href="#repl_environment_variable_options" id="repl_environment_variable_options">#</a></span></h2>
+<p>The built-in repl (invoked by running <code>node</code> or <code>node -i</code>) may be controlled
+via the following environment variables:
+
+</p>
+<ul>
+<li><code>NODE_REPL_HISTORY</code> - When a valid path is given, persistent REPL history
+will be saved to the specified file rather than <code>.node_repl_history</code> in the
+user&apos;s home directory. Setting this value to <code>&quot;&quot;</code> will disable persistent
+REPL history.</li>
+<li><code>NODE_REPL_HISTORY_SIZE</code> - defaults to <code>1000</code>. Controls how many lines of
+history will be persisted if history is available. Must be a positive number.</li>
+<li><code>NODE_REPL_MODE</code> - may be any of <code>sloppy</code>, <code>strict</code>, or <code>magic</code>. Defaults
+to <code>magic</code>, which will automatically run &quot;strict mode only&quot; statements in
+strict mode.</li>
+</ul>
 <h2>repl.start(options)<span><a class="mark" href="#repl_repl_start_options" id="repl_repl_start_options">#</a></span></h2>
-<p>Returns and starts a <code>REPLServer</code> instance, that inherits from 
-[Readline Interface][]. Accepts an &quot;options&quot; Object that takes 
+<p>Returns and starts a <code>REPLServer</code> instance, that inherits from
+<a href="readline.html#readline_class_interface">Readline Interface</a>. Accepts an &quot;options&quot; Object that takes
 the following values:
 
 </p>
@@ -130,6 +193,16 @@ return value of command if it&apos;s <code>undefined</code>. Defaults to <code>f
 returns the formatting (including coloring) to display. Defaults to
 <code>util.inspect</code>.</p>
 </li>
+<li><p><code>replMode</code> - controls whether the repl runs all commands in strict mode,
+default mode, or a hybrid mode (&quot;magic&quot; mode.) Acceptable values are:</p>
+<ul>
+<li><code>repl.REPL_MODE_SLOPPY</code> - run commands in sloppy mode.</li>
+<li><code>repl.REPL_MODE_STRICT</code> - run commands in strict mode. This is equivalent to
+prefacing every repl statement with <code>&apos;use strict&apos;</code>.</li>
+<li><code>repl.REPL_MODE_MAGIC</code> - attempt to run commands in default mode. If they
+fail to parse, re-try in strict mode.</li>
+</ul>
+</li>
 </ul>
 <p>You can use your own <code>eval</code> function if it has following signature:
 
@@ -137,20 +210,23 @@ returns the formatting (including coloring) to display. Defaults to
 <pre><code>function eval(cmd, context, filename, callback) {
   callback(null, result);
 }</code></pre>
-<p>Multiple REPLs may be started against the same running instance of node.  Each
+<p>On tab completion - <code>eval</code> will be called with <code>.scope</code> as an input string. It
+is expected to return an array of scope names to be used for the auto-completion.
+
+</p>
+<p>Multiple REPLs may be started against the same running instance of Node.js.  Each
 will share the same global object but will have unique I/O.
 
 </p>
 <p>Here is an example that starts a REPL on stdin, a Unix socket, and a TCP socket:
 
 </p>
-<pre><code>var net = require(&quot;net&quot;),
-    repl = require(&quot;repl&quot;);
-
-connections = 0;
+<pre><code>var net = require(&apos;net&apos;),
+    repl = require(&apos;repl&apos;),
+    connections = 0;
 
 repl.start({
-  prompt: &quot;node via stdin&gt; &quot;,
+  prompt: &apos;Node.js via stdin&gt; &apos;,
   input: process.stdin,
   output: process.stdout
 });
@@ -158,18 +234,18 @@ repl.start({
 net.createServer(function (socket) {
   connections += 1;
   repl.start({
-    prompt: &quot;node via Unix socket&gt; &quot;,
+    prompt: &apos;Node.js via Unix socket&gt; &apos;,
     input: socket,
     output: socket
   }).on(&apos;exit&apos;, function() {
     socket.end();
   })
-}).listen(&quot;/tmp/node-repl-sock&quot;);
+}).listen(&apos;/tmp/node-repl-sock&apos;);
 
 net.createServer(function (socket) {
   connections += 1;
   repl.start({
-    prompt: &quot;node via TCP socket&gt; &quot;,
+    prompt: &apos;Node.js via TCP socket&gt; &apos;,
     input: socket,
     output: socket
   }).on(&apos;exit&apos;, function() {
@@ -183,7 +259,7 @@ TCP sockets.
 
 </p>
 <p>By starting a REPL from a Unix socket-based server instead of stdin, you can
-connect to a long-running node process without restarting it.
+connect to a long-running Node.js process without restarting it.
 
 </p>
 <p>For an example of running a &quot;full-featured&quot; (<code>terminal</code>) REPL over
@@ -223,7 +299,7 @@ be emitted.
 
 </p>
 <pre><code>// Extend the initial repl context.
-r = repl.start({ options ... });
+var r = repl.start({ options ... });
 someExtension.extend(r.context);
 
 // When a new context is created extend it as well.
@@ -238,10 +314,14 @@ r.on(&apos;reset&apos;, function (context) {
 Tab completion is supported for both global and local variables.
 
 </p>
+<p>Core modules will be loaded on-demand into the environment. For example,
+accessing <code>fs</code> will <code>require()</code> the <code>fs</code> module as <code>global.fs</code>.
+
+</p>
 <p>The special variable <code>_</code> (underscore) contains the result of the last expression.
 
 </p>
-<pre><code>&gt; [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot; ]
+<pre><code>&gt; [ &apos;a&apos;, &apos;b&apos;, &apos;c&apos; ]
 [ &apos;a&apos;, &apos;b&apos;, &apos;c&apos; ]
 &gt; _.length
 3
@@ -253,10 +333,10 @@ associated with each <code>REPLServer</code>.  For example:
 
 </p>
 <pre><code>// repl_test.js
-var repl = require(&quot;repl&quot;),
-    msg = &quot;message&quot;;
+var repl = require(&apos;repl&apos;),
+    msg = &apos;message&apos;;
 
-repl.start(&quot;&gt; &quot;).context.m = msg;</code></pre>
+repl.start(&apos;&gt; &apos;).context.m = msg;</code></pre>
 <p>Things in the <code>context</code> object appear as local within the REPL:
 
 </p>
@@ -289,52 +369,36 @@ multi-line expression.</li>
 <li><code>&lt;ctrl&gt;C</code> - Similar to the <code>.break</code> keyword.  Terminates the current
 command.  Press twice on a blank line to forcibly exit.</li>
 <li><code>&lt;ctrl&gt;D</code> - Similar to the <code>.exit</code> keyword.</li>
+<li><code>&lt;tab&gt;</code> - Show both global and local(scope) variables</li>
 </ul>
+<h3>Customizing Object displays in the REPL<span><a class="mark" href="#repl_customizing_object_displays_in_the_repl" id="repl_customizing_object_displays_in_the_repl">#</a></span></h3>
+<p>The REPL module internally uses
+<a href="util.html#util_util_inspect_object_options">util.inspect()</a>, when printing values. However, <code>util.inspect</code> delegates the
+ call to the object&apos;s <code>inspect()</code> function, if it has one. You can read more
+ about this delegation <a href="util.html#util_custom_inspect_function_on_objects">here</a>.
 
-          </div>
-        </div>
-    </div>
-    </div>
-    <div id="footer">
-      <div class="foot-1">
-        <a href="http://www.joyent.com"><h5>The Node.js Project is Sponsored by</h5>
-        
-        <p class="tag">Production Node +<br>High Performance Infrastructure</p></a>
-        <a href="https://my.joyent.com/landing/signup/701800000015696" class="button getstarted">Get Started</a>
-      </div>
-      <div class="foot-2">
-        <div class="foot-nav">
-          <ul>
-            <li><a href="http://nodejs.org/download/">Downloads</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/documentation/">Documentation</a></li>
-            <li><a href="http://nodejs.org/api/">API Docs</a></li>
-            <li><a href="http://nodejs.org/documentation/tutorials/">Tutorials</a></li>
-            <li><a href="http://nodejs.org/documentation/localization/">Localization</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/community/">Community</a></li>
-            <li><a href="https://github.com/joyent/node/issues">Github Issues</a></li>
-            <li><a href="http://groups.google.com/group/nodejs">Mailing List</a></li>
-            <li><a href="http://webchat.freenode.net/?channels=node.js">IRC</a></li>
-            <li><a href="https://twitter.com/nodejs">Twitter</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/about/">About</a></li>
-            <li><a href="http://nodejs.org/about/organization/">Organization</a></li>
-            <li><a href="http://nodejs.org/about/core-team/">Core Team</a></li>
-            <li><a href="http://nodejs.org/about/resources/">Resources</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://blog.nodejs.org">Blog</a></li>
-          </ul>
-        </div>
-        <p class="copyright">Copyright 2014 <a href="http://joyent.com/">Joyent, Inc</a>, Node.js is a <a href="https://nodejs.org/images/trademark-policy.pdf">trademark</a> of Joyent, Inc. <a href="https://raw.github.com/joyent/node/v0.12.7/LICENSE">View license</a>.</p>
+</p>
+<p>For example, if you have defined an <code>inspect()</code> function on an object, like this:
+
+</p>
+<pre><code>&gt; var obj = { foo: &apos;this will not show up in the inspect() output&apos; };
+undefined
+&gt; obj.inspect = function() {
+...   return { bar: &apos;baz&apos; };
+... };
+[Function]</code></pre>
+<p>and try to print <code>obj</code> in REPL, it will invoke the custom <code>inspect()</code> function:
+
+</p>
+<pre><code>&gt; obj
+{ bar: &apos;baz&apos; }</code></pre>
+
       </div>
     </div>
+  </div>
+  <div id="footer">
+  </div>
 
-  
   
   
   

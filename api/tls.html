@@ -2,68 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>TLS (SSL) Node.js v0.12.7 Manual &amp; Documentation</title>
+  <title>TLS (SSL) Node.js v5.0.0 Manual &amp; Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/sh.css">
-  <link rel="canonical" href="http://nodejs.org/api/tls.html">
-  
-  
+  <link rel="canonical" href="https://nodejs.org/api/tls.html">
 </head>
-<body class="alt apidoc int docs" id="docs">
-    <div id="nav">
-      
-      <ul>
-        <li><a href="http://nodejs.org">Home</a></li>
-        <li><a href="http://nodejs.org/download/">Downloads</a></li>
-        <li class="active"><a href="http://nodejs.org/documentation/">Docs</a></li>
-        <li><a href="http://nodejs.org/community/">Community</a></li>
-        <li><a href="http://nodejs.org/about/">About</a></li>
-        <li><a href="http://jobs.nodejs.org">Jobs</a></li>
-        <li><a href="http://blog.nodejs.org">Blog</a></li>
-      </ul>
-    </div>
-    <div id="content-wrap">
-    <div id="content" class="clearfix">
-      <div id="column2" class="interior">
-        <!--<img src="/images/logo-light.svg" alt="node.js" width="170">-->
-        <ul class="docs-nav">
-          <li><a href="http://nodejs.org/documentation/">About Docs</a></li>
-          <li><a href="http://nodejs.org/documentation/tutorials/">Tutorials</a></li>
-          <li><a href="http://nodejs.org/documentation/contributing/">Contributing</a></li>
-          <li><a href="http://nodejs.org/documentation/workflow/">Workflow</a></li>
-          <li><a href="http://nodejs.org/documentation/localization/">Localization</a></li>
-          <li class="active"><a href="http://nodejs.org/api/">API Docs</a></li>
-        </ul>
+<body class="alt apidoc" id="api-section-tls">
+  <div id="content" class="clearfix">
+    <div id="column2" class="interior">
+      <div id="intro" class="interior">
+        <a href="/" title="Go back to the home page">
+          Node.js (1)
+        </a>
       </div>
-        <div id="column1" class="interior">
-          <header>
-            <h1>Node.js v0.12.7 Manual &amp; Documentation</h1>
-            <div id="gtoc">
-              <p>
-                <a href="index.html" name="toc">Index</a> |
-                <a href="all.html">View on single page</a> |
-                <a href="tls.json">View as JSON</a>
-              </p>
-            </div>
-            <hr>
-          </header>
+      <ul>
+<li><a class="nav-documentation" href="documentation.html">About these Docs</a></li>
+<li><a class="nav-synopsis" href="synopsis.html">Synopsis</a></li>
+<li><a class="nav-assert" href="assert.html">Assertion Testing</a></li>
+<li><a class="nav-buffer" href="buffer.html">Buffer</a></li>
+<li><a class="nav-addons" href="addons.html">C/C++ Addons</a></li>
+<li><a class="nav-child_process" href="child_process.html">Child Processes</a></li>
+<li><a class="nav-cluster" href="cluster.html">Cluster</a></li>
+<li><a class="nav-console" href="console.html">Console</a></li>
+<li><a class="nav-crypto" href="crypto.html">Crypto</a></li>
+<li><a class="nav-debugger" href="debugger.html">Debugger</a></li>
+<li><a class="nav-dns" href="dns.html">DNS</a></li>
+<li><a class="nav-domain" href="domain.html">Domain</a></li>
+<li><a class="nav-errors" href="errors.html">Errors</a></li>
+<li><a class="nav-events" href="events.html">Events</a></li>
+<li><a class="nav-fs" href="fs.html">File System</a></li>
+<li><a class="nav-globals" href="globals.html">Globals</a></li>
+<li><a class="nav-http" href="http.html">HTTP</a></li>
+<li><a class="nav-https" href="https.html">HTTPS</a></li>
+<li><a class="nav-modules" href="modules.html">Modules</a></li>
+<li><a class="nav-net" href="net.html">Net</a></li>
+<li><a class="nav-os" href="os.html">OS</a></li>
+<li><a class="nav-path" href="path.html">Path</a></li>
+<li><a class="nav-process" href="process.html">Process</a></li>
+<li><a class="nav-punycode" href="punycode.html">Punycode</a></li>
+<li><a class="nav-querystring" href="querystring.html">Query Strings</a></li>
+<li><a class="nav-readline" href="readline.html">Readline</a></li>
+<li><a class="nav-repl" href="repl.html">REPL</a></li>
+<li><a class="nav-stream" href="stream.html">Stream</a></li>
+<li><a class="nav-string_decoder" href="string_decoder.html">String Decoder</a></li>
+<li><a class="nav-timers" href="timers.html">Timers</a></li>
+<li><a class="nav-tls active" href="tls.html">TLS/SSL</a></li>
+<li><a class="nav-tty" href="tty.html">TTY</a></li>
+<li><a class="nav-dgram" href="dgram.html">UDP/Datagram</a></li>
+<li><a class="nav-url" href="url.html">URL</a></li>
+<li><a class="nav-util" href="util.html">Utilities</a></li>
+<li><a class="nav-v8" href="v8.html">V8</a></li>
+<li><a class="nav-vm" href="vm.html">VM</a></li>
+<li><a class="nav-zlib" href="zlib.html">ZLIB</a></li>
+</ul>
 
-          <div id="toc">
-            <h2>Table of Contents</h2>
-            <ul>
+    </div>
+
+    <div id="column1" data-id="tls" class="interior">
+      <header>
+        <h1>Node.js v5.0.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="index.html" name="toc">Index</a> |
+            <a href="all.html">View on single page</a> |
+            <a href="tls.json">View as JSON</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
 <li><a href="#tls_tls_ssl">TLS (SSL)</a><ul>
-<li><a href="#tls_protocol_support">Protocol support</a></li>
 <li><a href="#tls_client_initiated_renegotiation_attack_mitigation">Client-initiated renegotiation attack mitigation</a></li>
-<li><a href="#tls_npn_and_sni">NPN and SNI</a></li>
+<li><a href="#tls_alpn_npn_and_sni">ALPN, NPN and SNI</a></li>
+<li><a href="#tls_modifying_the_default_tls_cipher_suite">Modifying the Default TLS Cipher suite</a></li>
 <li><a href="#tls_perfect_forward_secrecy">Perfect Forward Secrecy</a></li>
 <li><a href="#tls_tls_getciphers">tls.getCiphers()</a></li>
 <li><a href="#tls_tls_createserver_options_secureconnectionlistener">tls.createServer(options[, secureConnectionListener])</a></li>
 <li><a href="#tls_tls_connect_options_callback">tls.connect(options[, callback])</a></li>
 <li><a href="#tls_tls_connect_port_host_options_callback">tls.connect(port[, host][, options][, callback])</a></li>
 <li><a href="#tls_class_tls_tlssocket">Class: tls.TLSSocket</a></li>
-<li><a href="#tls_new_tls_tlssocket_socket_options">new tls.TLSSocket(socket, options)</a></li>
+<li><a href="#tls_new_tls_tlssocket_socket_options">new tls.TLSSocket(socket[, options])</a></li>
 <li><a href="#tls_tls_createsecurecontext_details">tls.createSecureContext(details)</a></li>
-<li><a href="#tls_tls_createsecurepair_context_isserver_requestcert_rejectunauthorized">tls.createSecurePair([context][, isServer][, requestCert][, rejectUnauthorized])</a></li>
+<li><a href="#tls_tls_createsecurepair_context_isserver_requestcert_rejectunauthorized_options">tls.createSecurePair([context][, isServer][, requestCert][, rejectUnauthorized][, options])</a></li>
 <li><a href="#tls_class_securepair">Class: SecurePair</a><ul>
 <li><a href="#tls_event_secure">Event: &apos;secure&apos;</a></li>
 </ul>
@@ -74,9 +98,11 @@
 <li><a href="#tls_event_newsession">Event: &apos;newSession&apos;</a></li>
 <li><a href="#tls_event_resumesession">Event: &apos;resumeSession&apos;</a></li>
 <li><a href="#tls_event_ocsprequest">Event: &apos;OCSPRequest&apos;</a></li>
-<li><a href="#tls_server_listen_port_host_callback">server.listen(port[, host][, callback])</a></li>
-<li><a href="#tls_server_close">server.close()</a></li>
+<li><a href="#tls_server_listen_port_hostname_callback">server.listen(port[, hostname][, callback])</a></li>
+<li><a href="#tls_server_close_callback">server.close([callback])</a></li>
 <li><a href="#tls_server_address">server.address()</a></li>
+<li><a href="#tls_server_getticketkeys">server.getTicketKeys()</a></li>
+<li><a href="#tls_server_setticketkeys_keys">server.setTicketKeys(keys)</a></li>
 <li><a href="#tls_server_addcontext_hostname_context">server.addContext(hostname, context)</a></li>
 <li><a href="#tls_server_maxconnections">server.maxConnections</a></li>
 <li><a href="#tls_server_connections">server.connections</a></li>
@@ -94,6 +120,7 @@
 <li><a href="#tls_tlssocket_authorizationerror">tlsSocket.authorizationError</a></li>
 <li><a href="#tls_tlssocket_getpeercertificate_detailed">tlsSocket.getPeerCertificate([ detailed ])</a></li>
 <li><a href="#tls_tlssocket_getcipher">tlsSocket.getCipher()</a></li>
+<li><a href="#tls_tlssocket_getephemeralkeyinfo">tlsSocket.getEphemeralKeyInfo()</a></li>
 <li><a href="#tls_tlssocket_renegotiate_options_callback">tlsSocket.renegotiate(options, callback)</a></li>
 <li><a href="#tls_tlssocket_setmaxsendfragment_size">tlsSocket.setMaxSendFragment(size)</a></li>
 <li><a href="#tls_tlssocket_getsession">tlsSocket.getSession()</a></li>
@@ -110,11 +137,11 @@
 </li>
 </ul>
 
-          </div>
+      </div>
 
-          <div id="apicontent">
-            <h1>TLS (SSL)<span><a class="mark" href="#tls_tls_ssl" id="tls_tls_ssl">#</a></span></h1>
-<pre class="api_stability_3">Stability: 3 - Stable</pre><p>Use <code>require(&apos;tls&apos;)</code> to access this module.
+      <div id="apicontent">
+        <h1>TLS (SSL)<span><a class="mark" href="#tls_tls_ssl" id="tls_tls_ssl">#</a></span></h1>
+<pre class="api_stability_2">Stability: 2 - Stable</pre><p>Use <code>require(&apos;tls&apos;)</code> to access this module.
 
 </p>
 <p>The <code>tls</code> module uses OpenSSL to provide Transport Layer Security and/or
@@ -140,10 +167,11 @@ file. This is done with:
 <p>Alternatively you can send the CSR to a Certificate Authority for signing.
 
 </p>
-<p>(TODO: docs on creating a CA, for now interested users should just look at
-<code>test/fixtures/keys/Makefile</code> in the Node source code)
+<p>For Perfect Forward Secrecy, it is required to generate Diffie-Hellman
+parameters:
 
 </p>
+<pre><code>openssl dhparam -outform PEM -out dhparam.pem 2048</code></pre>
 <p>To create .pfx or .p12, do this:
 
 </p>
@@ -154,46 +182,6 @@ file. This is done with:
 <li><code>inkey</code>: private key</li>
 <li><code>certfile</code>: all CA certs concatenated in one file like
 <code>cat ca1-cert.pem ca2-cert.pem &gt; ca-cert.pem</code></li>
-</ul>
-<h2>Protocol support<span><a class="mark" href="#tls_protocol_support" id="tls_protocol_support">#</a></span></h2>
-<p>Node.js is compiled with SSLv2 and SSLv3 protocol support by default, but these
-protocols are <strong>disabled</strong>. They are considered insecure and could be easily
-compromised as was shown by <a href="https://access.redhat.com/articles/1232123">CVE-2014-3566</a>. However, in some situations, it
-may cause problems with legacy clients/servers (such as Internet Explorer 6).
-If you wish to enable SSLv2 or SSLv3, run node with the <code>--enable-ssl2</code> or
-<code>--enable-ssl3</code> flag respectively.  In future versions of Node.js SSLv2 and
-SSLv3 will not be compiled in by default.
-
-</p>
-<p>There is a way to force node into using SSLv3 or SSLv2 only mode by explicitly
-specifying <code>secureProtocol</code> to <code>&apos;SSLv3_method&apos;</code> or <code>&apos;SSLv2_method&apos;</code>.
-
-</p>
-<p>The default protocol method Node.js uses is <code>SSLv23_method</code> which would be more
-accurately named <code>AutoNegotiate_method</code>. This method will try and negotiate
-from the highest level down to whatever the client supports.  To provide a
-secure default, Node.js (since v0.10.33) explicitly disables the use of SSLv3
-and SSLv2 by setting the <code>secureOptions</code> to be
-<code>SSL_OP_NO_SSLv3|SSL_OP_NO_SSLv2</code> (again, unless you have passed
-<code>--enable-ssl3</code>, or <code>--enable-ssl2</code>, or <code>SSLv3_method</code> as <code>secureProtocol</code>).
-
-</p>
-<p>If you have set <code>secureOptions</code> to anything, we will not override your
-options.
-
-</p>
-<p>The ramifications of this behavior change:
-
-</p>
-<ul>
-<li>If your application is behaving as a secure server, clients who are <code>SSLv3</code>
-only will now not be able to appropriately negotiate a connection and will be
-refused. In this case your server will emit a <code>clientError</code> event. The error
-message will include <code>&apos;wrong version number&apos;</code>.</li>
-<li>If your application is behaving as a secure client and communicating with a
-server that doesn&apos;t support methods more secure than SSLv3 then your connection
-won&apos;t be able to negotiate and will fail. In this case your client will emit a
-an <code>error</code> event. The error message will include <code>&apos;wrong version number&apos;</code>.</li>
 </ul>
 <h2>Client-initiated renegotiation attack mitigation<span><a class="mark" href="#tls_client_initiated_renegotiation_attack_mitigation" id="tls_client_initiated_renegotiation_attack_mitigation">#</a></span></h2>
 <!-- type=misc -->
@@ -225,18 +213,58 @@ times.
 
 
 </p>
-<h2>NPN and SNI<span><a class="mark" href="#tls_npn_and_sni" id="tls_npn_and_sni">#</a></span></h2>
+<h2>ALPN, NPN and SNI<span><a class="mark" href="#tls_alpn_npn_and_sni" id="tls_alpn_npn_and_sni">#</a></span></h2>
 <!-- type=misc -->
 
-<p>NPN (Next Protocol Negotiation) and SNI (Server Name Indication) are TLS
+<p>ALPN (Application-Layer Protocol Negotiation Extension), NPN (Next
+Protocol Negotiation) and SNI (Server Name Indication) are TLS
 handshake extensions allowing you:
 
 </p>
 <ul>
-<li>NPN - to use one TLS server for multiple protocols (HTTP, SPDY)</li>
+<li>ALPN/NPN - to use one TLS server for multiple protocols (HTTP, SPDY, HTTP/2)</li>
 <li>SNI - to use one TLS server for multiple hostnames with different SSL
 certificates.</li>
 </ul>
+<h2>Modifying the Default TLS Cipher suite<span><a class="mark" href="#tls_modifying_the_default_tls_cipher_suite" id="tls_modifying_the_default_tls_cipher_suite">#</a></span></h2>
+<p>Node.js is built with a default suite of enabled and disabled TLS ciphers.
+Currently, the default cipher suite is:
+
+</p>
+<pre><code>ECDHE-RSA-AES128-GCM-SHA256:
+ECDHE-ECDSA-AES128-GCM-SHA256:
+ECDHE-RSA-AES256-GCM-SHA384:
+ECDHE-ECDSA-AES256-GCM-SHA384:
+DHE-RSA-AES128-GCM-SHA256:
+ECDHE-RSA-AES128-SHA256:
+DHE-RSA-AES128-SHA256:
+ECDHE-RSA-AES256-SHA384:
+DHE-RSA-AES256-SHA384:
+ECDHE-RSA-AES256-SHA256:
+DHE-RSA-AES256-SHA256:
+HIGH:
+!aNULL:
+!eNULL:
+!EXPORT:
+!DES:
+!RC4:
+!MD5:
+!PSK:
+!SRP:
+!CAMELLIA</code></pre>
+<p>This default can be overriden entirely using the <code>--tls-cipher-list</code> command
+line switch. For instance, the following makes
+<code>ECDHE-RSA-AES128-GCM-SHA256:!RC4</code> the default TLS cipher suite:
+
+</p>
+<pre><code>node --tls-cipher-list=&quot;ECDHE-RSA-AES128-GCM-SHA256:!RC4&quot;</code></pre>
+<p>Note that the default cipher suite included within Node.js has been carefully
+selected to reflect current security best practices and risk mitigation.
+Changing the default cipher suite can have a significant impact on the security
+of an application. The <code>--tls-cipher-list</code> switch should by used only if
+absolutely necessary.
+
+</p>
 <h2>Perfect Forward Secrecy<span><a class="mark" href="#tls_perfect_forward_secrecy" id="tls_perfect_forward_secrecy">#</a></span></h2>
 <!-- type=misc -->
 
@@ -287,7 +315,9 @@ CA certs of the server in PFX or PKCS12 format. (Mutually exclusive with
 the <code>key</code>, <code>cert</code> and <code>ca</code> options.)</p>
 </li>
 <li><p><code>key</code>: A string or <code>Buffer</code> containing the private key of the server in
-PEM format. (Could be an array of keys). (Required)</p>
+PEM format. To support multiple keys using different algorithms, an array
+can be provided. It can either be a plain array of keys, or an array of
+objects in the format <code>{pem: key, passphrase: passphrase}</code>. (Required)</p>
 </li>
 <li><p><code>passphrase</code>: A string of passphrase for the private key or pfx.</p>
 </li>
@@ -301,34 +331,53 @@ like VeriSign. These are used to authorize connections.</p>
 <li><p><code>crl</code> : Either a string or list of strings of PEM encoded CRLs (Certificate
 Revocation List)</p>
 </li>
-<li><p><code>ciphers</code>: A string describing the ciphers to use or exclude.</p>
-<p>To mitigate <a href="http://blog.ivanristic.com/2011/10/mitigating-the-beast-attack-on-tls.html">BEAST attacks</a> it is recommended that you use this option in
-conjunction with the <code>honorCipherOrder</code> option described below to
-prioritize the non-CBC cipher.</p>
-<p>Defaults to
-<code>ECDHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA256:AES128-GCM-SHA256:RC4:HIGH:!MD5:!aNULL</code>.
-Consult the <a href="http://www.openssl.org/docs/apps/ciphers.html#CIPHER_LIST_FORMAT">OpenSSL cipher list format documentation</a> for details
-on the format.</p>
-<p><code>ECDHE-RSA-AES128-SHA256</code>, <code>DHE-RSA-AES128-SHA256</code> and
-<code>AES128-GCM-SHA256</code> are TLS v1.2 ciphers and used when Node.js is
-linked against OpenSSL 1.0.1 or newer, such as the bundled version
-of OpenSSL.  Note that it is still possible for a TLS v1.2 client
-to negotiate a weaker cipher unless <code>honorCipherOrder</code> is enabled.</p>
-<p><code>RC4</code> is used as a fallback for clients that speak on older version of
-the TLS protocol.  <code>RC4</code> has in recent years come under suspicion and
-should be considered compromised for anything that is truly sensitive.
-It is speculated that state-level actors possess the ability to break it.</p>
-<p><strong>NOTE</strong>: Previous revisions of this section suggested <code>AES256-SHA</code> as an
-acceptable cipher. Unfortunately, <code>AES256-SHA</code> is a CBC cipher and therefore
-susceptible to <a href="http://blog.ivanristic.com/2011/10/mitigating-the-beast-attack-on-tls.html">BEAST attacks</a>. Do <em>not</em> use it.</p>
+<li><p><code>ciphers</code>: A string describing the ciphers to use or exclude, separated by
+<code>:</code>. The default cipher suite is:</p>
+<pre><code>ECDHE-RSA-AES128-GCM-SHA256:
+ECDHE-ECDSA-AES128-GCM-SHA256:
+ECDHE-RSA-AES256-GCM-SHA384:
+ECDHE-ECDSA-AES256-GCM-SHA384:
+DHE-RSA-AES128-GCM-SHA256:
+ECDHE-RSA-AES128-SHA256:
+DHE-RSA-AES128-SHA256:
+ECDHE-RSA-AES256-SHA384:
+DHE-RSA-AES256-SHA384:
+ECDHE-RSA-AES256-SHA256:
+DHE-RSA-AES256-SHA256:
+HIGH:
+!aNULL:
+!eNULL:
+!EXPORT:
+!DES:
+!RC4:
+!MD5:
+!PSK:
+!SRP:
+!CAMELLIA</code></pre>
+<p>The default cipher suite prefers GCM ciphers for <a href="http://www.chromium.org/Home/chromium-security/education/tls#TOC-Deprecation-of-TLS-Features-Algorithms-in-Chrome">Chrome&apos;s &apos;modern
+cryptography&apos; setting</a> and also prefers ECDHE and DHE ciphers for Perfect
+Forward secrecy, while offering <em>some</em> backward compatibiltity.</p>
+<p>128 bit AES is preferred over 192 and 256 bit AES in light of <a href="https://www.schneier.com/blog/archives/2009/07/another_new_aes.html">specific
+attacks affecting larger AES key sizes</a>.</p>
+<p>Old clients that rely on insecure and deprecated RC4 or DES-based ciphers
+(like Internet Explorer 6) aren&apos;t able to complete the handshake with the default
+configuration. If you absolutely must support these clients, the
+<a href="https://wiki.mozilla.org/Security/Server_Side_TLS">TLS recommendations</a> may offer a compatible cipher suite. For more details
+on the format, see the <a href="http://www.openssl.org/docs/apps/ciphers.html#CIPHER_LIST_FORMAT">OpenSSL cipher list format documentation</a>.</p>
 </li>
 <li><p><code>ecdhCurve</code>: A string describing a named curve to use for ECDH key agreement
 or false to disable ECDH.</p>
-<p>Defaults to <code>prime256v1</code>. Consult <a href="http://www.rfc-editor.org/rfc/rfc4492.txt">RFC 4492</a> for more details.</p>
+<p>Defaults to <code>prime256v1</code> (NIST P-256). Use <a href="crypto.html#crypto_crypto_getcurves">crypto.getCurves()</a> to obtain
+a list of available curve names. On recent releases,
+<code>openssl ecparam -list_curves</code> will also display the name and description of
+each available elliptic curve.</p>
 </li>
-<li><p><code>dhparam</code>: DH parameter file to use for DHE key agreement. Use
-<code>openssl dhparam</code> command to create it. If the file is invalid to
-load, it is silently discarded.</p>
+<li><p><code>dhparam</code>: A string or <code>Buffer</code> containing Diffie Hellman parameters,
+required for Perfect Forward Secrecy. Use <code>openssl dhparam</code> to create it.
+Its key length should be greater than or equal to 1024 bits, otherwise
+it throws an error. It is strongly recommended to use 2048 bits or
+more for stronger security. If omitted or invalid, it is silently
+discarded and DHE ciphers won&apos;t be available.</p>
 </li>
 <li><p><code>handshakeTimeout</code>: Abort the connection if the SSL/TLS handshake does not
 finish in this many milliseconds. The default is 120 seconds.</p>
@@ -336,13 +385,7 @@ finish in this many milliseconds. The default is 120 seconds.</p>
 times out.</p>
 </li>
 <li><p><code>honorCipherOrder</code> : When choosing a cipher, use the server&apos;s preferences
-instead of the client preferences.</p>
-<p>Although, this option is disabled by default, it is <em>recommended</em> that you
-use this option in conjunction with the <code>ciphers</code> option to mitigate
-BEAST attacks.</p>
-<p>Note: If SSLv2 is used, the server will send its list of preferences to the
-client, and the client chooses the cipher.  Support for SSLv2 is disabled
-unless node.js was configured with <code>./configure --with-sslv2</code>.</p>
+instead of the client preferences. Default: <code>true</code>.</p>
 </li>
 <li><p><code>requestCert</code>: If <code>true</code> the server will request a certificate from
 clients that connect and attempt to verify that certificate. Default:
@@ -352,12 +395,14 @@ clients that connect and attempt to verify that certificate. Default:
 which is not authorized with the list of supplied CAs. This option only
 has an effect if <code>requestCert</code> is <code>true</code>. Default: <code>false</code>.</p>
 </li>
-<li><p><code>checkServerIdentity(servername, cert)</code>: Provide an override for checking
-server&apos;s hostname against the certificate. Should return an error if verification
-fails. Return <code>undefined</code> if passing.</p>
-</li>
 <li><p><code>NPNProtocols</code>: An array or <code>Buffer</code> of possible NPN protocols. (Protocols
 should be ordered by their priority).</p>
+</li>
+<li><p><code>ALPNProtocols</code>: An array or <code>Buffer</code> of possible ALPN
+protocols. (Protocols should be ordered by their priority). When
+the server receives both NPN and ALPN extensions from the client,
+ALPN takes precedence over NPN and the server does not send an NPN
+extension to the client.</p>
 </li>
 <li><p><code>SNICallback(servername, cb)</code>: A function that will be called if client
 supports SNI TLS extension. Two argument will be passed to it: <code>servername</code>,
@@ -383,10 +428,6 @@ generated from command-line. Otherwise, the default is not provided.</p>
 <li><p><code>secureProtocol</code>: The SSL method to use, e.g. <code>SSLv3_method</code> to force
 SSL version 3. The possible values depend on your installation of
 OpenSSL and are defined in the constant <a href="http://www.openssl.org/docs/ssl/ssl.html#DEALING_WITH_PROTOCOL_METHODS">SSL_METHODS</a>.</p>
-</li>
-<li><p><code>secureOptions</code>: Set server options. For example, to disable the SSLv3
-protocol set the <code>SSL_OP_NO_SSLv3</code> flag. See <a href="https://www.openssl.org/docs/ssl/SSL_CTX_set_options.html">SSL_CTX_set_options</a>
-for all available options.</p>
 </li>
 </ul>
 <p>Here is a simple example echo server:
@@ -464,17 +505,6 @@ are ignored.</p>
 <li><p><code>path</code>: Creates unix socket connection to path. If this option is
 specified, <code>host</code> and <code>port</code> are ignored.</p>
 </li>
-<li><p><code>ciphers</code>: A string describing the ciphers to use or exclude.</p>
-<p>Defaults to
-<code>ECDHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA256:AES128-GCM-SHA256:HIGH:!RC4:!MD5:!aNULL</code>.
-Consult the <a href="http://www.openssl.org/docs/apps/ciphers.html#CIPHER_LIST_FORMAT">OpenSSL cipher list format documentation</a> for details
-on the format.</p>
-<p>The full list of available ciphers can be obtained via <a href="#tls_tls_getciphers">tls.getCiphers</a>.</p>
-<p><code>ECDHE-RSA-AES128-SHA256</code>, <code>DHE-RSA-AES128-SHA256</code> and
-<code>AES128-GCM-SHA256</code> are TLS v1.2 ciphers and used when Node.js is
-linked against OpenSSL 1.0.1 or newer, such as the bundled version
-of OpenSSL.</p>
-</li>
 <li><p><code>pfx</code>: A string or <code>Buffer</code> containing the private key, certificate and
 CA certs of the client in PFX or PKCS12 format.</p>
 </li>
@@ -490,22 +520,41 @@ PEM format. (Could be an array of certs).</p>
 format. If this is omitted several well known &quot;root&quot; CAs will be used,
 like VeriSign. These are used to authorize connections.</p>
 </li>
+<li><p><code>ciphers</code>: A string describing the ciphers to use or exclude, separated by
+<code>:</code>. Uses the same default cipher suite as <code>tls.createServer</code>.</p>
+</li>
 <li><p><code>rejectUnauthorized</code>: If <code>true</code>, the server certificate is verified against
 the list of supplied CAs. An <code>&apos;error&apos;</code> event is emitted if verification
 fails; <code>err.code</code> contains the OpenSSL error code. Default: <code>true</code>.</p>
 </li>
 <li><p><code>NPNProtocols</code>: An array of strings or <code>Buffer</code>s containing supported NPN
-protocols. <code>Buffer</code>s should have following format: <code>0x05hello0x05world</code>,
-where first byte is next protocol name&apos;s length. (Passing array should
-usually be much simpler: <code>[&apos;hello&apos;, &apos;world&apos;]</code>.)</p>
+protocols. <code>Buffer</code>s should have the following format:
+<code>0x05hello0x05world</code>, where first byte is next protocol name&apos;s
+length. (Passing array should usually be much simpler:
+<code>[&apos;hello&apos;, &apos;world&apos;]</code>.)</p>
+</li>
+<li><p><code>ALPNProtocols</code>: An array of strings or <code>Buffer</code>s containing
+supported ALPN protocols. <code>Buffer</code>s should have following format:
+<code>0x05hello0x05world</code>, where the first byte is the next protocol
+name&apos;s length. (Passing array should usually be much simpler:
+<code>[&apos;hello&apos;, &apos;world&apos;]</code>.)</p>
 </li>
 <li><p><code>servername</code>: Servername for SNI (Server Name Indication) TLS extension.</p>
+</li>
+<li><p><code>checkServerIdentity(servername, cert)</code>: Provide an override for checking
+server&apos;s hostname against the certificate. Should return an error if verification
+fails. Return <code>undefined</code> if passing.</p>
 </li>
 <li><p><code>secureProtocol</code>: The SSL method to use, e.g. <code>SSLv3_method</code> to force
 SSL version 3. The possible values depend on your installation of
 OpenSSL and are defined in the constant <a href="http://www.openssl.org/docs/ssl/ssl.html#DEALING_WITH_PROTOCOL_METHODS">SSL_METHODS</a>.</p>
 </li>
 <li><p><code>session</code>: A <code>Buffer</code> instance, containing TLS session.</p>
+</li>
+<li><p><code>minDHSize</code>: Minimum size of DH parameter in bits to accept a TLS
+connection. When a server offers DH parameter with a size less
+than this, the TLS connection is destroyed and throws an
+error. Default: 1024.</p>
 </li>
 </ul>
 <p>The <code>callback</code> parameter will be added as a listener for the
@@ -571,29 +620,32 @@ socket.on(&apos;end&apos;, function() {
 routines to perform transparent encryption/decryption of incoming/outgoing data.
 
 </p>
-<h2>new tls.TLSSocket(socket, options)<span><a class="mark" href="#tls_new_tls_tlssocket_socket_options" id="tls_new_tls_tlssocket_socket_options">#</a></span></h2>
+<h2>new tls.TLSSocket(socket[, options])<span><a class="mark" href="#tls_new_tls_tlssocket_socket_options" id="tls_new_tls_tlssocket_socket_options">#</a></span></h2>
 <p>Construct a new TLSSocket object from existing TCP socket.
 
 </p>
 <p><code>socket</code> is an instance of <a href="net.html#net_class_net_socket">net.Socket</a>
 
 </p>
-<p><code>options</code> is an object that might contain following properties:
+<p><code>options</code> is an optional object that might contain following properties:
 
 </p>
 <ul>
 <li><p><code>secureContext</code>: An optional TLS context object from
  <code>tls.createSecureContext( ... )</code></p>
 </li>
-<li><p><code>isServer</code>: If true - TLS socket will be instantiated in server-mode</p>
+<li><p><code>isServer</code>: If <code>true</code> - TLS socket will be instantiated in server-mode.
+Default: <code>false</code></p>
 </li>
 <li><p><code>server</code>: An optional <a href="net.html#net_class_net_server">net.Server</a> instance</p>
 </li>
-<li><p><code>requestCert</code>: Optional, see <a href="#tls_tls_createsecurepair_credentials_isserver_requestcert_rejectunauthorized">tls.createSecurePair</a></p>
+<li><p><code>requestCert</code>: Optional, see <a href="#tls_tls_createsecurepair_context_isserver_requestcert_rejectunauthorized">tls.createSecurePair</a></p>
 </li>
-<li><p><code>rejectUnauthorized</code>: Optional, see <a href="#tls_tls_createsecurepair_credentials_isserver_requestcert_rejectunauthorized">tls.createSecurePair</a></p>
+<li><p><code>rejectUnauthorized</code>: Optional, see <a href="#tls_tls_createsecurepair_context_isserver_requestcert_rejectunauthorized">tls.createSecurePair</a></p>
 </li>
 <li><p><code>NPNProtocols</code>: Optional, see <a href="#tls_tls_createserver_options_secureconnectionlistener">tls.createServer</a></p>
+</li>
+<li><p><code>ALPNProtocols</code>: Optional, see <a href="#tls_tls_createserver_options_secureconnectionlistener">tls.createServer</a></p>
 </li>
 <li><p><code>SNICallback</code>: Optional, see <a href="#tls_tls_createserver_options_secureconnectionlistener">tls.createServer</a></p>
 </li>
@@ -612,7 +664,10 @@ dictionary with keys:
 <ul>
 <li><code>pfx</code> : A string or buffer holding the PFX or PKCS12 encoded private
 key, certificate and CA certificates</li>
-<li><code>key</code> : A string holding the PEM encoded private key</li>
+<li><code>key</code>: A string or <code>Buffer</code> containing the private key of the server in
+PEM format. To support multiple keys using different algorithms, an array
+can be provided. It can either be a plain array of keys, or an array of
+objects in the format <code>{pem: key, passphrase: passphrase}</code>. (Required)</li>
 <li><code>passphrase</code> : A string of passphrase for the private key or pfx</li>
 <li><code>cert</code> : A string holding the PEM encoded certificate</li>
 <li><code>ca</code> : Either a string or list of strings of PEM encoded CA
@@ -627,14 +682,14 @@ for details on the format.</li>
 instead of the client preferences. For further details see <code>tls</code> module
 documentation.</li>
 </ul>
-<p>If no &apos;ca&apos; details are given, then node.js will use the default
+<p>If no &apos;ca&apos; details are given, then Node.js will use the default
 publicly trusted list of CAs as given in
 </p>
 <p><a href="http://mxr.mozilla.org/mozilla/source/security/nss/lib/ckfw/builtins/certdata.txt">http://mxr.mozilla.org/mozilla/source/security/nss/lib/ckfw/builtins/certdata.txt</a>.
 
 
 </p>
-<h2>tls.createSecurePair([context][, isServer][, requestCert][, rejectUnauthorized])<span><a class="mark" href="#tls_tls_createsecurepair_context_isserver_requestcert_rejectunauthorized" id="tls_tls_createsecurepair_context_isserver_requestcert_rejectunauthorized">#</a></span></h2>
+<h2>tls.createSecurePair([context][, isServer][, requestCert][, rejectUnauthorized][, options])<span><a class="mark" href="#tls_tls_createsecurepair_context_isserver_requestcert_rejectunauthorized_options" id="tls_tls_createsecurepair_context_isserver_requestcert_rejectunauthorized_options">#</a></span></h2>
 <p>Creates a new secure pair object with two streams, one of which reads/writes
 encrypted data, and one reads/writes cleartext data.
 Generally the encrypted one is piped to/from an incoming encrypted data stream,
@@ -653,6 +708,8 @@ certificate from a connecting client. Only applies to server connections.</p>
 <li><p><code>rejectUnauthorized</code>: A boolean indicating whether a server should
 automatically reject clients with invalid certificates. Only applies to
 servers with <code>requestCert</code> enabled.</p>
+</li>
+<li><p><code>options</code>: An object with common SSL options. See <a href="#tls_class_tls_tlssocket">tls.TLSSocket</a>.</p>
 </li>
 </ul>
 <p><code>tls.createSecurePair()</code> returns a SecurePair object with <code>cleartext</code> and
@@ -697,8 +754,16 @@ server. If <code>socket.authorized</code> is false, then
 <code>socket.authorizationError</code> is set to describe how authorization
 failed. Implied but worth mentioning: depending on the settings of the TLS
 server, you unauthorized connections may be accepted.
-<code>socket.npnProtocol</code> is a string containing selected NPN protocol.
-<code>socket.servername</code> is a string containing servername requested with
+
+</p>
+<p><code>socket.npnProtocol</code> is a string containing the selected NPN protocol
+and <code>socket.alpnProtocol</code> is a string containing the selected ALPN
+protocol, When both NPN and ALPN extensions are received, ALPN takes
+precedence over NPN and the next protocol is selected by ALPN. When
+ALPN has no selected protocol, this returns false.
+
+</p>
+<p><code>socket.servername</code> is a string containing servername requested with
 SNI.
 
 
@@ -743,8 +808,18 @@ perform lookup in external storage using given <code>sessionId</code>, and invok
 <p>NOTE: adding this event listener will have an effect only on connections
 established after addition of event listener.
 
+</p>
+<p>Here&apos;s an example for using TLS session resumption:
 
 </p>
+<pre><code>var tlsSessionStore = {};
+server.on(&apos;newSession&apos;, function(id, data, cb) {
+  tlsSessionStore[id.toString(&apos;hex&apos;)] = data;
+  cb();
+});
+server.on(&apos;resumeSession&apos;, function(id, cb) {
+  cb(null, tlsSessionStore[id.toString(&apos;hex&apos;)] || null);
+});</code></pre>
 <h3>Event: &apos;OCSPRequest&apos;<span><a class="mark" href="#tls_event_ocsprequest" id="tls_event_ocsprequest">#</a></span></h3>
 <p><code>function (certificate, issuer, callback) { }</code>
 
@@ -792,10 +867,11 @@ certificates.
 
 
 </p>
-<h3>server.listen(port[, host][, callback])<span><a class="mark" href="#tls_server_listen_port_host_callback" id="tls_server_listen_port_host_callback">#</a></span></h3>
-<p>Begin accepting connections on the specified <code>port</code> and <code>host</code>.  If the
-<code>host</code> is omitted, the server will accept connections directed to any
-IPv4 address (<code>INADDR_ANY</code>).
+<h3>server.listen(port[, hostname][, callback])<span><a class="mark" href="#tls_server_listen_port_hostname_callback" id="tls_server_listen_port_hostname_callback">#</a></span></h3>
+<p>Begin accepting connections on the specified <code>port</code> and <code>hostname</code>. If the
+<code>hostname</code> is omitted, the server will accept connections on any IPv6 address
+(<code>::</code>) when IPv6 is available, or any IPv4 address (<code>0.0.0.0</code>) otherwise. A
+port value of zero will assign a random port.
 
 </p>
 <p>This function is asynchronous. The last parameter <code>callback</code> will be called
@@ -806,16 +882,33 @@ when the server has been bound.
 
 
 </p>
-<h3>server.close()<span><a class="mark" href="#tls_server_close" id="tls_server_close">#</a></span></h3>
+<h3>server.close([callback])<span><a class="mark" href="#tls_server_close_callback" id="tls_server_close_callback">#</a></span></h3>
 <p>Stops the server from accepting new connections. This function is
 asynchronous, the server is finally closed when the server emits a <code>&apos;close&apos;</code>
-event.
+event.  Optionally, you can pass a callback to listen for the <code>&apos;close&apos;</code> event.
 
 </p>
 <h3>server.address()<span><a class="mark" href="#tls_server_address" id="tls_server_address">#</a></span></h3>
 <p>Returns the bound address, the address family name and port of the
 server as reported by the operating system.  See <a href="net.html#net_server_address">net.Server.address()</a> for
 more information.
+
+</p>
+<h3>server.getTicketKeys()<span><a class="mark" href="#tls_server_getticketkeys" id="tls_server_getticketkeys">#</a></span></h3>
+<p>Returns <code>Buffer</code> instance holding the keys currently used for
+encryption/decryption of the <a href="https://www.ietf.org/rfc/rfc5077.txt">TLS Session Tickets</a>
+
+</p>
+<h3>server.setTicketKeys(keys)<span><a class="mark" href="#tls_server_setticketkeys_keys" id="tls_server_setticketkeys_keys">#</a></span></h3>
+<p>Updates the keys for encryption/decryption of the <a href="https://www.ietf.org/rfc/rfc5077.txt">TLS Session Tickets</a>.
+
+</p>
+<p>NOTE: the buffer should be 48 bytes long. See server <code>ticketKeys</code> option for
+more information oh how it is going to be used.
+
+</p>
+<p>NOTE: the change is effective only for the future server connections. Existing
+or currently pending server connections will use previous keys.
 
 </p>
 <h3>server.addContext(hostname, context)<span><a class="mark" href="#tls_server_addcontext_hostname_context" id="tls_server_addcontext_hostname_context">#</a></span></h3>
@@ -836,7 +929,7 @@ gets high.
 
 </p>
 <h2>Class: CryptoStream<span><a class="mark" href="#tls_class_cryptostream" id="tls_class_cryptostream">#</a></span></h2>
-<pre class="api_stability_0">Stability: 0 - Deprecated. Use tls.TLSSocket instead.</pre><p>This is an encrypted stream.
+<pre class="api_stability_0">Stability: 0 - Deprecated: Use <a href="#tls_class_tls_tlssocket">tls.TLSSocket</a> instead.</pre><p>This is an encrypted stream.
 
 </p>
 <h3>cryptoStream.bytesWritten<span><a class="mark" href="#tls_cryptostream_byteswritten" id="tls_cryptostream_byteswritten">#</a></span></h3>
@@ -859,8 +952,9 @@ The listener will be called no matter if the server&apos;s certificate was
 authorized or not. It is up to the user to test <code>tlsSocket.authorized</code>
 to see if the server certificate was signed by one of the specified CAs.
 If <code>tlsSocket.authorized === false</code> then the error can be found in
-<code>tlsSocket.authorizationError</code>. Also if NPN was used - you can check
-<code>tlsSocket.npnProtocol</code> for negotiated protocol.
+<code>tlsSocket.authorizationError</code>. Also if ALPN or NPN was used - you can
+check <code>tlsSocket.alpnProtocol</code> or <code>tlsSocket.npnProtocol</code> for the
+negotiated protocol.
 
 </p>
 <h3>Event: &apos;OCSPResponse&apos;<span><a class="mark" href="#tls_event_ocspresponse" id="tls_event_ocspresponse">#</a></span></h3>
@@ -939,6 +1033,19 @@ protocol version of the current connection.
 information.
 
 </p>
+<h3>tlsSocket.getEphemeralKeyInfo()<span><a class="mark" href="#tls_tlssocket_getephemeralkeyinfo" id="tls_tlssocket_getephemeralkeyinfo">#</a></span></h3>
+<p>Returns an object representing a type, name and size of parameter of
+an ephemeral key exchange in <a href="#tls_perfect_forward_secrecy">Perfect forward Secrecy</a> on a client
+connection. It returns an empty object when the key exchange is not
+ephemeral. As it is only supported on a client socket, it returns null
+if this is called on a server socket. The supported types are &apos;DH&apos; and
+&apos;ECDH&apos;. The <code>name</code> property is only available in &apos;ECDH&apos;.
+
+</p>
+<p>Example:
+
+</p>
+<pre><code>{ type: &apos;ECDH&apos;, name: &apos;prime256v1&apos;, size: 256 }</code></pre>
 <h3>tlsSocket.renegotiate(options, callback)<span><a class="mark" href="#tls_tlssocket_renegotiate_options_callback" id="tls_tlssocket_renegotiate_options_callback">#</a></span></h3>
 <p>Initiate TLS renegotiation process. The <code>options</code> may contain the following
 fields: <code>rejectUnauthorized</code>, <code>requestCert</code> (See <a href="#tls_tls_createserver_options_secureconnectionlistener">tls.createServer</a>
@@ -1009,50 +1116,12 @@ object with three properties, e.g.
 
 </p>
 
-          </div>
-        </div>
-    </div>
-    </div>
-    <div id="footer">
-      <div class="foot-1">
-        <a href="http://www.joyent.com"><h5>The Node.js Project is Sponsored by</h5>
-        
-        <p class="tag">Production Node +<br>High Performance Infrastructure</p></a>
-        <a href="https://my.joyent.com/landing/signup/701800000015696" class="button getstarted">Get Started</a>
-      </div>
-      <div class="foot-2">
-        <div class="foot-nav">
-          <ul>
-            <li><a href="http://nodejs.org/download/">Downloads</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/documentation/">Documentation</a></li>
-            <li><a href="http://nodejs.org/api/">API Docs</a></li>
-            <li><a href="http://nodejs.org/documentation/tutorials/">Tutorials</a></li>
-            <li><a href="http://nodejs.org/documentation/localization/">Localization</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/community/">Community</a></li>
-            <li><a href="https://github.com/joyent/node/issues">Github Issues</a></li>
-            <li><a href="http://groups.google.com/group/nodejs">Mailing List</a></li>
-            <li><a href="http://webchat.freenode.net/?channels=node.js">IRC</a></li>
-            <li><a href="https://twitter.com/nodejs">Twitter</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/about/">About</a></li>
-            <li><a href="http://nodejs.org/about/organization/">Organization</a></li>
-            <li><a href="http://nodejs.org/about/core-team/">Core Team</a></li>
-            <li><a href="http://nodejs.org/about/resources/">Resources</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://blog.nodejs.org">Blog</a></li>
-          </ul>
-        </div>
-        <p class="copyright">Copyright 2014 <a href="http://joyent.com/">Joyent, Inc</a>, Node.js is a <a href="https://nodejs.org/images/trademark-policy.pdf">trademark</a> of Joyent, Inc. <a href="https://raw.github.com/joyent/node/v0.12.7/LICENSE">View license</a>.</p>
       </div>
     </div>
+  </div>
+  <div id="footer">
+  </div>
 
-  
   
   
   

@@ -2,55 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Path Node.js v0.12.7 Manual &amp; Documentation</title>
+  <title>Path Node.js v5.0.0 Manual &amp; Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/sh.css">
-  <link rel="canonical" href="http://nodejs.org/api/path.html">
-  
-  
+  <link rel="canonical" href="https://nodejs.org/api/path.html">
 </head>
-<body class="alt apidoc int docs" id="docs">
-    <div id="nav">
-      
-      <ul>
-        <li><a href="http://nodejs.org">Home</a></li>
-        <li><a href="http://nodejs.org/download/">Downloads</a></li>
-        <li class="active"><a href="http://nodejs.org/documentation/">Docs</a></li>
-        <li><a href="http://nodejs.org/community/">Community</a></li>
-        <li><a href="http://nodejs.org/about/">About</a></li>
-        <li><a href="http://jobs.nodejs.org">Jobs</a></li>
-        <li><a href="http://blog.nodejs.org">Blog</a></li>
-      </ul>
-    </div>
-    <div id="content-wrap">
-    <div id="content" class="clearfix">
-      <div id="column2" class="interior">
-        <!--<img src="/images/logo-light.svg" alt="node.js" width="170">-->
-        <ul class="docs-nav">
-          <li><a href="http://nodejs.org/documentation/">About Docs</a></li>
-          <li><a href="http://nodejs.org/documentation/tutorials/">Tutorials</a></li>
-          <li><a href="http://nodejs.org/documentation/contributing/">Contributing</a></li>
-          <li><a href="http://nodejs.org/documentation/workflow/">Workflow</a></li>
-          <li><a href="http://nodejs.org/documentation/localization/">Localization</a></li>
-          <li class="active"><a href="http://nodejs.org/api/">API Docs</a></li>
-        </ul>
+<body class="alt apidoc" id="api-section-path">
+  <div id="content" class="clearfix">
+    <div id="column2" class="interior">
+      <div id="intro" class="interior">
+        <a href="/" title="Go back to the home page">
+          Node.js (1)
+        </a>
       </div>
-        <div id="column1" class="interior">
-          <header>
-            <h1>Node.js v0.12.7 Manual &amp; Documentation</h1>
-            <div id="gtoc">
-              <p>
-                <a href="index.html" name="toc">Index</a> |
-                <a href="all.html">View on single page</a> |
-                <a href="path.json">View as JSON</a>
-              </p>
-            </div>
-            <hr>
-          </header>
+      <ul>
+<li><a class="nav-documentation" href="documentation.html">About these Docs</a></li>
+<li><a class="nav-synopsis" href="synopsis.html">Synopsis</a></li>
+<li><a class="nav-assert" href="assert.html">Assertion Testing</a></li>
+<li><a class="nav-buffer" href="buffer.html">Buffer</a></li>
+<li><a class="nav-addons" href="addons.html">C/C++ Addons</a></li>
+<li><a class="nav-child_process" href="child_process.html">Child Processes</a></li>
+<li><a class="nav-cluster" href="cluster.html">Cluster</a></li>
+<li><a class="nav-console" href="console.html">Console</a></li>
+<li><a class="nav-crypto" href="crypto.html">Crypto</a></li>
+<li><a class="nav-debugger" href="debugger.html">Debugger</a></li>
+<li><a class="nav-dns" href="dns.html">DNS</a></li>
+<li><a class="nav-domain" href="domain.html">Domain</a></li>
+<li><a class="nav-errors" href="errors.html">Errors</a></li>
+<li><a class="nav-events" href="events.html">Events</a></li>
+<li><a class="nav-fs" href="fs.html">File System</a></li>
+<li><a class="nav-globals" href="globals.html">Globals</a></li>
+<li><a class="nav-http" href="http.html">HTTP</a></li>
+<li><a class="nav-https" href="https.html">HTTPS</a></li>
+<li><a class="nav-modules" href="modules.html">Modules</a></li>
+<li><a class="nav-net" href="net.html">Net</a></li>
+<li><a class="nav-os" href="os.html">OS</a></li>
+<li><a class="nav-path active" href="path.html">Path</a></li>
+<li><a class="nav-process" href="process.html">Process</a></li>
+<li><a class="nav-punycode" href="punycode.html">Punycode</a></li>
+<li><a class="nav-querystring" href="querystring.html">Query Strings</a></li>
+<li><a class="nav-readline" href="readline.html">Readline</a></li>
+<li><a class="nav-repl" href="repl.html">REPL</a></li>
+<li><a class="nav-stream" href="stream.html">Stream</a></li>
+<li><a class="nav-string_decoder" href="string_decoder.html">String Decoder</a></li>
+<li><a class="nav-timers" href="timers.html">Timers</a></li>
+<li><a class="nav-tls" href="tls.html">TLS/SSL</a></li>
+<li><a class="nav-tty" href="tty.html">TTY</a></li>
+<li><a class="nav-dgram" href="dgram.html">UDP/Datagram</a></li>
+<li><a class="nav-url" href="url.html">URL</a></li>
+<li><a class="nav-util" href="util.html">Utilities</a></li>
+<li><a class="nav-v8" href="v8.html">V8</a></li>
+<li><a class="nav-vm" href="vm.html">VM</a></li>
+<li><a class="nav-zlib" href="zlib.html">ZLIB</a></li>
+</ul>
 
-          <div id="toc">
-            <h2>Table of Contents</h2>
-            <ul>
+    </div>
+
+    <div id="column1" data-id="path" class="interior">
+      <header>
+        <h1>Node.js v5.0.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="index.html" name="toc">Index</a> |
+            <a href="all.html">View on single page</a> |
+            <a href="path.json">View as JSON</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
 <li><a href="#path_path">Path</a><ul>
 <li><a href="#path_path_normalize_p">path.normalize(p)</a></li>
 <li><a href="#path_path_join_path1_path2">path.join([path1][, path2][, ...])</a></li>
@@ -70,11 +94,11 @@
 </li>
 </ul>
 
-          </div>
+      </div>
 
-          <div id="apicontent">
-            <h1>Path<span><a class="mark" href="#path_path" id="path_path">#</a></span></h1>
-<pre class="api_stability_3">Stability: 3 - Stable</pre><p>This module contains utilities for handling and transforming file
+      <div id="apicontent">
+        <h1>Path<span><a class="mark" href="#path_path" id="path_path">#</a></span></h1>
+<pre class="api_stability_2">Stability: 2 - Stable</pre><p>This module contains utilities for handling and transforming file
 paths.  Almost all these methods perform only string transformations.
 The file system is not consulted to check whether paths are valid.
 
@@ -97,6 +121,10 @@ On Windows backslashes are used.
 <pre><code>path.normalize(&apos;/foo/bar//baz/asdf/quux/..&apos;)
 // returns
 &apos;/foo/bar/baz/asdf&apos;</code></pre>
+<p><em>Note:</em> If the path string passed as argument is a zero-length string then <code>&apos;.&apos;</code>
+        will be returned, which represents the current working directory.
+
+</p>
 <h2>path.join([path1][, path2][, ...])<span><a class="mark" href="#path_path_join_path1_path2" id="path_path_join_path1_path2">#</a></span></h2>
 <p>Join all arguments together and normalize the resulting path.
 
@@ -115,6 +143,12 @@ silently ignored.  In v0.10 and up, an exception is thrown.
 path.join(&apos;foo&apos;, {}, &apos;bar&apos;)
 // throws exception
 TypeError: Arguments to path.join must be strings</code></pre>
+<p><em>Note:</em> If the arguments to <code>join</code> have zero-length strings, unlike other path
+        module functions, they will be ignored. If the joined path string is a
+        zero-length string then <code>&apos;.&apos;</code> will be returned, which represents the
+        current working directory.
+
+</p>
 <h2>path.resolve([from ...], to)<span><a class="mark" href="#path_path_resolve_from_to" id="path_path_resolve_from_to">#</a></span></h2>
 <p>Resolves <code>to</code> to an absolute path.
 
@@ -156,6 +190,10 @@ path.resolve(&apos;/foo/bar&apos;, &apos;/tmp/file/&apos;)
 path.resolve(&apos;wwwroot&apos;, &apos;static_files/png/&apos;, &apos;../gif/image.gif&apos;)
 // if currently in /home/myself/node, it returns
 &apos;/home/myself/node/wwwroot/static_files/gif/image.gif&apos;</code></pre>
+<p><em>Note:</em> If the arguments to <code>resolve</code> have zero-length strings then the current
+        working directory will be used instead of them.
+
+</p>
 <h2>path.isAbsolute(path)<span><a class="mark" href="#path_path_isabsolute_path" id="path_path_isabsolute_path">#</a></span></h2>
 <p>Determines whether <code>path</code> is an absolute path. An absolute path will always
 resolve to the same location, regardless of the working directory.
@@ -173,8 +211,13 @@ path.isAbsolute(&apos;.&apos;)        // false</code></pre>
 </p>
 <pre><code>path.isAbsolute(&apos;//server&apos;)  // true
 path.isAbsolute(&apos;C:/foo/..&apos;) // true
-path.isAbsolute(&apos;bar\\baz&apos;)   // false
+path.isAbsolute(&apos;bar\\baz&apos;)  // false
 path.isAbsolute(&apos;.&apos;)         // false</code></pre>
+<p><em>Note:</em> If the path string passed as parameter is a zero-length string, unlike
+        other path module functions, it will be used as-is and <code>false</code> will be
+        returned.
+
+</p>
 <h2>path.relative(from, to)<span><a class="mark" href="#path_path_relative_from_to" id="path_path_relative_from_to">#</a></span></h2>
 <p>Solve the relative path from <code>from</code> to <code>to</code>.
 
@@ -195,6 +238,11 @@ path from one to the other.  This is actually the reverse transform of
 path.relative(&apos;/data/orandea/test/aaa&apos;, &apos;/data/orandea/impl/bbb&apos;)
 // returns
 &apos;../../impl/bbb&apos;</code></pre>
+<p><em>Note:</em> If the arguments to <code>relative</code> have zero-length strings then the current
+        working directory will be used instead of the zero-length strings. If
+        both the paths are the same then a zero-length string will be returned.
+
+</p>
 <h2>path.dirname(p)<span><a class="mark" href="#path_path_dirname_p" id="path_path_dirname_p">#</a></span></h2>
 <p>Return the directory name of a path.  Similar to the Unix <code>dirname</code> command.
 
@@ -240,6 +288,10 @@ path.extname(&apos;index.&apos;)
 
 path.extname(&apos;index&apos;)
 // returns
+&apos;&apos;
+
+path.extname(&apos;.index&apos;)
+// returns
 &apos;&apos;</code></pre>
 <h2>path.sep<span><a class="mark" href="#path_path_sep" id="path_path_sep">#</a></span></h2>
 <p>The platform-specific file separator. <code>&apos;\\&apos;</code> or <code>&apos;/&apos;</code>.
@@ -274,11 +326,11 @@ process.env.PATH.split(path.delimiter)
 
 </p>
 <pre><code>console.log(process.env.PATH)
-// &apos;C:\Windows\system32;C:\Windows;C:\Program Files\nodejs\&apos;
+// &apos;C:\Windows\system32;C:\Windows;C:\Program Files\node\&apos;
 
 process.env.PATH.split(path.delimiter)
 // returns
-[&apos;C:\Windows\system32&apos;, &apos;C:\Windows&apos;, &apos;C:\Program Files\nodejs\&apos;]</code></pre>
+[&apos;C:\\Windows\\system32&apos;, &apos;C:\\Windows&apos;, &apos;C:\\Program Files\\node\\&apos;]</code></pre>
 <h2>path.parse(pathString)<span><a class="mark" href="#path_path_parse_pathstring" id="path_path_parse_pathstring">#</a></span></h2>
 <p>Returns an object from a path string.
 
@@ -301,8 +353,8 @@ process.env.PATH.split(path.delimiter)
 <pre><code>path.parse(&apos;C:\\path\\dir\\index.html&apos;)
 // returns
 {
-    root : &quot;C:\&quot;,
-    dir : &quot;C:\path\dir&quot;,
+    root : &quot;C:\\&quot;,
+    dir : &quot;C:\\path\\dir&quot;,
     base : &quot;index.html&quot;,
     ext : &quot;.html&quot;,
     name : &quot;index&quot;
@@ -330,50 +382,12 @@ compatible way.
 compatible way.
 </p>
 
-          </div>
-        </div>
-    </div>
-    </div>
-    <div id="footer">
-      <div class="foot-1">
-        <a href="http://www.joyent.com"><h5>The Node.js Project is Sponsored by</h5>
-        
-        <p class="tag">Production Node +<br>High Performance Infrastructure</p></a>
-        <a href="https://my.joyent.com/landing/signup/701800000015696" class="button getstarted">Get Started</a>
-      </div>
-      <div class="foot-2">
-        <div class="foot-nav">
-          <ul>
-            <li><a href="http://nodejs.org/download/">Downloads</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/documentation/">Documentation</a></li>
-            <li><a href="http://nodejs.org/api/">API Docs</a></li>
-            <li><a href="http://nodejs.org/documentation/tutorials/">Tutorials</a></li>
-            <li><a href="http://nodejs.org/documentation/localization/">Localization</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/community/">Community</a></li>
-            <li><a href="https://github.com/joyent/node/issues">Github Issues</a></li>
-            <li><a href="http://groups.google.com/group/nodejs">Mailing List</a></li>
-            <li><a href="http://webchat.freenode.net/?channels=node.js">IRC</a></li>
-            <li><a href="https://twitter.com/nodejs">Twitter</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/about/">About</a></li>
-            <li><a href="http://nodejs.org/about/organization/">Organization</a></li>
-            <li><a href="http://nodejs.org/about/core-team/">Core Team</a></li>
-            <li><a href="http://nodejs.org/about/resources/">Resources</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://blog.nodejs.org">Blog</a></li>
-          </ul>
-        </div>
-        <p class="copyright">Copyright 2014 <a href="http://joyent.com/">Joyent, Inc</a>, Node.js is a <a href="https://nodejs.org/images/trademark-policy.pdf">trademark</a> of Joyent, Inc. <a href="https://raw.github.com/joyent/node/v0.12.7/LICENSE">View license</a>.</p>
       </div>
     </div>
+  </div>
+  <div id="footer">
+  </div>
 
-  
   
   
   

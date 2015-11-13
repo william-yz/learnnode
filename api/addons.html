@@ -2,55 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Addons Node.js v0.12.7 Manual &amp; Documentation</title>
+  <title>Addons Node.js v5.0.0 Manual &amp; Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/sh.css">
-  <link rel="canonical" href="http://nodejs.org/api/addons.html">
-  
-  
+  <link rel="canonical" href="https://nodejs.org/api/addons.html">
 </head>
-<body class="alt apidoc int docs" id="docs">
-    <div id="nav">
-      
-      <ul>
-        <li><a href="http://nodejs.org">Home</a></li>
-        <li><a href="http://nodejs.org/download/">Downloads</a></li>
-        <li class="active"><a href="http://nodejs.org/documentation/">Docs</a></li>
-        <li><a href="http://nodejs.org/community/">Community</a></li>
-        <li><a href="http://nodejs.org/about/">About</a></li>
-        <li><a href="http://jobs.nodejs.org">Jobs</a></li>
-        <li><a href="http://blog.nodejs.org">Blog</a></li>
-      </ul>
-    </div>
-    <div id="content-wrap">
-    <div id="content" class="clearfix">
-      <div id="column2" class="interior">
-        <!--<img src="/images/logo-light.svg" alt="node.js" width="170">-->
-        <ul class="docs-nav">
-          <li><a href="http://nodejs.org/documentation/">About Docs</a></li>
-          <li><a href="http://nodejs.org/documentation/tutorials/">Tutorials</a></li>
-          <li><a href="http://nodejs.org/documentation/contributing/">Contributing</a></li>
-          <li><a href="http://nodejs.org/documentation/workflow/">Workflow</a></li>
-          <li><a href="http://nodejs.org/documentation/localization/">Localization</a></li>
-          <li class="active"><a href="http://nodejs.org/api/">API Docs</a></li>
-        </ul>
+<body class="alt apidoc" id="api-section-addons">
+  <div id="content" class="clearfix">
+    <div id="column2" class="interior">
+      <div id="intro" class="interior">
+        <a href="/" title="Go back to the home page">
+          Node.js (1)
+        </a>
       </div>
-        <div id="column1" class="interior">
-          <header>
-            <h1>Node.js v0.12.7 Manual &amp; Documentation</h1>
-            <div id="gtoc">
-              <p>
-                <a href="index.html" name="toc">Index</a> |
-                <a href="all.html">View on single page</a> |
-                <a href="addons.json">View as JSON</a>
-              </p>
-            </div>
-            <hr>
-          </header>
+      <ul>
+<li><a class="nav-documentation" href="documentation.html">About these Docs</a></li>
+<li><a class="nav-synopsis" href="synopsis.html">Synopsis</a></li>
+<li><a class="nav-assert" href="assert.html">Assertion Testing</a></li>
+<li><a class="nav-buffer" href="buffer.html">Buffer</a></li>
+<li><a class="nav-addons active" href="addons.html">C/C++ Addons</a></li>
+<li><a class="nav-child_process" href="child_process.html">Child Processes</a></li>
+<li><a class="nav-cluster" href="cluster.html">Cluster</a></li>
+<li><a class="nav-console" href="console.html">Console</a></li>
+<li><a class="nav-crypto" href="crypto.html">Crypto</a></li>
+<li><a class="nav-debugger" href="debugger.html">Debugger</a></li>
+<li><a class="nav-dns" href="dns.html">DNS</a></li>
+<li><a class="nav-domain" href="domain.html">Domain</a></li>
+<li><a class="nav-errors" href="errors.html">Errors</a></li>
+<li><a class="nav-events" href="events.html">Events</a></li>
+<li><a class="nav-fs" href="fs.html">File System</a></li>
+<li><a class="nav-globals" href="globals.html">Globals</a></li>
+<li><a class="nav-http" href="http.html">HTTP</a></li>
+<li><a class="nav-https" href="https.html">HTTPS</a></li>
+<li><a class="nav-modules" href="modules.html">Modules</a></li>
+<li><a class="nav-net" href="net.html">Net</a></li>
+<li><a class="nav-os" href="os.html">OS</a></li>
+<li><a class="nav-path" href="path.html">Path</a></li>
+<li><a class="nav-process" href="process.html">Process</a></li>
+<li><a class="nav-punycode" href="punycode.html">Punycode</a></li>
+<li><a class="nav-querystring" href="querystring.html">Query Strings</a></li>
+<li><a class="nav-readline" href="readline.html">Readline</a></li>
+<li><a class="nav-repl" href="repl.html">REPL</a></li>
+<li><a class="nav-stream" href="stream.html">Stream</a></li>
+<li><a class="nav-string_decoder" href="string_decoder.html">String Decoder</a></li>
+<li><a class="nav-timers" href="timers.html">Timers</a></li>
+<li><a class="nav-tls" href="tls.html">TLS/SSL</a></li>
+<li><a class="nav-tty" href="tty.html">TTY</a></li>
+<li><a class="nav-dgram" href="dgram.html">UDP/Datagram</a></li>
+<li><a class="nav-url" href="url.html">URL</a></li>
+<li><a class="nav-util" href="util.html">Utilities</a></li>
+<li><a class="nav-v8" href="v8.html">V8</a></li>
+<li><a class="nav-vm" href="vm.html">VM</a></li>
+<li><a class="nav-zlib" href="zlib.html">ZLIB</a></li>
+</ul>
 
-          <div id="toc">
-            <h2>Table of Contents</h2>
-            <ul>
+    </div>
+
+    <div id="column1" data-id="addons" class="interior">
+      <header>
+        <h1>Node.js v5.0.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="index.html" name="toc">Index</a> |
+            <a href="all.html">View on single page</a> |
+            <a href="addons.json">View as JSON</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
 <li><a href="#addons_addons">Addons</a><ul>
 <li><a href="#addons_hello_world">Hello world</a></li>
 <li><a href="#addons_addon_patterns">Addon patterns</a><ul>
@@ -61,16 +85,20 @@
 <li><a href="#addons_wrapping_c_objects">Wrapping C++ objects</a></li>
 <li><a href="#addons_factory_of_wrapped_objects">Factory of wrapped objects</a></li>
 <li><a href="#addons_passing_wrapped_objects_around">Passing wrapped objects around</a></li>
+<li><a href="#addons_atexit_hooks">AtExit hooks</a><ul>
+<li><a href="#addons_void_atexit_callback_args">void AtExit(callback, args)</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 
-          </div>
+      </div>
 
-          <div id="apicontent">
-            <h1>Addons<span><a class="mark" href="#addons_addons" id="addons_addons">#</a></span></h1>
+      <div id="apicontent">
+        <h1>Addons<span><a class="mark" href="#addons_addons" id="addons_addons">#</a></span></h1>
 <p>Addons are dynamically linked shared objects. They can provide glue to C and
 C++ libraries. The API (at the moment) is rather complex, involving
 knowledge of several libraries:
@@ -79,23 +107,23 @@ knowledge of several libraries:
 <ul>
 <li><p>V8 JavaScript, a C++ library. Used for interfacing with JavaScript:
 creating objects, calling functions, etc.  Documented mostly in the
-<code>v8.h</code> header file (<code>deps/v8/include/v8.h</code> in the Node source
+<code>v8.h</code> header file (<code>deps/v8/include/v8.h</code> in the Node.js source
 tree), which is also available
-<a href="http://izs.me/v8-docs/main.html">online</a>.</p>
+<a href="https://v8docs.nodesource.com/">online</a>.</p>
 </li>
-<li><p><a href="https://github.com/joyent/libuv">libuv</a>, C event loop library.
+<li><p><a href="https://github.com/libuv/libuv">libuv</a>, C event loop library.
 Anytime one needs to wait for a file descriptor to become readable,
 wait for a timer, or wait for a signal to be received one will need
 to interface with libuv. That is, if you perform any I/O, libuv will
 need to be used.</p>
 </li>
-<li><p>Internal Node libraries. Most importantly is the <code>node::ObjectWrap</code>
+<li><p>Internal Node.js libraries. Most importantly is the <code>node::ObjectWrap</code>
 class which you will likely want to derive from.</p>
 </li>
 <li><p>Others. Look in <code>deps/</code> for what else is available.</p>
 </li>
 </ul>
-<p>Node statically compiles all its dependencies into the executable.
+<p>Node.js statically compiles all its dependencies into the executable.
 When compiling your module, you don&apos;t need to worry about linking to
 any of these libraries.
 
@@ -117,23 +145,31 @@ the following JavaScript code:
 <pre><code>// hello.cc
 #include &lt;node.h&gt;
 
-using namespace v8;
+namespace demo {
+
+using v8::FunctionCallbackInfo;
+using v8::Isolate;
+using v8::Local;
+using v8::Object;
+using v8::String;
+using v8::Value;
 
 void Method(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
-  Isolate* isolate = Isolate::GetCurrent();
-  HandleScope scope(isolate);
+  Isolate* isolate = args.GetIsolate();
   args.GetReturnValue().Set(String::NewFromUtf8(isolate, &quot;world&quot;));
 }
 
-void init(Handle&lt;Object&gt; exports) {
+void init(Local&lt;Object&gt; exports) {
   NODE_SET_METHOD(exports, &quot;hello&quot;, Method);
 }
 
-NODE_MODULE(addon, init)</code></pre>
-<p>Note that all Node addons must export an initialization function:
+NODE_MODULE(addon, init)
+
+}  // namespace demo</code></pre>
+<p>Note that all Node.js addons must export an initialization function:
 
 </p>
-<pre><code>void Initialize (Handle&lt;Object&gt; exports);
+<pre><code>void Initialize(Local&lt;Object&gt; exports);
 NODE_MODULE(module_name, Initialize)</code></pre>
 <p>There is no semi-colon after <code>NODE_MODULE</code> as it&apos;s not a function (see
 <code>node.h</code>).
@@ -146,7 +182,7 @@ NODE_MODULE(module_name, Initialize)</code></pre>
 <p>The source code needs to be built into <code>addon.node</code>, the binary Addon. To
 do this we create a file called <code>binding.gyp</code> which describes the configuration
 to build your module in a JSON-like format. This file gets compiled by
-<a href="https://github.com/TooTallNate/node-gyp">node-gyp</a>.
+<a href="https://github.com/nodejs/node-gyp">node-gyp</a>.
 
 </p>
 <pre><code>{
@@ -170,7 +206,7 @@ command.
 in <code>build/Release/</code>.
 
 </p>
-<p>You can now use the binary addon in a Node project <code>hello.js</code> by pointing
+<p>You can now use the binary addon in an Node.js project <code>hello.js</code> by pointing
 <code>require</code> to the recently built <code>hello.node</code> module:
 
 </p>
@@ -223,11 +259,19 @@ function calls and return a result. This is the main and only needed source
 <pre><code>// addon.cc
 #include &lt;node.h&gt;
 
-using namespace v8;
+namespace demo {
+
+using v8::Exception;
+using v8::FunctionCallbackInfo;
+using v8::Isolate;
+using v8::Local;
+using v8::Number;
+using v8::Object;
+using v8::String;
+using v8::Value;
 
 void Add(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
-  Isolate* isolate = Isolate::GetCurrent();
-  HandleScope scope(isolate);
+  Isolate* isolate = args.GetIsolate();
 
   if (args.Length() &lt; 2) {
     isolate-&gt;ThrowException(Exception::TypeError(
@@ -247,11 +291,13 @@ void Add(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
   args.GetReturnValue().Set(num);
 }
 
-void Init(Handle&lt;Object&gt; exports) {
+void Init(Local&lt;Object&gt; exports) {
   NODE_SET_METHOD(exports, &quot;add&quot;, Add);
 }
 
-NODE_MODULE(addon, Init)</code></pre>
+NODE_MODULE(addon, Init)
+
+}  // namespace demo</code></pre>
 <p>You can test it with the following JavaScript snippet:
 
 </p>
@@ -267,23 +313,32 @@ there. Here&apos;s <code>addon.cc</code>:
 <pre><code>// addon.cc
 #include &lt;node.h&gt;
 
-using namespace v8;
+namespace demo {
+
+using v8::Function;
+using v8::FunctionCallbackInfo;
+using v8::Isolate;
+using v8::Local;
+using v8::Null;
+using v8::Object;
+using v8::String;
+using v8::Value;
 
 void RunCallback(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
-  Isolate* isolate = Isolate::GetCurrent();
-  HandleScope scope(isolate);
-
+  Isolate* isolate = args.GetIsolate();
   Local&lt;Function&gt; cb = Local&lt;Function&gt;::Cast(args[0]);
   const unsigned argc = 1;
   Local&lt;Value&gt; argv[argc] = { String::NewFromUtf8(isolate, &quot;hello world&quot;) };
-  cb-&gt;Call(isolate-&gt;GetCurrentContext()-&gt;Global(), argc, argv);
+  cb-&gt;Call(Null(isolate), argc, argv);
 }
 
-void Init(Handle&lt;Object&gt; exports, Handle&lt;Object&gt; module) {
+void Init(Local&lt;Object&gt; exports, Local&lt;Object&gt; module) {
   NODE_SET_METHOD(module, &quot;exports&quot;, RunCallback);
 }
 
-NODE_MODULE(addon, Init)</code></pre>
+NODE_MODULE(addon, Init)
+
+}  // namespace demo</code></pre>
 <p>Note that this example uses a two-argument form of <code>Init()</code> that receives
 the full <code>module</code> object as the second argument. This allows the addon
 to completely overwrite <code>exports</code> with a single function instead of
@@ -308,11 +363,17 @@ the string passed to <code>createObject()</code>:
 <pre><code>// addon.cc
 #include &lt;node.h&gt;
 
-using namespace v8;
+namespace demo {
+
+using v8::FunctionCallbackInfo;
+using v8::Isolate;
+using v8::Local;
+using v8::Object;
+using v8::String;
+using v8::Value;
 
 void CreateObject(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
-  Isolate* isolate = Isolate::GetCurrent();
-  HandleScope scope(isolate);
+  Isolate* isolate = args.GetIsolate();
 
   Local&lt;Object&gt; obj = Object::New(isolate);
   obj-&gt;Set(String::NewFromUtf8(isolate, &quot;msg&quot;), args[0]-&gt;ToString());
@@ -320,11 +381,13 @@ void CreateObject(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
   args.GetReturnValue().Set(obj);
 }
 
-void Init(Handle&lt;Object&gt; exports, Handle&lt;Object&gt; module) {
+void Init(Local&lt;Object&gt; exports, Local&lt;Object&gt; module) {
   NODE_SET_METHOD(module, &quot;exports&quot;, CreateObject);
 }
 
-NODE_MODULE(addon, Init)</code></pre>
+NODE_MODULE(addon, Init)
+
+}  // namespace demo</code></pre>
 <p>To test it in JavaScript:
 
 </p>
@@ -342,17 +405,24 @@ wraps a C++ function:
 <pre><code>// addon.cc
 #include &lt;node.h&gt;
 
-using namespace v8;
+namespace demo {
+
+using v8::Function;
+using v8::FunctionCallbackInfo;
+using v8::FunctionTemplate;
+using v8::Isolate;
+using v8::Local;
+using v8::Object;
+using v8::String;
+using v8::Value;
 
 void MyFunction(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
-  Isolate* isolate = Isolate::GetCurrent();
-  HandleScope scope(isolate);
+  Isolate* isolate = args.GetIsolate();
   args.GetReturnValue().Set(String::NewFromUtf8(isolate, &quot;hello world&quot;));
 }
 
 void CreateFunction(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
-  Isolate* isolate = Isolate::GetCurrent();
-  HandleScope scope(isolate);
+  Isolate* isolate = args.GetIsolate();
 
   Local&lt;FunctionTemplate&gt; tpl = FunctionTemplate::New(isolate, MyFunction);
   Local&lt;Function&gt; fn = tpl-&gt;GetFunction();
@@ -363,11 +433,13 @@ void CreateFunction(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
   args.GetReturnValue().Set(fn);
 }
 
-void Init(Handle&lt;Object&gt; exports, Handle&lt;Object&gt; module) {
+void Init(Local&lt;Object&gt; exports, Local&lt;Object&gt; module) {
   NODE_SET_METHOD(module, &quot;exports&quot;, CreateFunction);
 }
 
-NODE_MODULE(addon, Init)</code></pre>
+NODE_MODULE(addon, Init)
+
+}  // namespace demo</code></pre>
 <p>To test:
 
 </p>
@@ -386,13 +458,18 @@ module <code>addon.cc</code>:
 #include &lt;node.h&gt;
 #include &quot;myobject.h&quot;
 
-using namespace v8;
+namespace demo {
 
-void InitAll(Handle&lt;Object&gt; exports) {
+using v8::Local;
+using v8::Object;
+
+void InitAll(Local&lt;Object&gt; exports) {
   MyObject::Init(exports);
 }
 
-NODE_MODULE(addon, InitAll)</code></pre>
+NODE_MODULE(addon, InitAll)
+
+}  // namespace demo</code></pre>
 <p>Then in <code>myobject.h</code> make your wrapper inherit from <code>node::ObjectWrap</code>:
 
 </p>
@@ -403,9 +480,11 @@ NODE_MODULE(addon, InitAll)</code></pre>
 #include &lt;node.h&gt;
 #include &lt;node_object_wrap.h&gt;
 
+namespace demo {
+
 class MyObject : public node::ObjectWrap {
  public:
-  static void Init(v8::Handle&lt;v8::Object&gt; exports);
+  static void Init(v8::Local&lt;v8::Object&gt; exports);
 
  private:
   explicit MyObject(double value = 0);
@@ -417,6 +496,8 @@ class MyObject : public node::ObjectWrap {
   double value_;
 };
 
+}  // namespace demo
+
 #endif</code></pre>
 <p>And in <code>myobject.cc</code> implement the various methods that you want to expose.
 Here we expose the method <code>plusOne</code> by adding it to the constructor&apos;s
@@ -426,7 +507,18 @@ prototype:
 <pre><code>// myobject.cc
 #include &quot;myobject.h&quot;
 
-using namespace v8;
+namespace demo {
+
+using v8::Function;
+using v8::FunctionCallbackInfo;
+using v8::FunctionTemplate;
+using v8::Isolate;
+using v8::Local;
+using v8::Number;
+using v8::Object;
+using v8::Persistent;
+using v8::String;
+using v8::Value;
 
 Persistent&lt;Function&gt; MyObject::constructor;
 
@@ -436,8 +528,8 @@ MyObject::MyObject(double value) : value_(value) {
 MyObject::~MyObject() {
 }
 
-void MyObject::Init(Handle&lt;Object&gt; exports) {
-  Isolate* isolate = Isolate::GetCurrent();
+void MyObject::Init(Local&lt;Object&gt; exports) {
+  Isolate* isolate = exports-&gt;GetIsolate();
 
   // Prepare constructor template
   Local&lt;FunctionTemplate&gt; tpl = FunctionTemplate::New(isolate, New);
@@ -453,8 +545,7 @@ void MyObject::Init(Handle&lt;Object&gt; exports) {
 }
 
 void MyObject::New(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
-  Isolate* isolate = Isolate::GetCurrent();
-  HandleScope scope(isolate);
+  Isolate* isolate = args.GetIsolate();
 
   if (args.IsConstructCall()) {
     // Invoked as constructor: `new MyObject(...)`
@@ -472,14 +563,15 @@ void MyObject::New(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
 }
 
 void MyObject::PlusOne(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
-  Isolate* isolate = Isolate::GetCurrent();
-  HandleScope scope(isolate);
+  Isolate* isolate = args.GetIsolate();
 
   MyObject* obj = ObjectWrap::Unwrap&lt;MyObject&gt;(args.Holder());
   obj-&gt;value_ += 1;
 
   args.GetReturnValue().Set(Number::New(isolate, obj-&gt;value_));
-}</code></pre>
+}
+
+}  // namespace demo</code></pre>
 <p>Test it with:
 
 </p>
@@ -505,21 +597,28 @@ explicitly instantiating them with the <code>new</code> operator in JavaScript, 
 #include &lt;node.h&gt;
 #include &quot;myobject.h&quot;
 
-using namespace v8;
+namespace demo {
+
+using v8::FunctionCallbackInfo;
+using v8::Isolate;
+using v8::Local;
+using v8::Object;
+using v8::String;
+using v8::Value;
 
 void CreateObject(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
-  Isolate* isolate = Isolate::GetCurrent();
-  HandleScope scope(isolate);
   MyObject::NewInstance(args);
 }
 
-void InitAll(Handle&lt;Object&gt; exports, Handle&lt;Object&gt; module) {
-  MyObject::Init();
+void InitAll(Local&lt;Object&gt; exports, Local&lt;Object&gt; module) {
+  MyObject::Init(exports-&gt;GetIsolate());
 
   NODE_SET_METHOD(module, &quot;exports&quot;, CreateObject);
 }
 
-NODE_MODULE(addon, InitAll)</code></pre>
+NODE_MODULE(addon, InitAll)
+
+}  // namespace demo</code></pre>
 <p>In <code>myobject.h</code> we now introduce the static method <code>NewInstance</code> that takes
 care of instantiating the object (i.e. it does the job of <code>new</code> in JavaScript):
 
@@ -531,9 +630,11 @@ care of instantiating the object (i.e. it does the job of <code>new</code> in Ja
 #include &lt;node.h&gt;
 #include &lt;node_object_wrap.h&gt;
 
+namespace demo {
+
 class MyObject : public node::ObjectWrap {
  public:
-  static void Init();
+  static void Init(v8::Isolate* isolate);
   static void NewInstance(const v8::FunctionCallbackInfo&lt;v8::Value&gt;&amp; args);
 
  private:
@@ -546,6 +647,8 @@ class MyObject : public node::ObjectWrap {
   double value_;
 };
 
+}  // namespace demo
+
 #endif</code></pre>
 <p>The implementation is similar to the above in <code>myobject.cc</code>:
 
@@ -554,7 +657,18 @@ class MyObject : public node::ObjectWrap {
 #include &lt;node.h&gt;
 #include &quot;myobject.h&quot;
 
-using namespace v8;
+namespace demo {
+
+using v8::Function;
+using v8::FunctionCallbackInfo;
+using v8::FunctionTemplate;
+using v8::Isolate;
+using v8::Local;
+using v8::Number;
+using v8::Object;
+using v8::Persistent;
+using v8::String;
+using v8::Value;
 
 Persistent&lt;Function&gt; MyObject::constructor;
 
@@ -564,8 +678,7 @@ MyObject::MyObject(double value) : value_(value) {
 MyObject::~MyObject() {
 }
 
-void MyObject::Init() {
-  Isolate* isolate = Isolate::GetCurrent();
+void MyObject::Init(Isolate* isolate) {
   // Prepare constructor template
   Local&lt;FunctionTemplate&gt; tpl = FunctionTemplate::New(isolate, New);
   tpl-&gt;SetClassName(String::NewFromUtf8(isolate, &quot;MyObject&quot;));
@@ -578,8 +691,7 @@ void MyObject::Init() {
 }
 
 void MyObject::New(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
-  Isolate* isolate = Isolate::GetCurrent();
-  HandleScope scope(isolate);
+  Isolate* isolate = args.GetIsolate();
 
   if (args.IsConstructCall()) {
     // Invoked as constructor: `new MyObject(...)`
@@ -597,11 +709,10 @@ void MyObject::New(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
 }
 
 void MyObject::NewInstance(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
-  Isolate* isolate = Isolate::GetCurrent();
-  HandleScope scope(isolate);
+  Isolate* isolate = args.GetIsolate();
 
   const unsigned argc = 1;
-  Handle&lt;Value&gt; argv[argc] = { args[0] };
+  Local&lt;Value&gt; argv[argc] = { args[0] };
   Local&lt;Function&gt; cons = Local&lt;Function&gt;::New(isolate, constructor);
   Local&lt;Object&gt; instance = cons-&gt;NewInstance(argc, argv);
 
@@ -609,14 +720,15 @@ void MyObject::NewInstance(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
 }
 
 void MyObject::PlusOne(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
-  Isolate* isolate = Isolate::GetCurrent();
-  HandleScope scope(isolate);
+  Isolate* isolate = args.GetIsolate();
 
   MyObject* obj = ObjectWrap::Unwrap&lt;MyObject&gt;(args.Holder());
   obj-&gt;value_ += 1;
 
   args.GetReturnValue().Set(Number::New(isolate, obj-&gt;value_));
-}</code></pre>
+}
+
+}  // namespace demo</code></pre>
 <p>Test it with:
 
 </p>
@@ -634,7 +746,7 @@ console.log( obj2.plusOne() ); // 22
 console.log( obj2.plusOne() ); // 23</code></pre>
 <h3>Passing wrapped objects around<span><a class="mark" href="#addons_passing_wrapped_objects_around" id="addons_passing_wrapped_objects_around">#</a></span></h3>
 <p>In addition to wrapping and returning C++ objects, you can pass them around
-by unwrapping them with Node&apos;s <code>node::ObjectWrap::Unwrap</code> helper function.
+by unwrapping them with Node.js&apos;s <code>node::ObjectWrap::Unwrap</code> helper function.
 In the following <code>addon.cc</code> we introduce a function <code>add()</code> that can take on two
 <code>MyObject</code> objects:
 
@@ -644,17 +756,22 @@ In the following <code>addon.cc</code> we introduce a function <code>add()</code
 #include &lt;node_object_wrap.h&gt;
 #include &quot;myobject.h&quot;
 
-using namespace v8;
+namespace demo {
+
+using v8::FunctionCallbackInfo;
+using v8::Isolate;
+using v8::Local;
+using v8::Number;
+using v8::Object;
+using v8::String;
+using v8::Value;
 
 void CreateObject(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
-  Isolate* isolate = Isolate::GetCurrent();
-  HandleScope scope(isolate);
   MyObject::NewInstance(args);
 }
 
 void Add(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
-  Isolate* isolate = Isolate::GetCurrent();
-  HandleScope scope(isolate);
+  Isolate* isolate = args.GetIsolate();
 
   MyObject* obj1 = node::ObjectWrap::Unwrap&lt;MyObject&gt;(
       args[0]-&gt;ToObject());
@@ -665,14 +782,16 @@ void Add(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
   args.GetReturnValue().Set(Number::New(isolate, sum));
 }
 
-void InitAll(Handle&lt;Object&gt; exports) {
-  MyObject::Init();
+void InitAll(Local&lt;Object&gt; exports) {
+  MyObject::Init(exports-&gt;GetIsolate());
 
   NODE_SET_METHOD(exports, &quot;createObject&quot;, CreateObject);
   NODE_SET_METHOD(exports, &quot;add&quot;, Add);
 }
 
-NODE_MODULE(addon, InitAll)</code></pre>
+NODE_MODULE(addon, InitAll)
+
+}  // namespace demo</code></pre>
 <p>To make things interesting we introduce a public method in <code>myobject.h</code> so we
 can probe private values after unwrapping the object:
 
@@ -684,9 +803,11 @@ can probe private values after unwrapping the object:
 #include &lt;node.h&gt;
 #include &lt;node_object_wrap.h&gt;
 
+namespace demo {
+
 class MyObject : public node::ObjectWrap {
  public:
-  static void Init();
+  static void Init(v8::Isolate* isolate);
   static void NewInstance(const v8::FunctionCallbackInfo&lt;v8::Value&gt;&amp; args);
   inline double value() const { return value_; }
 
@@ -699,6 +820,8 @@ class MyObject : public node::ObjectWrap {
   double value_;
 };
 
+}  // namespace demo
+
 #endif</code></pre>
 <p>The implementation of <code>myobject.cc</code> is similar as before:
 
@@ -707,7 +830,17 @@ class MyObject : public node::ObjectWrap {
 #include &lt;node.h&gt;
 #include &quot;myobject.h&quot;
 
-using namespace v8;
+namespace demo {
+
+using v8::Function;
+using v8::FunctionCallbackInfo;
+using v8::FunctionTemplate;
+using v8::Isolate;
+using v8::Local;
+using v8::Object;
+using v8::Persistent;
+using v8::String;
+using v8::Value;
 
 Persistent&lt;Function&gt; MyObject::constructor;
 
@@ -717,9 +850,7 @@ MyObject::MyObject(double value) : value_(value) {
 MyObject::~MyObject() {
 }
 
-void MyObject::Init() {
-  Isolate* isolate = Isolate::GetCurrent();
-
+void MyObject::Init(Isolate* isolate) {
   // Prepare constructor template
   Local&lt;FunctionTemplate&gt; tpl = FunctionTemplate::New(isolate, New);
   tpl-&gt;SetClassName(String::NewFromUtf8(isolate, &quot;MyObject&quot;));
@@ -729,8 +860,7 @@ void MyObject::Init() {
 }
 
 void MyObject::New(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
-  Isolate* isolate = Isolate::GetCurrent();
-  HandleScope scope(isolate);
+  Isolate* isolate = args.GetIsolate();
 
   if (args.IsConstructCall()) {
     // Invoked as constructor: `new MyObject(...)`
@@ -748,16 +878,17 @@ void MyObject::New(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
 }
 
 void MyObject::NewInstance(const FunctionCallbackInfo&lt;Value&gt;&amp; args) {
-  Isolate* isolate = Isolate::GetCurrent();
-  HandleScope scope(isolate);
+  Isolate* isolate = args.GetIsolate();
 
   const unsigned argc = 1;
-  Handle&lt;Value&gt; argv[argc] = { args[0] };
+  Local&lt;Value&gt; argv[argc] = { args[0] };
   Local&lt;Function&gt; cons = Local&lt;Function&gt;::New(isolate, constructor);
   Local&lt;Object&gt; instance = cons-&gt;NewInstance(argc, argv);
 
   args.GetReturnValue().Set(instance);
-}</code></pre>
+}
+
+}  // namespace demo</code></pre>
 <p>Test it with:
 
 </p>
@@ -769,51 +900,83 @@ var obj2 = addon.createObject(20);
 var result = addon.add(obj1, obj2);
 
 console.log(result); // 30</code></pre>
+<h3>AtExit hooks<span><a class="mark" href="#addons_atexit_hooks" id="addons_atexit_hooks">#</a></span></h3>
+<h4>void AtExit(callback, args)<span><a class="mark" href="#addons_void_atexit_callback_args" id="addons_void_atexit_callback_args">#</a></span></h4>
+<ul>
+<li><code>callback</code>: <code>void (*)(void*)</code> - A pointer to the function to call at exit.</li>
+<li><code>args</code>: <code>void*</code> - A pointer to pass to the callback at exit.</li>
+</ul>
+<p>Registers exit hooks that run after the event loop has ended, but before the VM
+is killed.
 
-          </div>
-        </div>
-    </div>
-    </div>
-    <div id="footer">
-      <div class="foot-1">
-        <a href="http://www.joyent.com"><h5>The Node.js Project is Sponsored by</h5>
-        
-        <p class="tag">Production Node +<br>High Performance Infrastructure</p></a>
-        <a href="https://my.joyent.com/landing/signup/701800000015696" class="button getstarted">Get Started</a>
-      </div>
-      <div class="foot-2">
-        <div class="foot-nav">
-          <ul>
-            <li><a href="http://nodejs.org/download/">Downloads</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/documentation/">Documentation</a></li>
-            <li><a href="http://nodejs.org/api/">API Docs</a></li>
-            <li><a href="http://nodejs.org/documentation/tutorials/">Tutorials</a></li>
-            <li><a href="http://nodejs.org/documentation/localization/">Localization</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/community/">Community</a></li>
-            <li><a href="https://github.com/joyent/node/issues">Github Issues</a></li>
-            <li><a href="http://groups.google.com/group/nodejs">Mailing List</a></li>
-            <li><a href="http://webchat.freenode.net/?channels=node.js">IRC</a></li>
-            <li><a href="https://twitter.com/nodejs">Twitter</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/about/">About</a></li>
-            <li><a href="http://nodejs.org/about/organization/">Organization</a></li>
-            <li><a href="http://nodejs.org/about/core-team/">Core Team</a></li>
-            <li><a href="http://nodejs.org/about/resources/">Resources</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://blog.nodejs.org">Blog</a></li>
-          </ul>
-        </div>
-        <p class="copyright">Copyright 2014 <a href="http://joyent.com/">Joyent, Inc</a>, Node.js is a <a href="https://nodejs.org/images/trademark-policy.pdf">trademark</a> of Joyent, Inc. <a href="https://raw.github.com/joyent/node/v0.12.7/LICENSE">View license</a>.</p>
-      </div>
-    </div>
+</p>
+<p>Callbacks are run in last-in, first-out order. AtExit takes two parameters:
+a pointer to a callback function to run at exit, and a pointer to untyped
+context data to be passed to that callback.
 
-  
+</p>
+<p>The file <code>addon.cc</code> implements AtExit below:
+
+</p>
+<pre><code>// addon.cc
+#undef NDEBUG
+#include &lt;assert.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;node.h&gt;
+
+namespace demo {
+
+using node::AtExit;
+using v8::HandleScope;
+using v8::Isolate;
+using v8::Local;
+using v8::Object;
+
+static char cookie[] = &quot;yum yum&quot;;
+static int at_exit_cb1_called = 0;
+static int at_exit_cb2_called = 0;
+
+static void at_exit_cb1(void* arg) {
+  Isolate* isolate = static_cast&lt;Isolate*&gt;(arg);
+  HandleScope scope(isolate);
+  Local&lt;Object&gt; obj = Object::New(isolate);
+  assert(!obj.IsEmpty()); // assert VM is still alive
+  assert(obj-&gt;IsObject());
+  at_exit_cb1_called++;
+}
+
+static void at_exit_cb2(void* arg) {
+  assert(arg == static_cast&lt;void*&gt;(cookie));
+  at_exit_cb2_called++;
+}
+
+static void sanity_check(void*) {
+  assert(at_exit_cb1_called == 1);
+  assert(at_exit_cb2_called == 2);
+}
+
+void init(Local&lt;Object&gt; exports) {
+  AtExit(sanity_check);
+  AtExit(at_exit_cb2, cookie);
+  AtExit(at_exit_cb2, cookie);
+  AtExit(at_exit_cb1, exports-&gt;GetIsolate());
+}
+
+NODE_MODULE(addon, init);
+
+}  // namespace demo</code></pre>
+<p>Test in JavaScript by running:
+
+</p>
+<pre><code>// test.js
+var addon = require(&apos;./build/Release/addon&apos;);</code></pre>
+
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+  </div>
+
   
   
   

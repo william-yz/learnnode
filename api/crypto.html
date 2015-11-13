@@ -2,59 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Crypto Node.js v0.12.7 Manual &amp; Documentation</title>
+  <title>Crypto Node.js v5.0.0 Manual &amp; Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/sh.css">
-  <link rel="canonical" href="http://nodejs.org/api/crypto.html">
-  
-  
+  <link rel="canonical" href="https://nodejs.org/api/crypto.html">
 </head>
-<body class="alt apidoc int docs" id="docs">
-    <div id="nav">
-      
-      <ul>
-        <li><a href="http://nodejs.org">Home</a></li>
-        <li><a href="http://nodejs.org/download/">Downloads</a></li>
-        <li class="active"><a href="http://nodejs.org/documentation/">Docs</a></li>
-        <li><a href="http://nodejs.org/community/">Community</a></li>
-        <li><a href="http://nodejs.org/about/">About</a></li>
-        <li><a href="http://jobs.nodejs.org">Jobs</a></li>
-        <li><a href="http://blog.nodejs.org">Blog</a></li>
-      </ul>
-    </div>
-    <div id="content-wrap">
-    <div id="content" class="clearfix">
-      <div id="column2" class="interior">
-        <!--<img src="/images/logo-light.svg" alt="node.js" width="170">-->
-        <ul class="docs-nav">
-          <li><a href="http://nodejs.org/documentation/">About Docs</a></li>
-          <li><a href="http://nodejs.org/documentation/tutorials/">Tutorials</a></li>
-          <li><a href="http://nodejs.org/documentation/contributing/">Contributing</a></li>
-          <li><a href="http://nodejs.org/documentation/workflow/">Workflow</a></li>
-          <li><a href="http://nodejs.org/documentation/localization/">Localization</a></li>
-          <li class="active"><a href="http://nodejs.org/api/">API Docs</a></li>
-        </ul>
+<body class="alt apidoc" id="api-section-crypto">
+  <div id="content" class="clearfix">
+    <div id="column2" class="interior">
+      <div id="intro" class="interior">
+        <a href="/" title="Go back to the home page">
+          Node.js (1)
+        </a>
       </div>
-        <div id="column1" class="interior">
-          <header>
-            <h1>Node.js v0.12.7 Manual &amp; Documentation</h1>
-            <div id="gtoc">
-              <p>
-                <a href="index.html" name="toc">Index</a> |
-                <a href="all.html">View on single page</a> |
-                <a href="crypto.json">View as JSON</a>
-              </p>
-            </div>
-            <hr>
-          </header>
+      <ul>
+<li><a class="nav-documentation" href="documentation.html">About these Docs</a></li>
+<li><a class="nav-synopsis" href="synopsis.html">Synopsis</a></li>
+<li><a class="nav-assert" href="assert.html">Assertion Testing</a></li>
+<li><a class="nav-buffer" href="buffer.html">Buffer</a></li>
+<li><a class="nav-addons" href="addons.html">C/C++ Addons</a></li>
+<li><a class="nav-child_process" href="child_process.html">Child Processes</a></li>
+<li><a class="nav-cluster" href="cluster.html">Cluster</a></li>
+<li><a class="nav-console" href="console.html">Console</a></li>
+<li><a class="nav-crypto active" href="crypto.html">Crypto</a></li>
+<li><a class="nav-debugger" href="debugger.html">Debugger</a></li>
+<li><a class="nav-dns" href="dns.html">DNS</a></li>
+<li><a class="nav-domain" href="domain.html">Domain</a></li>
+<li><a class="nav-errors" href="errors.html">Errors</a></li>
+<li><a class="nav-events" href="events.html">Events</a></li>
+<li><a class="nav-fs" href="fs.html">File System</a></li>
+<li><a class="nav-globals" href="globals.html">Globals</a></li>
+<li><a class="nav-http" href="http.html">HTTP</a></li>
+<li><a class="nav-https" href="https.html">HTTPS</a></li>
+<li><a class="nav-modules" href="modules.html">Modules</a></li>
+<li><a class="nav-net" href="net.html">Net</a></li>
+<li><a class="nav-os" href="os.html">OS</a></li>
+<li><a class="nav-path" href="path.html">Path</a></li>
+<li><a class="nav-process" href="process.html">Process</a></li>
+<li><a class="nav-punycode" href="punycode.html">Punycode</a></li>
+<li><a class="nav-querystring" href="querystring.html">Query Strings</a></li>
+<li><a class="nav-readline" href="readline.html">Readline</a></li>
+<li><a class="nav-repl" href="repl.html">REPL</a></li>
+<li><a class="nav-stream" href="stream.html">Stream</a></li>
+<li><a class="nav-string_decoder" href="string_decoder.html">String Decoder</a></li>
+<li><a class="nav-timers" href="timers.html">Timers</a></li>
+<li><a class="nav-tls" href="tls.html">TLS/SSL</a></li>
+<li><a class="nav-tty" href="tty.html">TTY</a></li>
+<li><a class="nav-dgram" href="dgram.html">UDP/Datagram</a></li>
+<li><a class="nav-url" href="url.html">URL</a></li>
+<li><a class="nav-util" href="util.html">Utilities</a></li>
+<li><a class="nav-v8" href="v8.html">V8</a></li>
+<li><a class="nav-vm" href="vm.html">VM</a></li>
+<li><a class="nav-zlib" href="zlib.html">ZLIB</a></li>
+</ul>
 
-          <div id="toc">
-            <h2>Table of Contents</h2>
-            <ul>
+    </div>
+
+    <div id="column1" data-id="crypto" class="interior">
+      <header>
+        <h1>Node.js v5.0.0 Documentation</h1>
+        <div id="gtoc">
+          <p>
+            <a href="index.html" name="toc">Index</a> |
+            <a href="all.html">View on single page</a> |
+            <a href="crypto.json">View as JSON</a>
+          </p>
+        </div>
+        <hr>
+      </header>
+
+      <div id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
 <li><a href="#crypto_crypto">Crypto</a><ul>
 <li><a href="#crypto_crypto_setengine_engine_flags">crypto.setEngine(engine[, flags])</a></li>
 <li><a href="#crypto_crypto_getciphers">crypto.getCiphers()</a></li>
 <li><a href="#crypto_crypto_gethashes">crypto.getHashes()</a></li>
+<li><a href="#crypto_crypto_getcurves">crypto.getCurves()</a></li>
 <li><a href="#crypto_crypto_createcredentials_details">crypto.createCredentials(details)</a></li>
 <li><a href="#crypto_crypto_createhash_algorithm">crypto.createHash(algorithm)</a></li>
 <li><a href="#crypto_class_hash">Class: Hash</a><ul>
@@ -128,7 +153,6 @@
 <li><a href="#crypto_crypto_pbkdf2_password_salt_iterations_keylen_digest_callback">crypto.pbkdf2(password, salt, iterations, keylen[, digest], callback)</a></li>
 <li><a href="#crypto_crypto_pbkdf2sync_password_salt_iterations_keylen_digest">crypto.pbkdf2Sync(password, salt, iterations, keylen[, digest])</a></li>
 <li><a href="#crypto_crypto_randombytes_size_callback">crypto.randomBytes(size[, callback])</a></li>
-<li><a href="#crypto_crypto_pseudorandombytes_size_callback">crypto.pseudoRandomBytes(size[, callback])</a></li>
 <li><a href="#crypto_class_certificate">Class: Certificate</a><ul>
 <li><a href="#crypto_certificate_verifyspkac_spkac">Certificate.verifySpkac(spkac)</a></li>
 <li><a href="#crypto_certificate_exportchallenge_spkac">Certificate.exportChallenge(spkac)</a></li>
@@ -136,19 +160,20 @@
 </ul>
 </li>
 <li><a href="#crypto_crypto_publicencrypt_public_key_buffer">crypto.publicEncrypt(public_key, buffer)</a></li>
+<li><a href="#crypto_crypto_publicdecrypt_public_key_buffer">crypto.publicDecrypt(public_key, buffer)</a></li>
 <li><a href="#crypto_crypto_privatedecrypt_private_key_buffer">crypto.privateDecrypt(private_key, buffer)</a></li>
+<li><a href="#crypto_crypto_privateencrypt_private_key_buffer">crypto.privateEncrypt(private_key, buffer)</a></li>
 <li><a href="#crypto_crypto_default_encoding">crypto.DEFAULT_ENCODING</a></li>
 <li><a href="#crypto_recent_api_changes">Recent API Changes</a></li>
 </ul>
 </li>
 </ul>
 
-          </div>
+      </div>
 
-          <div id="apicontent">
-            <h1>Crypto<span><a class="mark" href="#crypto_crypto" id="crypto_crypto">#</a></span></h1>
-<pre class="api_stability_2">Stability: 2 - Unstable; API changes are being discussed for
-future versions.  Breaking changes will be minimized.  See below.</pre><p>Use <code>require(&apos;crypto&apos;)</code> to access this module.
+      <div id="apicontent">
+        <h1>Crypto<span><a class="mark" href="#crypto_crypto" id="crypto_crypto">#</a></span></h1>
+<pre class="api_stability_2">Stability: 2 - Stable</pre><p>Use <code>require(&apos;crypto&apos;)</code> to access this module.
 
 </p>
 <p>The crypto module offers a way of encapsulating secure credentials to be
@@ -164,7 +189,7 @@ decipher, sign and verify methods.
 <p>Load and set engine for some/all OpenSSL functions (selected by flags).
 
 </p>
-<p><code>engine</code> could be either an id or a path to the to the engine&apos;s shared library.
+<p><code>engine</code> could be either an id or a path to the engine&apos;s shared library.
 
 </p>
 <p><code>flags</code> is optional and has <code>ENGINE_METHOD_ALL</code> value by default. It could take
@@ -194,7 +219,7 @@ one of or mix of following flags (defined in <code>constants</code> module):
 
 </p>
 <pre><code>var ciphers = crypto.getCiphers();
-console.log(ciphers); // [&apos;AES-128-CBC&apos;, &apos;AES-128-CBC-HMAC-SHA1&apos;, ...]</code></pre>
+console.log(ciphers); // [&apos;aes-128-cbc&apos;, &apos;aes-128-ccm&apos;, ...]</code></pre>
 <h2>crypto.getHashes()<span><a class="mark" href="#crypto_crypto_gethashes" id="crypto_crypto_gethashes">#</a></span></h2>
 <p>Returns an array with the names of the supported hash algorithms.
 
@@ -204,8 +229,17 @@ console.log(ciphers); // [&apos;AES-128-CBC&apos;, &apos;AES-128-CBC-HMAC-SHA1&a
 </p>
 <pre><code>var hashes = crypto.getHashes();
 console.log(hashes); // [&apos;sha&apos;, &apos;sha1&apos;, &apos;sha1WithRSAEncryption&apos;, ...]</code></pre>
+<h2>crypto.getCurves()<span><a class="mark" href="#crypto_crypto_getcurves" id="crypto_crypto_getcurves">#</a></span></h2>
+<p>Returns an array with the names of the supported elliptic curves.
+
+</p>
+<p>Example:
+
+</p>
+<pre><code>var curves = crypto.getCurves();
+console.log(curves); // [&apos;secp256k1&apos;, &apos;secp384r1&apos;, ...]</code></pre>
 <h2>crypto.createCredentials(details)<span><a class="mark" href="#crypto_crypto_createcredentials_details" id="crypto_crypto_createcredentials_details">#</a></span></h2>
-<pre class="api_stability_0">Stability: 0 - Deprecated. Use <a href="tls.html#tls_tls_createsecurecontext_details">tls.createSecureContext</a> instead.</pre><p>Creates a credentials object, with the optional details being a
+<pre class="api_stability_0">Stability: 0 - Deprecated: Use <a href="tls.html#tls_tls_createsecurecontext_details">tls.createSecureContext</a> instead.</pre><p>Creates a credentials object, with the optional details being a
 dictionary with keys:
 
 </p>
@@ -224,7 +258,7 @@ Consult
 <a href="http://www.openssl.org/docs/apps/ciphers.html#CIPHER_LIST_FORMAT">http://www.openssl.org/docs/apps/ciphers.html#CIPHER_LIST_FORMAT</a>
 for details on the format.</li>
 </ul>
-<p>If no &apos;ca&apos; details are given, then node.js will use the default
+<p>If no &apos;ca&apos; details are given, then Node.js will use the default
 publicly trusted list of CAs as given in
 </p>
 <p><a href="http://mxr.mozilla.org/mozilla/source/security/nss/lib/ckfw/builtins/certdata.txt">http://mxr.mozilla.org/mozilla/source/security/nss/lib/ckfw/builtins/certdata.txt</a>.
@@ -277,7 +311,7 @@ digest.  The legacy <code>update</code> and <code>digest</code> methods are also
 <h3>hash.update(data[, input_encoding])<span><a class="mark" href="#crypto_hash_update_data_input_encoding" id="crypto_hash_update_data_input_encoding">#</a></span></h3>
 <p>Updates the hash content with the given <code>data</code>, the encoding of which
 is given in <code>input_encoding</code> and can be <code>&apos;utf8&apos;</code>, <code>&apos;ascii&apos;</code> or
-<code>&apos;binary&apos;</code>.  If no encoding is provided and the input is a string an
+<code>&apos;binary&apos;</code>.  If no encoding is provided, and the input is a string, an
 encoding of <code>&apos;binary&apos;</code> is enforced. If <code>data</code> is a <code>Buffer</code> then
 <code>input_encoding</code> is ignored.
 
@@ -359,7 +393,7 @@ passwords to be tested very rapidly.
 
 </p>
 <p>In line with OpenSSL&apos;s recommendation to use pbkdf2 instead of EVP_BytesToKey it
-is recommended you derive a key and iv yourself with <a href="#crypto_crypto_pbkdf2_password_salt_iterations_keylen_callback">crypto.pbkdf2</a> and to
+is recommended you derive a key and iv yourself with <a href="#crypto_crypto_pbkdf2_password_salt_iterations_keylen_digest_callback">crypto.pbkdf2</a> and to
 then use <a href="#crypto_crypto_createcipheriv_algorithm_key_iv">createCipheriv()</a> to create the cipher stream.
 
 </p>
@@ -486,7 +520,7 @@ called.
 <h3>decipher.setAutoPadding(auto_padding=true)<span><a class="mark" href="#crypto_decipher_setautopadding_auto_padding_true" id="crypto_decipher_setautopadding_auto_padding_true">#</a></span></h3>
 <p>You can disable auto padding if the data has been encrypted without
 standard block padding to prevent <code>decipher.final</code> from checking and
-removing it. Can only work if the input data&apos;s length is a multiple of
+removing it. This will only work if the input data&apos;s length is a multiple of
 the ciphers block size. You must call this before streaming data to
 <code>decipher.update</code>.
 
@@ -691,7 +725,7 @@ expected.
 supported groups are: <code>&apos;modp1&apos;</code>, <code>&apos;modp2&apos;</code>, <code>&apos;modp5&apos;</code> (defined in <a href="http://www.rfc-editor.org/rfc/rfc2412.txt">RFC
 2412</a>) and <code>&apos;modp14&apos;</code>, <code>&apos;modp15&apos;</code>, <code>&apos;modp16&apos;</code>, <code>&apos;modp17&apos;</code>,
 <code>&apos;modp18&apos;</code> (defined in <a href="http://www.rfc-editor.org/rfc/rfc3526.txt">RFC 3526</a>).  The returned object mimics the
-interface of objects created by <a href="#crypto_crypto_creatediffiehellman_prime_encoding">crypto.createDiffieHellman()</a>
+interface of objects created by <a href="#crypto_crypto_creatediffiehellman_prime_prime_encoding_generator_generator_encoding">crypto.createDiffieHellman()</a>
 above, but will not allow to change the keys (with
 <a href="#crypto_diffiehellman_setpublickey_public_key_encoding">diffieHellman.setPublicKey()</a> for example).  The advantage of using
 this routine is that the parties don&apos;t have to generate nor exchange
@@ -715,8 +749,11 @@ var bob_secret = bob.computeSecret(alice.getPublicKey(), null, &apos;hex&apos;);
 /* alice_secret and bob_secret should be the same */
 console.log(alice_secret == bob_secret);</code></pre>
 <h2>crypto.createECDH(curve_name)<span><a class="mark" href="#crypto_crypto_createecdh_curve_name" id="crypto_crypto_createecdh_curve_name">#</a></span></h2>
-<p>Creates a Elliptic Curve (EC) Diffie-Hellman key exchange object using a
-predefined curve specified by <code>curve_name</code> string.
+<p>Creates an Elliptic Curve (EC) Diffie-Hellman key exchange object using a
+predefined curve specified by the <code>curve_name</code> string. Use <a href="#crypto_crypto_getcurves">getCurves()</a> to
+obtain a list of available curve names. On recent releases,
+<code>openssl ecparam -list_curves</code> will also display the name and description of
+each available elliptic curve.
 
 </p>
 <h2>Class: ECDH<span><a class="mark" href="#crypto_class_ecdh" id="crypto_class_ecdh">#</a></span></h2>
@@ -801,7 +838,7 @@ var bob_secret = bob.computeSecret(alice.getPublicKey(), null, &apos;hex&apos;);
 console.log(alice_secret == bob_secret);</code></pre>
 <h2>crypto.pbkdf2(password, salt, iterations, keylen[, digest], callback)<span><a class="mark" href="#crypto_crypto_pbkdf2_password_salt_iterations_keylen_digest_callback" id="crypto_crypto_pbkdf2_password_salt_iterations_keylen_digest_callback">#</a></span></h2>
 <p>Asynchronous PBKDF2 function.  Applies the selected HMAC digest function
-(default: SHA1) to derive a key of the requested length from the password,
+(default: SHA1) to derive a key of the requested byte length from the password,
 salt and number of iterations.  The callback gets two arguments:
 <code>(err, derivedKey)</code>.
 
@@ -809,7 +846,7 @@ salt and number of iterations.  The callback gets two arguments:
 <p>Example:
 
 </p>
-<pre><code>crypto.pbkdf2(&apos;secret&apos;, &apos;salt&apos;, 4096, 512, &apos;sha256&apos;, function(err, key) {
+<pre><code>crypto.pbkdf2(&apos;secret&apos;, &apos;salt&apos;, 4096, 64, &apos;sha256&apos;, function(err, key) {
   if (err)
     throw err;
   console.log(key.toString(&apos;hex&apos;));  // &apos;c5e478d...1469e50&apos;
@@ -833,28 +870,12 @@ crypto.randomBytes(256, function(ex, buf) {
 });
 
 // sync
-try {
-  var buf = crypto.randomBytes(256);
-  console.log(&apos;Have %d bytes of random data: %s&apos;, buf.length, buf);
-} catch (ex) {
-  // handle error
-  // most likely, entropy sources are drained
-}</code></pre>
-<p>NOTE: Will throw error or invoke callback with error, if there is not enough
-accumulated entropy to generate cryptographically strong data. In other words,
-<code>crypto.randomBytes</code> without callback will not block even if all entropy sources
-are drained.
-
-</p>
-<h2>crypto.pseudoRandomBytes(size[, callback])<span><a class="mark" href="#crypto_crypto_pseudorandombytes_size_callback" id="crypto_crypto_pseudorandombytes_size_callback">#</a></span></h2>
-<p>Generates <em>non</em>-cryptographically strong pseudo-random data. The data
-returned will be unique if it is sufficiently long, but is not
-necessarily unpredictable. For this reason, the output of this
-function should never be used where unpredictability is important,
-such as in the generation of encryption keys.
-
-</p>
-<p>Usage is otherwise identical to <code>crypto.randomBytes</code>.
+const buf = crypto.randomBytes(256);
+console.log(&apos;Have %d bytes of random data: %s&apos;, buf.length, buf);</code></pre>
+<p>NOTE: This will block if there is insufficient entropy, although it should
+normally never take longer than a few milliseconds. The only time when this
+may conceivably block is right after boot, when the whole system is still
+low on entropy.
 
 </p>
 <h2>Class: Certificate<span><a class="mark" href="#crypto_class_certificate" id="crypto_class_certificate">#</a></span></h2>
@@ -884,6 +905,8 @@ element. <a href="http://www.openssl.org/docs/apps/spkac.html">http://www.openss
 </p>
 <p><code>public_key</code> can be an object or a string. If <code>public_key</code> is a string, it is
 treated as the key with no passphrase and will use <code>RSA_PKCS1_OAEP_PADDING</code>.
+Since RSA public keys may be derived from private keys you may pass a private
+key to this method.
 
 </p>
 <p><code>public_key</code>:
@@ -891,6 +914,7 @@ treated as the key with no passphrase and will use <code>RSA_PKCS1_OAEP_PADDING<
 </p>
 <ul>
 <li><code>key</code> : A string holding the PEM encoded private key</li>
+<li><code>passphrase</code> : An optional string of passphrase for the private key</li>
 <li><code>padding</code> : An optional padding value, one of the following:<ul>
 <li><code>constants.RSA_NO_PADDING</code></li>
 <li><code>constants.RSA_PKCS1_PADDING</code></li>
@@ -899,6 +923,11 @@ treated as the key with no passphrase and will use <code>RSA_PKCS1_OAEP_PADDING<
 </li>
 </ul>
 <p>NOTE: All paddings are defined in <code>constants</code> module.
+
+</p>
+<h2>crypto.publicDecrypt(public_key, buffer)<span><a class="mark" href="#crypto_crypto_publicdecrypt_public_key_buffer" id="crypto_crypto_publicdecrypt_public_key_buffer">#</a></span></h2>
+<p>See above for details. Has the same API as <code>crypto.publicEncrypt</code>. Default
+padding is <code>RSA_PKCS1_PADDING</code>.
 
 </p>
 <h2>crypto.privateDecrypt(private_key, buffer)<span><a class="mark" href="#crypto_crypto_privatedecrypt_private_key_buffer" id="crypto_crypto_privatedecrypt_private_key_buffer">#</a></span></h2>
@@ -925,6 +954,11 @@ treated as the key with no passphrase and will use <code>RSA_PKCS1_OAEP_PADDING<
 <p>NOTE: All paddings are defined in <code>constants</code> module.
 
 </p>
+<h2>crypto.privateEncrypt(private_key, buffer)<span><a class="mark" href="#crypto_crypto_privateencrypt_private_key_buffer" id="crypto_crypto_privateencrypt_private_key_buffer">#</a></span></h2>
+<p>See above for details. Has the same API as <code>crypto.privateDecrypt</code>.
+Default padding is <code>RSA_PKCS1_PADDING</code>.
+
+</p>
 <h2>crypto.DEFAULT_ENCODING<span><a class="mark" href="#crypto_crypto_default_encoding" id="crypto_crypto_default_encoding">#</a></span></h2>
 <p>The default encoding to use for functions that can take either strings
 or buffers.  The default value is <code>&apos;buffer&apos;</code>, which makes it default
@@ -938,13 +972,13 @@ as a temporary measure.
 
 </p>
 <h2>Recent API Changes<span><a class="mark" href="#crypto_recent_api_changes" id="crypto_recent_api_changes">#</a></span></h2>
-<p>The Crypto module was added to Node before there was the concept of a
+<p>The Crypto module was added to Node.js before there was the concept of a
 unified Stream API, and before there were Buffer objects for handling
 binary data.
 
 </p>
 <p>As such, the streaming classes don&apos;t have the typical methods found on
-other Node classes, and many methods accepted and returned
+other Node.js classes, and many methods accepted and returned
 Binary-encoded strings by default rather than Buffers.  This was
 changed to use Buffers by default instead.
 
@@ -973,50 +1007,12 @@ temporary measure.
 
 </p>
 
-          </div>
-        </div>
-    </div>
-    </div>
-    <div id="footer">
-      <div class="foot-1">
-        <a href="http://www.joyent.com"><h5>The Node.js Project is Sponsored by</h5>
-        
-        <p class="tag">Production Node +<br>High Performance Infrastructure</p></a>
-        <a href="https://my.joyent.com/landing/signup/701800000015696" class="button getstarted">Get Started</a>
-      </div>
-      <div class="foot-2">
-        <div class="foot-nav">
-          <ul>
-            <li><a href="http://nodejs.org/download/">Downloads</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/documentation/">Documentation</a></li>
-            <li><a href="http://nodejs.org/api/">API Docs</a></li>
-            <li><a href="http://nodejs.org/documentation/tutorials/">Tutorials</a></li>
-            <li><a href="http://nodejs.org/documentation/localization/">Localization</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/community/">Community</a></li>
-            <li><a href="https://github.com/joyent/node/issues">Github Issues</a></li>
-            <li><a href="http://groups.google.com/group/nodejs">Mailing List</a></li>
-            <li><a href="http://webchat.freenode.net/?channels=node.js">IRC</a></li>
-            <li><a href="https://twitter.com/nodejs">Twitter</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://nodejs.org/about/">About</a></li>
-            <li><a href="http://nodejs.org/about/organization/">Organization</a></li>
-            <li><a href="http://nodejs.org/about/core-team/">Core Team</a></li>
-            <li><a href="http://nodejs.org/about/resources/">Resources</a></li>
-          </ul>
-          <ul>
-            <li><a href="http://blog.nodejs.org">Blog</a></li>
-          </ul>
-        </div>
-        <p class="copyright">Copyright 2014 <a href="http://joyent.com/">Joyent, Inc</a>, Node.js is a <a href="https://nodejs.org/images/trademark-policy.pdf">trademark</a> of Joyent, Inc. <a href="https://raw.github.com/joyent/node/v0.12.7/LICENSE">View license</a>.</p>
       </div>
     </div>
+  </div>
+  <div id="footer">
+  </div>
 
-  
   
   
   
