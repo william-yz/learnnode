@@ -1,0 +1,9 @@
+# learnnode
+WilliamYang
+
+===== LICENSE BEGIN =====
+84037-12042010
+000020qfMQh"38DtLxGTQ0hv2YRSw8
+05CV9D6A7JYCjmKPmK27aTFsvWYbWM
+zczVCnXKIcT2yRo07JAbDdOcfqSRyW
+===== LICENSE END =====
