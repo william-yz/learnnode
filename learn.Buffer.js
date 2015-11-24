@@ -2,7 +2,7 @@ var assert = require('assert');
 // Buffer class is a global
 
 //new Buffer(str[,encoding]); encoding : defaults to 'utf8'
-var strBuffer = new Buffer('buffer')
+var strBuffer = new Buffer('buffer');
 
 
 var arrBuffer = new Buffer([0x62, 0x75, 0x66, 0x66, 0x65, 0x72]);
@@ -16,8 +16,6 @@ assert(Buffer.isEncoding('utf8'));
 
 assert(!Buffer.isBuffer({}));
 assert(Buffer.isBuffer(strBuffer));
-
-
 var source = new Buffer('!!'),
 	target = new Buffer('target');
 //copy(targetBuffer[, targetStart(0)][, sourceStart(0)][, sourceEnd(source.length)])
