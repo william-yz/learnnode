@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)https://nodejs.org/en/docs/es6/ -->
+<html lang="en" class=" has-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>ECMAScript 2015 (ES6) | Node.js</title>
+
+    <link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+    <link rel="dns-prefetch" href="http://fonts.gstatic.com/">
+    <link rel="dns-prefetch" href="http://www.google-analytics.com/">
+
+    <meta name="author" content="Node.js Foundation">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" href="https://nodejs.org/static/apple-touch-icon.png">
+    <link rel="icon" href="https://nodejs.org/static/favicon.ico">
+
+    <link rel="canonical" href="./ECMAScript 2015 (ES6) _ Node.js_files/ECMAScript 2015 (ES6) _ Node.js.html">
+        <link rel="alternate" href="https://nodejs.org/en/feed/blog.xml" title="Node.js Blog" type="application/rss+xml">
+        <link rel="alternate" href="https://nodejs.org/en/feed/releases.xml" title="Node.js Blog: Releases" type="application/rss+xml">
+        <link rel="alternate" href="https://nodejs.org/en/feed/vulnerability.xml" title="Node.js Blog: Vulnerability Reports" type="application/rss+xml">
+        <link rel="alternate" href="https://nodejs.org/en/feed/tsc-minutes.xml" title="Node.js TSC meeting minutes" type="application/rss+xml">
+    <link rel="stylesheet" href="./ECMAScript 2015 (ES6) _ Node.js_files/styles.css" media="all">
+
+    <script async="" src="./ECMAScript 2015 (ES6) _ Node.js_files/analytics.js"></script><script>
+        document.querySelector('html').className += " has-js";
+
+        var WebFontConfig = { google: { families: ['Source Sans Pro:400,600'] } };
+        !function(n,o,d,e,j,s){n.GoogleAnalyticsObject=d;n[d]||(n[d]=function(){
+        (n[d].q=n[d].q||[]).push(arguments)});n[d].l=+new Date;j=o.createElement(e);
+        s=o.getElementsByTagName(e)[0];j.async=1;j.src='//www.google-analytics.com/analytics.js';
+        s.parentNode.insertBefore(j,s)}(window,document,'ga','script');
+
+        ga('create', 'UA-67020396-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+    
+            <a href="https://nodejs.org/en" id="logo">
+              <img src="./ECMAScript 2015 (ES6) _ Node.js_files/logo.svg" height="75" width="180" alt="node.js">
+            </a>
+            <nav>
+                <ul class="list-divider-pipe">
+                    <li>
+                        <a href="https://nodejs.org/en/">Home</a>
+                    </li>
+                    <li>
+                        <a href="https://nodejs.org/en/about/">About</a>
+                    </li>
+                    <li>
+                        <a href="https://nodejs.org/en/download/">Downloads</a>
+                    </li>
+                    <li class="active">
+                        <a href="https://nodejs.org/en/docs/">Docs</a>
+                    </li>
+                    <li>
+                        <a href="https://nodejs.org/en/foundation/">Foundation</a>
+                    </li>
+                    <li>
+                        <a href="https://nodejs.org/en/get-involved/">Get Involved</a>
+                    </li>
+                    <li>
+                        <a href="https://nodejs.org/en/security/">Security</a>
+                    </li>
+                    <li>
+                        <a href="https://nodejs.org/en/blog/">News</a>
+                    </li>
+                </ul>
+            </nav>
+    
+        </div>
+    </header>
+
+    <div id="main">
+        <div class="container has-side-nav">
+
+            <aside>
+                <ul>
+                    <li>
+                        <a href="https://nodejs.org/en/docs/">Docs</a>
+                    </li>
+                    <li class="active">
+                        <a href="./ECMAScript 2015 (ES6) _ Node.js_files/ECMAScript 2015 (ES6) _ Node.js.html">ES6 in Node.js</a>
+                    </li>
+                    <li>
+                        <a href="https://nodejs.org/en/docs/faq/">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="https://nodejs.org/dist/latest-v4.x/docs/api/">
+                            v4.2.4 API <span class="small color-lightgray"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://nodejs.org/dist/latest-v5.x/docs/api/">
+                            v5.4.0 API
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://nodejs.org/en/docs/guides">Guides</a>
+                    </li>
+                </ul>
+            </aside>
+
+            <article>
+                <a class="edit-link" href="https://github.com/nodejs/nodejs.org/edit/master/locale/en/docs/es6.md">Edit on GitHub</a> <h1>ECMAScript 2015 (ES6) in Node.js<a name="ecmascript-2015-es6-in-node-js" class="anchor" href="https://nodejs.org/en/docs/es6/#ecmascript-2015-es6-in-node-js"></a></h1><p>Node.js is built against modern versions of <a href="https://developers.google.com/v8/">V8</a>. By keeping up-to-date with the latest releases of this engine, we ensure new features from the <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">JavaScript ECMA-262 specification</a> are brought to Node.js developers in a timely manner, as well as continued performance and stability improvements.</p>
+<p>All ECMAScript 2015 (ES6) features are split into three groups for <strong>shipping</strong>, <strong>staged</strong>, and <strong>in progress</strong> features:</p>
+<ul>
+<li>All <strong>shipping</strong> features, which V8 considers stable, are turned <strong>on by default on Node.js</strong> and do <strong>NOT</strong> require any kind of runtime flag.</li>
+<li><strong>Staged</strong> features, which are almost-completed features that are not considered stable by the V8 team, require a runtime flag: <code>--es_staging</code> (or its synonym, <code>--harmony</code>).</li>
+<li><strong>In progress</strong> features can be activated individually by their respective harmony flag (e.g. <code>--harmony_destructuring</code>), although this is highly discouraged unless for testing purposes.</li>
+</ul>
+<h2>Which features ship with Node.js by default (no runtime flag required)?<a name="which-features-ship-with-node-js-by-default-no-runtime-flag-required" class="anchor" href="https://nodejs.org/en/docs/es6/#which-features-ship-with-node-js-by-default-no-runtime-flag-required"></a></h2><ul>
+<li>Block scoping<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a> (strict mode only)</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></li>
+<li><code>function</code>-in-blocks (strict mode only <a href="https://nodejs.org/en/docs/es6/#ref-1">[1]</a><span id="backref-1"></span>)</li>
+</ul>
+</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a> (strict mode only)</li>
+<li>Collections<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap">WeakMap</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set">Set</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet">WeakSet</a></li>
+</ul>
+</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays">Typed arrays</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*">Generators</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Numeric_literals">Binary and Octal literals</a></li>
+<li><a href="https://github.com/lukehoban/es6features#enhanced-object-literals">Object literal extensions</a> (shorthand properties and methods)</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla#Additions_to_the_String_object">New String methods</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbols</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings">Template strings</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow Functions</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a> <a href="https://nodejs.org/en/docs/es6/#ref-2">[2]</a><span id="backref-2"></span></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign">Object.assign</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">Spread operator</a> <a href="https://nodejs.org/en/docs/es6/#ref-2">[2]</a><span id="backref-2"></span></li>
+</ul>
+<p>You can view a more detailed list, including a comparison with other engines, on the <a href="https://kangax.github.io/compat-table/es6/">compat-table</a> project page.</p>
+<p><small id="ref-1">[<a href="https://nodejs.org/en/docs/es6/#backref-1">1</a>]: As of v8 3.31.74.1, block-scoped declarations are <a href="https://groups.google.com/forum/#!topic/v8-users/3UXNCkAU8Es">intentionally implemented with a non-compliant limitation to strict mode code</a>. Developers should be aware that this will change as v8 continues towards ES6 specification compliance.</small><br>
+<small id="ref-2">[<a href="https://nodejs.org/en/docs/es6/#backref-2">2</a>]: Only available in Node.js &gt;= 5.x.x</small></p>
+<h2>Which features are behind the --es_staging flag?<a name="which-features-are-behind-the-es_staging-flag" class="anchor" href="https://nodejs.org/en/docs/es6/#which-features-are-behind-the-es_staging-flag"></a></h2><ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol"><code>Symbol.toStringTag</code></a> (user-definable results for <code>Object.prototype.toString</code>, behind flag <code>--harmony_tostring</code>)</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes"><code>Array.prototype.includes</code></a> (determine whether
+an array includes a certain element, behind flag <code>--harmony_array_includes</code>) <a href="https://nodejs.org/en/docs/es6/#ref-2">[2]</a><span id="backref-2"></span></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">Rest Parameters</a> (represent an indefinite number
+of arguments as an array, behind flag <code>--harmony_rest_parameters</code>) <a href="https://nodejs.org/en/docs/es6/#ref-2">[2]</a><span id="backref-2"></span></li>
+</ul>
+<h2>Which features are in progress?<a name="which-features-are-in-progress" class="anchor" href="https://nodejs.org/en/docs/es6/#which-features-are-in-progress"></a></h2><p>New features are constantly being added to the V8 engine. Generally speaking, expect them to land on a future Node.js release, although timing is unknown.</p>
+<p>You may list all the <em>in progress</em> features available on each Node.js release by grepping through the <code>--v8-options</code> argument. Please note that these are incomplete and possibly broken features of V8, so use them at your own risk:</p>
+<pre><code class="language-bash">node --v8-options <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">"in progress"</span>
+</code></pre>
+<h2>I have my infrastructure set up to leverage the --harmony flag. Should I remove it?<a name="i-have-my-infrastructure-set-up-to-leverage-the-harmony-flag-should-i-remove-it" class="anchor" href="https://nodejs.org/en/docs/es6/#i-have-my-infrastructure-set-up-to-leverage-the-harmony-flag-should-i-remove-it"></a></h2><p>The current behaviour of the <code>--harmony</code> flag on Node.js is to enable <strong>staged</strong> features only. After all, it is now a synonym of <code>--es_staging</code>. As mentioned above, these are completed features that have not been considered stable yet. If you want to play safe, especially on production environments, consider removing this runtime flag until it ships by default on V8 and, consequently, on Node.js. If you keep this enabled, you should be prepared for further Node.js upgrades to break your code if V8 changes their semantics to more closely follow the standard.</p>
+<h2>How do I find which version of V8 ships with a particular version of Node.js?<a name="how-do-i-find-which-version-of-v8-ships-with-a-particular-version-of-node-js" class="anchor" href="https://nodejs.org/en/docs/es6/#how-do-i-find-which-version-of-v8-ships-with-a-particular-version-of-node-js"></a></h2><p>Node.js provides a simple way to list all dependencies and respective versions that ship with a specific binary through the <code>process</code> global object. In case of the V8 engine, type the following in your terminal to retrieve its version:</p>
+<pre><code class="language-bash">node -p process.versions.v8
+</code></pre>
+
+            </article>
+
+        </div>
+    </div>
+
+    <a href="https://nodejs.org/en/docs/es6/#" id="scrollToTop" style="display: none;">↑ <span>Scroll to top</span></a>
+    
+    <footer role="contentinfo">
+    
+        <div class="linuxfoundation-footer">
+            <div class="container">
+                <div class="issue-link-container">
+                    <ul class="list-divider-pipe issue-link">
+                        <li><a href="https://github.com/nodejs/node/issues">Report Node.js issue</a></li>
+                        <li><a href="https://github.com/nodejs/nodejs.org/issues">Report website issue</a></li>
+                        <li><a href="https://github.com/nodejs/help/issues">Get Help</a></li>
+                    </ul>
+                    <a class="linuxfoundation-logo" href="http://collabprojects.linuxfoundation.org/">Linux Foundation Collaborative Projects</a>
+                </div>
+    
+                <p>© 2015 Node.js Foundation. All Rights Reserved. Portions of this site originally © 2015 Joyent. </p>
+                <p>Node.js is a trademark of Joyent, Inc. and is used with its permission. Please review the <a href="https://nodejs.org/static/documents/trademark-policy.pdf">Trademark Guidelines of the Node.js Foundation</a>.</p>
+                <p>Linux Foundation is a registered trademark of The Linux Foundation.</p>
+                <p>Linux is a registered <a href="http://www.linuxfoundation.org/programs/legal/trademark" title="Linux Mark Institute">trademark</a> of Linus Torvalds.</p>
+                <p>
+                   <a href="https://raw.githubusercontent.com/nodejs/node/master/LICENSE">Node.js Project Licensing Information</a>.
+                </p>
+            </div>
+        </div>
+    
+    </footer>
+    
+    <link rel="stylesheet" href="./ECMAScript 2015 (ES6) _ Node.js_files/prism-tomorrow.css" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" async="" defer=""></script>
+    <script type="text/javascript">
+        var $scrollToTop = document.getElementById('scrollToTop');
+        (window.onscroll = function() {
+            $scrollToTop.style.display = (window.pageYOffset > window.innerHeight) ? 'block' : 'none';
+        })();
+        $scrollToTop.onclick = function() {
+            window.scrollTo(0, 0);
+            return false;
+        };
+    </script>
+    
+    <script>
+    (function(d,e,m,s){
+        if (!/(MSIE|Trident)/.test(navigator.userAgent)){return;}
+        m=d.createElement(e);
+        s=d.getElementsByTagName(e)[0];m.async=1;m.src='/static/js/modernizr.custom.js';
+        m.onload=function(){Modernizr.addTest('flexboxtweener', Modernizr.testAllProps('flexAlign'));};
+        s.parentNode.insertBefore(m,s);
+    })(document,'script');
+    </script>
+    
+
+
+</body></html>

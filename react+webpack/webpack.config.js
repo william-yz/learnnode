@@ -4,24 +4,19 @@
 'use strict';
 
 module.exports = {
-    entry: './main.js',
+    entry: [
+        './assets/js/main.jsx'
+    ],
     output: {
+        path: 'public',
         filename: 'bundle.js'
     },
-    module: {
-        loaders: [
-            { test: /\.coffee$/, loader: 'coffee-loader' },
-            {
-                test: /\.js$/,
-                loader: 'babel-loader',
-                query: {
-                    presets: ['es2015', 'react']
-                }
-            }
-        ]
-    },
-    resolve: {
-        // you can now require('file') instead of require('file.coffee')
-        extensions: ['', '.js', '.json', '.coffee']
+    module : {
+        loaders : {
+            test : /\.jsx$/,
+            exclude : /node_modules/,
+            loaders : ['babel']
+        }
     }
+
 };
