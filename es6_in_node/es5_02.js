@@ -30,7 +30,7 @@ console.log(arr.some(function(i) {
 console.log(newArr);*/
 
 //.filter(function(element))
-/*newArr = arr.filter(function(i) {
+/*var newArr = arr.filter(function(i) {
   return i % 2 === 0;
 });
 console.log(newArr);*/

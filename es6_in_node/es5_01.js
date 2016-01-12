@@ -26,29 +26,30 @@ var o = Object.create({
   }
 });
 
-
+/*
 console.log(o);
 console.log(o.__proto__);
 o.say();
 
 o.age = 10;
-console.log(o.age);
+console.log(o.age);*/
 
 /*Object.defineProperty(o, 'sex', {
   value : 'M',
   writable : false,
-  enumerable : true,
+  enumerable : false,
   configurable : false
 });
 
 o.sex = 'F';
 console.log(o.sex);
 delete o.sex;
-console.log(o.sex);*/
+console.log(o.sex);
 
-// console.log(Object.keys(o));
 
-/*Object.preventExtensions(o);
+console.log(Object.keys(o));
+
+Object.preventExtensions(o);
 console.log(Object.isExtensible(o));
 o.home = 'xxx';
 console.log(o.home);*/

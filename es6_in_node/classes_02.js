@@ -39,7 +39,7 @@ class Circle {
     }
 }
 
-/*var circle1 = new Circle(10),
+var circle1 = new Circle(10),
     circle2 = new Circle(20);
 
 Circle.draw();
@@ -59,6 +59,4 @@ try {
     circle1.radius = 'abc';
 } catch (e) {
     console.log('error: ' + e.message);
-}*/
-
-module.exports = Circle;
+}

@@ -19,8 +19,8 @@ obj.say();
     }, 1000);
   }
 };
-obj.say();
-*/
+obj.say();*/
+
 /*var obj = {
   name : 'William',
   say : function() {
@@ -35,6 +35,9 @@ obj.say();*/
   console.log(this.name + event)
 }
 var a = {name : 'william'};
+
 onclick.apply(a,['click']);
 onclick.call(a,'click');
+
+//a.onclick('click')
 onclick.bind(a, 'click')();*/

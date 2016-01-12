@@ -28,7 +28,7 @@ Dog.prototype.speak = function() {
     this.name = name;
   }
   
-  name () {
+  showName () {
     console.log('Its name is ' + this.name);
   }
 
@@ -46,7 +46,7 @@ class Dog extends Animal {
 
 
 
-/*var animal = {
+var animal = {
   showName() {
     console.log('Its name is ' + this.name);
   },
@@ -62,7 +62,7 @@ var dog = {
   __proto__ : animal,
   name,
   speak
-}*/
+}
 
 var dog = new Dog('Diandian');
 

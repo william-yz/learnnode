@@ -1,3 +1,4 @@
 'use strict';
-let x;
+
+var x;
 let x;
