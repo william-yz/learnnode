@@ -26,15 +26,15 @@ var o = Object.create({
   }
 });
 
-/*
-console.log(o);
+
+/*console.log(o);
 console.log(o.__proto__);
 o.say();
 
 o.age = 10;
 console.log(o.age);*/
 
-/*Object.defineProperty(o, 'sex', {
+Object.defineProperty(o, 'sex', {
   value : 'M',
   writable : false,
   enumerable : false,
@@ -46,13 +46,12 @@ console.log(o.sex);
 delete o.sex;
 console.log(o.sex);
 
-
 console.log(Object.keys(o));
 
 Object.preventExtensions(o);
 console.log(Object.isExtensible(o));
 o.home = 'xxx';
-console.log(o.home);*/
+console.log(o.home);
 
 //Object.seal(o) / Object.isSealed
 

@@ -1,0 +1,69 @@
+prefix = -webkit- -moz-
+
+
+cb(prop, args...)
+  {prop}
+  for pre in prefix
+    {pre}{prop} args
+
+borderDefault= 1px solid #DBDBDB
+
+.questioncontent
+  background #f2f5f6
+  border-color #d8d8d8
+  cb box-shadow none !important
+  cb border-radius 0 !important
+  border 5px solid #e5e5e5
+  border-radius 0 !important
+  box-shadow none !important
+  padding 10px
+  margin 20px
+  & .form-btn
+    width 100%
+    margin 5px
+    & .btn
+      float right
+      margin 5px
+  & .form-group 
+    & .table 
+      &.type
+        border borderDefault
+        text-align center
+      & th
+      & td
+        height 35px
+        font-size 20px
+        line-height 35px
+        border-right borderDefault
+        border-bottom borderDefault
+        padding 0
+      & td input
+        border-radius 0
+        width 100%
+        height auto
+        border 0
+
+.que-show
+  width 100%
+  min-height 100px
+  background #FFFFFF
+  border borderDefault
+  padding-top 40px
+  margin-top 30px
+  
+.exam
+  background #FFFFFF
+  & .exam-head  h1
+    margin 0
+    & .exam-content
+      padding 10px 30px
+      & p
+        font-size 15px
+  & .que-answer div
+    width 100%
+    height 15-px
+  & input
+    margin-left 5px
+    margin-right 5px
+    border 0
+    border-bottom 1px solid black
