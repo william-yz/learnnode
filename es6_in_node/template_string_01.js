@@ -23,9 +23,4 @@ function tag(strings, ...values) {
   return "Bazinga!";
 }
 
-tag`Hello ${ a + b } world ${ a * b }`;
-
-var a = '``';
-
-b = a;
-console.log(b);
+console.log(tag`Hello world `);

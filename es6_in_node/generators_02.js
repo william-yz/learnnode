@@ -6,16 +6,16 @@ for (var val of arr) {
   console.log(val);
 }*/
 
-/*
-var str = 'abcde';
+
+/*var str = 'abcde';
 for (var val of str) {
   console.log(val);
-}
-*/
+}*/
 
 
-/*
-var set = new Set([1,1,2,3,4]);
+
+
+/*var set = new Set([4,1,2,3]);
 set.add(2);
 for (var val of set) {
   console.log(val);
@@ -32,8 +32,8 @@ for (var val of map) {
 }
 */
 
-/*
-function* generator(n) {
+
+/*function* generator(n) {
   for (var i = 0; i < n; i ++) {
     yield i;
   }
@@ -44,12 +44,12 @@ var gen = generator(10);
 for (var val of gen) {
   console.log(val);
 }
-console.log(gen[Symbol.iterator]);
-*/
+console.log(gen[Symbol.iterator]);*/
 
 
 
-/*var myiterator = {
+
+var myiterator = {
   datas : [{
     name : 'william',
     sex : 'M'
@@ -65,8 +65,9 @@ console.log(gen[Symbol.iterator]);
     this.index ++ ;
     return {done : this.index === this.datas.length, value : this.datas[this.index]};
   }
-}
+};
 
-for (var data of myiterator ) {
+console.log(Array.prototype[Symbol.iterator])
+for (var data of myiterator.datas ) {
   console.log(data);
-}*/
+}

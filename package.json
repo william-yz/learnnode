@@ -16,6 +16,7 @@
     "cheerio": "^0.19.0",
     "express": "^4.13.3",
     "lodash": "^3.10.1",
+    "mongodb": "^2.1.4",
     "node-promise": "^0.5.12",
     "node-xml": "^1.0.2",
     "superagent": "latest"

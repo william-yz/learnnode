@@ -10,7 +10,7 @@ var a = {
   func : function() {
     setTimeout(function() {
       console.log(this);
-    }/*.bind(this)*/,1000);
+    }.bind(this),1000);
   }
 };
 

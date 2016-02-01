@@ -61,11 +61,19 @@ var speak = function() {
 var dog = {
   __proto__ : animal,
   name,
-  speak
+  speak,
+  [getKey('enabled')]: true,
 }
 
-var dog = new Dog('Diandian');
+ // var dog = new Dog('Diandian');
 
+
+function getKey(s) {
+  return s + '00';
+}
+var a = 'enabled00';
+dog[a] = false;
+console.log(dog.enabled00);
 
 dog.showName();
 dog.speak();

@@ -3,8 +3,8 @@ var a = Symbol('a'),
   b = Symbol('a'),
   c = Symbol.for('a'),
   d = Symbol.for('a');
-
-/*console.log(a === b);
+/*
+console.log(a === b);
 console.log(a === c);
 console.log(b === c);
 console.log(d === c);*/
@@ -22,8 +22,8 @@ console.log(obj[key]);
 
 for (let key in obj) {
   console.log(key);
-}
-*/
+}*/
+
 
 var key = Symbol('circlesMade');
 class Circle {

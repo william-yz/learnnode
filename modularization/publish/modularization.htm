@@ -1,0 +1,297 @@
+<!--
+    Powered By nodePPT - This is probably the best web presentation tool so far!
+    version: 1.4.1
+    site: https://github.com/ksky521/nodePPT
+    date: 
+-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>The front-end componentization development - By William Yang</title>
+    <link rel="stylesheet" media="all" href="./css/nodeppt.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="./css/phone.css">
+    
+    <link rel="stylesheet" href="./js/highlight/styles/monokai_sublime.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    
+<link rel="stylesheet" href="./css/theme.light.css">
+</head>
+<body>
+<div class="slides">
+    <slides id="container">
+        <slide class="slide"><section class="slide-wrapper"><hgroup>
+<h1 class="blue3">The front-end componentization development</h1>
+
+
+</hgroup><article>
+
+<div class="pull-right text-primary">
+  William Yang
+  <br/><br/>
+  <small>Jan-22-2016</small>
+</div>
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>Agenda</h1>
+<ul>
+<li>Why need componentization?</li>
+<li>What is front-end componentization?</li>
+<li>How to componentize in front-ends ?</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>Why need componentization ?</h2>
+<ul class="fadeIn">
+<li>Resource redundancy</li>
+<li>Too complex relationship</li>
+<li>Hard to do unit test</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>Why need componentization ?</h2>
+<blockquote class="blue">Current request workflow :
+    <img src="./img/old.png" />
+    <blockquote class="blue pull-right">
+      <br/>
+    </blockquote>
+</blockquote>
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>Why need componentization ?</h2>
+<blockquote class="blue">Request workflow after componentization:
+    <img src="./img/new.png" />
+    <blockquote class="blue pull-right">
+      <br/>
+    </blockquote>
+</blockquote>
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>What is front-end componentization?</h2>
+<ul class="fadeIn">
+<li>Resource - On demand loading</li>
+<li>Clear and single responsibility</li>
+<li>Easy to do unit test</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>What is front-end componentization?</h2>
+<blockquote class="blue">Lifecycle
+    <img src="./img/Lifecycle.png" />
+    <blockquote class="blue pull-right">
+      <br/>
+    </blockquote>
+</blockquote>
+
+<ul class="fadeIn">
+<li>init: Initializes components root node and configuration.</li>
+<li>fetch: Load css and js resources.</li>
+<li>render: Render the content.</li>
+<li>ready: Data binging.</li>
+<li>update: Data update.</li>
+<li>destroy: Remove all event&#39;s listener and delete all component&#39;s nodes.</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>How to componentize in front-ends ?</h2>
+<blockquote class="blue">Directory structure
+  <br/>
+    <img src="./img/riotdemo.png" />
+    <blockquote class="blue pull-right">
+      components -
+      <br/> 
+      libs -
+      <br>
+      modules -
+      <br>
+    </blockquote>
+</blockquote>
+
+<p><a href="http://yangwi-9-w7:3000/riotdemo/modules/index.html">Demo</a></p>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>How to componentize in front-ends ?</h2>
+<h3>login.html</h3>
+<pre><code>&lt;html&gt;
+  &lt;msg-box&gt;&lt;/msg-box&gt;
+  &lt;table&gt;
+      &lt;username-input&gt;&lt;/username-input&gt;
+      &lt;password-input&gt;&lt;/password-input&gt;
+    &lt;tr&gt;
+      &lt;td&gt;
+        &lt;button id=&quot;loginBtn&quot;&gt;Login&lt;/button&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+
+  &lt;script type=&quot;text/javascript&quot; src=&quot;../../libs/jquery-1.11.2.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;../../libs/riot+compiler.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;riot/tag&quot; src=&quot;../../components/usernameInput.tag&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;riot/tag&quot; src=&quot;../../components/passwordInput.tag&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;riot/tag&quot; src=&quot;../../components/msgBox.tag&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;./login.js&quot;&gt;&lt;/script&gt;
+&lt;/html&gt;
+</code></pre>
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>How to componentize in front-ends ?</h2>
+<h3>register.html</h3>
+<pre><code>&lt;html&gt;
+  &lt;msg-box&gt;&lt;/msg-box&gt;
+  &lt;table&gt;
+      &lt;username-input&gt;&lt;/username-input&gt;
+      &lt;password-input&gt;&lt;/password-input&gt;
+    &lt;tr&gt;
+      &lt;td&gt;
+        &lt;button id=&quot;registerBtn&quot;&gt;Register&lt;/button&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+
+  &lt;script type=&quot;text/javascript&quot; src=&quot;../../libs/jquery-1.11.2.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;../../libs/riot+compiler.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;riot/tag&quot; src=&quot;../../components/usernameInput.tag&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;riot/tag&quot; src=&quot;../../components/passwordInput.tag&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;riot/tag&quot; src=&quot;../../components/msgBox.tag&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;./register.js&quot;&gt;&lt;/script&gt;
+&lt;/html&gt;
+</code></pre>
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>How to componentize in front-ends ?</h2>
+<h3>usernameInput.tag</h3>
+<pre><code>&lt;username-input&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;label for=&quot;usernameInput&quot;&gt;E-mail : &lt;/label&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;input type=&quot;text&quot; class=&quot;username&quot; id=&quot;usernameInput&quot;/&gt;
+      &lt;div class=&quot;msgBox&quot;&gt;&lt;/div&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+    this.on(&#39;mount&#39;,function() {
+      $(&#39;#usernameInput&#39;).on(&#39;keyup&#39;, function(e) {
+        var taget = $(e.target),
+            val = taget.val();
+        if (!val.match(/.+@oocl\.com$/)) {
+          riot.mount(&#39;msg-box&#39;,{
+            msg : &#39;E-mail must match *@oocl.com..&#39;
+          });
+        } else {
+          riot.mount(&#39;msg-box&#39;,{
+            msg : &#39;&#39;
+          });
+        }
+      });
+    });
+  &lt;/script&gt;
+&lt;/username-input&gt;
+</code></pre>
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>How to componentize in front-ends ?</h2>
+<h3>msgBox.tag</h3>
+<pre><code>&lt;msg-box&gt;
+  &lt;div id=&quot;msgBox&quot; class=&quot;msgBox&quot;&gt;&lt;/div&gt;
+  &lt;script&gt;
+    this.on(&#39;mount&#39;, function() {
+      $(&#39;#msgBox&#39;).html(opts.msg);
+    }.bind(opts));
+
+  &lt;/script&gt;
+  &lt;style&gt;
+    .msgBox {
+      color : red;
+    }
+  &lt;/style&gt;
+&lt;/msg-box&gt;
+</code></pre>
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>Framework</h2>
+<ul>
+<li>React.js</li>
+<li><a href="http://localhost:8080/index.html">vue.js</a></li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>Thank you!</h1>
+
+</article></section></slide>
+        
+
+        <!-- <slide class="slide logoslide dark nobackground">
+            <article class="flexbox vcenter">
+                <h2 style="color: white;">Powered By nodePPT v1.4.1</h2>
+            </article>
+        </slide> -->
+        <div class="slideTip" id="tip"></div>
+    </slides>
+</div>
+<canvas id="drawBoard" class="draw-board" width="900" height="700"></canvas>
+<div class="progress"><span id="progress"></span></div>
+<div id="_buttons">
+    <div class="_btn-box" id="_btn-box" style="display:none;">
+        <button class="fa fa-arrow-circle-left" id="_btn-prev"></button>
+        <button class="fa fa-arrow-circle-right" id="_btn-next"></button>
+        <button class="fa fa-paint-brush" id="_btn-brush"></button>
+        <button class="fa fa-compress" id="_btn-overview" data-toggle="fa fa-expand"></button>
+    </div>
+    <button class="fa fa-bars" id="_btn-bar"  data-toggle="fa fa-close"></button>
+</div>
+<script src="./js/mixjs/lib/mix.0.3.0.min.js"></script>
+<script>
+var base = location.protocol + '//' + location.host;
+
+var path = (location.pathname + '#').split('/').filter(function(v){
+    return !!v;
+});
+path.pop();
+path = path.join('/');
+MixJS.config({
+    baseURL: [ base, path, 'js'].join('/')+'/'
+});
+
+</script>
+<script src="./js/mixjs/lib/event/broadcast.js"></script>
+<script src="./js/nodeppt.js"></script>
+<script>
+Slide.init({
+    containerID: 'container',
+    drawBoardID: 'drawBoard',
+    slideClass: '.slide',
+    buildClass: '.build',
+    progressID: 'progress',
+    transition: 'slide',
+    width: 1100,
+    dir: './',
+    
+    //打开下面的注释就开启postMessage方式
+    //访问网址127.0.0.1:8080/ppt/demo#client
+    control:{
+        type: 'postMessage',
+        args:{
+            isControl:  false
+        }
+    },
+    
+    tipID: 'tip'
+});
+MixJS.loadJS('highlight/highlight.pack.js',function(){
+    hljs.tabReplace = '  ';
+    hljs.initHighlightingOnLoad();
+});
+</script>
+
+
+<!--placeholder-->
+</body>
+</html>

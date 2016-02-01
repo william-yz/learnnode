@@ -1,7 +1,7 @@
 // var Circle = require('./classes_02');
-var Circle = require('./symbol_01');
+const Circle = require('./symbol_01');
 
-
+Circle = 'a';
 
 var circle1 = new Circle(10),
     circle2 = new Circle(20);

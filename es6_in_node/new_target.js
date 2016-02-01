@@ -4,7 +4,6 @@ class A {
     console.log(new.target.name);
   }
 }
-
 class B extends A { constructor() { super(); } }
 
 var a = new A(); // logs "A"

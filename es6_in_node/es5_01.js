@@ -21,18 +21,20 @@ var o = Object.create({
     set : function(value) {
       if (Number.isInteger(value)) {
         this._age = value
+      } else {
+        this._age = 123;
       }
     }
   }
 });
 
 
-/*console.log(o);
+console.log(o);
 console.log(o.__proto__);
 o.say();
 
-o.age = 10;
-console.log(o.age);*/
+o.age = 'aa';
+console.log(o.age);
 
 Object.defineProperty(o, 'sex', {
   value : 'M',
