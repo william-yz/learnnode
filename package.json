@@ -19,6 +19,7 @@
     "mongodb": "^2.1.4",
     "node-promise": "^0.5.12",
     "node-xml": "^1.0.2",
-    "superagent": "latest"
+    "superagent": "latest",
+    "winston": "^2.1.1"
   }
 }
