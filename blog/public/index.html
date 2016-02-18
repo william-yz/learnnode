@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" type="text/css" href="./bootstrap/dist/css/bootstrap.min.css">
+</head>
+<style type="text/css">
+  .operator:hover {
+    cursor: pointer;
+  }
+
+</style>
+<body>
+  <div class="container-fluid" id="app">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="row">
+        <div class="page-header">
+          <h1>William's Page
+            <% if (isSecure) {%>
+            <small class="pull-right" style="margin-left : 3px;"><a @click="add"><span class="glyphicon glyphicon-plus operator"></span></a></small>
+            <% }%>
+          </h1>
+        </div>
+      </div>
+      <div class="row" v-for="article in articles">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4>
+              <a href="#" @click="show($index)">{{article.title}}</a>
+              <% if (isSecure) {%>
+              <small class="pull-right" style="margin-left : 3px;"><a @click="remove($index)"><span class="glyphicon glyphicon-trash operator"></span></a></small>
+              <small class="pull-right"><a @click="edit($index)"><span class="glyphicon glyphicon-edit operator" ></span></a></small>
+              <% }%>
+            </h4>
+              
+            
+          </div>
+          <div class="panel-body" v-show="article.isShow">
+            <div v-html="article.content | marked"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script type="text/javascript" src="./jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="./vue/dist/vue.js"></script>
+  <script type="text/javascript" src="./marked/marked.min.js"></script>
+  <script>
+    $(function() {
+      var vm = new Vue({
+        el : '#app',
+        data : function() {
+          return {
+            articles : [],
+            page : 1
+          }
+        },
+        filters: {
+          marked: marked
+        },
+        methods : {
+          show : function(index) {
+            if (typeof this.articles[index].isShow === 'undefined') {
+              Vue.set(this.articles[index],'isShow', true);
+            } else {
+              this.articles[index].isShow = !this.articles[index].isShow;
+            }
+          },
+
+          edit : function(index) {
+            window.location.href = '/secure/edit?_id='+this.articles[index]._id;
+          },
+
+          add : function() {
+            window.location.href = '/secure/edit';
+          }
+        }
+      });
+      $.get('/api/article', function(res) {
+        vm.$set('articles',res);
+      })
+    });
+  </script>
+</body>
+
+
+</html>

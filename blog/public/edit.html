@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" type="text/css" href="./bootstrap/dist/css/bootstrap.min.css">
+</head>
+<style type="text/css">
+  html, body, #editor {
+    margin: 0;
+    height: 95%;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+  }
+
+  textarea, #editor div {
+    display: inline-block;
+    width: 49.8%;
+    vertical-align: top;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 20px 0 0 20px;
+    overflow-y:scroll;
+    height:100%;
+  }
+
+  textarea {
+    border: none;
+    border-right: 1px solid #ccc;
+    resize: none;
+    outline: none;
+    background-color: #f6f6f6;
+    font-size: 14px;
+    font-family: 'Monaco', courier, monospace;
+    padding: 20px;
+  }
+
+  code {
+    color: #f66;
+  }
+
+</style>
+<body id="edit">
+  <div style="margin : 0px;padding-left : 100px; border-bottom : 1px #ccc solid">
+    <h1>
+      <input type="text" style="width: 80%;" v-model="article.title">
+      <small><p class="pull-right"><button @click="save">Save</button></p></small>
+    </h1>
+    
+  </div>
+  <div id="editor" class="row">
+    <textarea v-model="article.content" debounce="300"></textarea>
+    <div style="" v-html="article.content | marked"></div>
+  </div>
+  
+  <script type="text/javascript" src="./jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="./vue/dist/vue.js"></script>
+  <script type="text/javascript" src="./marked/marked.min.js"></script>
+  <script>
+    $(function() {
+      var _id = '<%= _id %>';
+      function initVue(article) {
+        new Vue({
+            el: '#edit',
+            data: {
+              article : article
+            },
+            filters: {
+              marked: marked
+            },
+            methods : {
+              save : function() {
+                console.log(JSON.parse(JSON.stringify(this.article)));
+                $.post('/secure/api/article', JSON.parse(JSON.stringify(this.article)), function() {
+                  console.log('Save success!!');
+                })
+              }
+            }
+          });
+      }
+      if (_id) {
+        $.get('/secure/api/article/'+_id, initVue);
+      } else {
+        initVue({
+          title : '',
+          content : ''
+        });
+      }
+        
+    })
+  </script>
+</body>
+
+
+</html>

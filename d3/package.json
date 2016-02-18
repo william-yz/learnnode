@@ -1,0 +1,15 @@
+{
+  "name": "d3",
+  "version": "1.0.0",
+  "description": "d3 gaming",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "William Yang",
+  "license": "MIT",
+  "dependencies": {
+    "excel": "^0.1.4",
+    "node-xlsx": "^0.6.0"
+  }
+}
