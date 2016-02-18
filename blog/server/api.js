@@ -2,7 +2,7 @@ const DB = require('./db');
 
 module.exports.list = function(req, res) {
   const db = DB(req.params[1]);
-  db.findAll
+  db.findAll({created : -1})
     .then((result) => {
       res.json(result);
     })

@@ -17,6 +17,9 @@ function initModels() {
       type: String,
       default: '',
       trim: true
+    },
+    tags : {
+      type : Array
     }
   });
 
